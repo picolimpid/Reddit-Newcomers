@@ -1,0 +1,65 @@
+180-day base rates: {'return_180d': 0.307, 'active_91_180': 0.165, 'regular_180d': 0.125, 'months_3plus': 0.052}
+
+=== 1. Longer horizon ===
+                                        label          outcome    n effect ci_lo ci_hi     p fdr_p
+0                     community-embedding fit      return_180d  401   1.33  1.01  1.76 0.045 0.734
+1                     community-embedding fit    active_91_180  340   1.17  0.83  1.65 0.360 0.734
+2                     community-embedding fit     regular_180d  302   1.15  0.73  1.82 0.543 0.877
+3                     community-embedding fit     months_3plus  148   1.24  0.54  2.84 0.619 0.877
+4                     community-embedding fit  n_active_months  407   1.11  0.91  1.34 0.314 0.734
+5                              text alignment      return_180d  402   0.97  0.70  1.35 0.866 0.943
+6                              text alignment    active_91_180  340   0.72  0.46  1.13 0.158 0.734
+7                              text alignment     regular_180d  303   0.95  0.59  1.55 0.852 0.943
+8                              text alignment     months_3plus  148   0.70  0.32  1.53 0.375 0.734
+9                              text alignment  n_active_months  408   0.86  0.67  1.11 0.252 0.734
+10                        structural PPMI fit      return_180d  402   0.98  0.74  1.30 0.899 0.943
+11                        structural PPMI fit    active_91_180  340   0.91  0.63  1.30 0.602 0.877
+12                        structural PPMI fit     regular_180d  303   1.02  0.65  1.59 0.943 0.943
+13                        structural PPMI fit     months_3plus  148   1.04  0.50  2.19 0.914 0.943
+14                        structural PPMI fit  n_active_months  408   0.88  0.72  1.08 0.230 0.734
+15  community-embedding fit | returned by 90d    active_91_180   64   0.35  0.05  2.64 0.310 0.734
+16           text alignment | returned by 90d    active_91_180   64   0.22  0.01  6.78 0.389 0.734
+
+replies to newcomers: 250; insider 63.2%, outsider 22.8%, 1-2 prior 14.0%, OP 2.4%
+newcomers with >= 1 insider reply: 98 of 139 replied-to
+                     return_90d    n    c2v
+kind                                       
+insider reply             0.235   98  0.346
+no reply                  0.241  340  0.334
+outsider reply only       0.195   41  0.383
+
+=== 2. Who replies ===
+                                                  label        outcome    n effect ci_lo ci_hi     p fdr_p
+0                         insider reply (vs all others)     return_90d  369   1.18  0.44  3.14 0.739 0.853
+1                       insider reply, among replied-to     return_90d   64   0.68  0.06  8.15 0.758 0.853
+2                              insider reply, + c2v fit     return_90d  368   1.21  0.46  3.17 0.702 0.853
+3                     outsider-only reply (vs no reply)     return_90d  276   0.92  0.25  3.38 0.895 0.895
+4                               c2v fit x insider reply     return_90d  368   1.98  0.76  5.15 0.161 0.725
+5                         insider reply (vs all others)    return_180d  402   1.28  0.55  2.98 0.564 0.853
+6                         insider reply (vs all others)   regular_180d  303   1.28  0.45  3.65 0.646 0.853
+7         c2v fit -> gets an insider reply (replied-to)  insider_reply   79   0.15  0.03  0.68 0.013 0.120
+8  text alignment -> gets an insider reply (replied-to)  insider_reply   80   1.23  0.42  3.55 0.709 0.853
+
+larger embedding: 3200 + 3168 users, vocabulary 7487
+validity own > random: 0.568; spearman with small c2v: 0.65; own vs placebo fit: 0.68
+
+=== 3. Larger embedding training set ===
+                                         label       outcome    n effect ci_lo ci_hi     p fdr_p
+0                               larger c2v fit    return_90d  369   1.42  0.99  2.05 0.058 0.146
+1                               larger c2v fit   regular_90d  206   1.53  0.72  3.23 0.271 0.357
+2             larger c2v fit, + text alignment    return_90d  369   1.47  1.00  2.16 0.049 0.146
+3  placebo: larger c2v fit to random subreddit    return_90d  369   1.43  1.00  2.05 0.053 0.146
+4                larger c2v fit, + placebo fit    return_90d  369   1.24  0.78  1.97 0.362 0.362
+5                placebo fit, + larger c2v fit    return_90d  369   1.24  0.78  1.98 0.361 0.362
+6                               larger c2v fit   return_180d  402   1.49  1.13  1.96 0.004 0.042
+7                               larger c2v fit  regular_180d  303   1.58  0.95  2.63 0.081 0.161
+8                larger c2v fit, + placebo fit   return_180d  402   1.29  0.85  1.97 0.230 0.357
+9                placebo fit, + larger c2v fit   return_180d  402   1.25  0.83  1.88 0.286 0.357
+
+raw rates by within-post quartile of the larger c2v fit:
+        return_90d  return_180d  regular_180d
+c2v_q                                       
+0.0         0.190        0.222         0.063
+1.0         0.188        0.297         0.139
+2.0         0.236        0.337         0.146
+3.0         0.286        0.348         0.134

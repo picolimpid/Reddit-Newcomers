@@ -1,0 +1,16 @@
+embedding vocabulary: 15247
+newcomers: 2410 | high/low per measure: {'c2v': 627, 'text': 627, 'recent': 576}
+
+F5: newcomers with >= 1 profiled interlocutor: 2371 of 2410
+by c2v group: {'tie_any_member': {'high': 0.332, 'low': 0.165}, 'tie_any_regular': {'high': 0.163, 'low': 0.061}, 'social_fit': {'high': 0.421, 'low': 0.283}}
+spearman own fit vs social fit: 0.606
+                                        label     n  effect  ci_lo  ci_hi      p  fdr_p
+0        own fit -> talked to a member before  2076   1.725  1.465  2.032  0.000  0.000
+1               own fit -> interlocutors' fit  2369   0.550  0.509  0.592  0.000  0.000
+2            talked to a member -> return 90d  1935   1.062  0.913  1.235  0.437  0.562
+3           talked to a regular -> return 90d  1935   1.037  0.900  1.194  0.618  0.652
+4            interlocutors' fit -> return 90d  1933   1.239  1.056  1.454  0.009  0.013
+5           interlocutors' fit -> return 180d  2074   1.340  1.154  1.554  0.000  0.000
+6   own fit | social fit + ties -> return 90d  1933   1.584  1.309  1.916  0.000  0.000
+7  own fit | social fit + ties -> return 180d  2074   1.640  1.366  1.969  0.000  0.000
+8          social fit | own fit -> return 90d  1933   0.957  0.791  1.158  0.652  0.652

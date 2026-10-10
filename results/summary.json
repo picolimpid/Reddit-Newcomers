@@ -1,0 +1,194 @@
+{
+  "sample": {
+    "posts": 80,
+    "pairs_sampled": 3200,
+    "pairs_with_history": 3081,
+    "newcomers_12m": 479,
+    "newcomers_6m": 652,
+    "newcomers_3m": 865,
+    "existing": 2209,
+    "unique_newcomer_users": 479,
+    "newcomer_share_of_sampled": 0.1496875,
+    "by_sub": {
+      "gaming": 68,
+      "movies": 95,
+      "science": 222,
+      "technology": 94
+    }
+  },
+  "desc_newcomers": {
+    "reply_received": {
+      "mean": 0.2902,
+      "50%": 0.0,
+      "std": 0.4543
+    },
+    "n_replies": {
+      "mean": 0.5929,
+      "50%": 0.0,
+      "std": 1.8028
+    },
+    "reengaged": {
+      "mean": 0.1608,
+      "50%": 0.0,
+      "std": 0.3677
+    },
+    "depth": {
+      "mean": 0.7474,
+      "50%": 0.0,
+      "std": 1.6932
+    },
+    "top_level": {
+      "mean": 0.4468,
+      "50%": 0.0,
+      "std": 0.4977
+    },
+    "entry_delay_min": {
+      "mean": 1577.5423,
+      "50%": 315.2333,
+      "std": 8438.6279
+    },
+    "n_hist": {
+      "mean": 91.0125,
+      "50%": 96.0,
+      "std": 31.3816
+    },
+    "hist_n_subs": {
+      "mean": 31.6764,
+      "50%": 30.0,
+      "std": 15.2272
+    },
+    "mini_mean": {
+      "mean": 0.1561,
+      "50%": 0.1516,
+      "std": 0.1112
+    },
+    "mini_top5": {
+      "mean": 0.2245,
+      "50%": 0.2145,
+      "std": 0.073
+    },
+    "mpnet_mean": {
+      "mean": 0.1562,
+      "50%": 0.1502,
+      "std": 0.1154
+    },
+    "mpnet_top5": {
+      "mean": 0.2211,
+      "50%": 0.2093,
+      "std": 0.0821
+    }
+  },
+  "validity": {
+    "mini_mean_vs_othersub": {
+      "mean_true": 0.15611420692849248,
+      "mean_other": 0.12527825262826248,
+      "share_true_gt_other": 0.5741127348643006,
+      "wilcoxon_p": 3.531039160995744e-05
+    },
+    "mini_top5_vs_othersub": {
+      "mean_true": 0.22446351926112723,
+      "mean_other": 0.19965032708980843,
+      "share_true_gt_other": 0.5803757828810021,
+      "wilcoxon_p": 7.854951906688029e-08
+    },
+    "mini_mean_vs_samesub": {
+      "n": 479,
+      "mean_true": 0.15611420692849248,
+      "mean_other": 0.13077066217985156,
+      "share_true_gt_other": 0.5511482254697286,
+      "wilcoxon_p": 0.00027579746107853363
+    },
+    "spearman": {
+      "mini_mean": {
+        "mini_mean": 1.0,
+        "mini_top5": 0.759,
+        "mini_recency": 0.945,
+        "mini_top10": 0.809,
+        "mpnet_mean": 0.81,
+        "mpnet_top5": 0.671
+      },
+      "mini_top5": {
+        "mini_mean": 0.759,
+        "mini_top5": 1.0,
+        "mini_recency": 0.757,
+        "mini_top10": 0.978,
+        "mpnet_mean": 0.647,
+        "mpnet_top5": 0.833
+      },
+      "mini_recency": {
+        "mini_mean": 0.945,
+        "mini_top5": 0.757,
+        "mini_recency": 1.0,
+        "mini_top10": 0.808,
+        "mpnet_mean": 0.788,
+        "mpnet_top5": 0.676
+      },
+      "mini_top10": {
+        "mini_mean": 0.809,
+        "mini_top5": 0.978,
+        "mini_recency": 0.808,
+        "mini_top10": 1.0,
+        "mpnet_mean": 0.695,
+        "mpnet_top5": 0.836
+      },
+      "mpnet_mean": {
+        "mini_mean": 0.81,
+        "mini_top5": 0.647,
+        "mini_recency": 0.788,
+        "mini_top10": 0.695,
+        "mpnet_mean": 1.0,
+        "mpnet_top5": 0.784
+      },
+      "mpnet_top5": {
+        "mini_mean": 0.671,
+        "mini_top5": 0.833,
+        "mini_recency": 0.676,
+        "mini_top10": 0.836,
+        "mpnet_mean": 0.784,
+        "mpnet_top5": 1.0
+      }
+    },
+    "align_newcomer_vs_existing": {
+      "mini_mean": {
+        "0": 0.15611420692849248,
+        "1": 0.2043592733678072
+      },
+      "mini_top5": {
+        "0": 0.22446351926112723,
+        "1": 0.259362826369207
+      }
+    }
+  },
+  "newcomer_vs_existing": [
+    {
+      "outcome": "reply_received",
+      "n": 2688,
+      "rate_newcomer": 0.29018789144050106,
+      "rate_existing": 0.35898596650067904,
+      "ratio": 0.9473872174572863,
+      "ci_lo": 0.7426544355270966,
+      "ci_hi": 1.2085601281899454,
+      "p": 0.6635017686500495
+    },
+    {
+      "outcome": "n_replies",
+      "n": 2688,
+      "rate_newcomer": 0.592901878914405,
+      "rate_existing": 0.8945224083295609,
+      "ratio": 1.004545184523178,
+      "ci_lo": 0.8043084320513769,
+      "ci_hi": 1.2546319142458608,
+      "p": 0.968107172278119
+    },
+    {
+      "outcome": "reengaged",
+      "n": 2688,
+      "rate_newcomer": 0.16075156576200417,
+      "rate_existing": 0.22227252150294252,
+      "ratio": 0.724065823508951,
+      "ci_lo": 0.5347403485209696,
+      "ci_hi": 0.9804222146762808,
+      "p": 0.03681089272950346
+    }
+  ]
+}

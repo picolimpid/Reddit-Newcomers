@@ -1,0 +1,21 @@
+embedding vocabulary: 7487
+newcomers: 479 | high/low per measure: {'c2v': 112, 'text': 112, 'recent': 97}
+
+returners with in-community items: 146; items 729
+
+=== F3. What returners do inside the community (180 days) ===
+                                                                            c2v: hi/lo c2v: eff c2v: p c2v: fdr    text: hi/lo text: eff text: p text: fdr  recent: hi/lo recent: eff recent: p recent: fdr
+outcome              label                                                                                                                                                                                 
+insub_days_first     days until first return                               42.6 / 44.8     0.06  0.633    0.945    46.2 / 50.8     -0.05   0.693     0.987    51.4 / 49.8        0.06     0.601       0.945
+insub_early_share    share within 6 h of thread creation (browsing new)  0.612 / 0.444     0.14  0.257    0.945  0.579 / 0.522     -0.04   0.835     0.987  0.702 / 0.455        0.15     0.184       0.945
+insub_len            mean length (log words)                               3.25 / 3.04     0.03  0.797    0.945    2.88 / 3.11     -0.02   0.830     0.987    3.05 / 2.93        0.04     0.702       0.945
+insub_log_n          # contributions (log)                                 1.22 / 1.22     0.02  0.891    0.945    1.14 / 1.46     -0.07   0.591     0.987    1.15 / 1.33        0.06     0.677       0.945
+insub_months         # active 30-day blocks                                1.61 / 1.75     0.97  0.744    0.945       1.42 / 2      0.92   0.199     0.864    1.53 / 1.75        1.04     0.706       0.945
+insub_ordinary_share share in threads with < 100 comments                 0.16 / 0.105    -0.03  0.856    0.945   0.201 / 0.15      0.17   0.464     0.987  0.117 / 0.123       -0.06     0.710       0.945
+insub_post_share     share that are posts (submissions)                          0 / 0     0.02  0.670    0.945          0 / 0      0.05   0.456     0.987          0 / 0        0.01     0.846       0.996
+insub_question       share asking a question                             0.187 / 0.167     0.01  0.945    0.945   0.21 / 0.169      0.10   0.609     0.987  0.156 / 0.205        0.01     0.970       0.996
+insub_reply_share    share that are replies to comments (conversation)   0.671 / 0.568    -0.16  0.176    0.945    0.47 / 0.68     -0.07   0.582     0.987   0.649 / 0.52       -0.08     0.496       0.945
+insub_score          mean score received (asinh)                          1.87 / 0.948     0.16  0.203    0.945    1.53 / 1.37      0.00   0.978     0.989    1.73 / 1.49        0.09     0.296       0.945
+insub_span_days      days between first and last contribution              37.1 / 41.1    -0.07  0.543    0.945    20.1 / 52.3     -0.24   0.078     0.505    28.5 / 45.9       -0.08     0.508       0.945
+insub_threads        # distinct threads                                    2.05 / 3.17     0.96  0.810    0.945    1.94 / 3.93      0.76   0.058     0.505    2.03 / 3.79        1.00     0.996       0.996
+insub_viral_share    share in threads with >= 1000 comments              0.288 / 0.216     0.10  0.513    0.945  0.268 / 0.272      0.00   0.989     0.989  0.304 / 0.215        0.05     0.727       0.945

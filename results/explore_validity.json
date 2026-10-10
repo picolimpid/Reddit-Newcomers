@@ -1,0 +1,25 @@
+{
+ "struct_fit": {
+  "own_mean": 0.14365438531578306,
+  "random_mean": 0.10698816861861164,
+  "share_own_gt_random": 0.6304801670146137,
+  "n": 479
+ },
+ "struct_neighbor": {
+  "own_mean": 0.06613763369743705,
+  "random_mean": 0.05426166065112483,
+  "share_own_gt_random": 0.5177453027139874,
+  "n": 479
+ },
+ "corr_struct_vs_text_newcomers": 0.24560234423781482,
+ "struct_fit_existing_mean (in-sample, optimistic)": 0.41345280892173175,
+ "struct_fit_newcomer_mean": 0.14365438531578306,
+ "op_replied_rate": 0.012526096033402923,
+ "downvoted_rate": 0.0918580375782881,
+ "regular_90d_rate": 0.07724425887265135,
+ "c2v_share_own_gt_random": 0.6352201257861635,
+ "corr_c2v_vs_struct_text": {
+  "struct_fit": 0.5553755634542021,
+  "pp_mini_mean": 0.09663434332444591
+ }
+}

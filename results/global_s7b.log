@@ -1,0 +1,41 @@
+3776 subjects
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|##########| 201/201 [00:00<00:00, 40873.42it/s]
+[transformers] [1mRobertaForSequenceClassification LOAD REPORT[0m from: cardiffnlp/twitter-roberta-base-sentiment-latest
+Key                         | Status     |  | 
+----------------------------+------------+--+-
+roberta.pooler.dense.bias   | UNEXPECTED |  | 
+roberta.pooler.dense.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|##########| 201/201 [00:00<00:00, 40202.91it/s]
+sentiment/toxicity done
+Loading weights:   0%|          | 0/434 [00:00<?, ?it/s]Loading weights:   1%|1         | 5/434 [00:00<00:09, 47.57it/s]Loading weights:   2%|2         | 10/434 [00:00<00:12, 34.68it/s]Loading weights:   3%|3         | 14/434 [00:00<00:14, 28.20it/s]Loading weights:   5%|4         | 20/434 [00:00<00:11, 34.53it/s]Loading weights:   6%|5         | 25/434 [00:00<00:14, 27.37it/s]Loading weights:   8%|7         | 34/434 [00:01<00:11, 33.66it/s]Loading weights:   9%|8         | 39/434 [00:01<00:11, 34.09it/s]Loading weights:  10%|#         | 45/434 [00:01<00:10, 38.38it/s]Loading weights:  12%|#1        | 50/434 [00:01<00:14, 26.65it/s]Loading weights:  12%|#2        | 54/434 [00:01<00:15, 25.02it/s]Loading weights:  14%|#3        | 59/434 [00:02<00:14, 25.55it/s]Loading weights:  15%|#5        | 67/434 [00:02<00:11, 30.77it/s]Loading weights:  16%|#6        | 71/434 [00:02<00:12, 28.03it/s]Loading weights:  17%|#7        | 74/434 [00:02<00:14, 24.70it/s]Loading weights:  18%|#7        | 77/434 [00:02<00:14, 24.50it/s]Loading weights:  19%|#8        | 82/434 [00:02<00:12, 28.73it/s]Loading weights:  20%|#9        | 86/434 [00:03<00:14, 24.19it/s]Loading weights:  21%|##1       | 93/434 [00:03<00:13, 25.93it/s]Loading weights:  22%|##2       | 97/434 [00:03<00:12, 27.45it/s]Loading weights:  24%|##4       | 105/434 [00:03<00:09, 36.27it/s]Loading weights:  25%|##5       | 110/434 [00:03<00:08, 37.39it/s]Loading weights:  26%|##6       | 115/434 [00:03<00:09, 35.17it/s]Loading weights:  27%|##7       | 119/434 [00:03<00:10, 30.19it/s]Loading weights:  28%|##8       | 123/434 [00:04<00:10, 30.64it/s]Loading weights:  29%|##9       | 128/434 [00:04<00:09, 32.91it/s]Loading weights:  32%|###1      | 137/434 [00:04<00:06, 45.17it/s]Loading weights:  35%|###5      | 152/434 [00:04<00:04, 68.69it/s]Loading weights:  37%|###6      | 160/434 [00:04<00:04, 68.18it/s]Loading weights:  39%|###8      | 168/434 [00:04<00:05, 50.17it/s]Loading weights:  40%|####      | 174/434 [00:05<00:06, 41.77it/s]Loading weights:  41%|####1     | 179/434 [00:05<00:06, 38.48it/s]Loading weights:  44%|####4     | 192/434 [00:05<00:04, 52.53it/s]Loading weights:  47%|####6     | 202/434 [00:05<00:03, 59.38it/s]Loading weights:  48%|####8     | 209/434 [00:05<00:03, 56.61it/s]Loading weights:  50%|#####     | 217/434 [00:05<00:03, 56.68it/s]Loading weights: 100%|##########| 434/434 [00:05<00:00, 74.77it/s]
+stance done: 1534 first-comment pairs, 2050 reply pairs
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 3375.53it/s]
+saved (3776, 23)
+newcomer_12m               0       1
+answered_replier       0.082   0.048
+exchange_turns         0.164   0.089
+question               0.181   0.187
+n_words               19.259  17.988
+rate_i                 0.030   0.033
+rate_you               0.019   0.019
+rate_we                0.004   0.004
+rate_hedge             0.005   0.004
+exclaim                0.134   0.121
+laugh                  0.065   0.078
+sentiment             -0.041  -0.044
+insult                 0.064   0.066
+toxicity               0.126   0.114
+stance_disagree        0.301   0.296
+stance_agree           0.213   0.229
+p_disagree             0.298   0.295
+reply_tone_sentiment  -0.166  -0.174
+reply_tone_insult      0.157   0.106
+reply_tone_disagree    0.436   0.393
+sim_thread             0.370   0.381
+sim_post               0.160   0.170
+sim_parent             0.309   0.317
+sim_own_history        0.260   0.236

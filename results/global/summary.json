@@ -1,0 +1,273 @@
+{
+  "sample": {
+    "posts": 247,
+    "pairs_sampled": 4924,
+    "pairs_with_history": 4556,
+    "newcomers_12m": 2413,
+    "newcomers_6m": 2630,
+    "newcomers_3m": 2878,
+    "existing": 1363,
+    "unique_newcomer_users": 2410,
+    "newcomer_share_of_sampled": 0.49004874086108857,
+    "by_sub": {
+      "AbsoluteUnits": 8,
+      "AccidentalRenaissance": 64,
+      "Amazing": 54,
+      "Amigurumi": 13,
+      "AnimalsBeingBros": 34,
+      "AnimalsBeingDerps": 30,
+      "AnimalsBeingGeniuses": 13,
+      "ArcRaiders": 8,
+      "BatmanArkham": 18,
+      "BeAmazed": 33,
+      "BrandNewSentence": 23,
+      "CoupleMemes": 26,
+      "Damnthatsinteresting": 8,
+      "DiWHY": 10,
+      "Eyebleach": 30,
+      "Fauxmoi": 7,
+      "Frieren": 14,
+      "FunnyAnimals": 9,
+      "GuysBeingDudes": 166,
+      "HumansBeingBros": 14,
+      "KidsAreFuckingStupid": 41,
+      "LinkedInLunatics": 4,
+      "MadeMeSmile": 61,
+      "MurderedByWords": 4,
+      "NonPoliticalTwitter": 4,
+      "OneOrangeBraincell": 37,
+      "Pareidolia": 14,
+      "PastAndPresentPics": 15,
+      "QuotesPorn": 16,
+      "Satisfyingasfuck": 16,
+      "ShitAmericansSay": 8,
+      "Silksong": 7,
+      "SipsTea": 219,
+      "Snorkblot": 115,
+      "StrangerThings": 32,
+      "TVTooHigh": 10,
+      "TikTokCringe": 6,
+      "Unexpected": 7,
+      "WatchPeopleDieInside": 213,
+      "Weird": 33,
+      "Whatcouldgowrong": 21,
+      "abandoned": 13,
+      "agedlikewine": 41,
+      "airplaneears": 11,
+      "animalsdoingstuff": 22,
+      "bald": 85,
+      "blackmagicfuckery": 29,
+      "cats": 37,
+      "comedyheaven": 47,
+      "confession": 13,
+      "confidentlyincorrect": 15,
+      "fixedbytheduet": 13,
+      "foundsatan": 71,
+      "goodnews": 12,
+      "illinois": 11,
+      "inflation": 9,
+      "interesting": 36,
+      "interestingasfuck": 28,
+      "lol": 7,
+      "madlads": 33,
+      "meirl": 44,
+      "mildlyinteresting": 8,
+      "nextfuckinglevel": 38,
+      "oddlysatisfying": 21,
+      "okbuddycinephile": 10,
+      "oregon": 8,
+      "pics": 6,
+      "pranks": 28,
+      "rareinsults": 45,
+      "rarepuppers": 13,
+      "shittymoviedetails": 9,
+      "spaceporn": 16,
+      "spreadsmile": 13,
+      "sssdfg": 12,
+      "technicallythetruth": 16,
+      "teslastockholders": 10,
+      "toptalent": 14,
+      "weddingshaming": 11,
+      "whatisit": 7,
+      "whenthe": 19,
+      "wholesome": 15,
+      "woahdude": 17,
+      "youseeingthisshit": 35
+    }
+  },
+  "desc_newcomers": {
+    "reply_received": {
+      "mean": 0.2138,
+      "50%": 0.0,
+      "std": 0.4101
+    },
+    "n_replies": {
+      "mean": 0.4202,
+      "50%": 0.0,
+      "std": 1.3305
+    },
+    "reengaged": {
+      "mean": 0.0908,
+      "50%": 0.0,
+      "std": 0.2873
+    },
+    "depth": {
+      "mean": 0.5106,
+      "50%": 0.0,
+      "std": 1.4856
+    },
+    "top_level": {
+      "mean": 0.6092,
+      "50%": 1.0,
+      "std": 0.488
+    },
+    "entry_delay_min": {
+      "mean": 2467.7471,
+      "50%": 417.1667,
+      "std": 9099.5316
+    },
+    "n_hist": {
+      "mean": 94.4281,
+      "50%": 95.0,
+      "std": 32.4363
+    },
+    "hist_n_subs": {
+      "mean": 34.1467,
+      "50%": 33.0,
+      "std": 15.0649
+    },
+    "mini_mean": {
+      "mean": 0.2068,
+      "50%": 0.2093,
+      "std": 0.0978
+    },
+    "mini_top5": {
+      "mean": 0.2268,
+      "50%": 0.2239,
+      "std": 0.0498
+    },
+    "mpnet_mean": {
+      "mean": 0.1822,
+      "50%": 0.1827,
+      "std": 0.0974
+    },
+    "mpnet_top5": {
+      "mean": 0.2155,
+      "50%": 0.2134,
+      "std": 0.053
+    }
+  },
+  "validity": {
+    "mini_mean_vs_othersub": {
+      "mean_true": 0.20675411730152116,
+      "mean_other": 0.18822986875347716,
+      "share_true_gt_other": 0.5694156651471197,
+      "wilcoxon_p": 2.3702743280344755e-13
+    },
+    "mini_top5_vs_othersub": {
+      "mean_true": 0.22683392321846074,
+      "mean_other": 0.21509060029741695,
+      "share_true_gt_other": 0.5735598839618732,
+      "wilcoxon_p": 5.236190249979344e-18
+    },
+    "mini_mean_vs_samesub": {
+      "n": 1942,
+      "mean_true": 0.2066784190616965,
+      "mean_other": 0.1927703674271144,
+      "share_true_gt_other": 0.5314109165808445,
+      "wilcoxon_p": 3.469587967894009e-07
+    },
+    "spearman": {
+      "mini_mean": {
+        "mini_mean": 1.0,
+        "mini_top5": 0.655,
+        "mini_recency": 0.946,
+        "mini_top10": 0.729,
+        "mpnet_mean": 0.814,
+        "mpnet_top5": 0.528
+      },
+      "mini_top5": {
+        "mini_mean": 0.655,
+        "mini_top5": 1.0,
+        "mini_recency": 0.65,
+        "mini_top10": 0.969,
+        "mpnet_mean": 0.564,
+        "mpnet_top5": 0.741
+      },
+      "mini_recency": {
+        "mini_mean": 0.946,
+        "mini_top5": 0.65,
+        "mini_recency": 1.0,
+        "mini_top10": 0.728,
+        "mpnet_mean": 0.769,
+        "mpnet_top5": 0.528
+      },
+      "mini_top10": {
+        "mini_mean": 0.729,
+        "mini_top5": 0.969,
+        "mini_recency": 0.728,
+        "mini_top10": 1.0,
+        "mpnet_mean": 0.619,
+        "mpnet_top5": 0.744
+      },
+      "mpnet_mean": {
+        "mini_mean": 0.814,
+        "mini_top5": 0.564,
+        "mini_recency": 0.769,
+        "mini_top10": 0.619,
+        "mpnet_mean": 1.0,
+        "mpnet_top5": 0.676
+      },
+      "mpnet_top5": {
+        "mini_mean": 0.528,
+        "mini_top5": 0.741,
+        "mini_recency": 0.528,
+        "mini_top10": 0.744,
+        "mpnet_mean": 0.676,
+        "mpnet_top5": 1.0
+      }
+    },
+    "align_newcomer_vs_existing": {
+      "mini_mean": {
+        "0": 0.20675411730152116,
+        "1": 0.22608672907836982
+      },
+      "mini_top5": {
+        "0": 0.22683392321846074,
+        "1": 0.2341882079041625
+      }
+    }
+  },
+  "newcomer_vs_existing": [
+    {
+      "outcome": "reply_received",
+      "n": 3598,
+      "rate_newcomer": 0.2138416908412764,
+      "rate_existing": 0.2846661775495231,
+      "ratio": 0.857559488917982,
+      "ci_lo": 0.6738937847817629,
+      "ci_hi": 1.0912821777565862,
+      "p": 0.2114355126867844
+    },
+    {
+      "outcome": "n_replies",
+      "n": 3598,
+      "rate_newcomer": 0.4202237878159967,
+      "rate_existing": 0.76008804108584,
+      "ratio": 0.9525743302983736,
+      "ci_lo": 0.7229641057898408,
+      "ci_hi": 1.2551077535890385,
+      "p": 0.7298849475163929
+    },
+    {
+      "outcome": "reengaged",
+      "n": 3076,
+      "rate_newcomer": 0.09075839204309988,
+      "rate_existing": 0.1467351430667645,
+      "ratio": 0.646155331047719,
+      "ci_lo": 0.47130470055461354,
+      "ci_hi": 0.8858742791023928,
+      "p": 0.00667311269634803
+    }
+  ]
+}

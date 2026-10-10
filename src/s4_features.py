@@ -132,8 +132,10 @@ def alignment(model_name, mask, prefix, extra=True):
     E = np.vstack(chunks)
     owner = np.array(owner)
     subs = posts.subreddit.values
+    centroids = {}
     for i in sub.index:
         H = E[owner == i]
+        centroids[i] = H.mean(axis=0) / np.linalg.norm(H.mean(axis=0))
         ages = np.array([a for _, a in hist_texts[int(df.at[i, "hist_idx"])]])
         p = P[pidx[df.at[i, "post_id"]]]
 
@@ -156,6 +158,10 @@ def alignment(model_name, mask, prefix, extra=True):
             same = np.where((subs == df.at[i, "subreddit"])
                             & (np.array(post_ids) != df.at[i, "post_id"]))[0]
             df.at[i, f"{prefix}_mean_samesub"] = mean_sim(P[rng.choice(same)]) if len(same) else np.nan
+    # user history centroids (row index -> vector), reused by the comment-content stage
+    np.save(os.path.join(DATA, f"user_centroids_{prefix}.npy"),
+            np.vstack([centroids[i] for i in sub.index]).astype(np.float32))
+    np.save(os.path.join(DATA, f"user_centroids_{prefix}_idx.npy"), np.array(sub.index))
 
 
 has_hist = df.hist_idx.notna()

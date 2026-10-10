@@ -1,0 +1,42 @@
+pairs: 4924 | newcomers(12m): 2413 | existing: 1363 | with history: 4556
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 3961.53it/s]
+mini encoding 451141 history items
+  mini chunk 1/23
+  mini chunk 2/23
+  mini chunk 3/23
+  mini chunk 4/23
+  mini chunk 5/23
+  mini chunk 6/23
+  mini chunk 7/23
+  mini chunk 8/23
+  mini chunk 9/23
+  mini chunk 10/23
+  mini chunk 11/23
+  mini chunk 12/23
+  mini chunk 13/23
+  mini chunk 14/23
+  mini chunk 15/23
+  mini chunk 16/23
+  mini chunk 17/23
+  mini chunk 18/23
+  mini chunk 19/23
+  mini chunk 20/23
+  mini chunk 21/23
+  mini chunk 22/23
+  mini chunk 23/23
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights:  26%|##6       | 52/199 [00:00<00:00, 518.51it/s]Loading weights: 100%|##########| 199/199 [00:00<00:00, 1030.18it/s]
+mpnet encoding 227855 history items
+  mpnet chunk 1/12
+  mpnet chunk 2/12
+  mpnet chunk 3/12
+  mpnet chunk 4/12
+  mpnet chunk 5/12
+  mpnet chunk 6/12
+  mpnet chunk 7/12
+  mpnet chunk 8/12
+  mpnet chunk 9/12
+  mpnet chunk 10/12
+  mpnet chunk 11/12
+  mpnet chunk 12/12
+saved (4924, 37)

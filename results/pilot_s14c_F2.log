@@ -1,0 +1,28 @@
+embedding vocabulary: 7487
+newcomers: 479 | high/low per measure: {'c2v': 112, 'text': 112, 'recent': 97}
+
+=== F2. Reddit-wide behavior in the 90 days after (adjusted for before) ===
+                                                                                  c2v: hi/lo c2v: eff c2v: p c2v: fdr        text: hi/lo text: eff text: p text: fdr      recent: hi/lo recent: eff recent: p recent: fdr
+outcome                      label                                                                                                                                                                                       
+active_days_after            after: active_days (| before)                       38.4 / 44.5     0.01  0.864    0.942        41.3 / 39.9      0.01   0.748     0.936        45.2 / 46.2        0.04     0.413       0.975
+comments_per_day_after       after: comments_per_day (| before)                    0.853 / 1     0.02  0.637    0.942      0.963 / 0.901      0.01   0.829     0.936        1.04 / 1.04        0.04     0.318       0.975
+exclaim_after                after: exclaim (| before)                        0.0789 / 0.107     0.02  0.686    0.942     0.0811 / 0.112     -0.03   0.536     0.936      0.078 / 0.111        0.00     0.926       0.975
+insult_after                 after: insult (| before)                        0.0748 / 0.0698    -0.01  0.792    0.942     0.062 / 0.0608     -0.05   0.220     0.936    0.0751 / 0.0651        0.03     0.604       0.975
+laugh_after                  after: laugh (| before)                         0.0427 / 0.0824    -0.02  0.601    0.942    0.0613 / 0.0729     -0.02   0.737     0.936     0.043 / 0.0793        0.01     0.817       0.975
+log_comment_post_ratio_after after: log_comment_post_ratio (| before)            3.56 / 3.77    -0.06  0.129    0.568        3.63 / 3.73     -0.04   0.420     0.936           4 / 3.83       -0.02     0.522       0.975
+log_new_subs                 after: new subreddits (log)                         2.72 / 2.88    -0.06  0.104    0.568        2.87 / 2.73     -0.01   0.781     0.936        3.01 / 2.96       -0.02     0.639       0.975
+log_words_after              after: log_words (| before)                         2.98 / 2.95     0.02  0.601    0.942        2.98 / 2.97      0.01   0.882     0.936        2.92 / 2.93        0.00     0.975       0.975
+n_subreddits_after           after: n_subreddits (| before)                      3.24 / 3.39    -0.03  0.390    0.942        3.37 / 3.26     -0.03   0.479     0.936        3.55 / 3.46        0.01     0.878       0.975
+nbr_fit_after                after: nbr_fit (| before)                         0.621 / 0.371     0.40  0.000    0.000      0.514 / 0.464      0.01   0.826     0.936      0.612 / 0.378        0.33     0.002       0.038
+post_share_after             after: post_share (| before)                    0.0277 / 0.0327     0.02  0.611    0.942    0.0238 / 0.0226      0.04   0.463     0.936    0.0195 / 0.0292       -0.03     0.404       0.975
+posts_per_day_after          after: posts_per_day (| before)                 0.0308 / 0.0493     0.07  0.007    0.080    0.0379 / 0.0336      0.03   0.304     0.936    0.0329 / 0.0433        0.05     0.079       0.873
+question_after               after: question (| before)                        0.201 / 0.213    -0.04  0.500    0.942      0.203 / 0.206     -0.02   0.713     0.936      0.207 / 0.204        0.01     0.922       0.975
+rate_hedge_after             after: rate_hedge (| before)                  0.00587 / 0.00584    -0.02  0.761    0.942  0.00605 / 0.00573      0.01   0.831     0.936  0.00607 / 0.00622       -0.06     0.266       0.975
+rate_i_after                 after: rate_i (| before)                        0.0347 / 0.0322     0.04  0.359    0.942    0.0323 / 0.0342      0.01   0.881     0.936    0.0316 / 0.0316        0.01     0.779       0.975
+rate_we_after                after: rate_we (| before)                     0.00477 / 0.00519    -0.08  0.163    0.597   0.0048 / 0.00456      0.04   0.583     0.936  0.00452 / 0.00514       -0.04     0.501       0.975
+rate_you_after               after: rate_you (| before)                      0.0189 / 0.0204     0.00  0.960    0.960    0.0197 / 0.0205     -0.03   0.613     0.936    0.0198 / 0.0211       -0.02     0.714       0.975
+sentiment_after              after: sentiment (| before)                      -0.157 / -0.14     0.01  0.805    0.942     -0.16 / -0.112     -0.00   0.980     0.980     -0.185 / -0.13       -0.06     0.166       0.975
+sub_entropy_after            after: sub_entropy (| before)                        2.68 / 2.7    -0.07  0.046    0.336        2.81 / 2.62     -0.01   0.865     0.936        2.84 / 2.78       -0.04     0.284       0.975
+subs_per_10_items_after      after: subs_per_10_items (| before)                 3.82 / 3.14    -0.02  0.696    0.942        3.44 / 3.38     -0.01   0.893     0.936        3.33 / 3.02       -0.02     0.718       0.975
+target_sub_share_after       after: share of activity in target subreddit  0.00923 / 0.00616    -0.01  0.899    0.942  0.00876 / 0.00752     -0.01   0.848     0.936  0.00416 / 0.00371        0.05     0.274       0.975
+topic_sim_px_after           after: topic_sim_px (| before)                    0.163 / 0.128     0.01  0.837    0.942     0.214 / 0.0853      0.32   0.000     0.000      0.152 / 0.137        0.00     0.953       0.975

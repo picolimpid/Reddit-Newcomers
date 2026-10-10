@@ -1,0 +1,119 @@
+subreddits with an audience profile: 4 / 4
+c2v vocabulary: 1903 | targets covered: 4
+newcomers with return outcome: 479
+
+=== Main effects (per +1 SD, or 0/1 for binary) ===
+   family                                              label       outcome    n effect ci_lo  ci_hi     p fdr_p
+0       A                Structural fit (co-membership PPMI)    return_90d  369   0.82  0.59   1.14 0.239 0.566
+1       A                Structural fit (co-membership PPMI)  return_n_90d  375    NaN   NaN    NaN   NaN   NaN
+2       A                Structural fit (co-membership PPMI)   regular_90d  206   1.10  0.60   2.00 0.765 0.861
+3       A      Share of activity in S's neighbour subreddits    return_90d  369   0.85  0.59   1.22 0.373 0.566
+4       A      Share of activity in S's neighbour subreddits  return_n_90d  375    NaN   NaN    NaN   NaN   NaN
+5       A      Share of activity in S's neighbour subreddits   regular_90d  206   1.02  0.63   1.67 0.924 0.924
+6       A    Structural fit, + text alignment (pp_mini_mean)    return_90d  369   0.82  0.57   1.18 0.288 0.566
+7       A    Structural fit, + text alignment (pp_mini_mean)  return_n_90d  375    NaN   NaN    NaN   NaN   NaN
+8       A    Structural fit, + text alignment (pp_mini_mean)   regular_90d  206   1.09  0.58   2.04 0.792 0.861
+9       A      Community-embedding fit (community2vec-style)    return_90d  368   1.16  0.83   1.62 0.377 0.566
+10      A      Community-embedding fit (community2vec-style)  return_n_90d  374    NaN   NaN    NaN   NaN   NaN
+11      A      Community-embedding fit (community2vec-style)   regular_90d  205   1.37  0.77   2.45 0.288 0.784
+12      A          Community-embedding fit, + text alignment    return_90d  368   1.19  0.85   1.67 0.319 0.566
+13      A          Community-embedding fit, + text alignment  return_n_90d  374    NaN   NaN    NaN   NaN   NaN
+14      A          Community-embedding fit, + text alignment   regular_90d  205   1.37  0.76   2.47 0.300 0.784
+15      B                     Subreddit entropy (generalist)    return_90d  369   1.20  0.90   1.60 0.225 0.566
+16      B                     Subreddit entropy (generalist)  return_n_90d  375    NaN   NaN    NaN   NaN   NaN
+17      B                     Subreddit entropy (generalist)   regular_90d  206   1.28  0.71   2.32 0.413 0.784
+18      B          Share in top prior subreddit (specialist)    return_90d  369   0.81  0.58   1.13 0.211 0.566
+19      B          Share in top prior subreddit (specialist)  return_n_90d  375    NaN   NaN    NaN   NaN   NaN
+20      B          Share in top prior subreddit (specialist)   regular_90d  206   0.72  0.32   1.59 0.412 0.784
+21      C                          First comment got a reply    return_90d  369   1.09  0.47   2.49 0.843 0.909
+22      C                          First comment got a reply  return_n_90d  375    NaN   NaN    NaN   NaN   NaN
+23      C                          First comment got a reply   regular_90d  206   2.84  0.71  11.40 0.141 0.784
+24      C                        OP replied to first comment    return_90d  369   0.70  0.01  34.75 0.856 0.909
+25      C                        OP replied to first comment  return_n_90d  375    NaN   NaN    NaN   NaN   NaN
+26      C                        OP replied to first comment   regular_90d  206   4.09  0.03 520.55 0.569 0.791
+27      C            Within-post score rank of first comment    return_90d  369   1.21  0.88   1.67 0.237 0.566
+28      C            Within-post score rank of first comment  return_n_90d  375    NaN   NaN    NaN   NaN   NaN
+29      C            Within-post score rank of first comment   regular_90d  206   1.41  0.85   2.32 0.183 0.784
+30      C                           First comment score <= 0    return_90d  369   0.50  0.15   1.70 0.267 0.566
+31      C                           First comment score <= 0  return_n_90d  375    NaN   NaN    NaN   NaN   NaN
+32      C                           First comment score <= 0   regular_90d  206   0.00  0.00   0.00 0.000 0.000
+33      C               Reply tone: sentiment (replied only)    return_90d   64   0.77  0.20   3.04 0.712 0.865
+34      C               Reply tone: sentiment (replied only)  return_n_90d   64   0.85  0.38   1.93 0.701   NaN
+35      C               Reply tone: sentiment (replied only)   regular_90d   39   1.34  0.12  14.88 0.810 0.861
+36      C              Reply tone: max insult (replied only)    return_90d   64   0.74  0.26   2.10 0.574 0.751
+37      C              Reply tone: max insult (replied only)  return_n_90d   64   1.06  0.58   1.91 0.860   NaN
+38      C              Reply tone: max insult (replied only)   regular_90d   39   2.44  0.59  10.11 0.219 0.784
+39      D  Style fit to thread norm, | user's usual distance    return_90d  369   0.84  0.57   1.25 0.400 0.566
+40      D  Style fit to thread norm, | user's usual distance  return_n_90d  375    NaN   NaN    NaN   NaN   NaN
+41      D  Style fit to thread norm, | user's usual distance   regular_90d  206   0.83  0.46   1.48 0.527 0.791
+42      D                   Semantic fit to prior discussion    return_90d  369   0.76  0.51   1.13 0.174 0.566
+43      D                   Semantic fit to prior discussion  return_n_90d  375    NaN   NaN    NaN   NaN   NaN
+44      D                   Semantic fit to prior discussion   regular_90d  206   0.78  0.40   1.51 0.461 0.784
+45      D                           Semantic fit to the post    return_90d  369   0.82  0.56   1.22 0.339 0.566
+46      D                           Semantic fit to the post  return_n_90d  375    NaN   NaN    NaN   NaN   NaN
+47      D                           Semantic fit to the post   regular_90d  206   0.74  0.35   1.57 0.431 0.784
+48      D                       Entry delay (later = higher)    return_90d  369   0.97  0.41   2.34 0.955 0.955
+49      D                       Entry delay (later = higher)  return_n_90d  375    NaN   NaN    NaN   NaN   NaN
+50      D                       Entry delay (later = higher)   regular_90d  206   0.79  0.32   1.93 0.605 0.791
+
+=== Interactions (return_90d; ratio of ORs) ===
+                              label    n  n_posts effect ci_lo ci_hi     p fdr_p
+0  Alignment x reply received (RQ2)  369       48   1.32  0.53  3.34 0.552 0.915
+1            Alignment x OP replied  369       48   0.00  0.00  0.00 0.000 0.000
+2       Alignment x text post (RQ3)  369       48   0.66  0.24  1.82 0.426 0.915
+3  Alignment x high-newcomer thread  369       48   0.85  0.26  2.82 0.790 0.915
+4        Structural fit x text post  369       48   0.96  0.45  2.05 0.915 0.915
+5      Reply x high-newcomer thread  369       48   1.35  0.17 10.66 0.775 0.915
+
+=== Post-level newcomer share (subreddit FE) ===
+OR 0.82 [0.54, 1.23] p=0.332 n=479
+
+=== Validity / descriptives ===
+{
+ "struct_fit": {
+  "own_mean": 0.14365438531578306,
+  "random_mean": 0.10698816861861164,
+  "share_own_gt_random": 0.6304801670146137,
+  "n": 479
+ },
+ "struct_neighbor": {
+  "own_mean": 0.06613763369743705,
+  "random_mean": 0.05426166065112483,
+  "share_own_gt_random": 0.5177453027139874,
+  "n": 479
+ },
+ "corr_struct_vs_text_newcomers": 0.24560234423781482,
+ "struct_fit_existing_mean (in-sample, optimistic)": 0.41345280892173175,
+ "struct_fit_newcomer_mean": 0.14365438531578306,
+ "op_replied_rate": 0.012526096033402923,
+ "downvoted_rate": 0.0918580375782881,
+ "regular_90d_rate": 0.07724425887265135
+}
+
+=== Robustness (return_90d) ===
+                                         label    n  n_posts               effect           ci_lo                    ci_hi     p
+0      placebo: struct fit to random subreddit  369       48                 1.01            0.73                     1.39 0.972
+1        struct_fit + entropy + text alignment  369       48                 0.81            0.56                     1.18 0.276
+2          struct_fit, top-level comments only  127       27                 0.83            0.35                     1.96 0.666
+3         placebo: c2v fit to random subreddit  368       48                 1.02            0.74                     1.40 0.921
+4  c2v_fit + placebo + entropy + struct + text  368       48                 1.48            0.99                     2.22 0.057
+5                c2v_fit, entered in first 24h  309       42                 1.01            0.70                     1.46 0.948
+6                   c2v_fit, entered after 24h   13        4 10144007891127160.00 300335164272.32 342620206809842253824.00 0.000
+7         text alignment, entered in first 24h  310       42                 0.90            0.57                     1.41 0.637
+8            text alignment, entered after 24h   13        4                 0.00            0.00                      inf 1.000
+
+=== Raw 90-day return by within-post quartile ===
+     text_q  struct_q  c2v_q
+0.0   0.198     0.246  0.175
+1.0   0.248     0.228  0.270
+2.0   0.236     0.213  0.261
+3.0   0.223     0.205  0.214
+
+=== Raw 90-day return by entry delay ===
+           ret    n  reply    c2v   text
+delay_h                                 
+<1h      0.250   44  0.523  0.397  0.177
+1-3h     0.212   85  0.518  0.359  0.152
+3-12h    0.219  242  0.231  0.330  0.140
+12-48h   0.296   81  0.173  0.341  0.161
+>48h     0.259   27  0.074  0.287  0.183

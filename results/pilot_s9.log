@@ -1,0 +1,11 @@
+3081 users; 296107 history comments
+296107 comments resolved; 237462 unique engaged posts
+237260 posts found
+engaged posts per user: median 84.0 | users with >= 5 : 3081
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 3677.08it/s]
+pp_mini embedded 232936 posts
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights:  26%|##5       | 51/199 [00:00<00:00, 504.28it/s]Loading weights: 100%|##########| 199/199 [00:00<00:00, 1068.67it/s]
+pp_mpnet embedded 232936 posts
+saved (3081, 8) | scored users: 3081
+pilot exit 0

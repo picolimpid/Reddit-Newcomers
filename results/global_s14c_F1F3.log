@@ -1,0 +1,45 @@
+embedding vocabulary: 15247
+newcomers: 2410 | high/low per measure: {'c2v': 627, 'text': 627, 'recent': 576}
+
+=== F1. Entry and first comment ===
+                                                                   c2v: hi/lo c2v: eff c2v: p c2v: fdr         text: hi/lo text: eff text: p text: fdr      recent: hi/lo recent: eff recent: p recent: fdr
+outcome           label                                                                                                                                                                                    
+answered_replier  Thread: answered a replier                    0.246 / 0.243     0.65  0.175    0.501       0.228 / 0.151      1.26   0.382     0.850      0.207 / 0.298        0.56     0.094       0.540
+insult            Comment: insult                             0.0613 / 0.0639    -0.01  0.590    0.818       0.058 / 0.074     -0.02   0.505     0.914     0.067 / 0.0717       -0.02     0.433       0.650
+laugh             Comment: laughter/emoji                     0.0766 / 0.0845     1.00  0.995    0.995     0.0813 / 0.0734      1.02   0.900     0.996     0.059 / 0.0833        0.99     0.960       0.960
+log_delay         Entry: log minutes after post creation           6.26 / 6.4    -0.03  0.188    0.501         6.33 / 6.33      0.00   0.996     0.996         6.2 / 6.38       -0.03     0.166       0.540
+log_prior         Entry: log # comments already in thread         5.91 / 5.97    -0.01  0.322    0.643         5.91 / 5.95     -0.01   0.262     0.793        5.89 / 5.98       -0.01     0.519       0.650
+log_words         Comment: length (log words)                     2.44 / 2.39     0.04  0.064    0.323          2.4 / 2.46      0.03   0.257     0.793        2.42 / 2.39        0.04     0.075       0.540
+n_replies         Reception: # replies                           0.486 / 0.44     0.94  0.556    0.818        0.389 / 0.48      0.91   0.291     0.793      0.439 / 0.432        0.94     0.539       0.650
+question          Comment: asks a question                      0.179 / 0.171     1.03  0.739    0.869       0.193 / 0.174      1.03   0.721     0.914      0.181 / 0.184        1.04     0.670       0.706
+rate_i            Comment: 'I' rate                           0.0308 / 0.0334    -0.05  0.065    0.323     0.0326 / 0.0335     -0.01   0.653     0.914    0.0316 / 0.0346       -0.04     0.194       0.540
+rate_we           Comment: 'we' rate                          0.00454 / 0.003     0.03  0.226    0.501   0.00395 / 0.00426     -0.01   0.641     0.914  0.00433 / 0.00266        0.03     0.240       0.540
+rate_you          Comment: 'you' rate                         0.0236 / 0.0167     0.07  0.033    0.323     0.0174 / 0.0185     -0.01   0.777     0.914    0.0221 / 0.0173        0.04     0.243       0.540
+reengaged         Thread: commented again in thread           0.0989 / 0.0973     0.98  0.889    0.935      0.0893 / 0.075      1.13   0.317     0.793     0.0851 / 0.113        0.93     0.533       0.650
+reply_received    Reception: got a reply                          0.22 / 0.23     0.93  0.437    0.795       0.203 / 0.233      0.90   0.259     0.793       0.21 / 0.227        0.94     0.490       0.650
+reply_tone_insult Reception: insult in replies                 0.127 / 0.0778     0.04  0.584    0.818     0.0996 / 0.0859     -0.05   0.537     0.914     0.131 / 0.0882        0.06     0.481       0.650
+score_asinh       Reception: comment score (asinh)                1.54 / 1.42     0.00  0.830    0.923         1.42 / 1.48     -0.00   0.962     0.996        1.51 / 1.38        0.01     0.553       0.650
+sentiment         Comment: sentiment                        -0.048 / -0.00854    -0.01  0.613    0.818  -0.00818 / -0.0594      0.03   0.206     0.793   -0.063 / -0.0306       -0.02     0.342       0.650
+sim_post          Comment: similarity to post                    0.165 / 0.17    -0.03  0.206    0.501       0.182 / 0.172      0.03   0.297     0.793      0.165 / 0.171       -0.03     0.167       0.540
+sim_thread        Comment: similarity to prior discussion       0.372 / 0.383    -0.03  0.189    0.501       0.383 / 0.381     -0.01   0.672     0.914        0.37 / 0.38       -0.03     0.163       0.540
+stance_disagree   Comment: disagrees with parent (replies)      0.294 / 0.301     0.95  0.705    0.869       0.308 / 0.263      0.96   0.777     0.914      0.283 / 0.297        0.93     0.620       0.689
+top_level         Entry: first comment is top-level              0.593 / 0.64     0.84  0.014    0.276       0.622 / 0.604      1.10   0.226     0.793      0.595 / 0.632        0.89     0.123       0.540
+
+returners with in-community items: 598; items 2200
+
+=== F3. What returners do inside the community (180 days) ===
+                                                                               c2v: hi/lo c2v: eff c2v: p c2v: fdr      text: hi/lo text: eff text: p text: fdr     recent: hi/lo recent: eff recent: p recent: fdr
+outcome              label                                                                                                                                                                                         
+insub_days_first     days until first return                                  45.6 / 36.9     0.04  0.521    0.694      41.5 / 38.4      0.01   0.861     0.940       45.7 / 36.8        0.09     0.189       0.543
+insub_early_share    share within 6 h of thread creation (browsing new)     0.502 / 0.476    -0.01  0.872    0.944      0.5 / 0.501     -0.04   0.625     0.858     0.544 / 0.492        0.04     0.555       0.664
+insub_len            mean length (log words)                                  2.48 / 2.37     0.12  0.028    0.358      2.38 / 2.53      0.06   0.419     0.778       2.47 / 2.33        0.08     0.120       0.543
+insub_log_n          # contributions (log)                                     1.2 / 1.18     0.04  0.534    0.694      1.26 / 1.19      0.15   0.037     0.141       1.22 / 1.21        0.05     0.446       0.644
+insub_months         # active 30-day blocks                                   1.55 / 1.44     1.06  0.214    0.591      1.67 / 1.39      1.17   0.005     0.065       1.62 / 1.54        1.06     0.213       0.543
+insub_ordinary_share share in threads with < 100 comments                   0.205 / 0.288    -0.04  0.507    0.694     0.229 / 0.24      0.03   0.660     0.858     0.212 / 0.287       -0.07     0.251       0.543
+insub_post_share     share that are posts (submissions)                  0.00437 / 0.0192    -0.06  0.339    0.694  0.0114 / 0.0145      0.01   0.904     0.940  0.00271 / 0.0112        0.01     0.562       0.664
+insub_question       share asking a question                                0.148 / 0.182    -0.11  0.108    0.555    0.133 / 0.154     -0.12   0.128     0.332     0.161 / 0.173       -0.07     0.410       0.644
+insub_reply_share    share that are replies to comments (conversation)       0.466 / 0.34     0.10  0.128    0.555      0.402 / 0.4      0.03   0.606     0.858      0.452 / 0.36        0.07     0.218       0.543
+insub_score          mean score received (asinh)                              1.54 / 1.37     0.00  0.944    0.944      1.48 / 1.47     -0.09   0.192     0.416       1.48 / 1.27        0.01     0.832       0.832
+insub_span_days      days between first and last contribution                 30.2 / 22.1     0.09  0.227    0.591      35.8 / 24.1      0.17   0.044     0.141       34.2 / 29.3        0.08     0.358       0.644
+insub_threads        # distinct threads                                        2.82 / 2.7     1.08  0.387    0.694      3.04 / 2.36      1.24   0.026     0.141        2.5 / 2.68        1.13     0.064       0.543
+insub_viral_share    share in threads with >= 1000 comments                 0.309 / 0.359     0.01  0.901    0.944     0.31 / 0.333      0.01   0.940     0.940     0.314 / 0.342        0.02     0.721       0.781

@@ -1,0 +1,172 @@
+{
+ "posts": 80,
+ "pairs_sampled": 3200,
+ "pairs_with_history": 3081,
+ "newcomers_12m": 479,
+ "newcomers_6m": 652,
+ "newcomers_3m": 865,
+ "existing": 2209,
+ "unique_newcomer_users": 479,
+ "newcomer_share_of_sampled": 0.1496875,
+ "by_sub": {
+  "gaming": 68,
+  "movies": 95,
+  "science": 222,
+  "technology": 94
+ }
+}
+{
+ "mini_mean_vs_othersub": {
+  "mean_true": 0.15611420692849248,
+  "mean_other": 0.12527825262826248,
+  "share_true_gt_other": 0.5741127348643006,
+  "wilcoxon_p": 3.531039160995744e-05
+ },
+ "mini_top5_vs_othersub": {
+  "mean_true": 0.22446351926112723,
+  "mean_other": 0.19965032708980843,
+  "share_true_gt_other": 0.5803757828810021,
+  "wilcoxon_p": 7.854951906688029e-08
+ },
+ "mini_mean_vs_samesub": {
+  "n": 479,
+  "mean_true": 0.15611420692849248,
+  "mean_other": 0.13077066217985156,
+  "share_true_gt_other": 0.5511482254697286,
+  "wilcoxon_p": 0.00027579746107853363
+ },
+ "spearman": {
+  "mini_mean": {
+   "mini_mean": 1.0,
+   "mini_top5": 0.759,
+   "mini_recency": 0.945,
+   "mini_top10": 0.809,
+   "mpnet_mean": 0.81,
+   "mpnet_top5": 0.671
+  },
+  "mini_top5": {
+   "mini_mean": 0.759,
+   "mini_top5": 1.0,
+   "mini_recency": 0.757,
+   "mini_top10": 0.978,
+   "mpnet_mean": 0.647,
+   "mpnet_top5": 0.833
+  },
+  "mini_recency": {
+   "mini_mean": 0.945,
+   "mini_top5": 0.757,
+   "mini_recency": 1.0,
+   "mini_top10": 0.808,
+   "mpnet_mean": 0.788,
+   "mpnet_top5": 0.676
+  },
+  "mini_top10": {
+   "mini_mean": 0.809,
+   "mini_top5": 0.978,
+   "mini_recency": 0.808,
+   "mini_top10": 1.0,
+   "mpnet_mean": 0.695,
+   "mpnet_top5": 0.836
+  },
+  "mpnet_mean": {
+   "mini_mean": 0.81,
+   "mini_top5": 0.647,
+   "mini_recency": 0.788,
+   "mini_top10": 0.695,
+   "mpnet_mean": 1.0,
+   "mpnet_top5": 0.784
+  },
+  "mpnet_top5": {
+   "mini_mean": 0.671,
+   "mini_top5": 0.833,
+   "mini_recency": 0.676,
+   "mini_top10": 0.836,
+   "mpnet_mean": 0.784,
+   "mpnet_top5": 1.0
+  }
+ },
+ "align_newcomer_vs_existing": {
+  "mini_mean": {
+   "0": 0.15611420692849248,
+   "1": 0.2043592733678072
+  },
+  "mini_top5": {
+   "0": 0.22446351926112723,
+   "1": 0.259362826369207
+  }
+ }
+}
+           outcome       measure    model    n  n_posts    coef      se       p  effect   ci_lo   ci_hi
+0   reply_received     mini_mean    logit  395       51  0.0149  0.2132  0.9445  1.0150  0.6683  1.5414
+1        n_replies     mini_mean  poisson  395       51 -0.1462  0.2163  0.4989  0.8640  0.5655  1.3200
+2        reengaged     mini_mean    logit  337       39  0.5163  0.2487  0.0379  1.6758  1.0292  2.7285
+3   reply_received     mini_top5    logit  395       51  0.0553  0.1741  0.7509  1.0568  0.7512  1.4867
+4        n_replies     mini_top5  poisson  395       51 -0.1308  0.1807  0.4690  0.8774  0.6157  1.2502
+5        reengaged     mini_top5    logit  337       39  0.3258  0.2009  0.1048  1.3852  0.9344  2.0535
+6   reply_received  mini_recency    logit  395       51 -0.0289  0.2156  0.8933  0.9715  0.6366  1.4824
+7        n_replies  mini_recency  poisson  395       51 -0.2194  0.1938  0.2574  0.8030  0.5492  1.1739
+8        reengaged  mini_recency    logit  337       39  0.4014  0.2402  0.0948  1.4939  0.9329  2.3922
+9   reply_received    mini_top10    logit  395       51  0.0599  0.1820  0.7421  1.0617  0.7431  1.5169
+10       n_replies    mini_top10  poisson  395       51 -0.1773  0.1963  0.3665  0.8375  0.5700  1.2306
+11       reengaged    mini_top10    logit  337       39  0.4036  0.1968  0.0402  1.4972  1.0181  2.2018
+12  reply_received    mpnet_mean    logit  395       51  0.0793  0.2112  0.7072  1.0826  0.7156  1.6378
+13       n_replies    mpnet_mean  poisson  395       51 -0.0824  0.1456  0.5716  0.9209  0.6923  1.2250
+14       reengaged    mpnet_mean    logit  337       39  0.6330  0.2318  0.0063  1.8832  1.1956  2.9662
+15  reply_received    mpnet_top5    logit  395       51  0.1437  0.1901  0.4498  1.1545  0.7954  1.6759
+16       n_replies    mpnet_top5  poisson  395       51  0.0314  0.1467  0.8305  1.0319  0.7741  1.3755
+17       reengaged    mpnet_top5    logit  337       39  0.4640  0.1824  0.0109  1.5905  1.1125  2.2739
+                         spec    measure         outcome    model      n  effect   ci_lo    ci_hi       p
+0                 lookback 6m  mini_mean  reply_received    logit  590.0  1.1088  0.7743   1.5878  0.5729
+1                 lookback 3m  mini_mean  reply_received    logit  829.0  0.9929  0.7552   1.3056  0.9595
+2              min history 50  mini_mean  reply_received    logit  298.0  0.9485  0.5754   1.5636  0.8359
+3      + first-comment length  mini_mean  reply_received    logit  395.0  1.0136  0.6593   1.5582  0.9510
+4             cluster by user  mini_mean  reply_received    logit  395.0  1.0150  0.6797   1.5155  0.9421
+5   first appearance per user  mini_mean  reply_received    logit  395.0  1.0150  0.6683   1.5414  0.9445
+6     top-level comments only  mini_mean  reply_received    logit    NaN     NaN     NaN      NaN     NaN
+7    linear probability / OLS  mini_mean  reply_received      ols  395.0  0.0003 -0.0604   0.0610  0.9927
+8                 lookback 6m  mini_mean       n_replies  poisson  590.0  0.7873  0.5084   1.2191  0.2837
+9                 lookback 3m  mini_mean       n_replies  poisson  829.0  0.8676  0.6094   1.2353  0.4309
+10             min history 50  mini_mean       n_replies  poisson  298.0  0.7662  0.5158   1.1382  0.1871
+11     + first-comment length  mini_mean       n_replies  poisson  395.0  0.8266  0.5388   1.2683  0.3834
+12            cluster by user  mini_mean       n_replies  poisson  395.0  0.8640  0.6203   1.2034  0.3872
+13  first appearance per user  mini_mean       n_replies  poisson  395.0  0.8640  0.5655   1.3200  0.4989
+14    top-level comments only  mini_mean       n_replies  poisson   86.0  2.3771  1.1949   4.7289  0.0136
+15   linear probability / OLS  mini_mean       n_replies      ols  395.0 -0.1128 -0.3420   0.1163  0.3345
+16          negative binomial  mini_mean       n_replies   negbin  395.0  0.9178  0.6407   1.3148  0.6401
+17                lookback 6m  mini_mean       reengaged    logit  508.0  1.8359  1.2176   2.7681  0.0037
+18                lookback 3m  mini_mean       reengaged    logit  705.0  1.4187  0.9699   2.0754  0.0715
+19             min history 50  mini_mean       reengaged    logit  267.0  1.7119  0.9812   2.9867  0.0583
+20     + first-comment length  mini_mean       reengaged    logit  337.0  1.6859  1.0384   2.7373  0.0347
+21            cluster by user  mini_mean       reengaged    logit  337.0  1.6758  1.1498   2.4424  0.0072
+22  first appearance per user  mini_mean       reengaged    logit  337.0  1.6758  1.0292   2.7285  0.0379
+23    top-level comments only  mini_mean       reengaged    logit    NaN     NaN     NaN      NaN     NaN
+24   linear probability / OLS  mini_mean       reengaged      ols  337.0  0.0815  0.0021   0.1609  0.0443
+25                lookback 6m  mini_top5  reply_received    logit  590.0  1.0151  0.7461   1.3810  0.9241
+26                lookback 3m  mini_top5  reply_received    logit  829.0  0.9934  0.7816   1.2625  0.9565
+27             min history 50  mini_top5  reply_received    logit  298.0  0.9779  0.6700   1.4272  0.9076
+28     + first-comment length  mini_top5  reply_received    logit  395.0  1.0551  0.7423   1.4996  0.7650
+29            cluster by user  mini_top5  reply_received    logit  395.0  1.0568  0.7370   1.5154  0.7638
+30  first appearance per user  mini_top5  reply_received    logit  395.0  1.0568  0.7512   1.4867  0.7509
+31    top-level comments only  mini_top5  reply_received    logit   83.0  1.3937  0.1215  15.9836  0.7897
+32   linear probability / OLS  mini_top5  reply_received      ols  395.0  0.0011 -0.0532   0.0553  0.9693
+33                lookback 6m  mini_top5       n_replies  poisson  590.0  0.8257  0.6091   1.1195  0.2175
+34                lookback 3m  mini_top5       n_replies  poisson  829.0  0.9045  0.7006   1.1679  0.4415
+35             min history 50  mini_top5       n_replies  poisson  298.0  0.7777  0.5635   1.0734  0.1262
+36     + first-comment length  mini_top5       n_replies  poisson  395.0  0.8578  0.6007   1.2249  0.3986
+37            cluster by user  mini_top5       n_replies  poisson  395.0  0.8774  0.6479   1.1882  0.3978
+38  first appearance per user  mini_top5       n_replies  poisson  395.0  0.8774  0.6157   1.2502  0.4690
+39    top-level comments only  mini_top5       n_replies  poisson    NaN     NaN     NaN      NaN     NaN
+40   linear probability / OLS  mini_top5       n_replies      ols  395.0 -0.0740 -0.2661   0.1182  0.4505
+41          negative binomial  mini_top5       n_replies   negbin  395.0  0.9178  0.6844   1.2307  0.5665
+42                lookback 6m  mini_top5       reengaged    logit  508.0  1.5217  1.0870   2.1302  0.0144
+43                lookback 3m  mini_top5       reengaged    logit  705.0  1.2660  0.9325   1.7188  0.1305
+44             min history 50  mini_top5       reengaged    logit  267.0  1.4411  0.9338   2.2239  0.0988
+45     + first-comment length  mini_top5       reengaged    logit  337.0  1.3883  0.9413   2.0477  0.0980
+46            cluster by user  mini_top5       reengaged    logit  337.0  1.3852  0.9894   1.9393  0.0577
+47  first appearance per user  mini_top5       reengaged    logit  337.0  1.3852  0.9344   2.0535  0.1048
+48    top-level comments only  mini_top5       reengaged    logit    NaN     NaN     NaN      NaN     NaN
+49   linear probability / OLS  mini_top5       reengaged      ols  337.0  0.0484 -0.0196   0.1165  0.1631
+          outcome     n  rate_newcomer  rate_existing   ratio   ci_lo   ci_hi       p
+0  reply_received  2688         0.2902         0.3590  0.9474  0.7427  1.2086  0.6635
+1       n_replies  2688         0.5929         0.8945  1.0045  0.8043  1.2546  0.9681
+2       reengaged  2688         0.1608         0.2223  0.7241  0.5347  0.9804  0.0368

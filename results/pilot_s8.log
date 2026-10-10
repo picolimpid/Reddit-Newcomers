@@ -1,0 +1,54 @@
+                 outcome     measure    model  primary    n  mean_newcomers  effect   ci_lo    ci_hi       p   p_fdr
+0               question   mini_mean    logit     True  333          0.1795  0.6940  0.4242   1.1354  0.1458  0.2916
+1               question   mini_top5    logit     True  333          0.1795  0.8120  0.5094   1.2943  0.3813     NaN
+2               question  mpnet_mean    logit     True  333          0.1795  0.6550  0.3919   1.0946  0.1063     NaN
+3        stance_disagree   mini_mean    logit     True  218          0.3396  1.0289  0.6355   1.6659  0.9077  0.9077
+4        stance_disagree   mini_top5    logit     True  218          0.3396  1.0515  0.7075   1.5628  0.8037     NaN
+5        stance_disagree  mpnet_mean    logit     True  218          0.3396  1.1931  0.7268   1.9586  0.4850     NaN
+6             sim_thread   mini_mean      ols     True  479          0.4306  0.1222 -0.0204   0.2647  0.0931  0.2916
+7             sim_thread   mini_top5      ols     True  479          0.4306  0.0588 -0.0607   0.1783  0.3350     NaN
+8             sim_thread  mpnet_mean      ols     True  479          0.4306  0.1133 -0.0180   0.2445  0.0908     NaN
+9             return_90d   mini_mean    logit     True  369          0.2359  0.9434  0.6656   1.3371  0.7433  0.9077
+10            return_90d   mini_top5    logit     True  369          0.2359  0.8866  0.6325   1.2429  0.4851     NaN
+11            return_90d  mpnet_mean    logit     True  369          0.2359  0.9291  0.6362   1.3568  0.7033     NaN
+12            return_30d   mini_mean    logit    False  340          0.1628  0.9204  0.5756   1.4718  0.7290  0.9234
+13          stance_agree   mini_mean    logit    False  221          0.3434  1.2846  0.7030   2.3474  0.4155  0.8747
+14             sentiment   mini_mean      ols    False  479         -0.2071 -0.0029 -0.1209   0.1152  0.9621  0.9677
+15                insult   mini_mean      ols    False  479          0.0493  0.0434 -0.0614   0.1482  0.4173  0.8747
+16              toxicity   mini_mean      ols    False  479          0.0839  0.0448 -0.0741   0.1637  0.4604  0.8747
+17             log_words   mini_mean      ols    False  479          3.0642  0.0292 -0.0727   0.1312  0.5741  0.9234
+18                rate_i   mini_mean      ols    False  479          0.0383  0.0665 -0.0425   0.1756  0.2319  0.7344
+19              rate_you   mini_mean      ols    False  479          0.0132 -0.0940 -0.2053   0.0172  0.0977  0.4639
+20               rate_we   mini_mean      ols    False  479          0.0046 -0.0564 -0.1397   0.0269  0.1844  0.7006
+21            rate_hedge   mini_mean      ols    False  479          0.0069 -0.0262 -0.1355   0.0831  0.6386  0.9234
+22               exclaim   mini_mean    logit    False  141          0.0501  1.0649  0.5268   2.1524  0.8610  0.9677
+23                 laugh   mini_mean    logit    False   63          0.0251  0.1851  0.0077   4.4690  0.2991  0.8119
+24              sim_post   mini_mean      ols    False  479          0.2714  0.1925  0.0760   0.3090  0.0012  0.0229
+25            sim_parent   mini_mean      ols    False  265          0.3780  0.2928  0.0783   0.5074  0.0075  0.0709
+26  reply_tone_sentiment   mini_mean      ols    False  139         -0.2352  0.0083 -0.3944   0.4111  0.9677  0.9677
+27     reply_tone_insult   mini_mean      ols    False  139          0.0690 -0.0834 -0.4907   0.3240  0.6883  0.9234
+28   reply_tone_disagree   mini_mean    logit    False   88          0.4317  1.2308  0.5035   3.0085  0.6488  0.9234
+29      answered_replier   mini_mean    logit    False   78          0.2950  4.6716  1.3297  16.4121  0.0162  0.1026
+30        exchange_turns   mini_mean  poisson    False   85          0.6187  1.0530  0.4405   2.5171  0.9076  0.9677
+                 outcome    model  mean_newcomer  mean_existing     n  n_posts    coef       p  effect   ci_lo   ci_hi          scale   p_fdr
+0               question    logit         0.1795         0.1938  2688       80 -0.1951  0.1908  0.8228  0.6143  1.1020          OR/RR  0.5618
+1        stance_disagree    logit         0.3396         0.3711  1531       79 -0.1261  0.4560  0.8815  0.6327  1.2281          OR/RR  0.6961
+2             sim_thread      ols         0.4306         0.4187  2684       80  0.0176  0.7429  0.0176 -0.0875  0.1227  SD of outcome  0.8189
+3           stance_agree    logit         0.3434         0.2948  1537       80  0.2156  0.1624  1.2406  0.9168  1.6787          OR/RR  0.5618
+4              sentiment      ols        -0.2071        -0.1979  2688       80  0.0706  0.2567  0.0706 -0.0514  0.1925  SD of outcome  0.5618
+5                 insult      ols         0.0493         0.0793  2688       80 -0.1266  0.0363 -0.1266 -0.2451 -0.0081  SD of outcome  0.3808
+6               toxicity      ols         0.0839         0.1305  2688       80 -0.1266  0.0262 -0.1266 -0.2381 -0.0150  SD of outcome  0.3808
+7              log_words      ols         3.0642         3.0431  2688       80 -0.0352  0.4641 -0.0352 -0.1294  0.0590  SD of outcome  0.6961
+8                 rate_i      ols         0.0383         0.0295  2688       80  0.0910  0.1340  0.0910 -0.0280  0.2100  SD of outcome  0.5618
+9               rate_you      ols         0.0132         0.0149  2688       80 -0.0157  0.7410 -0.0157 -0.1088  0.0774  SD of outcome  0.8189
+10               rate_we      ols         0.0046         0.0059  2688       80 -0.1042  0.0562 -0.1042 -0.2111  0.0028  SD of outcome  0.3934
+11            rate_hedge      ols         0.0069         0.0052  2688       80  0.0395  0.6119  0.0395 -0.1130  0.1920  SD of outcome  0.7558
+12               exclaim    logit         0.0501         0.0675  2290       68 -0.2305  0.3995  0.7942  0.4646  1.3575          OR/RR  0.6961
+13                 laugh    logit         0.0251         0.0263  1413       42  0.3470  0.2263  1.4149  0.8064  2.4823          OR/RR  0.5618
+14              sim_post      ols         0.2714         0.2611  2688       80 -0.0289  0.5857 -0.0289 -0.1329  0.0751  SD of outcome  0.7558
+15            sim_parent      ols         0.3780         0.3630  1537       80  0.0589  0.2675  0.0589 -0.0452  0.1630  SD of outcome  0.5618
+16  reply_tone_sentiment      ols        -0.2352        -0.1763   932       80 -0.0177  0.8477 -0.0177 -0.1980  0.1626  SD of outcome  0.8477
+17     reply_tone_insult      ols         0.0690         0.0992   932       80 -0.0253  0.7799 -0.0253 -0.2026  0.1521  SD of outcome  0.8189
+18   reply_tone_disagree    logit         0.4317         0.4363   914       78  0.1456  0.5545  1.1568  0.7137  1.8749          OR/RR  0.7558
+19      answered_replier    logit         0.2950         0.3417   911       77 -0.2693  0.3247  0.7639  0.4469  1.3057          OR/RR  0.6199
+20        exchange_turns  poisson         0.6187         0.5637   911       77  0.2998  0.2491  1.3496  0.8105  2.2474          OR/RR  0.5618
