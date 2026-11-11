@@ -1,0 +1,21 @@
+pair,metric,mean,lo,hi
+"JEV + Platt + session intercept (10 labels, lam=1) - JEV + Platt",auroc,0.0,0.0,0.0
+"JEV + Platt + session intercept (10 labels, lam=1) - JEV + Platt",acc,-0.021173402446776766,-0.08571615301526016,0.03249865330064011
+"JEV + Platt + session intercept (10 labels, lam=1) - JEV + Platt",util@1/3,-0.0066845531301815,-0.04966318737030811,0.03284181837766423
+"JEV + Platt + session intercept (10 labels, lam=1) - JEV + Platt",brier,0.012022662146650084,-0.008986730101810423,0.03779441427295026
+"JEV + Platt + session intercept (10 labels, lam=1) - JEV + Platt",fa_block90,0.0,0.0,0.0
+"JEV + Platt + session intercept (all first half, lam=1) - JEV + Platt",auroc,0.0,0.0,0.0
+"JEV + Platt + session intercept (all first half, lam=1) - JEV + Platt",acc,-0.024205922738046184,-0.06911828161403569,0.01784942017806677
+"JEV + Platt + session intercept (all first half, lam=1) - JEV + Platt",util@1/3,-0.002474077541499614,-0.030008385512701713,0.02662454956871348
+"JEV + Platt + session intercept (all first half, lam=1) - JEV + Platt",brier,0.003225220923668775,-0.010795436226356475,0.015883619931095612
+"JEV + Platt + session intercept (all first half, lam=1) - JEV + Platt",fa_block90,0.0,0.0,0.0
+"JEV + MLP offset + session intercept (10 labels, lam=1) - JEV + MLP offset",auroc,0.0,0.0,0.0
+"JEV + MLP offset + session intercept (10 labels, lam=1) - JEV + MLP offset",acc,-0.012123636067845306,-0.07363109387433749,0.038689616441957064
+"JEV + MLP offset + session intercept (10 labels, lam=1) - JEV + MLP offset",util@1/3,-0.009572105761980736,-0.04880048584467551,0.026833276868154062
+"JEV + MLP offset + session intercept (10 labels, lam=1) - JEV + MLP offset",brier,0.009650120178529117,-0.010530152365205851,0.03386320482932035
+"JEV + MLP offset + session intercept (10 labels, lam=1) - JEV + MLP offset",fa_block90,0.0,0.0,0.0
+"JEV + MLP offset + session intercept (all first half, lam=1) - JEV + MLP offset",auroc,0.0,0.0,0.0
+"JEV + MLP offset + session intercept (all first half, lam=1) - JEV + MLP offset",acc,-0.016271443019307916,-0.06598329925523247,0.03429413891297625
+"JEV + MLP offset + session intercept (all first half, lam=1) - JEV + MLP offset",util@1/3,0.0014140753167408843,-0.03210404502639417,0.031642576745897565
+"JEV + MLP offset + session intercept (all first half, lam=1) - JEV + MLP offset",brier,0.0011513147280828783,-0.012736883008672109,0.014324639347495016
+"JEV + MLP offset + session intercept (all first half, lam=1) - JEV + MLP offset",fa_block90,0.0,0.0,0.0

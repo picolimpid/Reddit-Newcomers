@@ -1,0 +1,12 @@
+{
+ "items with 3 users": 1239,
+ "Fleiss kappa": 0.1119419710278001,
+ "pairwise agreement": 0.5743879472693032,
+ "accept rate per vote": 0.3981705676620931,
+ "split-vote share (all proposal items)": 0.5702956020187455,
+ "accept rate by annotation position": [
+  0.408,
+  0.428,
+  0.359
+ ]
+}

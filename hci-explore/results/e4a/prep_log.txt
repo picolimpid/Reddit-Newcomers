@@ -1,0 +1,2 @@
+1315 rows in 26 evaluation cells, 2616 distinct requests, expected $0.0412 (375 tokens/request); JEV spent so far $0.3868, cap $0.44
+done; JEV spent so far $0.4287

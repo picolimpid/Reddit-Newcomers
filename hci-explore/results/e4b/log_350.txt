@@ -1,0 +1,8 @@
+== DICES-350 replication (104 raters x 350 conversations)
+split-half reliability: r = 0.966, Spearman-Brown 0.983 [0.974, 0.990]
+excess log loss: judge alone 0.0873, with k = 20 anchors 0.0188
+attribute                                                                                                                                         groups  gap_k0  gap_k20              gap_reduction
+   gender                                                                                                                         Man 0.076, Woman 0.096  0.0200   0.0014 +0.0186 [-0.0036, +0.0612]
+     race Asian/Asian subcontinent 0.105, Black/African American 0.053, LatinX, Latino, Hispanic or Spanish Origin 0.073, Multiracial 0.098, White 0.111  0.0583   0.0138 +0.0445 [+0.0207, +0.1295]
+      age                                                                                                     gen x+ 0.080, gen z 0.100, millenial 0.073  0.0264   0.0038 +0.0226 [+0.0024, +0.0770]
+education                                                                                     College degree or higher 0.077, High school or below 0.106  0.0295   0.0089 +0.0206 [-0.0067, +0.0738]

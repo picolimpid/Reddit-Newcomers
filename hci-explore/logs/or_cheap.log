@@ -1,0 +1,6 @@
+openai/gpt-4o-mini: n=2400 no-logprob=0 cost this run $0.0276 total $0.0276 median latency 0.80s
+openai/gpt-4o-mini: n=180 no-logprob=0 cost this run $0.0083 total $0.0359 median latency 0.74s
+openai/gpt-4o-mini: n=6400 no-logprob=0 cost this run $0.5794 total $0.6153 median latency 0.73s
+qwen/qwen3-32b: n=2400 no-logprob=0 cost this run $0.2289 total $0.8442 median latency 1.51s
+qwen/qwen3-32b: n=180 no-logprob=0 cost this run $0.1150 total $0.9602 median latency 2.35s
+qwen/qwen3-32b: n=6400 no-logprob=0 cost this run $1.5790 total $2.5414 median latency 2.38s

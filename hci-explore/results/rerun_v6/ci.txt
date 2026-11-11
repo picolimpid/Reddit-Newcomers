@@ -1,0 +1,142 @@
+
+== E1 raw, zero-shot (n=400 comments, B=2000)
+  spearman_soft
+    JEV: 0.731 [0.701, 0.757]
+    TF-IDF+LR: 0.655 [0.615, 0.690]
+    JEV - TF-IDF+LR: 0.076 [0.045, 0.107]*
+    GPT-4o-mini: 0.728 [0.696, 0.755]
+    JEV - GPT-4o-mini: 0.003 [-0.013, 0.020]
+    GPT-4o: 0.727 [0.695, 0.755]
+    JEV - GPT-4o: 0.004 [-0.014, 0.022]
+    Qwen3-32B (local): 0.726 [0.693, 0.755]
+    JEV - Qwen3-32B (local): 0.006 [-0.012, 0.022]
+  auroc_majority
+    JEV: 0.917 [0.901, 0.931]
+    TF-IDF+LR: 0.872 [0.849, 0.894]
+    JEV - TF-IDF+LR: 0.045 [0.024, 0.066]*
+    GPT-4o-mini: 0.908 [0.889, 0.924]
+    JEV - GPT-4o-mini: 0.009 [-0.001, 0.020]
+    GPT-4o: 0.904 [0.886, 0.920]
+    JEV - GPT-4o: 0.013 [0.002, 0.024]*
+    Qwen3-32B (local): 0.908 [0.890, 0.924]
+    JEV - Qwen3-32B (local): 0.009 [-0.003, 0.020]
+  brier_soft
+    JEV: 0.079 [0.072, 0.086]
+    TF-IDF+LR: 0.065 [0.059, 0.071]
+    JEV - TF-IDF+LR: 0.014 [0.005, 0.023]*
+    GPT-4o-mini: 0.158 [0.144, 0.174]
+    JEV - GPT-4o-mini: -0.080 [-0.091, -0.068]*
+    GPT-4o: 0.142 [0.129, 0.157]
+    JEV - GPT-4o: -0.064 [-0.074, -0.054]*
+    Qwen3-32B (local): 0.120 [0.108, 0.132]
+    JEV - Qwen3-32B (local): -0.041 [-0.049, -0.033]*
+  auroc_contested
+    JEV: 0.700 [0.674, 0.726]
+    TF-IDF+LR: 0.699 [0.668, 0.727]
+    JEV - TF-IDF+LR: 0.001 [-0.031, 0.032]
+    GPT-4o-mini: 0.663 [0.635, 0.689]
+    JEV - GPT-4o-mini: 0.037 [0.011, 0.063]*
+    GPT-4o: 0.709 [0.682, 0.735]
+    JEV - GPT-4o: -0.009 [-0.033, 0.015]
+    Qwen3-32B (local): 0.687 [0.658, 0.714]
+    JEV - Qwen3-32B (local): 0.013 [-0.003, 0.032]
+
+== E1 after Platt calibration on 20 anchors (B=1000; point = mean of 30 anchor draws)
+  acc
+    JEV: 0.848 [0.811, 0.871]
+    TF-IDF+LR: 0.820 [0.782, 0.844]
+    JEV - TF-IDF+LR: 0.028 [-0.004, 0.064]
+    GPT-4o-mini: 0.792 [0.745, 0.823]
+    JEV - GPT-4o-mini: 0.055 [0.025, 0.097]*
+    GPT-4o: 0.815 [0.771, 0.844]
+    JEV - GPT-4o: 0.033 [0.006, 0.068]*
+    Qwen3-32B (local): 0.836 [0.803, 0.860]
+    JEV - Qwen3-32B (local): 0.012 [-0.011, 0.034]
+  brier
+    JEV: 0.053 [0.047, 0.063]
+    TF-IDF+LR: 0.070 [0.062, 0.083]
+    JEV - TF-IDF+LR: -0.016 [-0.029, -0.006]*
+    GPT-4o-mini: 0.070 [0.062, 0.086]
+    JEV - GPT-4o-mini: -0.017 [-0.028, -0.007]*
+    GPT-4o: 0.064 [0.056, 0.077]
+    JEV - GPT-4o: -0.010 [-0.021, -0.001]*
+    Qwen3-32B (local): 0.058 [0.050, 0.069]
+    JEV - Qwen3-32B (local): -0.004 [-0.013, 0.003]
+  auroc_contested
+    JEV: 0.753 [0.714, 0.787]
+    TF-IDF+LR: 0.688 [0.640, 0.725]
+    JEV - TF-IDF+LR: 0.065 [0.026, 0.112]*
+    GPT-4o-mini: 0.691 [0.610, 0.720]
+    JEV - GPT-4o-mini: 0.062 [0.026, 0.138]*
+    GPT-4o: 0.709 [0.641, 0.743]
+    JEV - GPT-4o: 0.044 [0.007, 0.100]*
+    Qwen3-32B (local): 0.734 [0.694, 0.766]
+    JEV - Qwen3-32B (local): 0.019 [-0.015, 0.053]
+
+== E2 ProactiveBench (n=120 moments, B=2000)
+  need_auroc
+    JEV: 0.644 [0.544, 0.741]
+    GPT-4o-mini: 0.725 [0.636, 0.810]
+    JEV - GPT-4o-mini: -0.081 [-0.157, -0.003]*
+    GPT-4o: 0.634 [0.536, 0.732]
+    JEV - GPT-4o: 0.010 [-0.053, 0.079]
+    Qwen3-32B (local): 0.643 [0.542, 0.739]
+    JEV - Qwen3-32B (local): 0.001 [-0.078, 0.076]
+  accept_auroc
+    JEV: 0.823 [0.701, 0.918]
+    GPT-4o-mini: 0.633 [0.478, 0.778]
+    JEV - GPT-4o-mini: 0.190 [0.077, 0.309]*
+    GPT-4o: 0.822 [0.699, 0.927]
+    JEV - GPT-4o: 0.001 [-0.115, 0.118]
+    Qwen3-32B (local): 0.768 [0.640, 0.880]
+    JEV - Qwen3-32B (local): 0.055 [-0.050, 0.169]
+  reward_acc_all120
+    JEV: 0.617 [0.525, 0.700]
+    GPT-4o-mini: 0.550 [0.467, 0.642]
+    JEV - GPT-4o-mini: 0.067 [-0.025, 0.167]
+    GPT-4o: 0.592 [0.500, 0.675]
+    JEV - GPT-4o: 0.025 [-0.050, 0.100]
+    Qwen3-32B (local): 0.583 [0.492, 0.667]
+    JEV - Qwen3-32B (local): 0.033 [-0.042, 0.117]
+  FA_blocked@keep90%CD
+    JEV: 0.600 [0.387, 0.815]
+    GPT-4o-mini: 0.300 [0.080, 0.581]
+    JEV - GPT-4o-mini: 0.300 [0.026, 0.567]*
+    GPT-4o: 0.500 [0.032, 0.875]
+    JEV - GPT-4o: 0.100 [-0.269, 0.633]
+    Qwen3-32B (local): 0.400 [0.179, 0.718]
+    JEV - Qwen3-32B (local): 0.200 [-0.098, 0.452]
+
+== E3 SummEval, all 100 docs (B=2000)
+  spearman_avg
+    JEV: 0.582 [0.557, 0.605]
+    GPT-4o-mini: 0.498 [0.469, 0.523]
+    JEV - GPT-4o-mini: 0.084 [0.068, 0.102]*
+    Qwen3-32B (local): 0.518 [0.492, 0.543]
+    JEV - Qwen3-32B (local): 0.064 [0.049, 0.079]*
+  consistency_entropy_auroc
+    JEV: 0.948 [0.934, 0.961]
+    GPT-4o-mini: 0.548 [0.506, 0.586]
+    JEV - GPT-4o-mini: 0.400 [0.360, 0.442]*
+    Qwen3-32B (local): 0.907 [0.886, 0.926]
+    JEV - Qwen3-32B (local): 0.041 [0.023, 0.061]*
+
+== E3 SummEval, GPT-4o's 10 docs (B=2000)
+  spearman_avg
+    JEV: 0.595 [0.512, 0.680]
+    GPT-4o-mini: 0.446 [0.366, 0.522]
+    JEV - GPT-4o-mini: 0.149 [0.084, 0.200]*
+    GPT-4o: 0.486 [0.387, 0.591]
+    JEV - GPT-4o: 0.108 [0.046, 0.166]*
+    Qwen3-32B (local): 0.475 [0.372, 0.577]
+    JEV - Qwen3-32B (local): 0.120 [0.068, 0.172]*
+  consistency_entropy_auroc
+    JEV: 0.904 [0.842, 0.968]
+    GPT-4o-mini: 0.566 [0.432, 0.676]
+    JEV - GPT-4o-mini: 0.339 [0.224, 0.487]*
+    GPT-4o: 0.626 [0.542, 0.711]
+    JEV - GPT-4o: 0.278 [0.184, 0.393]*
+    Qwen3-32B (local): 0.879 [0.797, 0.961]
+    JEV - Qwen3-32B (local): 0.025 [-0.020, 0.078]
+
+* = 95% CI of the difference excludes 0.  JEV spent (unchanged) $0.3588

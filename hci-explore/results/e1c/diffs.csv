@@ -1,0 +1,309 @@
+pair,code,metric,mean,lo,hi
+JEV + person offset - JEV + Platt,hatespeech,logloss,-0.011739246443131734,-0.01727792828678107,-0.005675931205264722
+JEV + person offset - JEV + Platt,hatespeech,brier,-0.004220991640828203,-0.006479216782469836,-0.0018958885054226472
+JEV + person offset - JEV + Platt,hatespeech,auroc,0.01165019523248123,0.0065010842226821105,0.017166264761942964
+JEV + person offset - JEV + Platt,hatespeech,within_comment_auroc,0.17200000000000004,0.1213177849264706,0.22024442783663778
+JEV + person offset - JEV + Platt,insult,logloss,0.0005926074187657671,-0.0007496284434779663,0.0019519140687253463
+JEV + person offset - JEV + Platt,insult,brier,0.0001278080482735866,-0.0003235400686224729,0.0005994712574274706
+JEV + person offset - JEV + Platt,insult,auroc,-0.00027168675099209505,-0.001194782477264933,0.0006961556833558134
+JEV + person offset - JEV + Platt,insult,within_comment_auroc,0.01080550098231825,-0.04729571534900458,0.06865068331403501
+JEV + person offset - JEV + Platt,humiliate,logloss,-0.016285448129337077,-0.023452620505559647,-0.009365478278761403
+JEV + person offset - JEV + Platt,humiliate,brier,-0.0056147832431990286,-0.008293796279945378,-0.002941366487027615
+JEV + person offset - JEV + Platt,humiliate,auroc,0.012702924835702456,0.007831419951331648,0.018192665839926053
+JEV + person offset - JEV + Platt,humiliate,within_comment_auroc,0.16574965612104542,0.12269069073594119,0.21049394966637347
+JEV + person offset - JEV + Platt,dehumanize,logloss,-0.039280086720759666,-0.057740640075620714,-0.021088612884190727
+JEV + person offset - JEV + Platt,dehumanize,brier,-0.017819389116113804,-0.02433730376990229,-0.01122187064419662
+JEV + person offset - JEV + Platt,dehumanize,auroc,0.0407724640981324,0.02728345353691023,0.05450431779389022
+JEV + person offset - JEV + Platt,dehumanize,within_comment_auroc,0.2426160337552743,0.2019277313739761,0.28571686996071943
+JEV + person offset - JEV + Platt,violence,logloss,-0.00961863084625314,-0.015888628973299904,-0.0033605837531875465
+JEV + person offset - JEV + Platt,violence,brier,-0.002919572904224746,-0.004808418775153201,-0.0012875175500596042
+JEV + person offset - JEV + Platt,violence,auroc,0.008730063046515468,0.0014734559570211082,0.01750411228318588
+JEV + person offset - JEV + Platt,violence,within_comment_auroc,0.2112068965517241,0.13410295960667118,0.2871507305819021
+JEV + person offset - JEV + Platt,disrespect,logloss,-0.00014082473173721022,-0.0012664097693856652,0.0010867307049441677
+JEV + person offset - JEV + Platt,disrespect,brier,5.4360536988040664e-05,-0.0003667462440063822,0.0004891593385652353
+JEV + person offset - JEV + Platt,disrespect,auroc,0.0006379888536067746,-0.00030286425096804346,0.0016466086198997278
+JEV + person offset - JEV + Platt,disrespect,within_comment_auroc,0.011061946902654829,-0.04769461924468343,0.07446808510638303
+JEV + person offset - JEV + Platt,mean,logloss,-0.012745271575408843,-0.016373469841392718,-0.009076614954181607
+JEV + person offset - JEV + Platt,mean,brier,-0.005065428053184026,-0.006405493824436378,-0.003660417137237237
+JEV + person offset - JEV + Platt,mean,auroc,0.012370324885907705,0.009394170562533884,0.01564885569603341
+JEV + person offset - JEV + Platt,mean,within_comment_auroc,0.13557333905216948,0.11011582165848853,0.161962834868796
+JEV + demographics - JEV + Platt,hatespeech,logloss,-0.004025105762925196,-0.0076604416427805844,-0.0004346719572251764
+JEV + demographics - JEV + Platt,hatespeech,brier,-0.001630549331105291,-0.003076504259741919,-0.0002047340527483177
+JEV + demographics - JEV + Platt,hatespeech,auroc,0.004572495213250649,0.0010768046454516455,0.00822320817372905
+JEV + demographics - JEV + Platt,hatespeech,within_comment_auroc,0.08599999999999997,0.025338379285302862,0.14695087313275823
+JEV + demographics - JEV + Platt,insult,logloss,0.000386462805567922,-0.0018008524535972556,0.0025742572834350995
+JEV + demographics - JEV + Platt,insult,brier,0.00023202399086566516,-0.0005169604466211862,0.0009788585756464413
+JEV + demographics - JEV + Platt,insult,auroc,-4.985077999863918e-05,-0.0014878154497699996,0.001468670049374412
+JEV + demographics - JEV + Platt,insult,within_comment_auroc,-0.0009823182711198308,-0.04846297116623711,0.04906235292697943
+JEV + demographics - JEV + Platt,humiliate,logloss,-0.0009234628845056214,-0.002926459559744407,0.0010767891024708602
+JEV + demographics - JEV + Platt,humiliate,brier,-0.00022383286735211394,-0.0010476225730736226,0.0005341782955046691
+JEV + demographics - JEV + Platt,humiliate,auroc,0.0005614105480467035,-0.001086780458345221,0.0022602350991799106
+JEV + demographics - JEV + Platt,humiliate,within_comment_auroc,0.035075653370013726,-0.009685483870967767,0.0803687622309198
+JEV + demographics - JEV + Platt,dehumanize,logloss,-0.006664063163570821,-0.01096358944956408,-0.002889775009264157
+JEV + demographics - JEV + Platt,dehumanize,brier,-0.0023067139969084882,-0.004009791807127843,-0.0007577241892248315
+JEV + demographics - JEV + Platt,dehumanize,auroc,0.007080516494141209,0.003219060176298702,0.011764954111926828
+JEV + demographics - JEV + Platt,dehumanize,within_comment_auroc,0.11322081575246135,0.06433437942080357,0.16235064935064933
+JEV + demographics - JEV + Platt,violence,logloss,-0.0013340553142957845,-0.003641162851878528,0.0008748494623328037
+JEV + demographics - JEV + Platt,violence,brier,-0.00040740898113444945,-0.0011892761859110606,0.0003191011422970008
+JEV + demographics - JEV + Platt,violence,auroc,0.002024722176913185,-0.0007533571391665355,0.00501340356525275
+JEV + demographics - JEV + Platt,violence,within_comment_auroc,0.004310344827586188,-0.08301612746526767,0.09057105542095693
+JEV + demographics - JEV + Platt,disrespect,logloss,0.0010770287207330642,-0.0012212043004210678,0.0035773520695720593
+JEV + demographics - JEV + Platt,disrespect,brier,0.00023783546995587157,-0.0005796772708938774,0.0011176159854217103
+JEV + demographics - JEV + Platt,disrespect,auroc,-0.0010079367526111271,-0.002668939900443257,0.0005429296612649153
+JEV + demographics - JEV + Platt,disrespect,within_comment_auroc,-0.017699115044247815,-0.07394816829307313,0.0395478036175711
+JEV + demographics - JEV + Platt,mean,logloss,-0.001913865933166073,-0.003132885158196882,-0.0006467126905287706
+JEV + demographics - JEV + Platt,mean,brier,-0.000683107619279801,-0.0011808648098558814,-0.00023208267560476163
+JEV + demographics - JEV + Platt,mean,auroc,0.0021968928166236634,0.0010411879013949117,0.0034604402122363777
+JEV + demographics - JEV + Platt,mean,within_comment_auroc,0.03665423010578226,0.009242368389271345,0.06191002032518268
+JEV + demographics + person offset - JEV + person offset,hatespeech,logloss,-0.002530584994020202,-0.0052719215279712975,0.00028025255544878743
+JEV + demographics + person offset - JEV + person offset,hatespeech,brier,-0.0010325878662030552,-0.002107024513826611,4.523586890480605e-05
+JEV + demographics + person offset - JEV + person offset,hatespeech,auroc,0.002545965334738054,4.683621188194268e-05,0.004892728026243192
+JEV + demographics + person offset - JEV + person offset,hatespeech,within_comment_auroc,0.019999999999999907,-0.018671067738231913,0.058263385127879166
+JEV + demographics + person offset - JEV + person offset,insult,logloss,0.0004362605194925817,-0.0016560954150686813,0.002527687996832198
+JEV + demographics + person offset - JEV + person offset,insult,brier,0.0002283631193756852,-0.0004844201823106922,0.0009260004120950133
+JEV + demographics + person offset - JEV + person offset,insult,auroc,0.00011216425499671612,-0.001166786777389972,0.0015217907048092863
+JEV + demographics + person offset - JEV + person offset,insult,within_comment_auroc,0.017681728880157177,-0.032091584158415835,0.06950354374601825
+JEV + demographics + person offset - JEV + person offset,humiliate,logloss,-0.00042014112944932513,-0.001910893700691238,0.0010654330080044291
+JEV + demographics + person offset - JEV + person offset,humiliate,brier,-7.514214313766865e-05,-0.0006641920085903634,0.0004788238714631791
+JEV + demographics + person offset - JEV + person offset,humiliate,auroc,5.9862219820683293e-05,-0.000979109029026351,0.0011082988106267536
+JEV + demographics + person offset - JEV + person offset,humiliate,within_comment_auroc,0.005502063273727598,-0.012249978829706189,0.025316455696202556
+JEV + demographics + person offset - JEV + person offset,dehumanize,logloss,-0.0025261478471739207,-0.00445389927322031,-0.0008656993862951924
+JEV + demographics + person offset - JEV + person offset,dehumanize,brier,-0.0008585389223403905,-0.0015815222715245408,-0.0002170593238732881
+JEV + demographics + person offset - JEV + person offset,dehumanize,auroc,0.001845955137130928,0.0005971549712877611,0.003366275129487012
+JEV + demographics + person offset - JEV + person offset,dehumanize,within_comment_auroc,0.002812939521800284,-0.006018507807981449,0.012628122917971343
+JEV + demographics + person offset - JEV + person offset,violence,logloss,-0.0007068529084399977,-0.002299370084264158,0.000851580127191549
+JEV + demographics + person offset - JEV + person offset,violence,brier,-0.00030147652902692834,-0.0008469394757377782,0.0001874657360961662
+JEV + demographics + person offset - JEV + person offset,violence,auroc,0.0004999751785371709,-0.0013701729364038518,0.002418983915835215
+JEV + demographics + person offset - JEV + person offset,violence,within_comment_auroc,-0.008620689655172376,-0.0437104477025274,0.020408163265306145
+JEV + demographics + person offset - JEV + person offset,disrespect,logloss,0.0010280413176787517,-0.001168126494204165,0.0033974652061562983
+JEV + demographics + person offset - JEV + person offset,disrespect,brier,0.00020773973409345114,-0.0005592652221931286,0.0010382899166338179
+JEV + demographics + person offset - JEV + person offset,disrespect,auroc,-0.0012014743108862413,-0.0027649806226278687,0.0002829202072315509
+JEV + demographics + person offset - JEV + person offset,disrespect,within_comment_auroc,-0.013274336283185806,-0.07964606597355924,0.05744948721873562
+JEV + demographics + person offset - JEV + person offset,mean,logloss,-0.0007865708403186853,-0.0017208224653892667,0.00013517127799615803
+JEV + demographics + person offset - JEV + person offset,mean,brier,-0.0003052737678731511,-0.0006464489117652822,4.017714752817066e-05
+JEV + demographics + person offset - JEV + person offset,mean,auroc,0.0006437413023895518,-7.886791758872911e-05,0.0013507349546319923
+JEV + demographics + person offset - JEV + person offset,mean,within_comment_auroc,0.004016950956221131,-0.014222982167238378,0.021658125333777863
+JEV + shared person severity - JEV + person offset,hatespeech,logloss,0.010671989764306666,0.004561068086178825,0.01616724511415839
+JEV + shared person severity - JEV + person offset,hatespeech,brier,0.0036392619363662393,0.0014185745450494523,0.005879043238229421
+JEV + shared person severity - JEV + person offset,hatespeech,auroc,-0.008871163284587924,-0.013474180041338046,-0.0042246353911173755
+JEV + shared person severity - JEV + person offset,hatespeech,within_comment_auroc,-0.10000000000000009,-0.16242050984295509,-0.03083771807856678
+JEV + shared person severity - JEV + person offset,insult,logloss,0.0012258271008181998,-0.002471364509404135,0.004876349473037736
+JEV + shared person severity - JEV + person offset,insult,brier,0.0002505457091222796,-0.0010413187246564688,0.0015762398907700648
+JEV + shared person severity - JEV + person offset,insult,auroc,-2.2432850999343223e-05,-0.002224464182171762,0.0022468831670382264
+JEV + shared person severity - JEV + person offset,insult,within_comment_auroc,0.005893909626719096,-0.05488343643831443,0.06473482415288263
+JEV + shared person severity - JEV + person offset,humiliate,logloss,0.008067279208312406,0.0026447803360505093,0.014163204264002336
+JEV + shared person severity - JEV + person offset,humiliate,brier,0.0026322779776747074,0.0006645515182804193,0.004915504360864295
+JEV + shared person severity - JEV + person offset,humiliate,auroc,-0.005941729791647088,-0.00996164771787445,-0.0023123997595739217
+JEV + shared person severity - JEV + person offset,humiliate,within_comment_auroc,-0.04195323246217331,-0.08409350198412696,0.0015142320604787202
+JEV + shared person severity - JEV + person offset,dehumanize,logloss,0.028737638937844645,0.013249281050099995,0.04514534247618665
+JEV + shared person severity - JEV + person offset,dehumanize,brier,0.013687317143970007,0.00797929561936995,0.01957520591329312
+JEV + shared person severity - JEV + person offset,dehumanize,auroc,-0.029583810842793268,-0.042215205237560074,-0.018428655157437964
+JEV + shared person severity - JEV + person offset,dehumanize,within_comment_auroc,-0.1209563994374121,-0.16618692773276553,-0.07659900782966124
+JEV + shared person severity - JEV + person offset,violence,logloss,0.007516774698976325,0.0025144614946293483,0.012936778199257159
+JEV + shared person severity - JEV + person offset,violence,brier,0.002233371677700137,0.0007326887968272371,0.003964125531099654
+JEV + shared person severity - JEV + person offset,violence,auroc,-0.005414624805860746,-0.012260056841737445,0.0003068125354322879
+JEV + shared person severity - JEV + person offset,violence,within_comment_auroc,-0.11206896551724133,-0.1878352397882289,-0.029206446348429296
+JEV + shared person severity - JEV + person offset,disrespect,logloss,0.0012648750376834106,-0.0027628935285547536,0.00533639696498829
+JEV + shared person severity - JEV + person offset,disrespect,brier,-5.841485970721483e-05,-0.0013881228326249387,0.0013611215216250585
+JEV + shared person severity - JEV + person offset,disrespect,auroc,-0.0010130749178749454,-0.0035152110584382055,0.0015305441153577624
+JEV + shared person severity - JEV + person offset,disrespect,within_comment_auroc,0.017699115044247815,-0.05448302543766317,0.08498339883453035
+JEV + shared person severity - JEV + person offset,mean,logloss,0.009580730791323608,0.006636088072914641,0.012511674914781458
+JEV + shared person severity - JEV + person offset,mean,brier,0.003730726597521026,0.0025788037125804956,0.004973443292632978
+JEV + shared person severity - JEV + person offset,mean,auroc,-0.008474472748960552,-0.011059724385840639,-0.006207138269744318
+JEV + shared person severity - JEV + person offset,mean,within_comment_auroc,-0.058564262124309985,-0.08701724922799887,-0.02869050259924188
+JEV + person offset + MLP (item x person features) - JEV + person offset,hatespeech,logloss,-0.013438431650816596,-0.03603373967134889,0.010573356371228812
+JEV + person offset + MLP (item x person features) - JEV + person offset,hatespeech,brier,-0.00947627056045583,-0.016793048112446085,-0.0015111579003000675
+JEV + person offset + MLP (item x person features) - JEV + person offset,hatespeech,auroc,0.025972817953027194,0.0116846515485363,0.04095403995719636
+JEV + person offset + MLP (item x person features) - JEV + person offset,hatespeech,within_comment_auroc,0.0,-0.04169241573033704,0.04554644179957359
+JEV + person offset + MLP (item x person features) - JEV + person offset,insult,logloss,-0.0035890644817557216,-0.022983759021224744,0.014942794881201756
+JEV + person offset + MLP (item x person features) - JEV + person offset,insult,brier,-0.00043524999414326637,-0.007932215105712879,0.006752283396740578
+JEV + person offset + MLP (item x person features) - JEV + person offset,insult,auroc,0.002942026866247116,-0.0069441615001597816,0.013890494664905042
+JEV + person offset + MLP (item x person features) - JEV + person offset,insult,within_comment_auroc,0.05304518664047153,-0.015439997083697829,0.11764859068627453
+JEV + person offset + MLP (item x person features) - JEV + person offset,humiliate,logloss,-0.01865607627292082,-0.039327461232464195,-0.0006763726107415869
+JEV + person offset + MLP (item x person features) - JEV + person offset,humiliate,brier,-0.00901791929908985,-0.016427156907787326,-0.002300385778895194
+JEV + person offset + MLP (item x person features) - JEV + person offset,humiliate,auroc,0.01343825940079535,0.002497585092967253,0.02517653639055063
+JEV + person offset + MLP (item x person features) - JEV + person offset,humiliate,within_comment_auroc,0.02063273727647863,-0.01021838201316189,0.04993855869697125
+JEV + person offset + MLP (item x person features) - JEV + person offset,dehumanize,logloss,0.008483501047427233,-0.005253259633496718,0.02110614700422252
+JEV + person offset + MLP (item x person features) - JEV + person offset,dehumanize,brier,0.0016624954819338955,-0.002993563843402948,0.006107453760553676
+JEV + person offset + MLP (item x person features) - JEV + person offset,dehumanize,auroc,-0.003535125409227069,-0.011485812675549895,0.0042632556493210705
+JEV + person offset + MLP (item x person features) - JEV + person offset,dehumanize,within_comment_auroc,0.0,-0.014473742141976585,0.01584963797615252
+JEV + person offset + MLP (item x person features) - JEV + person offset,violence,logloss,0.00714825830144325,-0.00013339008670692893,0.015300274808939524
+JEV + person offset + MLP (item x person features) - JEV + person offset,violence,brier,0.0014437253090412924,-0.0005301707054807801,0.003569706615464086
+JEV + person offset + MLP (item x person features) - JEV + person offset,violence,auroc,-0.0036186146787040574,-0.008852825523266878,0.0009879430602795056
+JEV + person offset + MLP (item x person features) - JEV + person offset,violence,within_comment_auroc,-0.051724137931034475,-0.0901384675151694,-0.01737551615253828
+JEV + person offset + MLP (item x person features) - JEV + person offset,disrespect,logloss,0.010035922987781665,-0.009057628447553905,0.028519310067521283
+JEV + person offset + MLP (item x person features) - JEV + person offset,disrespect,brier,0.0034374230429198432,-0.0035359255673745407,0.010087134894863521
+JEV + person offset + MLP (item x person features) - JEV + person offset,disrespect,auroc,-0.004700564855634637,-0.014097187221851975,0.0049138764047716
+JEV + person offset + MLP (item x person features) - JEV + person offset,disrespect,within_comment_auroc,0.05973451327433632,-0.019146248204449906,0.13883662703513278
+JEV + person offset + MLP (item x person features) - JEV + person offset,mean,logloss,-0.001669315011473498,-0.012669176465368276,0.008692206273396532
+JEV + person offset + MLP (item x person features) - JEV + person offset,mean,brier,-0.002064299336632319,-0.0056998261716910865,0.0014578088470030036
+JEV + person offset + MLP (item x person features) - JEV + person offset,mean,auroc,0.00508313321275065,-0.0008354516074365462,0.010956265687204956
+JEV + person offset + MLP (item x person features) - JEV + person offset,mean,within_comment_auroc,0.013614716543375335,-0.010897580490007242,0.038403514127228276
+JEV + person offset + MLP (item x person features) - JEV + person offset + MLP (item features),hatespeech,logloss,-0.003972680089938119,-0.013581873273072866,0.006483689509304283
+JEV + person offset + MLP (item x person features) - JEV + person offset + MLP (item features),hatespeech,brier,-0.002336264438214719,-0.005314928997447426,0.0008125349421084147
+JEV + person offset + MLP (item x person features) - JEV + person offset + MLP (item features),hatespeech,auroc,0.007619083452479414,0.0015980267641437368,0.013280535869150305
+JEV + person offset + MLP (item x person features) - JEV + person offset + MLP (item features),hatespeech,within_comment_auroc,0.0,-0.04169241573033704,0.04554644179957359
+JEV + person offset + MLP (item x person features) - JEV + person offset + MLP (item features),insult,logloss,7.846231583208407e-05,-0.0071667399495622,0.008679084993353058
+JEV + person offset + MLP (item x person features) - JEV + person offset + MLP (item features),insult,brier,0.0001680724827697322,-0.0023787439714891014,0.0030402418687564526
+JEV + person offset + MLP (item x person features) - JEV + person offset + MLP (item features),insult,auroc,0.0005899008966495645,-0.0034684744572431397,0.004305438752374857
+JEV + person offset + MLP (item x person features) - JEV + person offset + MLP (item features),insult,within_comment_auroc,0.05304518664047153,-0.015439997083697829,0.11764859068627453
+JEV + person offset + MLP (item x person features) - JEV + person offset + MLP (item features),humiliate,logloss,-0.0047221892419134215,-0.012342105786928481,0.003894043278213713
+JEV + person offset + MLP (item x person features) - JEV + person offset + MLP (item features),humiliate,brier,-0.0020842004235090417,-0.005052437847477411,0.0009231300528162092
+JEV + person offset + MLP (item x person features) - JEV + person offset + MLP (item features),humiliate,auroc,0.003628944839391246,-0.0009876632768056836,0.008250390974415236
+JEV + person offset + MLP (item x person features) - JEV + person offset + MLP (item features),humiliate,within_comment_auroc,0.02063273727647863,-0.01021838201316189,0.04993855869697125
+JEV + person offset + MLP (item x person features) - JEV + person offset + MLP (item features),dehumanize,logloss,-0.002841536094851549,-0.009185243254765137,0.003764131861034215
+JEV + person offset + MLP (item x person features) - JEV + person offset + MLP (item features),dehumanize,brier,-0.0010058261669490531,-0.0032051710139405693,0.0012399668850225165
+JEV + person offset + MLP (item x person features) - JEV + person offset + MLP (item features),dehumanize,auroc,0.0023424405430728656,-0.0021518391898958738,0.006464699457347782
+JEV + person offset + MLP (item x person features) - JEV + person offset + MLP (item features),dehumanize,within_comment_auroc,0.0,-0.014473742141976585,0.01584963797615252
+JEV + person offset + MLP (item x person features) - JEV + person offset + MLP (item features),violence,logloss,-0.0003090167955127898,-0.004832322191786883,0.004175405595299633
+JEV + person offset + MLP (item x person features) - JEV + person offset + MLP (item features),violence,brier,7.994392062235511e-05,-0.0012493836127631692,0.001551454296354865
+JEV + person offset + MLP (item x person features) - JEV + person offset + MLP (item features),violence,auroc,0.0004999751785370599,-0.0031716561124655704,0.004277996829449615
+JEV + person offset + MLP (item x person features) - JEV + person offset + MLP (item features),violence,within_comment_auroc,-0.051724137931034475,-0.0901384675151694,-0.01737551615253828
+JEV + person offset + MLP (item x person features) - JEV + person offset + MLP (item features),disrespect,logloss,0.002713326551716966,-0.0041028314931547795,0.010827641916180526
+JEV + person offset + MLP (item x person features) - JEV + person offset + MLP (item features),disrespect,brier,0.0011484199309705762,-0.0014808140159903276,0.004095697939011418
+JEV + person offset + MLP (item x person features) - JEV + person offset + MLP (item features),disrespect,auroc,-0.0004915511435843456,-0.004461528206713422,0.003004055692828138
+JEV + person offset + MLP (item x person features) - JEV + person offset + MLP (item features),disrespect,within_comment_auroc,0.05973451327433632,-0.019146248204449906,0.13883662703513278
+JEV + person offset + MLP (item x person features) - JEV + person offset + MLP (item features),mean,logloss,-0.0015089388924444714,-0.0059769723016857654,0.003859695446878214
+JEV + person offset + MLP (item x person features) - JEV + person offset + MLP (item features),mean,brier,-0.0006716424490516917,-0.0021428651997616017,0.000952462588053707
+JEV + person offset + MLP (item x person features) - JEV + person offset + MLP (item features),mean,auroc,0.002364798961090967,-0.000419673302946659,0.004878541512710815
+JEV + person offset + MLP (item x person features) - JEV + person offset + MLP (item features),mean,within_comment_auroc,0.013614716543375335,-0.010897580490007242,0.038403514127228276
+JEV + person offset + MLP (item features) - JEV + person offset,hatespeech,logloss,-0.009465751560878477,-0.03249771340208318,0.015025644676186431
+JEV + person offset + MLP (item features) - JEV + person offset,hatespeech,brier,-0.00714000612224111,-0.01477983515323975,0.0010871397287797635
+JEV + person offset + MLP (item features) - JEV + person offset,hatespeech,auroc,0.01835373450054778,0.002327118406724619,0.033881180346996595
+JEV + person offset + MLP (item features) - JEV + person offset,hatespeech,within_comment_auroc,0.0,0.0,0.0
+JEV + person offset + MLP (item features) - JEV + person offset,insult,logloss,-0.0036675267975878056,-0.02250908291500898,0.013715971817023206
+JEV + person offset + MLP (item features) - JEV + person offset,insult,brier,-0.0006033224769129986,-0.007685455086904385,0.006018644932710744
+JEV + person offset + MLP (item features) - JEV + person offset,insult,auroc,0.0023521259695975516,-0.006630230162682008,0.012852084761299395
+JEV + person offset + MLP (item features) - JEV + person offset,insult,within_comment_auroc,0.0,0.0,0.0
+JEV + person offset + MLP (item features) - JEV + person offset,humiliate,logloss,-0.013933887031007397,-0.03251902924545551,0.0033308740232875227
+JEV + person offset + MLP (item features) - JEV + person offset,humiliate,brier,-0.006933718875580808,-0.013904865166384738,-0.0005033980161611519
+JEV + person offset + MLP (item features) - JEV + person offset,humiliate,auroc,0.009809314561404103,-0.00037236568449366676,0.020332873098123583
+JEV + person offset + MLP (item features) - JEV + person offset,humiliate,within_comment_auroc,0.0,0.0,0.0
+JEV + person offset + MLP (item features) - JEV + person offset,dehumanize,logloss,0.011325037142278782,-0.0026223468655820438,0.024234947261794586
+JEV + person offset + MLP (item features) - JEV + person offset,dehumanize,brier,0.0026683216488829486,-0.0016619869577295637,0.006838120148998311
+JEV + person offset + MLP (item features) - JEV + person offset,dehumanize,auroc,-0.005877565952299935,-0.014289976777582244,0.0018878439043343862
+JEV + person offset + MLP (item features) - JEV + person offset,dehumanize,within_comment_auroc,0.0,0.0,0.0
+JEV + person offset + MLP (item features) - JEV + person offset,violence,logloss,0.00745727509695604,0.0003214497118300994,0.01518294896083569
+JEV + person offset + MLP (item features) - JEV + person offset,violence,brier,0.0013637813884189373,-0.0005417176284013227,0.0033433073839279448
+JEV + person offset + MLP (item features) - JEV + person offset,violence,auroc,-0.004118589857241117,-0.0098242765720256,0.001613046565527762
+JEV + person offset + MLP (item features) - JEV + person offset,violence,within_comment_auroc,0.0,0.0,0.0
+JEV + person offset + MLP (item features) - JEV + person offset,disrespect,logloss,0.007322596436064699,-0.010749241401142563,0.024739801631640045
+JEV + person offset + MLP (item features) - JEV + person offset,disrespect,brier,0.002289003111949267,-0.004187903888884827,0.008501215940415897
+JEV + person offset + MLP (item features) - JEV + person offset,disrespect,auroc,-0.004209013712050291,-0.013652747820324199,0.004672319457831527
+JEV + person offset + MLP (item features) - JEV + person offset,disrespect,within_comment_auroc,0.0,0.0,0.0
+JEV + person offset + MLP (item features) - JEV + person offset,mean,logloss,-0.0001603761190290265,-0.01032545114648176,0.00906973562790222
+JEV + person offset + MLP (item features) - JEV + person offset,mean,brier,-0.0013926568875806272,-0.004886051692641423,0.0016940274348827727
+JEV + person offset + MLP (item features) - JEV + person offset,mean,auroc,0.002718334251659682,-0.0026365239027304516,0.00835151377929038
+JEV + person offset + MLP (item features) - JEV + person offset,mean,within_comment_auroc,0.0,0.0,0.0
+"JEV + Platt + MLP (item x demographics, no anchors) - JEV + Platt",hatespeech,logloss,-0.017035619695470683,-0.038953931917021914,0.006378893445657099
+"JEV + Platt + MLP (item x demographics, no anchors) - JEV + Platt",hatespeech,brier,-0.010211317492891975,-0.017389473922490187,-0.00245236400549191
+"JEV + Platt + MLP (item x demographics, no anchors) - JEV + Platt",hatespeech,auroc,0.0288626349278015,0.01374926833744553,0.04400398270214305
+"JEV + Platt + MLP (item x demographics, no anchors) - JEV + Platt",hatespeech,within_comment_auroc,0.07799999999999996,0.017805248319236643,0.13976607998347126
+"JEV + Platt + MLP (item x demographics, no anchors) - JEV + Platt",insult,logloss,-0.0039253421462528415,-0.024150941065292135,0.014499901659495261
+"JEV + Platt + MLP (item x demographics, no anchors) - JEV + Platt",insult,brier,-0.0008651465460519092,-0.008235185941633935,0.006117310168260619
+"JEV + Platt + MLP (item x demographics, no anchors) - JEV + Platt",insult,auroc,0.003147245910574248,-0.007221617362800597,0.013711307883414327
+"JEV + Platt + MLP (item x demographics, no anchors) - JEV + Platt",insult,within_comment_auroc,0.036345776031434185,-0.019131247704584173,0.09375
+"JEV + Platt + MLP (item x demographics, no anchors) - JEV + Platt",humiliate,logloss,-0.011638374724172507,-0.03111620623428122,0.0062124723498231385
+"JEV + Platt + MLP (item x demographics, no anchors) - JEV + Platt",humiliate,brier,-0.007202015899669706,-0.014051916272292193,-0.0009419775622618704
+"JEV + Platt + MLP (item x demographics, no anchors) - JEV + Platt",humiliate,auroc,0.011274321049174363,0.0007846617067775231,0.022734337439204003
+"JEV + Platt + MLP (item x demographics, no anchors) - JEV + Platt",humiliate,within_comment_auroc,0.02957359009628613,-0.017937460026620118,0.0763125966566021
+"JEV + Platt + MLP (item x demographics, no anchors) - JEV + Platt",dehumanize,logloss,0.009368846438840561,-0.004231863802386241,0.022658012256238178
+"JEV + Platt + MLP (item x demographics, no anchors) - JEV + Platt",dehumanize,brier,0.0024505439076690227,-0.0018446429180495063,0.0065567273415336295
+"JEV + Platt + MLP (item x demographics, no anchors) - JEV + Platt",dehumanize,auroc,-0.0038066991933045635,-0.013010610120091498,0.005219934794518506
+"JEV + Platt + MLP (item x demographics, no anchors) - JEV + Platt",dehumanize,within_comment_auroc,0.09353023909985936,0.05145180151011249,0.13888888888888884
+"JEV + Platt + MLP (item x demographics, no anchors) - JEV + Platt",violence,logloss,0.0065591858275602655,-0.0011826634929542348,0.015089225042474477
+"JEV + Platt + MLP (item x demographics, no anchors) - JEV + Platt",violence,brier,0.0013050995620729547,-0.0008885598857881088,0.003636970569995585
+"JEV + Platt + MLP (item x demographics, no anchors) - JEV + Platt",violence,auroc,-0.004519279184721392,-0.010349612876869196,0.0011389753279319142
+"JEV + Platt + MLP (item x demographics, no anchors) - JEV + Platt",violence,within_comment_auroc,0.0,-0.08298758865248228,0.08401038961038956
+"JEV + Platt + MLP (item x demographics, no anchors) - JEV + Platt",disrespect,logloss,0.008155267467771954,-0.010755859904938176,0.02680150540497113
+"JEV + Platt + MLP (item x demographics, no anchors) - JEV + Platt",disrespect,brier,0.002795418758446966,-0.0041078335625855745,0.00924493226128116
+"JEV + Platt + MLP (item x demographics, no anchors) - JEV + Platt",disrespect,auroc,-0.003368923691394965,-0.012796718569866458,0.0062915957646581975
+"JEV + Platt + MLP (item x demographics, no anchors) - JEV + Platt",disrespect,within_comment_auroc,0.04867256637168138,-0.015288914866483731,0.11134233114976282
+"JEV + Platt + MLP (item x demographics, no anchors) - JEV + Platt",mean,logloss,-0.001419339471953875,-0.012106007748590674,0.00864956228142318
+"JEV + Platt + MLP (item x demographics, no anchors) - JEV + Platt",mean,brier,-0.0019545696184041076,-0.005324463699417408,0.001424423919218123
+"JEV + Platt + MLP (item x demographics, no anchors) - JEV + Platt",mean,auroc,0.005264883303021532,-0.0003934552046151079,0.011333581411220086
+"JEV + Platt + MLP (item x demographics, no anchors) - JEV + Platt",mean,within_comment_auroc,0.047687028599876835,0.01452505009608427,0.07908571416524876
+TF-IDF + person offset - TF-IDF + Platt,hatespeech,logloss,-0.014192751519171987,-0.019826773930428716,-0.008103996774190877
+TF-IDF + person offset - TF-IDF + Platt,hatespeech,brier,-0.005710545246579352,-0.00791315112309535,-0.0035284027761623427
+TF-IDF + person offset - TF-IDF + Platt,hatespeech,auroc,0.012443457830620175,0.007406286219730518,0.01770769468266446
+TF-IDF + person offset - TF-IDF + Platt,hatespeech,within_comment_auroc,0.14800000000000002,0.09398208164088384,0.19709440470107312
+TF-IDF + person offset - TF-IDF + Platt,insult,logloss,0.0014740620546948024,-0.00022725150636341283,0.0031630897913265464
+TF-IDF + person offset - TF-IDF + Platt,insult,brier,0.00021641113777082222,-0.000376565668609459,0.00076428474823627
+TF-IDF + person offset - TF-IDF + Platt,insult,auroc,-0.0003373236113233258,-0.0017651309249823582,0.0010146999807658927
+TF-IDF + person offset - TF-IDF + Platt,insult,within_comment_auroc,0.007858546168958758,-0.05136452642266593,0.06598120503251127
+TF-IDF + person offset - TF-IDF + Platt,humiliate,logloss,-0.012601737099873778,-0.020278902668708083,-0.004961414677322013
+TF-IDF + person offset - TF-IDF + Platt,humiliate,brier,-0.005060972192556384,-0.008004112392141677,-0.001987067172964106
+TF-IDF + person offset - TF-IDF + Platt,humiliate,auroc,0.011741893522907887,0.006030959444173226,0.01743985006024609
+TF-IDF + person offset - TF-IDF + Platt,humiliate,within_comment_auroc,0.1272352132049519,0.08171567582924924,0.17033433618012417
+TF-IDF + person offset - TF-IDF + Platt,dehumanize,logloss,-0.036977422750955835,-0.0499925795661175,-0.024309868841843177
+TF-IDF + person offset - TF-IDF + Platt,dehumanize,brier,-0.015058720360239197,-0.02036534596400956,-0.009927904412652937
+TF-IDF + person offset - TF-IDF + Platt,dehumanize,auroc,0.039402463015570266,0.027559324569291645,0.05340118738601115
+TF-IDF + person offset - TF-IDF + Platt,dehumanize,within_comment_auroc,0.2229254571026723,0.1779364631057358,0.27000418569254186
+TF-IDF + person offset - TF-IDF + Platt,violence,logloss,-0.0024522733256037155,-0.0038324817115851853,-0.0011675096028861453
+TF-IDF + person offset - TF-IDF + Platt,violence,brier,-0.0007569700272853225,-0.0012406992774242336,-0.0003096529243420892
+TF-IDF + person offset - TF-IDF + Platt,violence,auroc,0.004675299807810895,0.0021186265109097353,0.007809706857342121
+TF-IDF + person offset - TF-IDF + Platt,violence,within_comment_auroc,0.1681034482758621,0.08770885547201342,0.2467850573705877
+TF-IDF + person offset - TF-IDF + Platt,disrespect,logloss,-3.776337067723512e-05,-0.0015785568889833124,0.0015784004774271438
+TF-IDF + person offset - TF-IDF + Platt,disrespect,brier,-0.00011249989972905716,-0.0006259934438233937,0.0004293172441606853
+TF-IDF + person offset - TF-IDF + Platt,disrespect,auroc,0.0005001147523575611,-0.0006286292108757918,0.0017269534646212475
+TF-IDF + person offset - TF-IDF + Platt,disrespect,within_comment_auroc,0.02212389380530977,-0.040943061735261396,0.07825601716287807
+TF-IDF + person offset - TF-IDF + Platt,mean,logloss,-0.010797981001931292,-0.013637101133845963,-0.007757911841710923
+TF-IDF + person offset - TF-IDF + Platt,mean,brier,-0.0044138827647697484,-0.005549866781540172,-0.003209708844756951
+TF-IDF + person offset - TF-IDF + Platt,mean,auroc,0.011404317552990576,0.008657067701825798,0.01441910578426484
+TF-IDF + person offset - TF-IDF + Platt,mean,within_comment_auroc,0.11604109309295914,0.0894087711515852,0.14374567371316377
+JEV + person offset - TF-IDF + person offset,hatespeech,logloss,0.01974694370103236,-0.009575907372864722,0.05012816893727895
+JEV + person offset - TF-IDF + person offset,hatespeech,brier,0.011994329756097655,0.0009163382875944802,0.023336585277544685
+JEV + person offset - TF-IDF + person offset,hatespeech,auroc,-0.034208535045693655,-0.0601759180014042,-0.008967982516553182
+JEV + person offset - TF-IDF + person offset,hatespeech,within_comment_auroc,0.02400000000000002,-0.014553772522522577,0.061606003187112034
+JEV + person offset - TF-IDF + person offset,insult,logloss,-0.09389674357064853,-0.13058255702043067,-0.05366166852209347
+JEV + person offset - TF-IDF + person offset,insult,brier,-0.03289126740036602,-0.04717744233104701,-0.017418752310284898
+JEV + person offset - TF-IDF + person offset,insult,auroc,0.05549056490903881,0.03234189732299413,0.07917304745820475
+JEV + person offset - TF-IDF + person offset,insult,within_comment_auroc,0.0029469548133594925,-0.03870434789659761,0.04652287035847361
+JEV + person offset - TF-IDF + person offset,humiliate,logloss,-0.04881123231081119,-0.07820190752371566,-0.017029465734076557
+JEV + person offset - TF-IDF + person offset,humiliate,brier,-0.016622890759053738,-0.02894819468393108,-0.004145403515411261
+JEV + person offset - TF-IDF + person offset,humiliate,auroc,0.032632999291360654,0.010927161328998592,0.05433233472143242
+JEV + person offset - TF-IDF + person offset,humiliate,within_comment_auroc,0.038514442916093516,0.007219622862686459,0.07019867549668868
+JEV + person offset - TF-IDF + person offset,dehumanize,logloss,-0.055580395011601225,-0.08444661967001026,-0.027969412449081424
+JEV + person offset - TF-IDF + person offset,dehumanize,brier,-0.022034090699391384,-0.03274161838999825,-0.010830784938736277
+JEV + person offset - TF-IDF + person offset,dehumanize,auroc,0.043158767073685156,0.022000339725513133,0.06337440723137723
+JEV + person offset - TF-IDF + person offset,dehumanize,within_comment_auroc,0.019690576652601988,-0.004110297590930598,0.04529261480846741
+JEV + person offset - TF-IDF + person offset,violence,logloss,-0.10068416159744817,-0.12868669187033105,-0.07556736447795197
+JEV + person offset - TF-IDF + person offset,violence,brier,-0.030979558721131673,-0.041119742875640415,-0.022250014829130565
+JEV + person offset - TF-IDF + person offset,violence,auroc,0.07050891090513245,0.03908394552384385,0.10389369718895333
+JEV + person offset - TF-IDF + person offset,violence,within_comment_auroc,0.04310344827586199,0.0,0.08976190476190476
+JEV + person offset - TF-IDF + person offset,disrespect,logloss,-0.09765541203020517,-0.13960051618838404,-0.0576214698815982
+JEV + person offset - TF-IDF + person offset,disrespect,brier,-0.03146304774730373,-0.04587011563969099,-0.016415957341766523
+JEV + person offset - TF-IDF + person offset,disrespect,auroc,0.05314489968588687,0.030985308465009492,0.07680401122767094
+JEV + person offset - TF-IDF + person offset,disrespect,within_comment_auroc,-0.01106194690265494,-0.057554659031754274,0.0372964721845319
+JEV + person offset - TF-IDF + person offset,mean,logloss,-0.06281350013661366,-0.08275889159872986,-0.044084652151793975
+JEV + person offset - TF-IDF + person offset,mean,brier,-0.020332754261858148,-0.027478885584500286,-0.013071129810106828
+JEV + person offset - TF-IDF + person offset,mean,auroc,0.036787934469901716,0.021809498916758166,0.05143550422151689
+JEV + person offset - TF-IDF + person offset,mean,within_comment_auroc,0.019532245959210343,0.0012797437718692654,0.037701881053048975
+JEV + Platt - TF-IDF + Platt,hatespeech,logloss,0.017293438624992108,-0.01110917032124611,0.04577943066608537
+JEV + Platt - TF-IDF + Platt,hatespeech,brier,0.010504776150346506,-0.0005803028743591376,0.021730174229988665
+JEV + Platt - TF-IDF + Platt,hatespeech,auroc,-0.03341527244755471,-0.06021974885860265,-0.0066945388431319764
+JEV + Platt - TF-IDF + Platt,hatespeech,within_comment_auroc,0.0,0.0,0.0
+JEV + Platt - TF-IDF + Platt,insult,logloss,-0.0930152889347195,-0.12980471355715117,-0.053048338245626554
+JEV + Platt - TF-IDF + Platt,insult,brier,-0.032802664310868784,-0.04717958934673026,-0.017206084699393664
+JEV + Platt - TF-IDF + Platt,insult,auroc,0.05542492804870758,0.031164695065622635,0.07906537088128852
+JEV + Platt - TF-IDF + Platt,insult,within_comment_auroc,0.0,0.0,0.0
+JEV + Platt - TF-IDF + Platt,humiliate,logloss,-0.04512752128134789,-0.07488503472044572,-0.013489137196311419
+JEV + Platt - TF-IDF + Platt,humiliate,brier,-0.016069079708411094,-0.028368236138677366,-0.003502438399146266
+JEV + Platt - TF-IDF + Platt,humiliate,auroc,0.031671967978566085,0.009429115496240943,0.052551074904586326
+JEV + Platt - TF-IDF + Platt,humiliate,within_comment_auroc,0.0,0.0,0.0
+JEV + Platt - TF-IDF + Platt,dehumanize,logloss,-0.053277731041797394,-0.0788075270592441,-0.028887528351258393
+JEV + Platt - TF-IDF + Platt,dehumanize,brier,-0.019273421943516778,-0.029197273719504487,-0.009207709793743296
+JEV + Platt - TF-IDF + Platt,dehumanize,auroc,0.04178876599112302,0.01726247468236692,0.06352496772847813
+JEV + Platt - TF-IDF + Platt,dehumanize,within_comment_auroc,0.0,0.0,0.0
+JEV + Platt - TF-IDF + Platt,violence,logloss,-0.09351780407679874,-0.1201470316214912,-0.06945001581048323
+JEV + Platt - TF-IDF + Platt,violence,brier,-0.02881695584419225,-0.03856008873631153,-0.020557313468215915
+JEV + Platt - TF-IDF + Platt,violence,auroc,0.06645414766642788,0.03385478861441914,0.09885572724118602
+JEV + Platt - TF-IDF + Platt,violence,within_comment_auroc,0.0,0.0,0.0
+JEV + Platt - TF-IDF + Platt,disrespect,logloss,-0.0975523506691452,-0.13972999788829898,-0.057756706582522604
+JEV + Platt - TF-IDF + Platt,disrespect,brier,-0.031629908184020825,-0.0459196448588357,-0.01689189049780957
+JEV + Platt - TF-IDF + Platt,disrespect,auroc,0.05300702558463766,0.030486649222623455,0.07631842732451226
+JEV + Platt - TF-IDF + Platt,disrespect,within_comment_auroc,0.0,0.0,0.0
+JEV + Platt - TF-IDF + Platt,mean,logloss,-0.060866209563136105,-0.08020330635647088,-0.041540229697188596
+JEV + Platt - TF-IDF + Platt,mean,brier,-0.01968120897344387,-0.026913171997093557,-0.012493257415557355
+JEV + Platt - TF-IDF + Platt,mean,auroc,0.03582192713698459,0.020390441175270838,0.05086736480207918
+JEV + Platt - TF-IDF + Platt,mean,within_comment_auroc,0.0,0.0,0.0

@@ -1,0 +1,26 @@
+pair,metric,mean,lo,hi
+JEV with 10-item history in state - JEV zero-shot,auroc,-0.0778,-0.1403,-0.0079
+JEV with 10-item history in state - JEV zero-shot,acc,0.1138,0.0317,0.2012
+JEV with 10-item history in state - JEV zero-shot,util@1/3,-0.0006,-0.0603,0.0504
+JEV with 10-item history in state - JEV zero-shot,brier,-0.0388,-0.0806,-0.0009
+JEV with 10-item history in state - JEV zero-shot,fa_block90,-0.108,-0.1755,-0.0441
+JEV zero-shot + kNN feature (fit on other sessions) - JEV zero-shot,auroc,-0.002,-0.0172,0.011
+JEV zero-shot + kNN feature (fit on other sessions) - JEV zero-shot,acc,0.2932,0.198,0.3853
+JEV zero-shot + kNN feature (fit on other sessions) - JEV zero-shot,util@1/3,0.0674,-0.0051,0.1336
+JEV zero-shot + kNN feature (fit on other sessions) - JEV zero-shot,brier,-0.1036,-0.142,-0.0631
+JEV zero-shot + kNN feature (fit on other sessions) - JEV zero-shot,fa_block90,0.0033,-0.0257,0.0308
+JEV zero-shot + kNN feature (fit on other sessions) - JEV + global Platt (other sessions),auroc,-0.002,-0.0172,0.011
+JEV zero-shot + kNN feature (fit on other sessions) - JEV + global Platt (other sessions),acc,0.0152,-0.0185,0.0458
+JEV zero-shot + kNN feature (fit on other sessions) - JEV + global Platt (other sessions),util@1/3,0.017,-0.006,0.0388
+JEV zero-shot + kNN feature (fit on other sessions) - JEV + global Platt (other sessions),brier,-0.0002,-0.0061,0.0056
+JEV zero-shot + kNN feature (fit on other sessions) - JEV + global Platt (other sessions),fa_block90,0.0033,-0.0257,0.0308
+JEV with 10-item history in state - JEV + session Platt (10 labels),auroc,-0.0778,-0.1403,-0.0079
+JEV with 10-item history in state - JEV + session Platt (10 labels),acc,-0.1265,-0.2089,-0.0522
+JEV with 10-item history in state - JEV + session Platt (10 labels),util@1/3,-0.0272,-0.0672,0.0112
+JEV with 10-item history in state - JEV + session Platt (10 labels),brier,0.0383,0.014,0.0641
+JEV with 10-item history in state - JEV + session Platt (10 labels),fa_block90,-0.108,-0.1755,-0.0441
+... + global Platt - JEV + global Platt (other sessions),auroc,-0.0778,-0.1403,-0.0079
+... + global Platt - JEV + global Platt (other sessions),acc,-0.0068,-0.0634,0.037
+... + global Platt - JEV + global Platt (other sessions),util@1/3,-0.0549,-0.1089,-0.0045
+... + global Platt - JEV + global Platt (other sessions),brier,0.0143,-0.0002,0.0316
+... + global Platt - JEV + global Platt (other sessions),fa_block90,-0.108,-0.1755,-0.0441

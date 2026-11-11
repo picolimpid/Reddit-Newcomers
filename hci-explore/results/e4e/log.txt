@@ -1,0 +1,10 @@
+300 rows from 26 cells
+original wording reproduced from cache: max |diff| vs E4a = 0.0100
+  wording  mean_p  auroc  spearman_vs_original  flip_rate_vs_original  mean_abs_diff
+ original   0.701  0.595                 1.000                  0.000          0.000
+  violate   0.697  0.589                 0.994                  0.010          0.018
+moderator   0.691  0.602                 0.989                  0.033          0.028
+pre-registered criterion (rho >= 0.8 and flips <= 10% for both rewordings): MET
+  violate: rho 95% CI [0.991, 0.995], flip rate 95% CI [0.000, 0.023]
+  moderator: rho 95% CI [0.984, 0.991], flip rate 95% CI [0.013, 0.057]
+JEV spent so far $0.4381

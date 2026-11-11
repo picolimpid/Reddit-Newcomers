@@ -1,0 +1,50 @@
+
+== DICES-350 (104 raters, fixed teams): 57634 (team, conversation) cases, split rate 0.526; consistency with no review 0.8246, with universal review 1.0
+budget                                         10%                   20%                   30%                   50%
+routing                                                                                                             
+random                        0.100 [0.097, 0.103]  0.199 [0.195, 0.204]  0.298 [0.295, 0.305]  0.501 [0.495, 0.506]
+content only (k = 0)          0.116 [0.105, 0.126]  0.223 [0.210, 0.237]  0.331 [0.317, 0.347]  0.527 [0.510, 0.545]
++ per-person offsets, k = 5   0.126 [0.121, 0.130]  0.243 [0.236, 0.251]  0.355 [0.345, 0.365]  0.568 [0.557, 0.580]
++ per-person offsets, k = 20  0.141 [0.136, 0.146]  0.262 [0.254, 0.271]  0.374 [0.365, 0.385]  0.592 [0.580, 0.605]
+oracle                        0.190 [0.183, 0.198]  0.380 [0.366, 0.396]  0.570 [0.549, 0.593]  0.950 [0.915, 0.989]
+expected agreement of the final decision with the team majority:
+budget                           10%     20%     30%     50%
+routing                                                     
+random                        0.8422  0.8596  0.8769  0.9125
+content only (k = 0)          0.8450  0.8637  0.8827  0.9171
++ per-person offsets, k = 5   0.8467  0.8672  0.8868  0.9242
++ per-person offsets, k = 20  0.8493  0.8706  0.8902  0.9283
+oracle                        0.8579  0.8912  0.9246  0.9912
+  surfaced, + per-person offsets, k = 20 - content only (k = 0) at 10%: +0.025 [+0.017, +0.036]
+  surfaced, + per-person offsets, k = 20 - content only (k = 0) at 20%: +0.039 [+0.029, +0.050]
+  surfaced, + per-person offsets, k = 20 - content only (k = 0) at 30%: +0.043 [+0.031, +0.055]
+  surfaced, + per-person offsets, k = 20 - content only (k = 0) at 50%: +0.064 [+0.050, +0.078]
+
+== DICES-990 (141 raters, E1i predictions): 29700 (team, conversation) cases, split rate 0.457; consistency with no review 0.8478, with universal review 1.0
+budget                                         10%                   20%                   30%                   50%
+routing                                                                                                             
+random                        0.099 [0.094, 0.105]  0.196 [0.193, 0.207]  0.296 [0.292, 0.308]  0.500 [0.492, 0.509]
+content only (k = 0)          0.148 [0.140, 0.154]  0.291 [0.280, 0.302]  0.426 [0.412, 0.441]  0.652 [0.637, 0.668]
++ per-person offsets, k = 5   0.164 [0.158, 0.171]  0.318 [0.309, 0.327]  0.458 [0.446, 0.470]  0.698 [0.685, 0.711]
++ per-person offsets, k = 20  0.182 [0.176, 0.189]  0.341 [0.331, 0.351]  0.486 [0.473, 0.500]  0.725 [0.712, 0.738]
+oracle                        0.219 [0.212, 0.227]  0.438 [0.424, 0.454]  0.657 [0.636, 0.681]  1.000 [1.000, 1.000]
+expected agreement of the final decision with the team majority:
+budget                           10%     20%     30%     50%
+routing                                                     
+random                        0.8630  0.8777  0.8929  0.9238
+content only (k = 0)          0.8703  0.8921  0.9127  0.9471
++ per-person offsets, k = 5   0.8728  0.8962  0.9175  0.9540
++ per-person offsets, k = 20  0.8756  0.8998  0.9218  0.9582
+oracle                        0.8812  0.9145  0.9478  1.0000
+  surfaced, + per-person offsets, k = 20 - content only (k = 0) at 10%: +0.035 [+0.028, +0.041]
+  surfaced, + per-person offsets, k = 20 - content only (k = 0) at 20%: +0.050 [+0.042, +0.058]
+  surfaced, + per-person offsets, k = 20 - content only (k = 0) at 30%: +0.060 [+0.051, +0.070]
+  surfaced, + per-person offsets, k = 20 - content only (k = 0) at 50%: +0.073 [+0.061, +0.085]
+
+== D2 secondary: team-disagreement detection when the shared parts come from singly-labelled logs
+split rate 0.457
+                                             data                              predictor                AUROC splits caught, top 20% flagged   AUROC vs content only  caught vs content only
+DICES-990, shared parts from singly-labelled logs         judge only (k = 0), all labels 0.677 [0.663, 0.690]           0.288 [0.277, 0.299]                                                
+DICES-990, shared parts from singly-labelled logs        + intercepts k = 20, all labels 0.774 [0.764, 0.784]           0.342 [0.331, 0.351] +0.097 [+0.087, +0.106] +0.054 [+0.045, +0.061]
+DICES-990, shared parts from singly-labelled logs  judge only (k = 0), single-label logs 0.672 [0.658, 0.685]           0.289 [0.278, 0.299] -0.005 [-0.009, -0.001] +0.001 [-0.004, +0.006]
+DICES-990, shared parts from singly-labelled logs + intercepts k = 20, single-label logs 0.771 [0.760, 0.780]           0.336 [0.325, 0.346] +0.094 [+0.084, +0.103] +0.048 [+0.040, +0.056]

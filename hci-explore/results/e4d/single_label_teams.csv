@@ -1,0 +1,5 @@
+data,predictor,AUROC,"splits caught, top 20% flagged",AUROC vs content only,caught vs content only
+"DICES-990, shared parts from singly-labelled logs","judge only (k = 0), all labels","0.677 [0.663, 0.690]","0.288 [0.277, 0.299]",,
+"DICES-990, shared parts from singly-labelled logs","+ intercepts k = 20, all labels","0.774 [0.764, 0.784]","0.342 [0.331, 0.351]","+0.097 [+0.087, +0.106]","+0.054 [+0.045, +0.061]"
+"DICES-990, shared parts from singly-labelled logs","judge only (k = 0), single-label logs","0.672 [0.658, 0.685]","0.289 [0.278, 0.299]","-0.005 [-0.009, -0.001]","+0.001 [-0.004, +0.006]"
+"DICES-990, shared parts from singly-labelled logs","+ intercepts k = 20, single-label logs","0.771 [0.760, 0.780]","0.336 [0.325, 0.346]","+0.094 [+0.084, +0.103]","+0.048 [+0.040, +0.056]"

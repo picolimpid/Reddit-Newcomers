@@ -1,0 +1,42 @@
+
+== suggesting model CodeLlama34b: 1346 suggestions, 27 programmers, accept rate 0.031
+                                                       auroc     within_user_auroc
+JEV only                                0.815 [0.753, 0.868]  0.837 [0.784, 0.878]
+LR | text                               0.774 [0.683, 0.841]  0.765 [0.660, 0.843]
+LR | text + conf                        0.794 [0.706, 0.863]  0.793 [0.700, 0.864]
+LR | text + JEV                         0.827 [0.740, 0.892]  0.839 [0.753, 0.904]
+LR | all (text + conf + history)        0.872 [0.814, 0.916]  0.848 [0.792, 0.891]
+LR | all (text + conf + history) + JEV  0.896 [0.850, 0.933]  0.878 [0.833, 0.913]
+                                                                       pair                   auroc       within_user_auroc
+                                              LR | text + JEV  -  LR | text +0.053 [+0.019, +0.089] +0.075 [+0.034, +0.117]
+                                       LR | text + JEV  -  LR | text + conf +0.033 [+0.000, +0.072] +0.047 [+0.005, +0.093]
+                                             LR | text + conf  -  LR | text +0.020 [-0.023, +0.061] +0.028 [-0.021, +0.071]
+LR | all (text + conf + history) + JEV  -  LR | all (text + conf + history) +0.023 [+0.002, +0.048] +0.030 [-0.000, +0.062]
+
+== suggesting model CodeLlama7b: 1508 suggestions, 24 programmers, accept rate 0.091
+                                                       auroc     within_user_auroc
+JEV only                                0.693 [0.646, 0.741]  0.694 [0.663, 0.733]
+LR | text                               0.716 [0.676, 0.766]  0.742 [0.709, 0.784]
+LR | text + conf                        0.741 [0.698, 0.788]  0.770 [0.737, 0.808]
+LR | text + JEV                         0.757 [0.708, 0.809]  0.774 [0.741, 0.816]
+LR | all (text + conf + history)        0.813 [0.774, 0.851]  0.766 [0.723, 0.818]
+LR | all (text + conf + history) + JEV  0.814 [0.777, 0.849]  0.773 [0.732, 0.820]
+                                                                       pair                   auroc       within_user_auroc
+                                              LR | text + JEV  -  LR | text +0.040 [+0.017, +0.063] +0.033 [+0.009, +0.059]
+                                       LR | text + JEV  -  LR | text + conf +0.016 [-0.009, +0.045] +0.004 [-0.019, +0.036]
+                                             LR | text + conf  -  LR | text +0.024 [+0.006, +0.041] +0.029 [+0.009, +0.042]
+LR | all (text + conf + history) + JEV  -  LR | all (text + conf + history) +0.001 [-0.012, +0.016] +0.007 [-0.008, +0.022]
+
+== suggesting model GPT-3.5: 1911 suggestions, 32 programmers, accept rate 0.145
+                                                       auroc     within_user_auroc
+JEV only                                0.658 [0.620, 0.698]  0.674 [0.639, 0.709]
+LR | text                               0.662 [0.625, 0.701]  0.663 [0.626, 0.698]
+LR | text + conf                        0.683 [0.647, 0.723]  0.690 [0.657, 0.725]
+LR | text + JEV                         0.714 [0.680, 0.750]  0.711 [0.678, 0.744]
+LR | all (text + conf + history)        0.729 [0.691, 0.766]  0.707 [0.671, 0.742]
+LR | all (text + conf + history) + JEV  0.746 [0.713, 0.780]  0.725 [0.692, 0.757]
+                                                                       pair                   auroc       within_user_auroc
+                                              LR | text + JEV  -  LR | text +0.052 [+0.027, +0.079] +0.048 [+0.023, +0.076]
+                                       LR | text + JEV  -  LR | text + conf +0.031 [+0.015, +0.047] +0.020 [+0.003, +0.039]
+                                             LR | text + conf  -  LR | text +0.021 [+0.004, +0.038] +0.028 [+0.010, +0.045]
+LR | all (text + conf + history) + JEV  -  LR | all (text + conf + history) +0.017 [+0.006, +0.029] +0.018 [+0.005, +0.032]

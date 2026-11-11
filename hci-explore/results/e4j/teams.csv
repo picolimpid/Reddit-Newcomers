@@ -1,0 +1,4 @@
+data,predictor,AUROC,"splits caught, top 20% flagged",AUROC vs content only,caught vs content only
+POPQUORN,judge only (k = 0),"0.701 [0.685, 0.716]","0.295 [0.283, 0.309]",,
+POPQUORN,"+ per-person offsets, k = 5","0.744 [0.731, 0.757]","0.319 [0.308, 0.332]","+0.043 [+0.035, +0.051]","+0.024 [+0.016, +0.033]"
+POPQUORN,"+ per-person offsets, k = 20","0.774 [0.762, 0.787]","0.336 [0.326, 0.348]","+0.073 [+0.064, +0.083]","+0.041 [+0.031, +0.050]"

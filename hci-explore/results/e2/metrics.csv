@@ -1,0 +1,9 @@
+,JEV,GPT-4o-mini,GPT-4o,Qwen3-32B (local)
+need_auroc,0.644,0.725,0.634,0.643
+need_acc@0.5,0.558,0.625,0.583,0.633
+accept_auroc,0.823,0.633,0.822,0.768
+accept_acc@0.5,0.683,0.55,0.6,0.567
+reward_acc_all120,0.617,0.55,0.592,0.583
+FA_blocked@keep90%CD,0.6,0.3,0.5,0.4
+FA_blocked@keep80%CD,0.7,0.467,0.733,0.6
+disrupt_auroc_vs_not_needed,0.625,,,

@@ -1,0 +1,7 @@
+history,k,auroc,lo,hi
+10 most recent,1,0.4911,0.4555,0.5262
+10 most recent,3,0.5012,0.4472,0.5542
+10 most recent,5,0.4833,0.4344,0.5337
+whole first half (43 per session on average),1,0.4955,0.4618,0.5279
+whole first half (43 per session on average),3,0.5151,0.4591,0.5582
+whole first half (43 per session on average),5,0.4989,0.4533,0.5422

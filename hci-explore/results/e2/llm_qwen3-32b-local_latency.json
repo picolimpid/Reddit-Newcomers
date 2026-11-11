@@ -1,0 +1,12 @@
+{
+ "model": "/data/hanqim2/models/Qwen3-32B",
+ "tp": 2,
+ "gpus": "1,8",
+ "n": 180,
+ "latency_median_s": 0.11322522163391113,
+ "latency_p90_s": 0.25286340713500977,
+ "n_latency": 30,
+ "batch_wall_s": 4.706625461578369,
+ "mass_median": 0.999997224332335,
+ "mass_below_0.5": 0.0
+}

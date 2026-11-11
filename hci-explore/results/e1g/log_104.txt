@@ -1,0 +1,79 @@
+DICES-350, raters = 104: 104 x 350; questions ['harmful', 'bias', 'misinfo', 'political', 'policy', 'overall']; yes rates harmful 0.197, bias 0.090, misinfo 0.033, political 0.023, policy 0.104, overall 0.353
+25 cells in 6s
+learned prior: correlation of the overall offset with each question's offset (mean over cells): harmful 0.90, bias 0.83, misinfo 0.66, political 0.65, policy 0.78, overall 1.00
+
+== within-conversation AUROC (pairs within a rater fold)
+k                                                      0      1      2      3      5      10     20     50
+model                                                                                                     
+random | crowd difficulties | overall answer only     0.5  0.614  0.655  0.677  0.710  0.741  0.762  0.777
+random | crowd difficulties | six answers             0.5  0.617  0.659  0.681  0.713  0.743  0.762  0.776
+random | jev difficulties | overall answer only       0.5  0.604  0.647  0.669  0.703  0.736  0.760  0.775
+random | jev difficulties | six answers               0.5  0.607  0.648  0.673  0.707  0.737  0.760  0.774
+CAT-crowd | crowd difficulties | overall answer only  0.5  0.639  0.693  0.707  0.723  0.747  0.760  0.770
+CAT-crowd | crowd difficulties | six answers          0.5  0.651  0.676  0.705  0.722  0.748  0.760  0.772
+CAT-JEV | jev difficulties | overall answer only      0.5  0.608  0.663  0.689  0.711  0.740  0.757  0.771
+CAT-JEV | jev difficulties | six answers              0.5  0.620  0.657  0.682  0.705  0.736  0.755  0.771
+
+== log loss
+k                                                         0       1       2       3       5       10      20      50
+model                                                                                                               
+random | crowd difficulties | overall answer only     0.6069  0.5942  0.5837  0.5766  0.5645  0.5491  0.5369  0.5278
+random | crowd difficulties | six answers             0.6069  0.6026  0.5910  0.5830  0.5675  0.5503  0.5380  0.5288
+random | jev difficulties | overall answer only       0.6069  0.5960  0.5867  0.5791  0.5672  0.5517  0.5391  0.5300
+random | jev difficulties | six answers               0.6069  0.6071  0.5964  0.5866  0.5704  0.5531  0.5398  0.5309
+CAT-crowd | crowd difficulties | overall answer only  0.6069  0.5834  0.5681  0.5634  0.5552  0.5436  0.5356  0.5285
+CAT-crowd | crowd difficulties | six answers          0.6069  0.5909  0.5875  0.5719  0.5621  0.5471  0.5361  0.5285
+CAT-JEV | jev difficulties | overall answer only      0.6069  0.5919  0.5794  0.5720  0.5613  0.5474  0.5379  0.5306
+CAT-JEV | jev difficulties | six answers              0.6069  0.6028  0.5968  0.5827  0.5676  0.5502  0.5398  0.5303
+
+== paired differences (two-way bootstrap; the first pair is the pre-registered primary comparison)
+                                                                                                 pair  k within-AUROC diff [95% CI]     log loss diff [95% CI]
+          random | jev difficulties | six answers  -  random | jev difficulties | overall answer only  1    +0.003 [-0.001, +0.008] +0.0111 [+0.0049, +0.0170]
+          random | jev difficulties | six answers  -  random | jev difficulties | overall answer only  2    +0.001 [-0.003, +0.006] +0.0097 [+0.0034, +0.0153]
+          random | jev difficulties | six answers  -  random | jev difficulties | overall answer only  3    +0.004 [-0.001, +0.009] +0.0075 [+0.0017, +0.0125]
+          random | jev difficulties | six answers  -  random | jev difficulties | overall answer only  5    +0.004 [-0.001, +0.009] +0.0032 [-0.0015, +0.0079]
+          random | jev difficulties | six answers  -  random | jev difficulties | overall answer only 10    +0.001 [-0.003, +0.005] +0.0014 [-0.0014, +0.0043]
+          random | jev difficulties | six answers  -  random | jev difficulties | overall answer only 20    -0.000 [-0.004, +0.003] +0.0007 [-0.0010, +0.0026]
+          random | jev difficulties | six answers  -  random | jev difficulties | overall answer only 50    -0.002 [-0.004, +0.001] +0.0009 [-0.0003, +0.0024]
+      random | crowd difficulties | six answers  -  random | crowd difficulties | overall answer only  1    +0.004 [-0.000, +0.008] +0.0084 [+0.0020, +0.0144]
+      random | crowd difficulties | six answers  -  random | crowd difficulties | overall answer only  2    +0.004 [-0.000, +0.009] +0.0073 [+0.0006, +0.0131]
+      random | crowd difficulties | six answers  -  random | crowd difficulties | overall answer only  3    +0.004 [-0.001, +0.009] +0.0064 [+0.0000, +0.0117]
+      random | crowd difficulties | six answers  -  random | crowd difficulties | overall answer only  5    +0.003 [-0.001, +0.008] +0.0030 [-0.0016, +0.0075]
+      random | crowd difficulties | six answers  -  random | crowd difficulties | overall answer only 10    +0.002 [-0.002, +0.006] +0.0013 [-0.0014, +0.0041]
+      random | crowd difficulties | six answers  -  random | crowd difficulties | overall answer only 20    -0.000 [-0.003, +0.002] +0.0011 [-0.0005, +0.0028]
+      random | crowd difficulties | six answers  -  random | crowd difficulties | overall answer only 50    -0.001 [-0.003, +0.001] +0.0010 [-0.0001, +0.0022]
+CAT-crowd | crowd difficulties | six answers  -  CAT-crowd | crowd difficulties | overall answer only  1    +0.012 [-0.004, +0.029] +0.0074 [-0.0034, +0.0186]
+CAT-crowd | crowd difficulties | six answers  -  CAT-crowd | crowd difficulties | overall answer only  2    -0.017 [-0.041, +0.007] +0.0194 [+0.0069, +0.0324]
+CAT-crowd | crowd difficulties | six answers  -  CAT-crowd | crowd difficulties | overall answer only  3    -0.003 [-0.023, +0.020] +0.0085 [-0.0026, +0.0197]
+CAT-crowd | crowd difficulties | six answers  -  CAT-crowd | crowd difficulties | overall answer only  5    -0.001 [-0.022, +0.027] +0.0069 [-0.0035, +0.0173]
+CAT-crowd | crowd difficulties | six answers  -  CAT-crowd | crowd difficulties | overall answer only 10    +0.001 [-0.015, +0.017] +0.0035 [-0.0043, +0.0114]
+CAT-crowd | crowd difficulties | six answers  -  CAT-crowd | crowd difficulties | overall answer only 20    +0.000 [-0.010, +0.011] +0.0005 [-0.0041, +0.0050]
+CAT-crowd | crowd difficulties | six answers  -  CAT-crowd | crowd difficulties | overall answer only 50    +0.002 [-0.004, +0.008] -0.0000 [-0.0024, +0.0025]
+        CAT-JEV | jev difficulties | six answers  -  CAT-JEV | jev difficulties | overall answer only  1    +0.012 [-0.001, +0.026] +0.0109 [+0.0024, +0.0197]
+        CAT-JEV | jev difficulties | six answers  -  CAT-JEV | jev difficulties | overall answer only  2    -0.006 [-0.028, +0.015] +0.0174 [+0.0056, +0.0292]
+        CAT-JEV | jev difficulties | six answers  -  CAT-JEV | jev difficulties | overall answer only  3    -0.007 [-0.030, +0.017] +0.0108 [-0.0014, +0.0222]
+        CAT-JEV | jev difficulties | six answers  -  CAT-JEV | jev difficulties | overall answer only  5    -0.006 [-0.030, +0.018] +0.0062 [-0.0037, +0.0165]
+        CAT-JEV | jev difficulties | six answers  -  CAT-JEV | jev difficulties | overall answer only 10    -0.003 [-0.019, +0.011] +0.0028 [-0.0038, +0.0096]
+        CAT-JEV | jev difficulties | six answers  -  CAT-JEV | jev difficulties | overall answer only 20    -0.002 [-0.014, +0.010] +0.0019 [-0.0026, +0.0069]
+        CAT-JEV | jev difficulties | six answers  -  CAT-JEV | jev difficulties | overall answer only 50    -0.000 [-0.009, +0.007] -0.0004 [-0.0034, +0.0027]
+   CAT-crowd | crowd difficulties | six answers  -  random | crowd difficulties | overall answer only  1    +0.037 [+0.001, +0.069] -0.0034 [-0.0186, +0.0136]
+   CAT-crowd | crowd difficulties | six answers  -  random | crowd difficulties | overall answer only  2    +0.021 [-0.008, +0.046] +0.0038 [-0.0112, +0.0198]
+   CAT-crowd | crowd difficulties | six answers  -  random | crowd difficulties | overall answer only  3    +0.028 [+0.005, +0.049] -0.0047 [-0.0167, +0.0082]
+   CAT-crowd | crowd difficulties | six answers  -  random | crowd difficulties | overall answer only  5    +0.013 [-0.007, +0.031] -0.0024 [-0.0122, +0.0082]
+   CAT-crowd | crowd difficulties | six answers  -  random | crowd difficulties | overall answer only 10    +0.007 [-0.008, +0.020] -0.0020 [-0.0087, +0.0052]
+   CAT-crowd | crowd difficulties | six answers  -  random | crowd difficulties | overall answer only 20    -0.002 [-0.014, +0.008] -0.0008 [-0.0052, +0.0045]
+   CAT-crowd | crowd difficulties | six answers  -  random | crowd difficulties | overall answer only 50    -0.005 [-0.014, +0.002] +0.0006 [-0.0025, +0.0044]
+         CAT-JEV | jev difficulties | six answers  -  random | jev difficulties | overall answer only  1    +0.016 [-0.013, +0.044] +0.0068 [-0.0057, +0.0195]
+         CAT-JEV | jev difficulties | six answers  -  random | jev difficulties | overall answer only  2    +0.010 [-0.016, +0.035] +0.0101 [-0.0039, +0.0249]
+         CAT-JEV | jev difficulties | six answers  -  random | jev difficulties | overall answer only  3    +0.012 [-0.012, +0.034] +0.0036 [-0.0091, +0.0164]
+         CAT-JEV | jev difficulties | six answers  -  random | jev difficulties | overall answer only  5    +0.002 [-0.019, +0.021] +0.0003 [-0.0095, +0.0105]
+         CAT-JEV | jev difficulties | six answers  -  random | jev difficulties | overall answer only 10    +0.000 [-0.015, +0.013] -0.0015 [-0.0083, +0.0064]
+         CAT-JEV | jev difficulties | six answers  -  random | jev difficulties | overall answer only 20    -0.005 [-0.018, +0.007] +0.0007 [-0.0044, +0.0064]
+         CAT-JEV | jev difficulties | six answers  -  random | jev difficulties | overall answer only 50    -0.004 [-0.015, +0.004] +0.0003 [-0.0029, +0.0035]
+        random | jev difficulties | six answers  -  random | crowd difficulties | overall answer only  1    -0.007 [-0.015, +0.002] +0.0129 [+0.0064, +0.0191]
+        random | jev difficulties | six answers  -  random | crowd difficulties | overall answer only  2    -0.007 [-0.014, -0.000] +0.0126 [+0.0066, +0.0183]
+        random | jev difficulties | six answers  -  random | crowd difficulties | overall answer only  3    -0.004 [-0.011, +0.003] +0.0100 [+0.0043, +0.0152]
+        random | jev difficulties | six answers  -  random | crowd difficulties | overall answer only  5    -0.002 [-0.009, +0.003] +0.0060 [+0.0015, +0.0108]
+        random | jev difficulties | six answers  -  random | crowd difficulties | overall answer only 10    -0.004 [-0.009, +0.001] +0.0040 [+0.0013, +0.0069]
+        random | jev difficulties | six answers  -  random | crowd difficulties | overall answer only 20    -0.002 [-0.006, +0.001] +0.0029 [+0.0010, +0.0048]
+        random | jev difficulties | six answers  -  random | crowd difficulties | overall answer only 50    -0.003 [-0.006, -0.000] +0.0031 [+0.0014, +0.0050]

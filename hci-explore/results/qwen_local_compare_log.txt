@@ -1,0 +1,26 @@
+                                                      comparison bootstrap unit                  JEV      Qwen3-32B local              Qwen - JEV
+        E2b ProactiveBench accept (1,387 proposals, 16 sessions)        session 0.655 [0.600, 0.712] 0.594 [0.536, 0.657] -0.062 [-0.087, -0.042]
+    E2e RealHumanEval accept (4,765 suggestions, 83 programmers)     programmer 0.676 [0.638, 0.713] 0.632 [0.597, 0.665] -0.045 [-0.068, -0.020]
+                     E2e RealHumanEval accept, within programmer     point only                0.634                0.592                        
+    E2e RealHumanEval useful (4,765 suggestions, 83 programmers)     programmer 0.715 [0.683, 0.751] 0.663 [0.629, 0.698] -0.052 [-0.076, -0.031]
+                     E2e RealHumanEval useful, within programmer     point only                0.675                0.633                        
+    E2e LR on both judges vs JEV alone (5-fold over programmers)     programmer 0.719 [0.689, 0.750] 0.722 [0.692, 0.753] +0.003 [-0.002, +0.008]
+                                  E2e LR Qwen alone vs JEV alone     programmer 0.719 [0.688, 0.752] 0.660 [0.628, 0.694] -0.059 [-0.085, -0.035]
+  E1e DICES harmful: AUROC vs rater majority (350 conversations)   conversation 0.781 [0.710, 0.843] 0.675 [0.604, 0.744] -0.106 [-0.152, -0.059]
+     E1e DICES bias: AUROC vs rater majority (350 conversations)   conversation 0.600 [0.520, 0.677] 0.536 [0.452, 0.617] -0.065 [-0.123, -0.009]
+  E1e DICES misinfo: AUROC vs rater majority (350 conversations)   conversation 0.765 [0.705, 0.825] 0.658 [0.585, 0.728] -0.108 [-0.169, -0.053]
+E1e DICES political: AUROC vs rater majority (350 conversations)   conversation 0.564 [0.483, 0.643] 0.561 [0.480, 0.639] -0.004 [-0.047, +0.043]
+   E1e DICES policy: AUROC vs rater majority (350 conversations)   conversation 0.825 [0.768, 0.876] 0.662 [0.591, 0.730] -0.163 [-0.229, -0.103]
+  E1e DICES overall: AUROC vs rater majority (350 conversations)   conversation 0.781 [0.720, 0.842] 0.628 [0.558, 0.699] -0.153 [-0.207, -0.099]
+
+DICES Spearman with the share of raters who said unsafe
+ question   JEV  Qwen3-32B local
+  harmful 0.442            0.199
+     bias 0.160            0.019
+  misinfo 0.446            0.248
+political 0.032            0.035
+   policy 0.460            0.188
+  overall 0.398            0.092
+
+latency at batch size 1, median seconds: e2b: Qwen local 0.125 (batch run 17 prompts/s), JEV via OpenRouter 0.138, e2e: Qwen local 0.106 (batch run 17 prompts/s), JEV via OpenRouter 0.125, e1e: Qwen local 0.108 (batch run 15 prompts/s), JEV via OpenRouter 0.124
+Qwen option mass below 0.5: {'e2b': 0.0, 'e2e': 0.0, 'e1e': 0.0}

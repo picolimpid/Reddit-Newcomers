@@ -1,0 +1,241 @@
+k,fold,model,n_anchor_labels,lam_d,lam_u,lam_v,epochs
+200,0,JEV + Platt,23089,,,,
+200,0,JEV six answers + Platt,23089,,,,
+200,0,+ demographics,23089,4.0,,,
+200,0,+ person offset,23089,,0.25,,
+200,0,+ person offset + person weights,23089,,0.25,32.0,
+200,0,"JEV + MLP offset (rater id, demographics, content)",23089,,,,15.0
+200,0,JEV + person offset + MLP,23089,,,,2.0
+200,0,MLP alone (no JEV),23089,,,,13.0
+200,1,JEV + Platt,23061,,,,
+200,1,JEV six answers + Platt,23061,,,,
+200,1,+ demographics,23061,4.0,,,
+200,1,+ person offset,23061,,0.25,,
+200,1,+ person offset + person weights,23061,,0.25,32.0,
+200,1,"JEV + MLP offset (rater id, demographics, content)",23061,,,,15.0
+200,1,JEV + person offset + MLP,23061,,,,3.0
+200,1,MLP alone (no JEV),23061,,,,10.0
+200,2,JEV + Platt,22995,,,,
+200,2,JEV six answers + Platt,22995,,,,
+200,2,+ demographics,22995,1.0,,,
+200,2,+ person offset,22995,,0.25,,
+200,2,+ person offset + person weights,22995,,0.25,32.0,
+200,2,"JEV + MLP offset (rater id, demographics, content)",22995,,,,14.0
+200,2,JEV + person offset + MLP,22995,,,,21.0
+200,2,MLP alone (no JEV),22995,,,,14.0
+200,3,JEV + Platt,23086,,,,
+200,3,JEV six answers + Platt,23086,,,,
+200,3,+ demographics,23086,4.0,,,
+200,3,+ person offset,23086,,0.25,,
+200,3,+ person offset + person weights,23086,,0.25,32.0,
+200,3,"JEV + MLP offset (rater id, demographics, content)",23086,,,,30.0
+200,3,JEV + person offset + MLP,23086,,,,8.0
+200,3,MLP alone (no JEV),23086,,,,20.0
+200,4,JEV + Platt,23105,,,,
+200,4,JEV six answers + Platt,23105,,,,
+200,4,+ demographics,23105,4.0,,,
+200,4,+ person offset,23105,,0.25,,
+200,4,+ person offset + person weights,23105,,0.25,32.0,
+200,4,"JEV + MLP offset (rater id, demographics, content)",23105,,,,8.0
+200,4,JEV + person offset + MLP,23105,,,,0.0
+200,4,MLP alone (no JEV),23105,,,,8.0
+100,0,JEV + Platt,11539,,,,
+100,0,JEV six answers + Platt,11539,,,,
+100,0,+ demographics,11539,4.0,,,
+100,0,+ person offset,11539,,0.25,,
+100,0,+ person offset + person weights,11539,,0.25,32.0,
+100,0,"JEV + MLP offset (rater id, demographics, content)",11539,,,,21.0
+100,0,JEV + person offset + MLP,11539,,,,2.0
+100,0,MLP alone (no JEV),11539,,,,21.0
+100,1,JEV + Platt,11557,,,,
+100,1,JEV six answers + Platt,11557,,,,
+100,1,+ demographics,11557,4.0,,,
+100,1,+ person offset,11557,,0.25,,
+100,1,+ person offset + person weights,11557,,0.25,32.0,
+100,1,"JEV + MLP offset (rater id, demographics, content)",11557,,,,16.0
+100,1,JEV + person offset + MLP,11557,,,,3.0
+100,1,MLP alone (no JEV),11557,,,,16.0
+100,2,JEV + Platt,11484,,,,
+100,2,JEV six answers + Platt,11484,,,,
+100,2,+ demographics,11484,4.0,,,
+100,2,+ person offset,11484,,0.25,,
+100,2,+ person offset + person weights,11484,,0.25,32.0,
+100,2,"JEV + MLP offset (rater id, demographics, content)",11484,,,,31.0
+100,2,JEV + person offset + MLP,11484,,,,3.0
+100,2,MLP alone (no JEV),11484,,,,27.0
+100,3,JEV + Platt,11524,,,,
+100,3,JEV six answers + Platt,11524,,,,
+100,3,+ demographics,11524,4.0,,,
+100,3,+ person offset,11524,,0.25,,
+100,3,+ person offset + person weights,11524,,0.25,32.0,
+100,3,"JEV + MLP offset (rater id, demographics, content)",11524,,,,24.0
+100,3,JEV + person offset + MLP,11524,,,,24.0
+100,3,MLP alone (no JEV),11524,,,,24.0
+100,4,JEV + Platt,11564,,,,
+100,4,JEV six answers + Platt,11564,,,,
+100,4,+ demographics,11564,4.0,,,
+100,4,+ person offset,11564,,0.25,,
+100,4,+ person offset + person weights,11564,,0.25,32.0,
+100,4,"JEV + MLP offset (rater id, demographics, content)",11564,,,,21.0
+100,4,JEV + person offset + MLP,11564,,,,0.0
+100,4,MLP alone (no JEV),11564,,,,13.0
+50,0,JEV + Platt,5764,,,,
+50,0,JEV six answers + Platt,5764,,,,
+50,0,+ demographics,5764,4.0,,,
+50,0,+ person offset,5764,,0.5,,
+50,0,+ person offset + person weights,5764,,0.5,32.0,
+50,0,"JEV + MLP offset (rater id, demographics, content)",5764,,,,37.0
+50,0,JEV + person offset + MLP,5764,,,,5.0
+50,0,MLP alone (no JEV),5764,,,,5.0
+50,1,JEV + Platt,5775,,,,
+50,1,JEV six answers + Platt,5775,,,,
+50,1,+ demographics,5775,4.0,,,
+50,1,+ person offset,5775,,0.5,,
+50,1,+ person offset + person weights,5775,,0.5,128.0,
+50,1,"JEV + MLP offset (rater id, demographics, content)",5775,,,,32.0
+50,1,JEV + person offset + MLP,5775,,,,5.0
+50,1,MLP alone (no JEV),5775,,,,23.0
+50,2,JEV + Platt,5732,,,,
+50,2,JEV six answers + Platt,5732,,,,
+50,2,+ demographics,5732,4.0,,,
+50,2,+ person offset,5732,,0.5,,
+50,2,+ person offset + person weights,5732,,0.5,128.0,
+50,2,"JEV + MLP offset (rater id, demographics, content)",5732,,,,54.0
+50,2,JEV + person offset + MLP,5732,,,,5.0
+50,2,MLP alone (no JEV),5732,,,,39.0
+50,3,JEV + Platt,5754,,,,
+50,3,JEV six answers + Platt,5754,,,,
+50,3,+ demographics,5754,16.0,,,
+50,3,+ person offset,5754,,0.5,,
+50,3,+ person offset + person weights,5754,,0.5,32.0,
+50,3,"JEV + MLP offset (rater id, demographics, content)",5754,,,,44.0
+50,3,JEV + person offset + MLP,5754,,,,22.0
+50,3,MLP alone (no JEV),5754,,,,34.0
+50,4,JEV + Platt,5771,,,,
+50,4,JEV six answers + Platt,5771,,,,
+50,4,+ demographics,5771,4.0,,,
+50,4,+ person offset,5771,,0.5,,
+50,4,+ person offset + person weights,5771,,0.5,128.0,
+50,4,"JEV + MLP offset (rater id, demographics, content)",5771,,,,2.0
+50,4,JEV + person offset + MLP,5771,,,,1.0
+50,4,MLP alone (no JEV),5771,,,,14.0
+20,0,JEV + Platt,2309,,,,
+20,0,JEV six answers + Platt,2309,,,,
+20,0,+ demographics,2309,4.0,,,
+20,0,+ person offset,2309,,0.5,,
+20,0,+ person offset + person weights,2309,,0.5,128.0,
+20,0,"JEV + MLP offset (rater id, demographics, content)",2309,,,,59.0
+20,0,JEV + person offset + MLP,2309,,,,7.0
+20,0,MLP alone (no JEV),2309,,,,12.0
+20,1,JEV + Platt,2305,,,,
+20,1,JEV six answers + Platt,2305,,,,
+20,1,+ demographics,2305,4.0,,,
+20,1,+ person offset,2305,,0.5,,
+20,1,+ person offset + person weights,2305,,0.5,128.0,
+20,1,"JEV + MLP offset (rater id, demographics, content)",2305,,,,10.0
+20,1,JEV + person offset + MLP,2305,,,,2.0
+20,1,MLP alone (no JEV),2305,,,,10.0
+20,2,JEV + Platt,2295,,,,
+20,2,JEV six answers + Platt,2295,,,,
+20,2,+ demographics,2295,16.0,,,
+20,2,+ person offset,2295,,0.5,,
+20,2,+ person offset + person weights,2295,,0.5,128.0,
+20,2,"JEV + MLP offset (rater id, demographics, content)",2295,,,,60.0
+20,2,JEV + person offset + MLP,2295,,,,0.0
+20,2,MLP alone (no JEV),2295,,,,54.0
+20,3,JEV + Platt,2298,,,,
+20,3,JEV six answers + Platt,2298,,,,
+20,3,+ demographics,2298,4.0,,,
+20,3,+ person offset,2298,,0.5,,
+20,3,+ person offset + person weights,2298,,0.5,128.0,
+20,3,"JEV + MLP offset (rater id, demographics, content)",2298,,,,60.0
+20,3,JEV + person offset + MLP,2298,,,,14.0
+20,3,MLP alone (no JEV),2298,,,,58.0
+20,4,JEV + Platt,2297,,,,
+20,4,JEV six answers + Platt,2297,,,,
+20,4,+ demographics,2297,16.0,,,
+20,4,+ person offset,2297,,1.0,,
+20,4,+ person offset + person weights,2297,,1.0,128.0,
+20,4,"JEV + MLP offset (rater id, demographics, content)",2297,,,,0.0
+20,4,JEV + person offset + MLP,2297,,,,0.0
+20,4,MLP alone (no JEV),2297,,,,12.0
+10,0,JEV + Platt,1153,,,,
+10,0,JEV six answers + Platt,1153,,,,
+10,0,+ demographics,1153,64.0,,,
+10,0,+ person offset,1153,,0.5,,
+10,0,+ person offset + person weights,1153,,0.5,128.0,
+10,0,"JEV + MLP offset (rater id, demographics, content)",1153,,,,23.0
+10,0,JEV + person offset + MLP,1153,,,,0.0
+10,0,MLP alone (no JEV),1153,,,,22.0
+10,1,JEV + Platt,1149,,,,
+10,1,JEV six answers + Platt,1149,,,,
+10,1,+ demographics,1149,16.0,,,
+10,1,+ person offset,1149,,0.5,,
+10,1,+ person offset + person weights,1149,,0.5,128.0,
+10,1,"JEV + MLP offset (rater id, demographics, content)",1149,,,,8.0
+10,1,JEV + person offset + MLP,1149,,,,10.0
+10,1,MLP alone (no JEV),1149,,,,12.0
+10,2,JEV + Platt,1135,,,,
+10,2,JEV six answers + Platt,1135,,,,
+10,2,+ demographics,1135,16.0,,,
+10,2,+ person offset,1135,,0.5,,
+10,2,+ person offset + person weights,1135,,0.5,128.0,
+10,2,"JEV + MLP offset (rater id, demographics, content)",1135,,,,0.0
+10,2,JEV + person offset + MLP,1135,,,,1.0
+10,2,MLP alone (no JEV),1135,,,,0.0
+10,3,JEV + Platt,1145,,,,
+10,3,JEV six answers + Platt,1145,,,,
+10,3,+ demographics,1145,4.0,,,
+10,3,+ person offset,1145,,0.5,,
+10,3,+ person offset + person weights,1145,,0.5,128.0,
+10,3,"JEV + MLP offset (rater id, demographics, content)",1145,,,,60.0
+10,3,JEV + person offset + MLP,1145,,,,0.0
+10,3,MLP alone (no JEV),1145,,,,42.0
+10,4,JEV + Platt,1145,,,,
+10,4,JEV six answers + Platt,1145,,,,
+10,4,+ demographics,1145,64.0,,,
+10,4,+ person offset,1145,,1.0,,
+10,4,+ person offset + person weights,1145,,1.0,128.0,
+10,4,"JEV + MLP offset (rater id, demographics, content)",1145,,,,0.0
+10,4,JEV + person offset + MLP,1145,,,,0.0
+10,4,MLP alone (no JEV),1145,,,,0.0
+5,0,JEV + Platt,588,,,,
+5,0,JEV six answers + Platt,588,,,,
+5,0,+ demographics,588,16.0,,,
+5,0,+ person offset,588,,0.5,,
+5,0,+ person offset + person weights,588,,0.5,128.0,
+5,0,"JEV + MLP offset (rater id, demographics, content)",588,,,,0.0
+5,0,JEV + person offset + MLP,588,,,,0.0
+5,0,MLP alone (no JEV),588,,,,51.0
+5,1,JEV + Platt,579,,,,
+5,1,JEV six answers + Platt,579,,,,
+5,1,+ demographics,579,64.0,,,
+5,1,+ person offset,579,,1.0,,
+5,1,+ person offset + person weights,579,,1.0,128.0,
+5,1,"JEV + MLP offset (rater id, demographics, content)",579,,,,3.0
+5,1,JEV + person offset + MLP,579,,,,5.0
+5,1,MLP alone (no JEV),579,,,,31.0
+5,2,JEV + Platt,567,,,,
+5,2,JEV six answers + Platt,567,,,,
+5,2,+ demographics,567,64.0,,,
+5,2,+ person offset,567,,0.5,,
+5,2,+ person offset + person weights,567,,0.5,128.0,
+5,2,"JEV + MLP offset (rater id, demographics, content)",567,,,,0.0
+5,2,JEV + person offset + MLP,567,,,,0.0
+5,2,MLP alone (no JEV),567,,,,0.0
+5,3,JEV + Platt,565,,,,
+5,3,JEV six answers + Platt,565,,,,
+5,3,+ demographics,565,16.0,,,
+5,3,+ person offset,565,,1.0,,
+5,3,+ person offset + person weights,565,,1.0,128.0,
+5,3,"JEV + MLP offset (rater id, demographics, content)",565,,,,0.0
+5,3,JEV + person offset + MLP,565,,,,0.0
+5,3,MLP alone (no JEV),565,,,,0.0
+5,4,JEV + Platt,572,,,,
+5,4,JEV six answers + Platt,572,,,,
+5,4,+ demographics,572,64.0,,,
+5,4,+ person offset,572,,2.0,,
+5,4,+ person offset + person weights,572,,2.0,128.0,
+5,4,"JEV + MLP offset (rater id, demographics, content)",572,,,,26.0
+5,4,JEV + person offset + MLP,572,,,,27.0
+5,4,MLP alone (no JEV),572,,,,33.0

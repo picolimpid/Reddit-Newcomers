@@ -1,0 +1,41 @@
+dataset,routing,budget,surfaced,consistency
+"DICES-350 (104 raters, fixed teams)",random,10%,"0.100 [0.097, 0.103]",0.8422
+"DICES-350 (104 raters, fixed teams)",random,20%,"0.199 [0.195, 0.204]",0.8596
+"DICES-350 (104 raters, fixed teams)",random,30%,"0.298 [0.295, 0.305]",0.8769
+"DICES-350 (104 raters, fixed teams)",random,50%,"0.501 [0.495, 0.506]",0.9125
+"DICES-350 (104 raters, fixed teams)",content only (k = 0),10%,"0.116 [0.105, 0.126]",0.8450
+"DICES-350 (104 raters, fixed teams)",content only (k = 0),20%,"0.223 [0.210, 0.237]",0.8637
+"DICES-350 (104 raters, fixed teams)",content only (k = 0),30%,"0.331 [0.317, 0.347]",0.8827
+"DICES-350 (104 raters, fixed teams)",content only (k = 0),50%,"0.527 [0.510, 0.545]",0.9171
+"DICES-350 (104 raters, fixed teams)","+ per-person offsets, k = 5",10%,"0.126 [0.121, 0.130]",0.8467
+"DICES-350 (104 raters, fixed teams)","+ per-person offsets, k = 5",20%,"0.243 [0.236, 0.251]",0.8672
+"DICES-350 (104 raters, fixed teams)","+ per-person offsets, k = 5",30%,"0.355 [0.345, 0.365]",0.8868
+"DICES-350 (104 raters, fixed teams)","+ per-person offsets, k = 5",50%,"0.568 [0.557, 0.580]",0.9242
+"DICES-350 (104 raters, fixed teams)","+ per-person offsets, k = 20",10%,"0.141 [0.136, 0.146]",0.8493
+"DICES-350 (104 raters, fixed teams)","+ per-person offsets, k = 20",20%,"0.262 [0.254, 0.271]",0.8706
+"DICES-350 (104 raters, fixed teams)","+ per-person offsets, k = 20",30%,"0.374 [0.365, 0.385]",0.8902
+"DICES-350 (104 raters, fixed teams)","+ per-person offsets, k = 20",50%,"0.592 [0.580, 0.605]",0.9283
+"DICES-350 (104 raters, fixed teams)",oracle,10%,"0.190 [0.183, 0.198]",0.8579
+"DICES-350 (104 raters, fixed teams)",oracle,20%,"0.380 [0.366, 0.396]",0.8912
+"DICES-350 (104 raters, fixed teams)",oracle,30%,"0.570 [0.549, 0.593]",0.9246
+"DICES-350 (104 raters, fixed teams)",oracle,50%,"0.950 [0.915, 0.989]",0.9912
+"DICES-990 (141 raters, E1i predictions)",random,10%,"0.099 [0.094, 0.105]",0.8630
+"DICES-990 (141 raters, E1i predictions)",random,20%,"0.196 [0.193, 0.207]",0.8777
+"DICES-990 (141 raters, E1i predictions)",random,30%,"0.296 [0.292, 0.308]",0.8929
+"DICES-990 (141 raters, E1i predictions)",random,50%,"0.500 [0.492, 0.509]",0.9238
+"DICES-990 (141 raters, E1i predictions)",content only (k = 0),10%,"0.148 [0.140, 0.154]",0.8703
+"DICES-990 (141 raters, E1i predictions)",content only (k = 0),20%,"0.291 [0.280, 0.302]",0.8921
+"DICES-990 (141 raters, E1i predictions)",content only (k = 0),30%,"0.426 [0.412, 0.441]",0.9127
+"DICES-990 (141 raters, E1i predictions)",content only (k = 0),50%,"0.652 [0.637, 0.668]",0.9471
+"DICES-990 (141 raters, E1i predictions)","+ per-person offsets, k = 5",10%,"0.164 [0.158, 0.171]",0.8728
+"DICES-990 (141 raters, E1i predictions)","+ per-person offsets, k = 5",20%,"0.318 [0.309, 0.327]",0.8962
+"DICES-990 (141 raters, E1i predictions)","+ per-person offsets, k = 5",30%,"0.458 [0.446, 0.470]",0.9175
+"DICES-990 (141 raters, E1i predictions)","+ per-person offsets, k = 5",50%,"0.698 [0.685, 0.711]",0.9540
+"DICES-990 (141 raters, E1i predictions)","+ per-person offsets, k = 20",10%,"0.182 [0.176, 0.189]",0.8756
+"DICES-990 (141 raters, E1i predictions)","+ per-person offsets, k = 20",20%,"0.341 [0.331, 0.351]",0.8998
+"DICES-990 (141 raters, E1i predictions)","+ per-person offsets, k = 20",30%,"0.486 [0.473, 0.500]",0.9218
+"DICES-990 (141 raters, E1i predictions)","+ per-person offsets, k = 20",50%,"0.725 [0.712, 0.738]",0.9582
+"DICES-990 (141 raters, E1i predictions)",oracle,10%,"0.219 [0.212, 0.227]",0.8812
+"DICES-990 (141 raters, E1i predictions)",oracle,20%,"0.438 [0.424, 0.454]",0.9145
+"DICES-990 (141 raters, E1i predictions)",oracle,30%,"0.657 [0.636, 0.681]",0.9478
+"DICES-990 (141 raters, E1i predictions)",oracle,50%,"1.000 [1.000, 1.000]",1.0000

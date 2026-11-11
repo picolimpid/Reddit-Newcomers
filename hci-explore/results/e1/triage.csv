@@ -1,0 +1,211 @@
+code,judge,deferred,acc
+hatespeech,JEV,0.0,0.6
+hatespeech,JEV,0.1,0.655
+hatespeech,JEV,0.2,0.6975
+hatespeech,JEV,0.3,0.76
+hatespeech,JEV,0.4,0.82
+hatespeech,JEV,0.5,0.8725
+hatespeech,JEV (random 20%),0.2,0.6803500000000001
+hatespeech,"TF-IDF+LR (supervised, 129k labels on 39k comments)",0.0,0.8925
+hatespeech,"TF-IDF+LR (supervised, 129k labels on 39k comments)",0.1,0.9275
+hatespeech,"TF-IDF+LR (supervised, 129k labels on 39k comments)",0.2,0.96
+hatespeech,"TF-IDF+LR (supervised, 129k labels on 39k comments)",0.3,0.9725
+hatespeech,"TF-IDF+LR (supervised, 129k labels on 39k comments)",0.4,0.985
+hatespeech,"TF-IDF+LR (supervised, 129k labels on 39k comments)",0.5,0.9925
+hatespeech,"TF-IDF+LR (supervised, 129k labels on 39k comments) (random 20%)",0.2,0.9131
+hatespeech,GPT-4o-mini,0.0,0.595
+hatespeech,GPT-4o-mini,0.1,0.635
+hatespeech,GPT-4o-mini,0.2,0.6925
+hatespeech,GPT-4o-mini,0.3,0.75
+hatespeech,GPT-4o-mini,0.4,0.7975
+hatespeech,GPT-4o-mini,0.5,0.855
+hatespeech,GPT-4o-mini (random 20%),0.2,0.67525
+hatespeech,GPT-4o,0.0,0.5925
+hatespeech,GPT-4o,0.1,0.645
+hatespeech,GPT-4o,0.2,0.7125
+hatespeech,GPT-4o,0.3,0.7825
+hatespeech,GPT-4o,0.4,0.82
+hatespeech,GPT-4o,0.5,0.8525
+hatespeech,GPT-4o (random 20%),0.2,0.6734
+hatespeech,Qwen3-32B (local),0.0,0.6375
+hatespeech,Qwen3-32B (local),0.1,0.6825
+hatespeech,Qwen3-32B (local),0.2,0.73
+hatespeech,Qwen3-32B (local),0.3,0.775
+hatespeech,Qwen3-32B (local),0.4,0.8075
+hatespeech,Qwen3-32B (local),0.5,0.845
+hatespeech,Qwen3-32B (local) (random 20%),0.2,0.7098500000000001
+insult,JEV,0.0,0.8125
+insult,JEV,0.1,0.8575
+insult,JEV,0.2,0.8925
+insult,JEV,0.3,0.9325
+insult,JEV,0.4,0.9525
+insult,JEV,0.5,0.9625
+insult,JEV (random 20%),0.2,0.8486500000000001
+insult,"TF-IDF+LR (supervised, 129k labels on 39k comments)",0.0,0.8
+insult,"TF-IDF+LR (supervised, 129k labels on 39k comments)",0.1,0.845
+insult,"TF-IDF+LR (supervised, 129k labels on 39k comments)",0.2,0.88
+insult,"TF-IDF+LR (supervised, 129k labels on 39k comments)",0.3,0.9175
+insult,"TF-IDF+LR (supervised, 129k labels on 39k comments)",0.4,0.945
+insult,"TF-IDF+LR (supervised, 129k labels on 39k comments)",0.5,0.9675
+insult,"TF-IDF+LR (supervised, 129k labels on 39k comments) (random 20%)",0.2,0.8414999999999999
+insult,GPT-4o-mini,0.0,0.7825
+insult,GPT-4o-mini,0.1,0.835
+insult,GPT-4o-mini,0.2,0.8775
+insult,GPT-4o-mini,0.3,0.9025
+insult,GPT-4o-mini,0.4,0.915
+insult,GPT-4o-mini,0.5,0.9175
+insult,GPT-4o-mini (random 20%),0.2,0.8256999999999999
+insult,GPT-4o,0.0,0.8175
+insult,GPT-4o,0.1,0.8625
+insult,GPT-4o,0.2,0.9
+insult,GPT-4o,0.3,0.94
+insult,GPT-4o,0.4,0.97
+insult,GPT-4o,0.5,0.9725
+insult,GPT-4o (random 20%),0.2,0.8545499999999998
+insult,Qwen3-32B (local),0.0,0.7975
+insult,Qwen3-32B (local),0.1,0.8475
+insult,Qwen3-32B (local),0.2,0.8875
+insult,Qwen3-32B (local),0.3,0.915
+insult,Qwen3-32B (local),0.4,0.94
+insult,Qwen3-32B (local),0.5,0.9625
+insult,Qwen3-32B (local) (random 20%),0.2,0.8373999999999999
+humiliate,JEV,0.0,0.6825
+humiliate,JEV,0.1,0.7375
+humiliate,JEV,0.2,0.7925
+humiliate,JEV,0.3,0.83
+humiliate,JEV,0.4,0.87
+humiliate,JEV,0.5,0.91
+humiliate,JEV (random 20%),0.2,0.74405
+humiliate,"TF-IDF+LR (supervised, 129k labels on 39k comments)",0.0,0.775
+humiliate,"TF-IDF+LR (supervised, 129k labels on 39k comments)",0.1,0.81
+humiliate,"TF-IDF+LR (supervised, 129k labels on 39k comments)",0.2,0.87
+humiliate,"TF-IDF+LR (supervised, 129k labels on 39k comments)",0.3,0.89
+humiliate,"TF-IDF+LR (supervised, 129k labels on 39k comments)",0.4,0.92
+humiliate,"TF-IDF+LR (supervised, 129k labels on 39k comments)",0.5,0.945
+humiliate,"TF-IDF+LR (supervised, 129k labels on 39k comments) (random 20%)",0.2,0.81895
+humiliate,GPT-4o-mini,0.0,0.6625
+humiliate,GPT-4o-mini,0.1,0.715
+humiliate,GPT-4o-mini,0.2,0.7725
+humiliate,GPT-4o-mini,0.3,0.835
+humiliate,GPT-4o-mini,0.4,0.875
+humiliate,GPT-4o-mini,0.5,0.89
+humiliate,GPT-4o-mini (random 20%),0.2,0.72895
+humiliate,GPT-4o,0.0,0.665
+humiliate,GPT-4o,0.1,0.7225
+humiliate,GPT-4o,0.2,0.79
+humiliate,GPT-4o,0.3,0.8475
+humiliate,GPT-4o,0.4,0.895
+humiliate,GPT-4o,0.5,0.925
+humiliate,GPT-4o (random 20%),0.2,0.7316499999999998
+humiliate,Qwen3-32B (local),0.0,0.6725
+humiliate,Qwen3-32B (local),0.1,0.7275
+humiliate,Qwen3-32B (local),0.2,0.775
+humiliate,Qwen3-32B (local),0.3,0.8175
+humiliate,Qwen3-32B (local),0.4,0.87
+humiliate,Qwen3-32B (local),0.5,0.9275
+humiliate,Qwen3-32B (local) (random 20%),0.2,0.7363500000000001
+dehumanize,JEV,0.0,0.81
+dehumanize,JEV,0.1,0.85
+dehumanize,JEV,0.2,0.895
+dehumanize,JEV,0.3,0.9225
+dehumanize,JEV,0.4,0.945
+dehumanize,JEV,0.5,0.9725
+dehumanize,JEV (random 20%),0.2,0.8478999999999999
+dehumanize,"TF-IDF+LR (supervised, 129k labels on 39k comments)",0.0,0.8025
+dehumanize,"TF-IDF+LR (supervised, 129k labels on 39k comments)",0.1,0.8375
+dehumanize,"TF-IDF+LR (supervised, 129k labels on 39k comments)",0.2,0.8875
+dehumanize,"TF-IDF+LR (supervised, 129k labels on 39k comments)",0.3,0.92
+dehumanize,"TF-IDF+LR (supervised, 129k labels on 39k comments)",0.4,0.9425
+dehumanize,"TF-IDF+LR (supervised, 129k labels on 39k comments)",0.5,0.96
+dehumanize,"TF-IDF+LR (supervised, 129k labels on 39k comments) (random 20%)",0.2,0.8425999999999999
+dehumanize,GPT-4o-mini,0.0,0.6475
+dehumanize,GPT-4o-mini,0.1,0.7125
+dehumanize,GPT-4o-mini,0.2,0.77
+dehumanize,GPT-4o-mini,0.3,0.82
+dehumanize,GPT-4o-mini,0.4,0.865
+dehumanize,GPT-4o-mini,0.5,0.9
+dehumanize,GPT-4o-mini (random 20%),0.2,0.7174999999999998
+dehumanize,GPT-4o,0.0,0.6975
+dehumanize,GPT-4o,0.1,0.745
+dehumanize,GPT-4o,0.2,0.7825
+dehumanize,GPT-4o,0.3,0.8475
+dehumanize,GPT-4o,0.4,0.885
+dehumanize,GPT-4o,0.5,0.9275
+dehumanize,GPT-4o (random 20%),0.2,0.75865
+dehumanize,Qwen3-32B (local),0.0,0.6775
+dehumanize,Qwen3-32B (local),0.1,0.7375
+dehumanize,Qwen3-32B (local),0.2,0.78
+dehumanize,Qwen3-32B (local),0.3,0.835
+dehumanize,Qwen3-32B (local),0.4,0.865
+dehumanize,Qwen3-32B (local),0.5,0.9
+dehumanize,Qwen3-32B (local) (random 20%),0.2,0.7432000000000001
+violence,JEV,0.0,0.945
+violence,JEV,0.1,0.985
+violence,JEV,0.2,0.9925
+violence,JEV,0.3,0.9925
+violence,JEV,0.4,0.995
+violence,JEV,0.5,1.0
+violence,JEV (random 20%),0.2,0.9564
+violence,"TF-IDF+LR (supervised, 129k labels on 39k comments)",0.0,0.9175
+violence,"TF-IDF+LR (supervised, 129k labels on 39k comments)",0.1,0.9575
+violence,"TF-IDF+LR (supervised, 129k labels on 39k comments)",0.2,0.9775
+violence,"TF-IDF+LR (supervised, 129k labels on 39k comments)",0.3,0.985
+violence,"TF-IDF+LR (supervised, 129k labels on 39k comments)",0.4,0.9925
+violence,"TF-IDF+LR (supervised, 129k labels on 39k comments)",0.5,0.9925
+violence,"TF-IDF+LR (supervised, 129k labels on 39k comments) (random 20%)",0.2,0.9345
+violence,GPT-4o-mini,0.0,0.8875
+violence,GPT-4o-mini,0.1,0.9225
+violence,GPT-4o-mini,0.2,0.9525
+violence,GPT-4o-mini,0.3,0.9925
+violence,GPT-4o-mini,0.4,1.0
+violence,GPT-4o-mini,0.5,1.0
+violence,GPT-4o-mini (random 20%),0.2,0.9107500000000001
+violence,GPT-4o,0.0,0.9025
+violence,GPT-4o,0.1,0.9525
+violence,GPT-4o,0.2,0.9775
+violence,GPT-4o,0.3,0.9975
+violence,GPT-4o,0.4,1.0
+violence,GPT-4o,0.5,1.0
+violence,GPT-4o (random 20%),0.2,0.9222500000000001
+violence,Qwen3-32B (local),0.0,0.9325
+violence,Qwen3-32B (local),0.1,0.965
+violence,Qwen3-32B (local),0.2,0.9775
+violence,Qwen3-32B (local),0.3,0.9875
+violence,Qwen3-32B (local),0.4,0.9925
+violence,Qwen3-32B (local),0.5,0.9925
+violence,Qwen3-32B (local) (random 20%),0.2,0.9464999999999999
+disrespect,JEV,0.0,0.8125
+disrespect,JEV,0.1,0.8625
+disrespect,JEV,0.2,0.9075
+disrespect,JEV,0.3,0.955
+disrespect,JEV,0.4,0.97
+disrespect,JEV,0.5,0.9825
+disrespect,JEV (random 20%),0.2,0.8491000000000001
+disrespect,"TF-IDF+LR (supervised, 129k labels on 39k comments)",0.0,0.82
+disrespect,"TF-IDF+LR (supervised, 129k labels on 39k comments)",0.1,0.86
+disrespect,"TF-IDF+LR (supervised, 129k labels on 39k comments)",0.2,0.895
+disrespect,"TF-IDF+LR (supervised, 129k labels on 39k comments)",0.3,0.9175
+disrespect,"TF-IDF+LR (supervised, 129k labels on 39k comments)",0.4,0.9425
+disrespect,"TF-IDF+LR (supervised, 129k labels on 39k comments)",0.5,0.965
+disrespect,"TF-IDF+LR (supervised, 129k labels on 39k comments) (random 20%)",0.2,0.8567000000000001
+disrespect,GPT-4o-mini,0.0,0.7975
+disrespect,GPT-4o-mini,0.1,0.8525
+disrespect,GPT-4o-mini,0.2,0.88
+disrespect,GPT-4o-mini,0.3,0.8825
+disrespect,GPT-4o-mini,0.4,0.89
+disrespect,GPT-4o-mini,0.5,0.895
+disrespect,GPT-4o-mini (random 20%),0.2,0.8367
+disrespect,GPT-4o,0.0,0.8225
+disrespect,GPT-4o,0.1,0.8725
+disrespect,GPT-4o,0.2,0.8975
+disrespect,GPT-4o,0.3,0.94
+disrespect,GPT-4o,0.4,0.9575
+disrespect,GPT-4o,0.5,0.96
+disrespect,GPT-4o (random 20%),0.2,0.8585999999999998
+disrespect,Qwen3-32B (local),0.0,0.81
+disrespect,Qwen3-32B (local),0.1,0.8575
+disrespect,Qwen3-32B (local),0.2,0.9025
+disrespect,Qwen3-32B (local),0.3,0.93
+disrespect,Qwen3-32B (local),0.4,0.9575
+disrespect,Qwen3-32B (local),0.5,0.9775
+disrespect,Qwen3-32B (local) (random 20%),0.2,0.8468999999999999

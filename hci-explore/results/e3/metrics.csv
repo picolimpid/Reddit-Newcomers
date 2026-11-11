@@ -1,0 +1,25 @@
+criterion,method,spearman,kendall
+coherence,JEV direct score,0.6932968576220111,0.5509654055486094
+coherence,JEV checklist (mean of 3 checks),0.6760584888010812,0.5373057038924063
+coherence,JEV direct + checklist,0.6927380382601831,0.5516643746083444
+consistency,JEV direct score,0.5628864372609655,0.47918654634511954
+consistency,JEV checklist (mean of 3 checks),0.5481429761793405,0.46075014055329794
+consistency,JEV direct + checklist,0.5592325536728739,0.4686656342349109
+fluency,JEV direct score,0.5107562818352638,0.4243602383387547
+fluency,JEV checklist (mean of 3 checks),0.49616405834722194,0.41238734581710135
+fluency,JEV direct + checklist,0.5066787951190003,0.42001062415353796
+relevance,JEV direct score,0.5602684877773163,0.445756175262347
+relevance,JEV checklist (mean of 3 checks),0.5727023926568461,0.4534302661672504
+relevance,JEV direct + checklist,0.5666902800673175,0.44937466081062133
+coherence,JEV 16 features + ridge on 5 labelled docs,0.686346045661236,0.5429854702075525
+consistency,JEV 16 features + ridge on 5 labelled docs,0.5208431475061267,0.43363491219277195
+fluency,JEV 16 features + ridge on 5 labelled docs,0.4871429480565473,0.4030641494511976
+relevance,JEV 16 features + ridge on 5 labelled docs,0.5369972636468681,0.425118915743692
+coherence,JEV 16 features + ridge on 10 labelled docs,0.6986067245617826,0.5548911181942109
+consistency,JEV 16 features + ridge on 10 labelled docs,0.5268760124173523,0.4390536148158718
+fluency,JEV 16 features + ridge on 10 labelled docs,0.49554496159806244,0.41062748537651295
+relevance,JEV 16 features + ridge on 10 labelled docs,0.5529294065573443,0.4394448317068977
+coherence,JEV 16 features + ridge on 20 labelled docs,0.6995182154586559,0.5548043487117064
+consistency,JEV 16 features + ridge on 20 labelled docs,0.5344189729254496,0.44598767679730883
+fluency,JEV 16 features + ridge on 20 labelled docs,0.5084109223476617,0.4223673185147397
+relevance,JEV 16 features + ridge on 20 labelled docs,0.5604249186861436,0.44698485738148397

@@ -1,0 +1,5 @@
+criterion,mean_abs_err,share_err>1,"spearman(entropy, err)",auroc(entropy -> err>1),auroc(1-confidence -> err>1),big errors caught @20% review
+coherence,0.57,0.175,0.245,0.652,0.577,0.332
+consistency,0.351,0.094,0.899,0.948,0.937,0.894
+fluency,1.295,0.638,0.356,0.76,0.679,0.272
+relevance,0.526,0.138,0.211,0.631,0.624,0.327

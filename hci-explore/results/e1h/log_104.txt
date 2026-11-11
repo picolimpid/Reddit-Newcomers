@@ -1,0 +1,39 @@
+DICES-350, raters = 104: 50 (cell, variant) trainings in 250s
+                    best_val                 first_val                 best_step            
+                        mean     min     max      mean     min     max      mean   min   max
+variant                                                                                     
+NP alone              0.4892  0.4548  0.5462    0.5773  0.5371  0.6573    2648.0  2000  3000
+NP on the intercept   0.4887  0.4545  0.5435    0.5361  0.5062  0.5924    2612.0  1800  3000
+
+== within-conversation AUROC (pairs within a rater fold)
+k                                   0      1      2      3      5      10     20     50
+model                                                                                  
+Bayesian intercept (E1f baseline)  0.5  0.604  0.647  0.669  0.703  0.736  0.760  0.775
+NP alone                           0.5  0.613  0.652  0.675  0.705  0.738  0.761  0.776
+NP on the intercept                0.5  0.607  0.650  0.672  0.705  0.737  0.760  0.776
+
+== log loss
+k                                      0       1       2       3       5       10      20      50
+model                                                                                            
+Bayesian intercept (E1f baseline)  0.6069  0.5960  0.5866  0.5790  0.5672  0.5518  0.5391  0.5300
+NP alone                           0.6173  0.6026  0.5921  0.5848  0.5719  0.5550  0.5408  0.5310
+NP on the intercept                0.6155  0.6027  0.5922  0.5840  0.5700  0.5525  0.5385  0.5288
+
+== paired differences (two-way bootstrap, 95% CI)
+                                                     pair  k                  within                    logloss
+           NP alone  -  Bayesian intercept (E1f baseline)  0 +0.000 [+0.000, +0.000] +0.0104 [-0.0051, +0.0266]
+           NP alone  -  Bayesian intercept (E1f baseline)  1 +0.009 [+0.002, +0.017] +0.0066 [-0.0085, +0.0223]
+           NP alone  -  Bayesian intercept (E1f baseline)  2 +0.005 [-0.001, +0.010] +0.0055 [-0.0096, +0.0210]
+           NP alone  -  Bayesian intercept (E1f baseline)  3 +0.006 [+0.001, +0.010] +0.0058 [-0.0093, +0.0213]
+           NP alone  -  Bayesian intercept (E1f baseline)  5 +0.002 [-0.002, +0.006] +0.0046 [-0.0105, +0.0195]
+           NP alone  -  Bayesian intercept (E1f baseline) 10 +0.002 [-0.001, +0.005] +0.0032 [-0.0114, +0.0176]
+           NP alone  -  Bayesian intercept (E1f baseline) 20 +0.001 [-0.001, +0.003] +0.0017 [-0.0128, +0.0157]
+           NP alone  -  Bayesian intercept (E1f baseline) 50 +0.000 [-0.001, +0.002] +0.0010 [-0.0131, +0.0146]
+NP on the intercept  -  Bayesian intercept (E1f baseline)  0 +0.000 [+0.000, +0.000] +0.0086 [-0.0063, +0.0236]
+NP on the intercept  -  Bayesian intercept (E1f baseline)  1 +0.004 [-0.002, +0.009] +0.0067 [-0.0081, +0.0220]
+NP on the intercept  -  Bayesian intercept (E1f baseline)  2 +0.004 [+0.001, +0.007] +0.0056 [-0.0086, +0.0202]
+NP on the intercept  -  Bayesian intercept (E1f baseline)  3 +0.003 [+0.000, +0.005] +0.0050 [-0.0091, +0.0196]
+NP on the intercept  -  Bayesian intercept (E1f baseline)  5 +0.002 [-0.000, +0.003] +0.0028 [-0.0113, +0.0172]
+NP on the intercept  -  Bayesian intercept (E1f baseline) 10 +0.001 [-0.000, +0.002] +0.0007 [-0.0132, +0.0145]
+NP on the intercept  -  Bayesian intercept (E1f baseline) 20 +0.000 [-0.001, +0.001] -0.0006 [-0.0146, +0.0132]
+NP on the intercept  -  Bayesian intercept (E1f baseline) 50 +0.000 [-0.000, +0.001] -0.0012 [-0.0151, +0.0126]

@@ -1,0 +1,23 @@
+                               JEV  GPT-4o-mini  GPT-4o  Qwen3-32B (local)
+need_auroc                   0.644        0.725   0.634              0.643
+need_acc@0.5                 0.558        0.625   0.583              0.633
+accept_auroc                 0.823        0.633   0.822              0.768
+accept_acc@0.5               0.683        0.550   0.600              0.567
+reward_acc_all120            0.617        0.550   0.592              0.583
+FA_blocked@keep90%CD         0.600        0.300   0.500              0.400
+FA_blocked@keep80%CD         0.700        0.467   0.733              0.600
+disrupt_auroc_vs_not_needed  0.625          NaN     NaN                NaN
+JEV latency median 0.086s p90 0.130s; input tokens median 678
+GPT-4o-mini latency via OpenRouter: median 0.74s p90 1.49s
+GPT-4o latency via OpenRouter: median 0.68s p90 1.41s
+category               Correct-Detection (CD)  ...  Missed-Need (MN)
+j_need                                   0.60  ...              0.54
+j_accept                                 0.73  ...               NaN
+Lgpt4omini_accept                        0.94  ...               NaN
+Lgpt4omini_need                          0.94  ...              0.96
+Lgpt4o_accept                            0.94  ...               NaN
+Lgpt4o_need                              0.54  ...              0.46
+Lqwen332blocal_accept                    0.97  ...               NaN
+Lqwen332blocal_need                      0.65  ...              0.69
+
+[8 rows x 4 columns]

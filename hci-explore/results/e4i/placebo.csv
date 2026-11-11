@@ -1,0 +1,9 @@
+anchors,k,within_auroc,lo,hi,logloss
+own,0,0.5,0.5,0.5,0.5182
+own,5,0.7604,0.711,0.8064,0.4453
+own,10,0.791,0.7433,0.833,0.4248
+own,20,0.8126,0.7671,0.852,0.408
+someone else's (placebo),0,0.5,0.5,0.5,0.5182
+someone else's (placebo),5,0.4816,0.4549,0.5068,0.5814
+someone else's (placebo),10,0.4753,0.4488,0.5036,0.6092
+someone else's (placebo),20,0.47,0.4378,0.5013,0.6319

@@ -1,0 +1,58 @@
+DICES-990: 141 raters x 990 conversations, 60990 labels
+
+== D3(1) split-half reliability of the per-person intercept (overall verdict)
+mean split-half r = 0.974; Spearman-Brown = 0.987 [0.980, 0.992] (rater bootstrap); pre-registered criterion: >= 0.7 with lower bound >= 0.6 -> MET
+(labels per rater: median 330, range 87-989)
+
+== D3(2) intercepts estimated from each harm category separately
+split-half reliability (Spearman-Brown): harmful 0.974, bias 0.972, misinfo 0.950, overall 0.986
+              pair     r  disattenuated
+   harmful vs bias 0.782          0.804
+harmful vs misinfo 0.716          0.744
+harmful vs overall 0.914          0.933
+   bias vs misinfo 0.709          0.738
+   bias vs overall 0.918          0.938
+misinfo vs overall 0.802          0.829
+
+== D4 whom does the fixed judge fail? (per-rater log loss, DICES-990)
+mean per-rater log loss: judge alone 0.5186, + own intercept (k = 20) 0.4095; difference +0.1091 [+0.0830, +0.1391]
+(1) Spearman(log loss, |intercept|): judge alone -0.253 [-0.424, -0.083]; with intercept -0.602 [-0.717, -0.463]
+(2) SD across raters of log loss: judge alone 0.1946, with intercept 0.1546; reduction +0.0399 [-0.0009, +0.0809]
+
+per-group mean of per-rater log loss (groups with >= 10 raters)
+attribute                                      group   n  logloss_k0  logloss_k20
+extremity                       most extreme quarter  36      0.5815       0.2726
+extremity                       other three quarters 105      0.4970       0.4565
+   gender                                        Man  63      0.4908       0.3973
+   gender                                      Woman  76      0.5436       0.4216
+   locale                                         IN  71      0.5783       0.4510
+   locale                                         US  70      0.4581       0.3675
+     race                   Asian/Asian subcontinent  46      0.5691       0.4258
+     race LatinX, Latino, Hispanic or Spanish Origin  15      0.3990       0.3253
+     race                                      Other  48      0.5560       0.4497
+     race                                      White  24      0.4474       0.3803
+      age                                     gen x+  35      0.5101       0.4116
+      age                                      gen z  22      0.5520       0.4162
+      age                                  millenial  84      0.5134       0.4069
+education                   College degree or higher 123      0.5239       0.4158
+education                       High school or below  18      0.4824       0.3664
+
+largest gap between groups (max - min of group means)
+attribute  gap_k0  gap_k20
+extremity  0.0844  -0.1839
+   gender  0.0528   0.0243
+   locale  0.1202   0.0835
+     race  0.1701   0.1245
+      age  0.0419   0.0093
+education  0.0414   0.0494
+
+most extreme quarter: share saying 'unsafe' to most conversations 0.31; their yes-rate median 0.06 vs others 0.24
+  gender: extreme quarter Woman=0.56, Man=0.42, Self-describe (below)=0.03 | all Woman=0.54, Man=0.45, Self-describe (below)=0.01, Nonbinary=0.01
+  locale: extreme quarter US=0.53, IN=0.47 | all IN=0.50, US=0.50
+  race: extreme quarter Asian/Asian subcontinent=0.36, Other=0.33, LatinX, Latino, Hispanic or Spanish Origin=0.14, White=0.11, Black/African American=0.06 | all Other=0.34, Asian/Asian subcontinent=0.33, White=0.17, LatinX, Latino, Hispanic or Spanish Origin=0.11, Black/African American=0.06
+  age: extreme quarter millenial=0.69, gen x+=0.17, gen z=0.14 | all millenial=0.60, gen x+=0.25, gen z=0.16
+
+== D3(3) RealHumanEval: 71 programmers with >= 40 suggestions; offset on the out-of-fold gate 'CDHF features + JEV, LR'
+first half vs second half (time): r = 0.448 [0.253, 0.617]
+random halves (same people):       r = 0.434 [0.199, 0.626]
+mean offset first half -0.130, second half -0.405

@@ -1,0 +1,42 @@
+
+== all: hide when the score is below a threshold set on training programmers (>= target of hidden ones rejected there)
+                    model target  hidden %  rejected among hidden %  accepted lost %
+                 JEV only   0.95      63.3                     95.1             32.6
+                 JEV only   0.97      32.2                     97.4              8.8
+                 JEV only   0.99       4.2                     98.5              0.7
+                LR | text   0.95      62.7                     95.5             29.5
+                LR | text   0.97      40.4                     97.6             10.3
+                LR | text   0.99      15.8                     99.1              1.5
+          LR | text + JEV   0.95      72.1                     95.4             34.6
+          LR | text + JEV   0.97      50.7                     97.3             14.2
+          LR | text + JEV   0.99      19.0                     99.0              2.0
+                 LR | all   0.95      76.9                     95.2             38.5
+                 LR | all   0.97      58.3                     97.3             16.6
+                 LR | all   0.99      29.3                     99.1              2.6
+           LR | all + JEV   0.95      78.8                     95.2             39.2
+           LR | all + JEV   0.97      61.4                     97.1             18.4
+           LR | all + JEV   0.99      35.3                     99.0              3.5
+CDHF replica (GBDT | all)   0.95      65.8                     96.1             26.9
+CDHF replica (GBDT | all)   0.97      41.7                     97.9              9.2
+CDHF replica (GBDT | all)   0.99      12.2                     99.3              0.9
+
+== first 10 per programmer: hide when the score is below a threshold set on training programmers (>= target of hidden ones rejected there)
+                    model target  hidden %  rejected among hidden %  accepted lost %
+                 JEV only   0.95      50.4                     92.8             28.0
+                 JEV only   0.97      22.7                     97.3              4.7
+                 JEV only   0.99       2.2                    100.0              0.0
+                LR | text   0.95      59.8                     92.3             35.5
+                LR | text   0.97      37.1                     93.8             17.8
+                LR | text   0.99      13.1                     97.2              2.8
+          LR | text + JEV   0.95      66.5                     92.2             40.2
+          LR | text + JEV   0.97      44.5                     95.1             16.8
+          LR | text + JEV   0.99      16.5                     97.1              3.7
+                 LR | all   0.95      66.1                     92.3             39.3
+                 LR | all   0.97      44.7                     94.1             20.6
+                 LR | all   0.99      17.6                     97.3              3.7
+           LR | all + JEV   0.95      68.9                     92.1             42.1
+           LR | all + JEV   0.97      48.6                     94.3             21.5
+           LR | all + JEV   0.99      22.2                     97.3              4.7
+CDHF replica (GBDT | all)   0.95      51.1                     92.0             31.8
+CDHF replica (GBDT | all)   0.97      24.2                     96.0              7.5
+CDHF replica (GBDT | all)   0.99       5.7                     97.9              0.9

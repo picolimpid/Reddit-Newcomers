@@ -1,0 +1,12 @@
+
+== POST HOC: excess log loss over the person's own best intercept (miscalibration cost)
+all raters: judge alone 0.1286, with k = 20 anchors 0.0195
+Spearman(excess, |best intercept|): judge alone +0.979, with anchors +0.572
+most extreme quarter: 0.3484 -> 0.0395; others 0.0532 -> 0.0126
+                      attribute                                                                                                     groups  gap_k0  gap_k20              gap_reduction
+                         gender                                                                                     Man 0.114, Woman 0.142  0.0280   0.0005 +0.0275 [-0.0027, +0.0805]
+                         locale                                                                                         IN 0.148, US 0.108  0.0401   0.0035 +0.0366 [-0.0010, +0.0956]
+                           race Asian/Asian subcontinent 0.168, LatinX, Latino, Hispanic or Spanish Origin 0.086, Other 0.123, White 0.084  0.0832   0.0116 +0.0716 [+0.0232, +0.1607]
+                            age                                                                 gen x+ 0.114, gen z 0.148, millenial 0.130  0.0343   0.0108 +0.0235 [-0.0039, +0.1452]
+                      education                                                 College degree or higher 0.129, High school or below 0.129  0.0002   0.0078 -0.0076 [-0.0074, +0.0914]
+extremity (top quarter vs rest)                                                                                                             0.2952   0.0269                           

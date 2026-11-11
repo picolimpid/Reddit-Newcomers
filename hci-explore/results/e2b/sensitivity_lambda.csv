@@ -1,0 +1,226 @@
+protocol,N,method,metric,mean,lo,hi
+P3 unseen session,50,JEV zero-shot,auroc,0.6506,0.6152,0.6739
+P3 unseen session,50,JEV zero-shot,acc,0.4806,0.4453,0.5012
+P3 unseen session,50,JEV zero-shot,util@1/3,0.025,-0.0519,0.0525
+P3 unseen session,50,JEV zero-shot,brier,0.2875,0.273,0.3038
+P3 unseen session,50,JEV zero-shot,fa_block90,0.294,0.2515,0.3645
+P3 unseen session,50,always show,auroc,0.5,0.5,0.5
+P3 unseen session,50,always show,acc,0.3442,0.2924,0.3641
+P3 unseen session,50,always show,util@1/3,0.0164,-0.0615,0.0462
+P3 unseen session,50,always show,brier,0.6558,0.6359,0.7076
+P3 unseen session,50,always show,fa_block90,0.0,0.0,0.0
+P3 unseen session,50,never show,auroc,0.5,0.5,0.5
+P3 unseen session,50,never show,acc,0.6558,0.6359,0.7076
+P3 unseen session,50,never show,util@1/3,0.0,0.0,0.0
+P3 unseen session,50,never show,brier,0.3442,0.2924,0.3641
+P3 unseen session,50,never show,fa_block90,0.0,0.0,0.0
+P3 unseen session,50,TF-IDF + LR (lam=0.1),auroc,0.5423,0.4827,0.6053
+P3 unseen session,50,TF-IDF + LR (lam=0.1),acc,0.639,0.5618,0.7048
+P3 unseen session,50,TF-IDF + LR (lam=0.1),util@1/3,-0.0022,-0.0883,0.0367
+P3 unseen session,50,TF-IDF + LR (lam=0.1),brier,0.2413,0.2057,0.2587
+P3 unseen session,50,TF-IDF + LR (lam=0.1),fa_block90,0.1736,0.1184,0.2442
+P3 unseen session,50,Emb + LR (lam=0.1),auroc,0.5416,0.4948,0.6127
+P3 unseen session,50,Emb + LR (lam=0.1),acc,0.6039,0.5429,0.6835
+P3 unseen session,50,Emb + LR (lam=0.1),util@1/3,0.0102,-0.0573,0.0401
+P3 unseen session,50,Emb + LR (lam=0.1),brier,0.2586,0.2126,0.2856
+P3 unseen session,50,Emb + LR (lam=0.1),fa_block90,0.1582,0.1072,0.2716
+P3 unseen session,50,Emb + JEV (lam=0.1),auroc,0.618,0.546,0.6795
+P3 unseen session,50,Emb + JEV (lam=0.1),acc,0.5977,0.5407,0.671
+P3 unseen session,50,Emb + JEV (lam=0.1),util@1/3,0.0559,-0.0148,0.0857
+P3 unseen session,50,Emb + JEV (lam=0.1),brier,0.2517,0.215,0.2848
+P3 unseen session,50,Emb + JEV (lam=0.1),fa_block90,0.263,0.1821,0.3488
+P3 unseen session,50,TF-IDF + LR,auroc,0.5414,0.4662,0.5895
+P3 unseen session,50,TF-IDF + LR,acc,0.6476,0.6032,0.7076
+P3 unseen session,50,TF-IDF + LR,util@1/3,-0.0018,-0.0886,0.0543
+P3 unseen session,50,TF-IDF + LR,brier,0.2333,0.2071,0.2447
+P3 unseen session,50,TF-IDF + LR,fa_block90,0.1718,0.128,0.2428
+P3 unseen session,50,Emb + LR,auroc,0.5357,0.475,0.6031
+P3 unseen session,50,Emb + LR,acc,0.6363,0.5461,0.7045
+P3 unseen session,50,Emb + LR,util@1/3,0.004,-0.0923,0.0603
+P3 unseen session,50,Emb + LR,brier,0.2344,0.205,0.2489
+P3 unseen session,50,Emb + LR,fa_block90,0.165,0.1042,0.291
+P3 unseen session,50,Emb + JEV,auroc,0.6354,0.5834,0.6929
+P3 unseen session,50,Emb + JEV,acc,0.6412,0.5953,0.6919
+P3 unseen session,50,Emb + JEV,util@1/3,0.0657,-0.0287,0.096
+P3 unseen session,50,Emb + JEV,brier,0.2226,0.1991,0.2397
+P3 unseen session,50,Emb + JEV,fa_block90,0.2914,0.2291,0.3856
+P3 unseen session,50,TF-IDF + LR (lam=10),auroc,0.54,0.4628,0.5765
+P3 unseen session,50,TF-IDF + LR (lam=10),acc,0.6496,0.6318,0.7076
+P3 unseen session,50,TF-IDF + LR (lam=10),util@1/3,-0.0011,-0.0899,0.0539
+P3 unseen session,50,TF-IDF + LR (lam=10),brier,0.2323,0.2076,0.2425
+P3 unseen session,50,TF-IDF + LR (lam=10),fa_block90,0.1704,0.1202,0.2272
+P3 unseen session,50,Emb + LR (lam=10),auroc,0.5336,0.4584,0.6043
+P3 unseen session,50,Emb + LR (lam=10),acc,0.6474,0.6061,0.7076
+P3 unseen session,50,Emb + LR (lam=10),util@1/3,0.0,-0.089,0.0534
+P3 unseen session,50,Emb + LR (lam=10),brier,0.2321,0.2066,0.2421
+P3 unseen session,50,Emb + LR (lam=10),fa_block90,0.1666,0.1048,0.2935
+P3 unseen session,50,Emb + JEV (lam=10),auroc,0.6336,0.5937,0.6892
+P3 unseen session,50,Emb + JEV (lam=10),acc,0.6451,0.6136,0.6922
+P3 unseen session,50,Emb + JEV (lam=10),util@1/3,0.0671,-0.012,0.0956
+P3 unseen session,50,Emb + JEV (lam=10),brier,0.2206,0.1984,0.2333
+P3 unseen session,50,Emb + JEV (lam=10),fa_block90,0.2828,0.2133,0.3901
+P3 unseen session,50,TF-IDF + LR (lam=100),auroc,0.5397,0.4624,0.5749
+P3 unseen session,50,TF-IDF + LR (lam=100),acc,0.6497,0.6318,0.7076
+P3 unseen session,50,TF-IDF + LR (lam=100),util@1/3,-0.0012,-0.0899,0.0539
+P3 unseen session,50,TF-IDF + LR (lam=100),brier,0.2322,0.2077,0.2423
+P3 unseen session,50,TF-IDF + LR (lam=100),fa_block90,0.1693,0.1194,0.2236
+P3 unseen session,50,Emb + LR (lam=100),auroc,0.5332,0.4566,0.6038
+P3 unseen session,50,Emb + LR (lam=100),acc,0.6482,0.6197,0.7076
+P3 unseen session,50,Emb + LR (lam=100),util@1/3,-0.0012,-0.0899,0.0539
+P3 unseen session,50,Emb + LR (lam=100),brier,0.2322,0.2075,0.2422
+P3 unseen session,50,Emb + LR (lam=100),fa_block90,0.1658,0.1051,0.2878
+P3 unseen session,50,Emb + JEV (lam=100),auroc,0.6327,0.5936,0.6873
+P3 unseen session,50,Emb + JEV (lam=100),acc,0.6457,0.6125,0.6929
+P3 unseen session,50,Emb + JEV (lam=100),util@1/3,0.0662,-0.0065,0.094
+P3 unseen session,50,Emb + JEV (lam=100),brier,0.2206,0.1981,0.2327
+P3 unseen session,50,Emb + JEV (lam=100),fa_block90,0.2802,0.211,0.3901
+P3 unseen session,200,JEV zero-shot,auroc,0.6506,0.6268,0.7064
+P3 unseen session,200,JEV zero-shot,acc,0.4806,0.4485,0.5047
+P3 unseen session,200,JEV zero-shot,util@1/3,0.025,-0.0651,0.0866
+P3 unseen session,200,JEV zero-shot,brier,0.2875,0.2709,0.3021
+P3 unseen session,200,JEV zero-shot,fa_block90,0.294,0.2449,0.3703
+P3 unseen session,200,always show,auroc,0.5,0.5,0.5
+P3 unseen session,200,always show,acc,0.3442,0.2821,0.3857
+P3 unseen session,200,always show,util@1/3,0.0164,-0.0768,0.0785
+P3 unseen session,200,always show,brier,0.6558,0.6143,0.7179
+P3 unseen session,200,always show,fa_block90,0.0,0.0,0.0
+P3 unseen session,200,never show,auroc,0.5,0.5,0.5
+P3 unseen session,200,never show,acc,0.6558,0.6143,0.7179
+P3 unseen session,200,never show,util@1/3,0.0,0.0,0.0
+P3 unseen session,200,never show,brier,0.3442,0.2821,0.3857
+P3 unseen session,200,never show,fa_block90,0.0,0.0,0.0
+P3 unseen session,200,TF-IDF + LR (lam=0.1),auroc,0.5751,0.5152,0.6291
+P3 unseen session,200,TF-IDF + LR (lam=0.1),acc,0.649,0.612,0.6969
+P3 unseen session,200,TF-IDF + LR (lam=0.1),util@1/3,0.0156,-0.0322,0.0596
+P3 unseen session,200,TF-IDF + LR (lam=0.1),brier,0.2311,0.2087,0.2464
+P3 unseen session,200,TF-IDF + LR (lam=0.1),fa_block90,0.1887,0.1308,0.2805
+P3 unseen session,200,Emb + LR (lam=0.1),auroc,0.5624,0.4933,0.6135
+P3 unseen session,200,Emb + LR (lam=0.1),acc,0.6101,0.5702,0.6801
+P3 unseen session,200,Emb + LR (lam=0.1),util@1/3,0.0308,-0.023,0.0608
+P3 unseen session,200,Emb + LR (lam=0.1),brier,0.2585,0.2233,0.277
+P3 unseen session,200,Emb + LR (lam=0.1),fa_block90,0.1769,0.1075,0.2285
+P3 unseen session,200,Emb + JEV (lam=0.1),auroc,0.6338,0.6047,0.6681
+P3 unseen session,200,Emb + JEV (lam=0.1),acc,0.6121,0.5641,0.6934
+P3 unseen session,200,Emb + JEV (lam=0.1),util@1/3,0.0665,-0.0045,0.1271
+P3 unseen session,200,Emb + JEV (lam=0.1),brier,0.254,0.2156,0.2826
+P3 unseen session,200,Emb + JEV (lam=0.1),fa_block90,0.274,0.2227,0.3173
+P3 unseen session,200,TF-IDF + LR,auroc,0.572,0.5111,0.6278
+P3 unseen session,200,TF-IDF + LR,acc,0.6558,0.6143,0.7179
+P3 unseen session,200,TF-IDF + LR,util@1/3,0.0027,-0.0748,0.0725
+P3 unseen session,200,TF-IDF + LR,brier,0.2288,0.2089,0.2395
+P3 unseen session,200,TF-IDF + LR,fa_block90,0.1947,0.1279,0.3054
+P3 unseen session,200,Emb + LR,auroc,0.5682,0.4727,0.6285
+P3 unseen session,200,Emb + LR,acc,0.6463,0.5961,0.7105
+P3 unseen session,200,Emb + LR,util@1/3,0.0223,-0.044,0.0667
+P3 unseen session,200,Emb + LR,brier,0.2298,0.2076,0.245
+P3 unseen session,200,Emb + LR,fa_block90,0.1852,0.1199,0.2658
+P3 unseen session,200,Emb + JEV,auroc,0.6566,0.6335,0.7064
+P3 unseen session,200,Emb + JEV,acc,0.6547,0.6031,0.7206
+P3 unseen session,200,Emb + JEV,util@1/3,0.0772,0.014,0.1438
+P3 unseen session,200,Emb + JEV,brier,0.2162,0.1934,0.2346
+P3 unseen session,200,Emb + JEV,fa_block90,0.3209,0.277,0.3606
+P3 unseen session,200,TF-IDF + LR (lam=10),auroc,0.5683,0.5147,0.6285
+P3 unseen session,200,TF-IDF + LR (lam=10),acc,0.6558,0.6143,0.7179
+P3 unseen session,200,TF-IDF + LR (lam=10),util@1/3,-0.0033,-0.0827,0.0741
+P3 unseen session,200,TF-IDF + LR (lam=10),brier,0.2283,0.2091,0.2388
+P3 unseen session,200,TF-IDF + LR (lam=10),fa_block90,0.1933,0.1369,0.3002
+P3 unseen session,200,Emb + LR (lam=10),auroc,0.5628,0.4812,0.6287
+P3 unseen session,200,Emb + LR (lam=10),acc,0.6558,0.6143,0.7179
+P3 unseen session,200,Emb + LR (lam=10),util@1/3,0.0046,-0.0764,0.077
+P3 unseen session,200,Emb + LR (lam=10),brier,0.2279,0.2092,0.239
+P3 unseen session,200,Emb + LR (lam=10),fa_block90,0.1874,0.1211,0.2951
+P3 unseen session,200,Emb + JEV (lam=10),auroc,0.6503,0.6196,0.7149
+P3 unseen session,200,Emb + JEV (lam=10),acc,0.6634,0.6327,0.7202
+P3 unseen session,200,Emb + JEV (lam=10),util@1/3,0.08,0.0207,0.1445
+P3 unseen session,200,Emb + JEV (lam=10),brier,0.2125,0.1935,0.2256
+P3 unseen session,200,Emb + JEV (lam=10),fa_block90,0.3117,0.2626,0.3976
+P3 unseen session,200,TF-IDF + LR (lam=100),auroc,0.5668,0.5146,0.6289
+P3 unseen session,200,TF-IDF + LR (lam=100),acc,0.6558,0.6143,0.7179
+P3 unseen session,200,TF-IDF + LR (lam=100),util@1/3,-0.0038,-0.0828,0.0731
+P3 unseen session,200,TF-IDF + LR (lam=100),brier,0.2281,0.2089,0.2387
+P3 unseen session,200,TF-IDF + LR (lam=100),fa_block90,0.1907,0.1389,0.287
+P3 unseen session,200,Emb + LR (lam=100),auroc,0.561,0.4832,0.6216
+P3 unseen session,200,Emb + LR (lam=100),acc,0.6558,0.6143,0.7179
+P3 unseen session,200,Emb + LR (lam=100),util@1/3,-0.002,-0.0795,0.0766
+P3 unseen session,200,Emb + LR (lam=100),brier,0.2281,0.209,0.2386
+P3 unseen session,200,Emb + LR (lam=100),fa_block90,0.1857,0.1238,0.2866
+P3 unseen session,200,Emb + JEV (lam=100),auroc,0.6483,0.6152,0.7164
+P3 unseen session,200,Emb + JEV (lam=100),acc,0.6641,0.6387,0.7212
+P3 unseen session,200,Emb + JEV (lam=100),util@1/3,0.0807,0.0227,0.1454
+P3 unseen session,200,Emb + JEV (lam=100),brier,0.2121,0.1937,0.2242
+P3 unseen session,200,Emb + JEV (lam=100),fa_block90,0.308,0.2669,0.4079
+P3 unseen session,all,JEV zero-shot,auroc,0.6506,0.6038,0.6949
+P3 unseen session,all,JEV zero-shot,acc,0.4806,0.4327,0.5151
+P3 unseen session,all,JEV zero-shot,util@1/3,0.025,-0.0884,0.0693
+P3 unseen session,all,JEV zero-shot,brier,0.2875,0.2679,0.3158
+P3 unseen session,all,JEV zero-shot,fa_block90,0.294,0.2052,0.3904
+P3 unseen session,all,always show,auroc,0.5,0.5,0.5
+P3 unseen session,all,always show,acc,0.3442,0.2673,0.3727
+P3 unseen session,all,always show,util@1/3,0.0164,-0.099,0.059
+P3 unseen session,all,always show,brier,0.6558,0.6273,0.7327
+P3 unseen session,all,always show,fa_block90,0.0,0.0,0.0
+P3 unseen session,all,never show,auroc,0.5,0.5,0.5
+P3 unseen session,all,never show,acc,0.6558,0.6273,0.7327
+P3 unseen session,all,never show,util@1/3,0.0,0.0,0.0
+P3 unseen session,all,never show,brier,0.3442,0.2673,0.3727
+P3 unseen session,all,never show,fa_block90,0.0,0.0,0.0
+P3 unseen session,all,TF-IDF + LR (lam=0.1),auroc,0.6357,0.5934,0.6673
+P3 unseen session,all,TF-IDF + LR (lam=0.1),acc,0.6615,0.6244,0.7247
+P3 unseen session,all,TF-IDF + LR (lam=0.1),util@1/3,0.0598,-0.0124,0.0885
+P3 unseen session,all,TF-IDF + LR (lam=0.1),brier,0.2232,0.2001,0.2363
+P3 unseen session,all,TF-IDF + LR (lam=0.1),fa_block90,0.2665,0.2043,0.3343
+P3 unseen session,all,Emb + LR (lam=0.1),auroc,0.5855,0.5544,0.6262
+P3 unseen session,all,Emb + LR (lam=0.1),acc,0.6133,0.5783,0.6611
+P3 unseen session,all,Emb + LR (lam=0.1),util@1/3,0.0405,-0.0319,0.068
+P3 unseen session,all,Emb + LR (lam=0.1),brier,0.2683,0.2355,0.3
+P3 unseen session,all,Emb + LR (lam=0.1),fa_block90,0.1908,0.1554,0.2419
+P3 unseen session,all,Emb + JEV (lam=0.1),auroc,0.6409,0.6028,0.6735
+P3 unseen session,all,Emb + JEV (lam=0.1),acc,0.5967,0.5587,0.6502
+P3 unseen session,all,Emb + JEV (lam=0.1),util@1/3,0.0502,-0.0267,0.074
+P3 unseen session,all,Emb + JEV (lam=0.1),brier,0.2808,0.2511,0.3091
+P3 unseen session,all,Emb + JEV (lam=0.1),fa_block90,0.2686,0.2314,0.3274
+P3 unseen session,all,TF-IDF + LR,auroc,0.6353,0.5934,0.6681
+P3 unseen session,all,TF-IDF + LR,acc,0.6571,0.6286,0.7337
+P3 unseen session,all,TF-IDF + LR,util@1/3,0.0251,-0.0644,0.0548
+P3 unseen session,all,TF-IDF + LR,brier,0.2248,0.203,0.2328
+P3 unseen session,all,TF-IDF + LR,fa_block90,0.2595,0.1845,0.3257
+P3 unseen session,all,Emb + LR,auroc,0.6133,0.5804,0.6519
+P3 unseen session,all,Emb + LR,acc,0.6511,0.6266,0.722
+P3 unseen session,all,Emb + LR,util@1/3,0.0535,-0.0007,0.0723
+P3 unseen session,all,Emb + LR,brier,0.2237,0.1982,0.2397
+P3 unseen session,all,Emb + LR,fa_block90,0.221,0.1888,0.2632
+P3 unseen session,all,Emb + JEV,auroc,0.6767,0.6415,0.715
+P3 unseen session,all,Emb + JEV,acc,0.6684,0.6264,0.717
+P3 unseen session,all,Emb + JEV,util@1/3,0.0927,0.0141,0.1342
+P3 unseen session,all,Emb + JEV,brier,0.213,0.193,0.2311
+P3 unseen session,all,Emb + JEV,fa_block90,0.3186,0.2623,0.3869
+P3 unseen session,all,TF-IDF + LR (lam=10),auroc,0.6194,0.5768,0.6526
+P3 unseen session,all,TF-IDF + LR (lam=10),acc,0.6558,0.6273,0.7327
+P3 unseen session,all,TF-IDF + LR (lam=10),util@1/3,-0.0089,-0.0955,0.0346
+P3 unseen session,all,TF-IDF + LR (lam=10),brier,0.2278,0.2046,0.2359
+P3 unseen session,all,TF-IDF + LR (lam=10),fa_block90,0.2414,0.1639,0.2968
+P3 unseen session,all,Emb + LR (lam=10),auroc,0.6109,0.5705,0.6462
+P3 unseen session,all,Emb + LR (lam=10),acc,0.6558,0.6273,0.7327
+P3 unseen session,all,Emb + LR (lam=10),util@1/3,0.0255,-0.0517,0.0451
+P3 unseen session,all,Emb + LR (lam=10),brier,0.2253,0.2002,0.2351
+P3 unseen session,all,Emb + LR (lam=10),fa_block90,0.1973,0.1639,0.2464
+P3 unseen session,all,Emb + JEV (lam=10),auroc,0.6652,0.6224,0.7076
+P3 unseen session,all,Emb + JEV (lam=10),acc,0.6663,0.6231,0.7189
+P3 unseen session,all,Emb + JEV (lam=10),util@1/3,0.0856,0.0163,0.1191
+P3 unseen session,all,Emb + JEV (lam=10),brier,0.2095,0.1903,0.2257
+P3 unseen session,all,Emb + JEV (lam=10),fa_block90,0.3273,0.2479,0.4012
+P3 unseen session,all,TF-IDF + LR (lam=100),auroc,0.6071,0.558,0.6376
+P3 unseen session,all,TF-IDF + LR (lam=100),acc,0.6558,0.6273,0.7327
+P3 unseen session,all,TF-IDF + LR (lam=100),util@1/3,-0.0167,-0.1011,0.0259
+P3 unseen session,all,TF-IDF + LR (lam=100),brier,0.2278,0.2039,0.2361
+P3 unseen session,all,TF-IDF + LR (lam=100),fa_block90,0.2271,0.1613,0.2777
+P3 unseen session,all,Emb + LR (lam=100),auroc,0.5921,0.5535,0.6287
+P3 unseen session,all,Emb + LR (lam=100),acc,0.6558,0.6273,0.7327
+P3 unseen session,all,Emb + LR (lam=100),util@1/3,-0.0062,-0.092,0.0347
+P3 unseen session,all,Emb + LR (lam=100),brier,0.2273,0.2032,0.2358
+P3 unseen session,all,Emb + LR (lam=100),fa_block90,0.2002,0.1747,0.2406
+P3 unseen session,all,Emb + JEV (lam=100),auroc,0.6515,0.6068,0.6993
+P3 unseen session,all,Emb + JEV (lam=100),acc,0.6724,0.6335,0.7228
+P3 unseen session,all,Emb + JEV (lam=100),util@1/3,0.0774,0.0121,0.1135
+P3 unseen session,all,Emb + JEV (lam=100),brier,0.2101,0.19,0.2265
+P3 unseen session,all,Emb + JEV (lam=100),fa_block90,0.3215,0.2364,0.4018

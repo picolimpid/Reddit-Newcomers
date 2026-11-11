@@ -1,0 +1,89 @@
+anchor rows 43227 (70 reference comments, 7912 annotators); evaluation rows 1575 (392 comments, 1370 annotators, whose anchors: median 6); 52 demographic features
+  shared severity, held-out anchor log loss per label (6 codes summed) by lam: {0.5: 2.1539, 1.0: 2.0944, 2.0: 2.0479, 4.0: 2.0218, 8.0: 2.0139, 32.0: 2.0186, 128.0: 2.0232, 10000.0: 2.0252}
+  shared severity (lam 8): slopes [0.84 1.02 0.93 0.79 0.98 1.15], intercepts [-1.62 -1.11 -1.12 -0.2  -0.44 -1.13], loadings [1. 1. 1. 1. 1. 1.] (fixed), sd of severity 0.253
+  linear fits done in 42s; chosen lam_u per code (JEV + person offset): {'hatespeech': 2.0, 'insult': 8.0, 'humiliate': 2.0, 'dehumanize': 0.5, 'violence': 1.0, 'disrespect': 8.0}; lam_d: {'hatespeech': 100.0, 'insult': 100.0, 'humiliate': 100.0, 'dehumanize': 30.0, 'violence': 100.0, 'disrespect': 100.0}; shared-severity lam 8.0
+  held-out anchor log loss (reference-comment folds):
+            JEV + Platt  JEV + person offset  JEV + demographics  JEV + demographics + person offset  TF-IDF + Platt  TF-IDF + person offset
+hatespeech       0.3858               0.3799              0.3846                              0.3792          0.4101                  0.4055
+insult           0.2801               0.2800              0.2801                              0.2801          0.3415                  0.3422
+humiliate        0.3949               0.3864              0.3951                              0.3866          0.4485                  0.4432
+dehumanize       0.4535               0.4197              0.4505                              0.4190          0.5016                  0.4786
+violence         0.2663               0.2622              0.2654                              0.2617          0.3703                  0.3706
+disrespect       0.2445               0.2447              0.2444                              0.2446          0.3022                  0.3032
+  45 MLP fits (268812 rows x 102 inputs for the person-aware one) in 24s; epochs run (incl. patience) median {'item': 11.0, 'itemxperson': 9.0, 'cold': 8.0}
+
+== individual labels on 392 new comments (1575 labels x 6 codes); mean over codes, comment bootstrap 95% CI.  Share of 'yes' labels per code: {'hatespeech': 0.261, 'insult': 0.586, 'humiliate': 0.471, 'dehumanize': 0.316, 'violence': 0.131, 'disrespect': 0.621}
+metric                                                            logloss                 brier                 auroc  within_comment_auroc
+method                                                                                                                                     
+JEV zero-shot                                        0.502 [0.474, 0.532]  0.162 [0.152, 0.173]  0.862 [0.844, 0.877]  0.500 [0.500, 0.500]
+JEV + Platt                                          0.409 [0.386, 0.432]  0.132 [0.124, 0.141]  0.862 [0.844, 0.877]  0.500 [0.500, 0.500]
+JEV + demographics                                   0.407 [0.384, 0.430]  0.132 [0.123, 0.140]  0.864 [0.846, 0.880]  0.537 [0.509, 0.562]
+JEV + person offset                                  0.396 [0.373, 0.419]  0.127 [0.119, 0.136]  0.874 [0.858, 0.889]  0.636 [0.610, 0.662]
+JEV + demographics + person offset                   0.395 [0.373, 0.419]  0.127 [0.119, 0.136]  0.875 [0.859, 0.889]  0.640 [0.615, 0.666]
+JEV + shared person severity                         0.406 [0.383, 0.428]  0.131 [0.123, 0.139]  0.866 [0.849, 0.881]  0.577 [0.545, 0.609]
+JEV + person offset + MLP (item features)            0.396 [0.370, 0.421]  0.126 [0.117, 0.135]  0.877 [0.861, 0.892]  0.636 [0.610, 0.662]
+JEV + person offset + MLP (item x person features)   0.394 [0.368, 0.419]  0.125 [0.116, 0.134]  0.879 [0.864, 0.894]  0.649 [0.623, 0.675]
+JEV + Platt + MLP (item x demographics, no anchors)  0.407 [0.382, 0.433]  0.130 [0.121, 0.139]  0.867 [0.850, 0.883]  0.548 [0.515, 0.579]
+TF-IDF + Platt                                       0.470 [0.445, 0.495]  0.152 [0.143, 0.161]  0.826 [0.805, 0.848]  0.500 [0.500, 0.500]
+TF-IDF + person offset                               0.459 [0.434, 0.484]  0.148 [0.138, 0.157]  0.837 [0.817, 0.858]  0.616 [0.589, 0.644]
+
+== paired differences (mean over codes)
+metric                                                                                                          logloss                    brier                    auroc     within_comment_auroc
+pair                                                                                                                                                                                              
+JEV + person offset - JEV + Platt                                                               -0.013 [-0.016, -0.009]  -0.005 [-0.006, -0.004]     0.012 [0.009, 0.016]     0.136 [0.110, 0.162]
+JEV + demographics - JEV + Platt                                                                -0.002 [-0.003, -0.001]  -0.001 [-0.001, -0.000]     0.002 [0.001, 0.003]     0.037 [0.009, 0.062]
+JEV + demographics + person offset - JEV + person offset                                         -0.001 [-0.002, 0.000]   -0.000 [-0.001, 0.000]    0.001 [-0.000, 0.001]    0.004 [-0.014, 0.022]
+JEV + shared person severity - JEV + person offset                                                 0.010 [0.007, 0.013]     0.004 [0.003, 0.005]  -0.008 [-0.011, -0.006]  -0.059 [-0.087, -0.029]
+JEV + person offset + MLP (item x person features) - JEV + person offset                         -0.002 [-0.013, 0.009]   -0.002 [-0.006, 0.001]    0.005 [-0.001, 0.011]    0.014 [-0.011, 0.038]
+JEV + person offset + MLP (item x person features) - JEV + person offset + MLP (item features)   -0.002 [-0.006, 0.004]   -0.001 [-0.002, 0.001]    0.002 [-0.000, 0.005]    0.014 [-0.011, 0.038]
+JEV + person offset + MLP (item features) - JEV + person offset                                  -0.000 [-0.010, 0.009]   -0.001 [-0.005, 0.002]    0.003 [-0.003, 0.008]     0.000 [0.000, 0.000]
+JEV + Platt + MLP (item x demographics, no anchors) - JEV + Platt                                -0.001 [-0.012, 0.009]   -0.002 [-0.005, 0.001]    0.005 [-0.000, 0.011]     0.048 [0.015, 0.079]
+TF-IDF + person offset - TF-IDF + Platt                                                         -0.011 [-0.014, -0.008]  -0.004 [-0.006, -0.003]     0.011 [0.009, 0.014]     0.116 [0.089, 0.144]
+JEV + person offset - TF-IDF + person offset                                                    -0.063 [-0.083, -0.044]  -0.020 [-0.027, -0.013]     0.037 [0.022, 0.051]     0.020 [0.001, 0.038]
+JEV + Platt - TF-IDF + Platt                                                                    -0.061 [-0.080, -0.042]  -0.020 [-0.027, -0.012]     0.036 [0.020, 0.051]     0.000 [0.000, 0.000]
+
+== within-comment AUROC per code
+code                                                 hatespeech  insult  humiliate  dehumanize  violence  disrespect   mean
+method                                                                                                                     
+JEV zero-shot                                             0.500   0.500      0.500       0.500     0.500       0.500  0.500
+JEV + Platt                                               0.500   0.500      0.500       0.500     0.500       0.500  0.500
+JEV + demographics                                        0.586   0.499      0.535       0.613     0.504       0.482  0.537
+JEV + person offset                                       0.672   0.511      0.666       0.743     0.711       0.511  0.636
+JEV + demographics + person offset                        0.692   0.528      0.671       0.745     0.703       0.498  0.640
+JEV + shared person severity                              0.572   0.517      0.624       0.622     0.599       0.529  0.577
+JEV + person offset + MLP (item features)                 0.672   0.511      0.666       0.743     0.711       0.511  0.636
+JEV + person offset + MLP (item x person features)        0.672   0.564      0.686       0.743     0.659       0.571  0.649
+JEV + Platt + MLP (item x demographics, no anchors)       0.578   0.536      0.530       0.594     0.500       0.549  0.548
+TF-IDF + Platt                                            0.500   0.500      0.500       0.500     0.500       0.500  0.500
+TF-IDF + person offset                                    0.648   0.508      0.627       0.723     0.668       0.522  0.616
+
+== log loss per code
+code                                                 hatespeech  insult  humiliate  dehumanize  violence  disrespect    mean
+method                                                                                                                      
+JEV zero-shot                                            0.7604  0.4636     0.6632      0.5089    0.1994      0.4169  0.5021
+JEV + Platt                                              0.4554  0.4133     0.5244      0.4922    0.1915      0.3764  0.4089
+JEV + demographics                                       0.4514  0.4137     0.5235      0.4855    0.1902      0.3775  0.4070
+JEV + person offset                                      0.4437  0.4139     0.5081      0.4529    0.1819      0.3762  0.3961
+JEV + demographics + person offset                       0.4412  0.4143     0.5077      0.4504    0.1812      0.3773  0.3953
+JEV + shared person severity                             0.4544  0.4151     0.5162      0.4817    0.1894      0.3775  0.4057
+JEV + person offset + MLP (item features)                0.4342  0.4102     0.4942      0.4643    0.1894      0.3836  0.3960
+JEV + person offset + MLP (item x person features)       0.4303  0.4103     0.4895      0.4614    0.1891      0.3863  0.3945
+JEV + Platt + MLP (item x demographics, no anchors)      0.4384  0.4094     0.5128      0.5016    0.1981      0.3845  0.4075
+TF-IDF + Platt                                           0.4381  0.5063     0.5695      0.5455    0.2850      0.4739  0.4697
+TF-IDF + person offset                                   0.4239  0.5078     0.5569      0.5085    0.2826      0.4739  0.4589
+
+== person offsets: spread and whether they carry over to new comments
+      code  sd_offset  lam_u  corr_offset_vs_new_residual
+hatespeech      0.340    2.0                        0.151
+    insult      0.078    8.0                       -0.009
+ humiliate      0.365    2.0                        0.201
+dehumanize      0.963    0.5                        0.275
+  violence      0.503    1.0                        0.145
+disrespect      0.069    8.0                        0.024
+
+shared severity vs MHS's own IRT severity (computed from ALL labels, so only a sanity check): r = -0.557
+total 309s
+
+real	5m10.577s
+user	11m23.023s
+sys	6m17.013s

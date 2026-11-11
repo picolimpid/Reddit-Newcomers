@@ -1,0 +1,9 @@
+test,pair,within,logloss
+H1 (primary),CAT-crowd | crowd difficulties (k=5)  -  random | jev difficulties (k=5),"+0.013 [-0.013, +0.038]","-0.0136 [-0.0232, -0.0031]"
+H2,random | jev difficulties (k=20)  -  random | jev difficulties (k=0),"+0.313 [+0.267, +0.352]","-0.1015 [-0.1320, -0.0763]"
+H3,CAT-JEV | jev difficulties (k=5)  -  random | jev difficulties (k=5),"-0.003 [-0.033, +0.026]","-0.0046 [-0.0153, +0.0066]"
+H4,CAT-crowd | crowd difficulties (k=2)  -  random | jev difficulties (k=2),"+0.020 [-0.008, +0.046]","-0.0142 [-0.0249, -0.0029]"
+H4,CAT-crowd | crowd difficulties (k=3)  -  random | jev difficulties (k=3),"+0.024 [-0.000, +0.050]","-0.0153 [-0.0259, -0.0047]"
+extra,random | crowd difficulties (k=5)  -  random | jev difficulties (k=5),"+0.003 [-0.001, +0.008]","-0.0019 [-0.0040, +0.0002]"
+extra,CAT-crowd | crowd difficulties (k=10)  -  random | jev difficulties (k=10),"+0.007 [-0.014, +0.025]","-0.0124 [-0.0197, -0.0041]"
+extra,CAT-crowd | crowd difficulties (k=20)  -  random | jev difficulties (k=20),"+0.001 [-0.011, +0.013]","-0.0061 [-0.0115, -0.0005]"

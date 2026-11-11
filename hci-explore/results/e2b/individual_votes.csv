@@ -1,0 +1,9 @@
+,auroc,acc,pairs,acc of never showing
+other two users' votes (3-user items),0.58,0.574,3717.0,0.614
+majority label incl. this user's own vote,,0.803,4013.0,0.614
+JEV zero-shot,0.629,0.492,4013.0,0.614
+JEV + Platt (all other sessions' labels),0.622,0.618,4013.0,0.614
+JEV 3Q + LR (all other sessions' labels),0.62,0.623,4013.0,0.614
+TF-IDF + LR (all other sessions' labels),0.527,0.615,4013.0,0.614
+Emb + LR (all other sessions' labels),0.568,0.614,4013.0,0.614
+Emb + JEV (all other sessions' labels),0.626,0.628,4013.0,0.614

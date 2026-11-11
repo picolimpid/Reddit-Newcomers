@@ -1,0 +1,9 @@
+,est,lo,hi
+accept_auroc (majority label),0.655,0.6,0.712
+"accept_auroc, unanimous items",0.816,0.752,0.866
+"accept_auroc, split-vote items",0.538,0.493,0.582
+"spearman(P(accept), share of users accepting)",0.336,0.242,0.426
+"need_auroc (help_needed, all items)",0.593,0.529,0.653
+accept_auroc - need_auroc,0.062,-0.024,0.147
+acc of show iff P(accept)>0.5,0.474,0.433,0.514
+acc of never showing,0.658,0.602,0.715

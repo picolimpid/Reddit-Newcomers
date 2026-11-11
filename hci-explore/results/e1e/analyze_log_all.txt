@@ -1,0 +1,100 @@
+DICES-350, raters = all: 123 raters x 350 conversations, 40356 labels (Unsure dropped), yes rate 0.348; rater yes-rate sd 0.206
+30 (fold, k) fits in 42s
+bootstrap (1000 draws over conversations x raters) in 9s
+
+== within-conversation AUROC (which raters of the same conversation call it unsafe; content-only = 0.5)
+k                                                   0      5      10     20     50     100    200
+model                                                                                            
+JEV zero-shot                                       0.5    NaN    NaN    NaN    NaN    NaN    NaN
+JEV + Platt                                         NaN  0.500  0.500  0.500  0.500  0.500  0.500
+JEV six answers + Platt                             NaN  0.500  0.500  0.500  0.500  0.500  0.500
++ demographics                                      NaN  0.562  0.582  0.587  0.587  0.587  0.590
++ person offset                                     NaN  0.728  0.764  0.786  0.799  0.805  0.808
++ person offset + person weights                    NaN  0.729  0.764  0.787  0.801  0.810  0.815
+JEV + MLP offset (rater id, demographics, content)  NaN  0.532  0.612  0.698  0.767  0.808  0.812
+JEV + person offset + MLP                           NaN  0.728  0.763  0.785  0.800  0.806  0.809
+MLP alone (no JEV)                                  NaN  0.594  0.608  0.720  0.774  0.806  0.810
+
+== log loss (individual labels)
+k                                                      0       5       10      20      50      100     200
+model                                                                                                     
+JEV zero-shot                                       0.7711     NaN     NaN     NaN     NaN     NaN     NaN
+JEV + Platt                                            NaN  0.6210  0.6215  0.6218  0.6213  0.6212  0.6213
+JEV six answers + Platt                                NaN  0.6093  0.6052  0.6054  0.6055  0.6049  0.6051
++ demographics                                         NaN  0.6061  0.5997  0.5972  0.5964  0.5955  0.5957
++ person offset                                        NaN  0.5574  0.5291  0.5136  0.5014  0.4963  0.4949
++ person offset + person weights                       NaN  0.5563  0.5289  0.5126  0.5001  0.4930  0.4895
+JEV + MLP offset (rater id, demographics, content)     NaN  0.6075  0.5944  0.5559  0.5203  0.4892  0.4871
+JEV + person offset + MLP                              NaN  0.5557  0.5285  0.5129  0.4984  0.4930  0.4906
+MLP alone (no JEV)                                     NaN  0.6463  0.6463  0.6056  0.5720  0.5493  0.5516
+
+== pooled AUROC
+k                                                     0      5      10     20     50     100    200
+model                                                                                              
+JEV zero-shot                                       0.618    NaN    NaN    NaN    NaN    NaN    NaN
+JEV + Platt                                           NaN  0.622  0.613  0.613  0.614  0.613  0.613
+JEV six answers + Platt                               NaN  0.643  0.647  0.646  0.647  0.647  0.647
++ demographics                                        NaN  0.652  0.662  0.669  0.671  0.672  0.672
++ person offset                                       NaN  0.742  0.774  0.789  0.800  0.805  0.806
++ person offset + person weights                      NaN  0.745  0.775  0.791  0.802  0.809  0.811
+JEV + MLP offset (rater id, demographics, content)    NaN  0.647  0.676  0.738  0.784  0.815  0.817
+JEV + person offset + MLP                             NaN  0.744  0.775  0.790  0.805  0.810  0.813
+MLP alone (no JEV)                                    NaN  0.547  0.556  0.664  0.724  0.756  0.754
+
+== paired differences (two-way bootstrap)
+                                                                     pair   k     log loss diff [95% CI] within-AUROC diff [95% CI]
+                              + person offset  -  JEV six answers + Platt   5 -0.0519 [-0.0791, -0.0268]    +0.228 [+0.184, +0.272]
+                              + person offset  -  JEV six answers + Platt  10 -0.0762 [-0.1102, -0.0449]    +0.264 [+0.220, +0.305]
+                              + person offset  -  JEV six answers + Platt  20 -0.0918 [-0.1279, -0.0601]    +0.286 [+0.246, +0.324]
+                              + person offset  -  JEV six answers + Platt  50 -0.1041 [-0.1406, -0.0721]    +0.299 [+0.261, +0.337]
+                              + person offset  -  JEV six answers + Platt 100 -0.1086 [-0.1466, -0.0760]    +0.305 [+0.267, +0.342]
+                              + person offset  -  JEV six answers + Platt 200 -0.1102 [-0.1486, -0.0778]    +0.308 [+0.270, +0.344]
+                               + demographics  -  JEV six answers + Platt   5 -0.0033 [-0.0074, +0.0007]    +0.062 [+0.014, +0.109]
+                               + demographics  -  JEV six answers + Platt  10 -0.0055 [-0.0119, +0.0006]    +0.082 [+0.027, +0.136]
+                               + demographics  -  JEV six answers + Platt  20 -0.0082 [-0.0197, +0.0024]    +0.087 [+0.028, +0.148]
+                               + demographics  -  JEV six answers + Platt  50 -0.0090 [-0.0212, +0.0020]    +0.087 [+0.029, +0.146]
+                               + demographics  -  JEV six answers + Platt 100 -0.0094 [-0.0220, +0.0021]    +0.087 [+0.026, +0.147]
+                               + demographics  -  JEV six answers + Platt 200 -0.0094 [-0.0225, +0.0022]    +0.090 [+0.033, +0.150]
+                     + person offset + person weights  -  + person offset   5 -0.0011 [-0.0038, +0.0013]    +0.000 [-0.001, +0.002]
+                     + person offset + person weights  -  + person offset  10 -0.0002 [-0.0013, +0.0009]    +0.001 [-0.000, +0.002]
+                     + person offset + person weights  -  + person offset  20 -0.0010 [-0.0018, -0.0003]    +0.001 [-0.000, +0.002]
+                     + person offset + person weights  -  + person offset  50 -0.0013 [-0.0027, -0.0000]    +0.002 [+0.000, +0.004]
+                     + person offset + person weights  -  + person offset 100 -0.0034 [-0.0055, -0.0013]    +0.005 [+0.002, +0.009]
+                     + person offset + person weights  -  + person offset 200 -0.0054 [-0.0078, -0.0032]    +0.007 [+0.004, +0.012]
+                            JEV + person offset + MLP  -  + person offset   5 -0.0017 [-0.0036, +0.0001]    +0.000 [-0.001, +0.001]
+                            JEV + person offset + MLP  -  + person offset  10 -0.0006 [-0.0015, +0.0003]    -0.000 [-0.000, +0.000]
+                            JEV + person offset + MLP  -  + person offset  20 -0.0007 [-0.0042, +0.0027]    -0.000 [-0.000, +0.000]
+                            JEV + person offset + MLP  -  + person offset  50 -0.0030 [-0.0103, +0.0039]    +0.000 [-0.000, +0.001]
+                            JEV + person offset + MLP  -  + person offset 100 -0.0033 [-0.0103, +0.0034]    +0.000 [-0.000, +0.001]
+                            JEV + person offset + MLP  -  + person offset 200 -0.0043 [-0.0143, +0.0053]    +0.001 [+0.001, +0.002]
+   JEV + MLP offset (rater id, demographics, content)  -  + person offset   5 +0.0501 [+0.0251, +0.0774]    -0.197 [-0.237, -0.154]
+   JEV + MLP offset (rater id, demographics, content)  -  + person offset  10 +0.0653 [+0.0369, +0.0952]    -0.152 [-0.179, -0.124]
+   JEV + MLP offset (rater id, demographics, content)  -  + person offset  20 +0.0423 [+0.0210, +0.0644]    -0.088 [-0.108, -0.070]
+   JEV + MLP offset (rater id, demographics, content)  -  + person offset  50 +0.0189 [+0.0033, +0.0351]    -0.032 [-0.044, -0.021]
+   JEV + MLP offset (rater id, demographics, content)  -  + person offset 100 -0.0072 [-0.0199, +0.0048]    +0.003 [+0.000, +0.005]
+   JEV + MLP offset (rater id, demographics, content)  -  + person offset 200 -0.0077 [-0.0202, +0.0042]    +0.005 [+0.002, +0.007]
+JEV + MLP offset (rater id, demographics, content)  -  MLP alone (no JEV)   5 -0.0388 [-0.0606, -0.0202]    -0.062 [-0.083, -0.040]
+JEV + MLP offset (rater id, demographics, content)  -  MLP alone (no JEV)  10 -0.0519 [-0.0704, -0.0365]    +0.004 [-0.007, +0.014]
+JEV + MLP offset (rater id, demographics, content)  -  MLP alone (no JEV)  20 -0.0496 [-0.0692, -0.0333]    -0.022 [-0.041, -0.004]
+JEV + MLP offset (rater id, demographics, content)  -  MLP alone (no JEV)  50 -0.0517 [-0.0733, -0.0328]    -0.007 [-0.019, +0.006]
+JEV + MLP offset (rater id, demographics, content)  -  MLP alone (no JEV) 100 -0.0601 [-0.0818, -0.0412]    +0.002 [+0.001, +0.004]
+JEV + MLP offset (rater id, demographics, content)  -  MLP alone (no JEV) 200 -0.0644 [-0.0882, -0.0447]    +0.003 [+0.001, +0.005]
+                                  JEV six answers + Platt  -  JEV + Platt   5 -0.0116 [-0.0246, +0.0003]    +0.000 [+0.000, +0.000]
+                                  JEV six answers + Platt  -  JEV + Platt  10 -0.0163 [-0.0281, -0.0054]    +0.000 [+0.000, +0.000]
+                                  JEV six answers + Platt  -  JEV + Platt  20 -0.0163 [-0.0276, -0.0062]    +0.000 [+0.000, +0.000]
+                                  JEV six answers + Platt  -  JEV + Platt  50 -0.0158 [-0.0268, -0.0055]    +0.000 [+0.000, +0.000]
+                                  JEV six answers + Platt  -  JEV + Platt 100 -0.0163 [-0.0272, -0.0063]    +0.000 [+0.000, +0.000]
+                                  JEV six answers + Platt  -  JEV + Platt 200 -0.0162 [-0.0276, -0.0060]    +0.000 [+0.000, +0.000]
+
+== chosen settings (median over folds)
+                                                   n_anchor_labels                                           lam_d                           lam_u                             lam_v                                  epochs                              
+k                                                              5       10      20      50       100      200   5     10   20   50   100  200   5    10   20   50    100   200    5      10     20     50    100   200    5     10    20    50    100   200
+model                                                                                                                                                                                                                                                     
++ demographics                                               572.0  1145.0  2298.0  5764.0  11539.0  23086.0  64.0  16.0  4.0  4.0  4.0  4.0   NaN  NaN  NaN  NaN   NaN   NaN    NaN    NaN    NaN    NaN   NaN   NaN    NaN   NaN   NaN   NaN   NaN   NaN
++ person offset                                              572.0  1145.0  2298.0  5764.0  11539.0  23086.0   NaN   NaN  NaN  NaN  NaN  NaN   1.0  0.5  0.5  0.5  0.25  0.25    NaN    NaN    NaN    NaN   NaN   NaN    NaN   NaN   NaN   NaN   NaN   NaN
++ person offset + person weights                             572.0  1145.0  2298.0  5764.0  11539.0  23086.0   NaN   NaN  NaN  NaN  NaN  NaN   1.0  0.5  0.5  0.5  0.25  0.25  128.0  128.0  128.0  128.0  32.0  32.0    NaN   NaN   NaN   NaN   NaN   NaN
+JEV + MLP offset (rater id, demographics, content)           572.0  1145.0  2298.0  5764.0  11539.0  23086.0   NaN   NaN  NaN  NaN  NaN  NaN   NaN  NaN  NaN  NaN   NaN   NaN    NaN    NaN    NaN    NaN   NaN   NaN    0.0   8.0  59.0  37.0  21.0  15.0
+JEV + Platt                                                  572.0  1145.0  2298.0  5764.0  11539.0  23086.0   NaN   NaN  NaN  NaN  NaN  NaN   NaN  NaN  NaN  NaN   NaN   NaN    NaN    NaN    NaN    NaN   NaN   NaN    NaN   NaN   NaN   NaN   NaN   NaN
+JEV + person offset + MLP                                    572.0  1145.0  2298.0  5764.0  11539.0  23086.0   NaN   NaN  NaN  NaN  NaN  NaN   NaN  NaN  NaN  NaN   NaN   NaN    NaN    NaN    NaN    NaN   NaN   NaN    0.0   0.0   2.0   5.0   3.0   3.0
+JEV six answers + Platt                                      572.0  1145.0  2298.0  5764.0  11539.0  23086.0   NaN   NaN  NaN  NaN  NaN  NaN   NaN  NaN  NaN  NaN   NaN   NaN    NaN    NaN    NaN    NaN   NaN   NaN    NaN   NaN   NaN   NaN   NaN   NaN
+MLP alone (no JEV)                                           572.0  1145.0  2298.0  5764.0  11539.0  23086.0   NaN   NaN  NaN  NaN  NaN  NaN   NaN  NaN  NaN  NaN   NaN   NaN    NaN    NaN    NaN    NaN   NaN   NaN   31.0  12.0  12.0  23.0  21.0  13.0

@@ -1,0 +1,21 @@
+all conversations: disagreement 0.302, within-conversation AUROC (k = 20) 0.816
+                         conversations  disagreement  yes_rate  within_auroc_k20
+topic                                                                           
+Drugs/alcohol                       13         0.445     0.524             0.827
+Racial                              28         0.442     0.473             0.815
+Political                           50         0.440     0.435             0.799
+mental health/self harm             16         0.435     0.360             0.829
+Health                              29         0.432     0.395             0.814
+Misinformation                      18         0.430     0.544             0.814
+Gendered & Sexist                   15         0.428     0.431             0.811
+Bigoted                             11         0.424     0.460             0.811
+LGBTQ+ & Homophobic                 11         0.415     0.351             0.803
+Sexual                              33         0.409     0.463             0.827
+Aggressive                          29         0.407     0.417             0.807
+Religious                           22         0.406     0.360             0.802
+identity                            16         0.398     0.385             0.771
+Personal                            26         0.343     0.296             0.798
+Senseless                           17         0.320     0.240             0.817
+(none)                             684         0.271     0.223             0.819
+Banter                              55         0.248     0.185             0.813
+Miscellaneous                       17         0.241     0.162             0.800

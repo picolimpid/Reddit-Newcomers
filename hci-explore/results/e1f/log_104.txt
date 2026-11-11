@@ -1,0 +1,149 @@
+DICES-350, raters = 104: 104 raters x 350 conversations; two-way CV 5 x 5; 11 strategies, k = (0, 1, 2, 3, 5, 10, 20, 50), random strategies repeated 5 times
+25 cells in 5s
+       tau2  tau2_demo     s2
+mean  1.677      1.445  1.348
+min   1.472      1.334  1.132
+max   1.907      1.644  1.536
+bootstrap (1000 draws over conversations x raters) in 59s
+
+== within-conversation AUROC (which of the new raters call a new conversation unsafe; pairs within a rater fold)
+k                                                 0      1      2      3      5      10     20     50
+model                                                                                                
+random | jev difficulties                      0.500  0.604  0.647  0.669  0.703  0.736  0.760  0.775
+random | crowd difficulties                    0.500  0.614  0.655  0.677  0.710  0.741  0.762  0.777
+random-common | jev difficulties               0.500  0.605  0.641  0.670  0.705  0.740  0.762  0.778
+random-common | crowd difficulties             0.500  0.605  0.641  0.669  0.705  0.739  0.762  0.778
+disputed-crowd | crowd difficulties            0.500  0.639  0.680  0.699  0.713  0.739  0.756  0.769
+CAT-crowd | crowd difficulties                 0.500  0.639  0.694  0.712  0.727  0.743  0.756  0.769
+borderline-JEV | jev difficulties              0.500  0.608  0.644  0.670  0.704  0.730  0.750  0.766
+CAT-JEV | jev difficulties                     0.500  0.608  0.654  0.679  0.704  0.738  0.753  0.770
+random | jev difficulties + demographics       0.498  0.603  0.641  0.666  0.700  0.736  0.759  0.775
+CAT-crowd | crowd difficulties + demographics  0.498  0.636  0.679  0.697  0.717  0.735  0.752  0.769
+CAT-JEV | jev difficulties + demographics      0.498  0.588  0.640  0.664  0.689  0.720  0.748  0.769
+reference (all pool labels): 0.785
+
+== log loss
+k                                                  0       1       2       3       5       10      20      50
+model                                                                                                        
+random | jev difficulties                      0.6069  0.5960  0.5866  0.5790  0.5672  0.5518  0.5391  0.5300
+random | crowd difficulties                    0.6069  0.5942  0.5837  0.5766  0.5645  0.5491  0.5369  0.5278
+random-common | jev difficulties               0.6069  0.5941  0.5877  0.5800  0.5679  0.5521  0.5397  0.5291
+random-common | crowd difficulties             0.6069  0.5928  0.5848  0.5765  0.5644  0.5490  0.5371  0.5273
+disputed-crowd | crowd difficulties            0.6069  0.5835  0.5724  0.5674  0.5611  0.5479  0.5368  0.5300
+CAT-crowd | crowd difficulties                 0.6069  0.5835  0.5677  0.5611  0.5531  0.5445  0.5368  0.5292
+borderline-JEV | jev difficulties              0.6069  0.5918  0.5888  0.5807  0.5697  0.5580  0.5445  0.5353
+CAT-JEV | jev difficulties                     0.6069  0.5918  0.5824  0.5777  0.5625  0.5477  0.5393  0.5299
+random | jev difficulties + demographics       0.6118  0.5983  0.5883  0.5802  0.5680  0.5524  0.5394  0.5302
+CAT-crowd | crowd difficulties + demographics  0.6118  0.5885  0.5753  0.5669  0.5552  0.5449  0.5363  0.5288
+CAT-JEV | jev difficulties + demographics      0.6118  0.5986  0.5858  0.5780  0.5695  0.5552  0.5426  0.5314
+
+== pooled AUROC
+k                                                 0      1      2      3      5      10     20     50
+model                                                                                                
+random | jev difficulties                      0.648  0.681  0.700  0.713  0.732  0.753  0.769  0.779
+random | crowd difficulties                    0.648  0.684  0.704  0.717  0.736  0.756  0.770  0.780
+random-common | jev difficulties               0.648  0.686  0.699  0.713  0.731  0.752  0.767  0.779
+random-common | crowd difficulties             0.648  0.688  0.703  0.717  0.735  0.756  0.770  0.780
+disputed-crowd | crowd difficulties            0.648  0.705  0.723  0.729  0.737  0.754  0.768  0.776
+CAT-crowd | crowd difficulties                 0.648  0.705  0.730  0.739  0.748  0.758  0.767  0.776
+borderline-JEV | jev difficulties              0.648  0.690  0.697  0.711  0.728  0.746  0.763  0.772
+CAT-JEV | jev difficulties                     0.648  0.690  0.708  0.715  0.736  0.755  0.765  0.777
+random | jev difficulties + demographics       0.640  0.675  0.696  0.710  0.729  0.752  0.768  0.779
+CAT-crowd | crowd difficulties + demographics  0.640  0.692  0.715  0.728  0.743  0.757  0.767  0.776
+CAT-JEV | jev difficulties + demographics      0.640  0.675  0.699  0.712  0.725  0.743  0.760  0.776
+
+== paired differences (two-way bootstrap; first two pairs are the pre-registered primary comparisons)
+                                                                            pair  k within-AUROC diff [95% CI]     log loss diff [95% CI]
+                        CAT-JEV | jev difficulties  -  random | jev difficulties  1    +0.005 [-0.024, +0.032] -0.0041 [-0.0110, +0.0032]
+                        CAT-JEV | jev difficulties  -  random | jev difficulties  2    +0.007 [-0.021, +0.030] -0.0042 [-0.0112, +0.0031]
+                        CAT-JEV | jev difficulties  -  random | jev difficulties  3    +0.010 [-0.019, +0.033] -0.0013 [-0.0091, +0.0069]
+                        CAT-JEV | jev difficulties  -  random | jev difficulties  5    +0.001 [-0.023, +0.024] -0.0047 [-0.0123, +0.0029]
+                        CAT-JEV | jev difficulties  -  random | jev difficulties 10    +0.002 [-0.013, +0.015] -0.0040 [-0.0099, +0.0017]
+                        CAT-JEV | jev difficulties  -  random | jev difficulties 20    -0.007 [-0.021, +0.006] +0.0002 [-0.0048, +0.0050]
+                        CAT-JEV | jev difficulties  -  random | jev difficulties 50    -0.005 [-0.015, +0.002] -0.0001 [-0.0032, +0.0034]
+                    CAT-crowd | crowd difficulties  -  random | jev difficulties  1    +0.035 [+0.003, +0.066] -0.0125 [-0.0203, -0.0047]
+                    CAT-crowd | crowd difficulties  -  random | jev difficulties  2    +0.047 [+0.018, +0.073] -0.0189 [-0.0271, -0.0102]
+                    CAT-crowd | crowd difficulties  -  random | jev difficulties  3    +0.042 [+0.015, +0.064] -0.0179 [-0.0261, -0.0091]
+                    CAT-crowd | crowd difficulties  -  random | jev difficulties  5    +0.024 [+0.001, +0.042] -0.0141 [-0.0211, -0.0061]
+                    CAT-crowd | crowd difficulties  -  random | jev difficulties 10    +0.006 [-0.011, +0.021] -0.0072 [-0.0134, +0.0001]
+                    CAT-crowd | crowd difficulties  -  random | jev difficulties 20    -0.004 [-0.018, +0.007] -0.0023 [-0.0074, +0.0041]
+                    CAT-crowd | crowd difficulties  -  random | jev difficulties 50    -0.007 [-0.017, +0.002] -0.0009 [-0.0046, +0.0034]
+                       random | crowd difficulties  -  random | jev difficulties  1    +0.010 [+0.001, +0.019] -0.0018 [-0.0033, -0.0005]
+                       random | crowd difficulties  -  random | jev difficulties  2    +0.008 [+0.002, +0.015] -0.0029 [-0.0046, -0.0015]
+                       random | crowd difficulties  -  random | jev difficulties  3    +0.008 [+0.001, +0.014] -0.0025 [-0.0041, -0.0009]
+                       random | crowd difficulties  -  random | jev difficulties  5    +0.006 [+0.001, +0.012] -0.0028 [-0.0048, -0.0010]
+                       random | crowd difficulties  -  random | jev difficulties 10    +0.005 [+0.001, +0.009] -0.0027 [-0.0045, -0.0010]
+                       random | crowd difficulties  -  random | jev difficulties 20    +0.002 [-0.001, +0.005] -0.0022 [-0.0037, -0.0006]
+                       random | crowd difficulties  -  random | jev difficulties 50    +0.001 [-0.000, +0.003] -0.0022 [-0.0035, -0.0008]
+                  CAT-crowd | crowd difficulties  -  random | crowd difficulties  1    +0.025 [-0.009, +0.058] -0.0107 [-0.0187, -0.0025]
+                  CAT-crowd | crowd difficulties  -  random | crowd difficulties  2    +0.039 [+0.010, +0.064] -0.0160 [-0.0243, -0.0073]
+                  CAT-crowd | crowd difficulties  -  random | crowd difficulties  3    +0.034 [+0.009, +0.056] -0.0155 [-0.0234, -0.0067]
+                  CAT-crowd | crowd difficulties  -  random | crowd difficulties  5    +0.017 [-0.006, +0.036] -0.0113 [-0.0180, -0.0033]
+                  CAT-crowd | crowd difficulties  -  random | crowd difficulties 10    +0.001 [-0.017, +0.016] -0.0046 [-0.0099, +0.0023]
+                  CAT-crowd | crowd difficulties  -  random | crowd difficulties 20    -0.006 [-0.019, +0.004] -0.0001 [-0.0046, +0.0056]
+                  CAT-crowd | crowd difficulties  -  random | crowd difficulties 50    -0.008 [-0.018, +0.000] +0.0013 [-0.0018, +0.0051]
+             disputed-crowd | crowd difficulties  -  random | crowd difficulties  1    +0.025 [-0.009, +0.058] -0.0107 [-0.0187, -0.0025]
+             disputed-crowd | crowd difficulties  -  random | crowd difficulties  2    +0.025 [-0.002, +0.049] -0.0113 [-0.0192, -0.0030]
+             disputed-crowd | crowd difficulties  -  random | crowd difficulties  3    +0.021 [-0.003, +0.043] -0.0092 [-0.0173, -0.0006]
+             disputed-crowd | crowd difficulties  -  random | crowd difficulties  5    +0.003 [-0.025, +0.025] -0.0034 [-0.0111, +0.0053]
+             disputed-crowd | crowd difficulties  -  random | crowd difficulties 10    -0.002 [-0.021, +0.014] -0.0012 [-0.0073, +0.0060]
+             disputed-crowd | crowd difficulties  -  random | crowd difficulties 20    -0.006 [-0.022, +0.006] -0.0001 [-0.0049, +0.0056]
+             disputed-crowd | crowd difficulties  -  random | crowd difficulties 50    -0.007 [-0.020, +0.002] +0.0022 [-0.0011, +0.0064]
+              random-common | crowd difficulties  -  random | crowd difficulties  1    -0.009 [-0.023, +0.005] -0.0014 [-0.0047, +0.0018]
+              random-common | crowd difficulties  -  random | crowd difficulties  2    -0.015 [-0.029, +0.001] +0.0011 [-0.0023, +0.0045]
+              random-common | crowd difficulties  -  random | crowd difficulties  3    -0.008 [-0.021, +0.004] -0.0000 [-0.0036, +0.0037]
+              random-common | crowd difficulties  -  random | crowd difficulties  5    -0.005 [-0.016, +0.005] -0.0001 [-0.0035, +0.0035]
+              random-common | crowd difficulties  -  random | crowd difficulties 10    -0.002 [-0.010, +0.006] -0.0001 [-0.0032, +0.0029]
+              random-common | crowd difficulties  -  random | crowd difficulties 20    +0.000 [-0.005, +0.005] +0.0001 [-0.0021, +0.0023]
+              random-common | crowd difficulties  -  random | crowd difficulties 50    +0.001 [-0.002, +0.004] -0.0005 [-0.0021, +0.0010]
+                  random-common | jev difficulties  -  random | jev difficulties  1    +0.001 [-0.011, +0.014] -0.0018 [-0.0050, +0.0015]
+                  random-common | jev difficulties  -  random | jev difficulties  2    -0.005 [-0.019, +0.010] +0.0011 [-0.0029, +0.0050]
+                  random-common | jev difficulties  -  random | jev difficulties  3    +0.000 [-0.012, +0.013] +0.0009 [-0.0033, +0.0048]
+                  random-common | jev difficulties  -  random | jev difficulties  5    +0.002 [-0.009, +0.013] +0.0007 [-0.0030, +0.0041]
+                  random-common | jev difficulties  -  random | jev difficulties 10    +0.003 [-0.005, +0.011] +0.0004 [-0.0025, +0.0030]
+                  random-common | jev difficulties  -  random | jev difficulties 20    +0.002 [-0.003, +0.008] +0.0006 [-0.0019, +0.0030]
+                  random-common | jev difficulties  -  random | jev difficulties 50    +0.003 [-0.001, +0.006] -0.0009 [-0.0025, +0.0006]
+                 borderline-JEV | jev difficulties  -  random | jev difficulties  1    +0.005 [-0.024, +0.032] -0.0041 [-0.0110, +0.0032]
+                 borderline-JEV | jev difficulties  -  random | jev difficulties  2    -0.003 [-0.034, +0.024] +0.0022 [-0.0067, +0.0128]
+                 borderline-JEV | jev difficulties  -  random | jev difficulties  3    +0.001 [-0.029, +0.025] +0.0017 [-0.0062, +0.0106]
+                 borderline-JEV | jev difficulties  -  random | jev difficulties  5    +0.000 [-0.025, +0.021] +0.0025 [-0.0054, +0.0111]
+                 borderline-JEV | jev difficulties  -  random | jev difficulties 10    -0.006 [-0.025, +0.011] +0.0063 [-0.0010, +0.0146]
+                 borderline-JEV | jev difficulties  -  random | jev difficulties 20    -0.010 [-0.025, +0.003] +0.0054 [-0.0013, +0.0126]
+                 borderline-JEV | jev difficulties  -  random | jev difficulties 50    -0.009 [-0.021, -0.000] +0.0053 [+0.0008, +0.0103]
+          random | jev difficulties + demographics  -  random | jev difficulties  1    -0.000 [-0.034, +0.029] +0.0023 [-0.0040, +0.0097]
+          random | jev difficulties + demographics  -  random | jev difficulties  2    -0.006 [-0.027, +0.013] +0.0017 [-0.0032, +0.0072]
+          random | jev difficulties + demographics  -  random | jev difficulties  3    -0.004 [-0.018, +0.010] +0.0011 [-0.0028, +0.0054]
+          random | jev difficulties + demographics  -  random | jev difficulties  5    -0.004 [-0.012, +0.005] +0.0008 [-0.0020, +0.0038]
+          random | jev difficulties + demographics  -  random | jev difficulties 10    -0.001 [-0.005, +0.003] +0.0006 [-0.0008, +0.0024]
+          random | jev difficulties + demographics  -  random | jev difficulties 20    -0.001 [-0.003, +0.001] +0.0003 [-0.0004, +0.0012]
+          random | jev difficulties + demographics  -  random | jev difficulties 50    -0.000 [-0.001, +0.000] +0.0002 [-0.0001, +0.0005]
+CAT-crowd | crowd difficulties + demographics  -  CAT-crowd | crowd difficulties  1    -0.003 [-0.048, +0.035] +0.0050 [-0.0061, +0.0166]
+CAT-crowd | crowd difficulties + demographics  -  CAT-crowd | crowd difficulties  2    -0.015 [-0.056, +0.020] +0.0075 [-0.0021, +0.0187]
+CAT-crowd | crowd difficulties + demographics  -  CAT-crowd | crowd difficulties  3    -0.014 [-0.045, +0.014] +0.0058 [-0.0037, +0.0161]
+CAT-crowd | crowd difficulties + demographics  -  CAT-crowd | crowd difficulties  5    -0.010 [-0.040, +0.015] +0.0021 [-0.0061, +0.0105]
+CAT-crowd | crowd difficulties + demographics  -  CAT-crowd | crowd difficulties 10    -0.007 [-0.029, +0.012] +0.0004 [-0.0067, +0.0075]
+CAT-crowd | crowd difficulties + demographics  -  CAT-crowd | crowd difficulties 20    -0.004 [-0.018, +0.009] -0.0004 [-0.0057, +0.0045]
+CAT-crowd | crowd difficulties + demographics  -  CAT-crowd | crowd difficulties 50    +0.000 [-0.007, +0.007] -0.0004 [-0.0025, +0.0015]
+        CAT-JEV | jev difficulties + demographics  -  CAT-JEV | jev difficulties  1    -0.020 [-0.057, +0.019] +0.0067 [-0.0037, +0.0174]
+        CAT-JEV | jev difficulties + demographics  -  CAT-JEV | jev difficulties  2    -0.014 [-0.048, +0.024] +0.0034 [-0.0064, +0.0131]
+        CAT-JEV | jev difficulties + demographics  -  CAT-JEV | jev difficulties  3    -0.015 [-0.046, +0.019] +0.0003 [-0.0099, +0.0108]
+        CAT-JEV | jev difficulties + demographics  -  CAT-JEV | jev difficulties  5    -0.016 [-0.042, +0.011] +0.0070 [-0.0022, +0.0155]
+        CAT-JEV | jev difficulties + demographics  -  CAT-JEV | jev difficulties 10    -0.018 [-0.034, -0.002] +0.0075 [-0.0002, +0.0149]
+        CAT-JEV | jev difficulties + demographics  -  CAT-JEV | jev difficulties 20    -0.005 [-0.018, +0.006] +0.0033 [-0.0015, +0.0084]
+        CAT-JEV | jev difficulties + demographics  -  CAT-JEV | jev difficulties 50    -0.001 [-0.007, +0.006] +0.0015 [-0.0011, +0.0041]
+
+== what the asked questions look like (share answered Unsure; crowd p(1-p); crowd yes-rate)
+                                              unsure               crowd_info               crowd_yes              
+k                                                 5      10     20         5      10     20        5      10     20
+variant                                                                                                            
+random | jev difficulties                      0.060  0.057  0.058      0.158  0.158  0.157     0.332  0.333  0.329
+random | crowd difficulties                    0.060  0.057  0.058      0.158  0.158  0.157     0.332  0.333  0.329
+random-common | jev difficulties               0.063  0.059  0.063      0.156  0.150  0.150     0.338  0.306  0.313
+random-common | crowd difficulties             0.063  0.059  0.063      0.156  0.150  0.150     0.338  0.306  0.313
+disputed-crowd | crowd difficulties            0.091  0.088  0.087      0.250  0.250  0.249     0.499  0.498  0.500
+CAT-crowd | crowd difficulties                 0.087  0.086  0.089      0.224  0.212  0.204     0.504  0.506  0.507
+borderline-JEV | jev difficulties              0.069  0.069  0.070      0.182  0.182  0.182     0.538  0.532  0.525
+CAT-JEV | jev difficulties                     0.077  0.077  0.078      0.178  0.171  0.169     0.512  0.503  0.498
+random | jev difficulties + demographics       0.060  0.057  0.058      0.158  0.158  0.157     0.332  0.333  0.329
+CAT-crowd | crowd difficulties + demographics  0.088  0.087  0.093      0.226  0.216  0.208     0.511  0.513  0.511
+CAT-JEV | jev difficulties + demographics      0.078  0.079  0.079      0.178  0.175  0.172     0.509  0.505  0.502

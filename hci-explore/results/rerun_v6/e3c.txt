@@ -1,0 +1,41 @@
+
+== all docs: Spearman (n docs per judge: {'GPT-4o': 10, 'GPT-4o-mini': 100, 'JEV': 100, 'Qwen3-32B (local)': 100})
+crit               coherence  consistency  fluency  relevance    avg
+judge                                                               
+JEV                    0.693        0.563    0.510      0.560  0.582
+GPT-4o-mini            0.567        0.505    0.348      0.571  0.498
+GPT-4o                 0.468        0.487    0.390      0.601  0.486
+Qwen3-32B (local)      0.644        0.524    0.430      0.474  0.518
+Kendall avg: {'GPT-4o': 0.389, 'GPT-4o-mini': 0.402, 'JEV': 0.476, 'Qwen3-32B (local)': 0.42}
+
+== common subset (10 docs): Spearman (n docs per judge: {'GPT-4o': 10, 'GPT-4o-mini': 10, 'JEV': 10, 'Qwen3-32B (local)': 10})
+crit               coherence  consistency  fluency  relevance    avg
+judge                                                               
+JEV                    0.690        0.532    0.512      0.646  0.595
+GPT-4o-mini            0.485        0.376    0.281      0.642  0.446
+GPT-4o                 0.468        0.487    0.390      0.601  0.486
+Qwen3-32B (local)      0.612        0.433    0.383      0.471  0.475
+Kendall avg: {'GPT-4o': 0.389, 'GPT-4o-mini': 0.359, 'JEV': 0.485, 'Qwen3-32B (local)': 0.385}
+
+== entropy -> |error|>1 (AUROC), share of big errors caught when reviewing the 20% most uncertain
+crit               coherence  consistency  fluency  relevance
+judge                                                        
+GPT-4o                 0.439        0.626    0.462      0.537
+GPT-4o-mini            0.499        0.548    0.605      0.618
+JEV                    0.652        0.948    0.760      0.631
+Qwen3-32B (local)      0.477        0.907    0.523      0.495
+crit               coherence  consistency  fluency  relevance
+judge                                                        
+GPT-4o                 0.181        0.227    0.215      0.212
+GPT-4o-mini            0.197        0.242    0.205      0.252
+JEV                    0.332        0.894    0.272      0.327
+Qwen3-32B (local)      0.219        0.782    0.212      0.234
+crit               coherence  consistency  fluency  relevance
+judge                                                        
+GPT-4o                  1.02         0.94     1.04       0.79
+GPT-4o-mini             0.92         0.91     1.90       0.69
+JEV                     0.57         0.35     1.29       0.53
+Qwen3-32B (local)       0.61         0.27     1.30       0.60
+
+median probability mass on 1-5 tokens: {'GPT-4o': 0.993, 'GPT-4o-mini': 0.992, 'JEV': nan, 'Qwen3-32B (local)': 1.0}
+median latency per call (s): {'GPT-4o': 0.66, 'GPT-4o-mini': 0.73, 'JEV': nan, 'Qwen3-32B (local)': nan}

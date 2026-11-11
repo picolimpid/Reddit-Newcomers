@@ -1,0 +1,6 @@
+test,pair,within,pooled_auroc,logloss,noninferior
+primary,"Qwen3-32B (local), all labels, k=20  -  JEV, all labels, k=20","-0.0019 [-0.0043, +0.0009]",-0.0320,"+0.0271 [+0.0136, +0.0389]",True
+,"Qwen3-32B (local), m=1, k=20  -  JEV, m=1, k=20","-0.0018 [-0.0042, +0.0005]",-0.0323,"+0.0271 [+0.0145, +0.0390]",
+,"Qwen3-32B (local), all labels, k=5  -  JEV, all labels, k=5","-0.0032 [-0.0069, +0.0007]",-0.0363,"+0.0258 [+0.0132, +0.0373]",
+,"Qwen3-32B (local), all labels, k=0  -  JEV, all labels, k=0","+0.0000 [+0.0000, +0.0000]",-0.0529,"+0.0231 [+0.0113, +0.0341]",
+,"Qwen3-32B (local), m=1, k=20  -  Qwen3-32B (local), all labels, k=20","-0.0008 [-0.0023, +0.0008]",-0.0106,"+0.0093 [+0.0045, +0.0139]",

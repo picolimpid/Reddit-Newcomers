@@ -1,0 +1,12 @@
+
+== DICES-350, 104 raters, fixed teams of 3: 57634 (team, conversation) cases, split rate 0.526
+                   predictor                AUROC splits caught, top 20% flagged   AUROC vs content only  caught vs content only
+        content only (k = 0) 0.545 [0.523, 0.566]           0.223 [0.210, 0.237]                                                
+ + per-person offsets, k = 5 0.603 [0.587, 0.619]           0.243 [0.236, 0.251] +0.058 [+0.047, +0.070] +0.020 [+0.010, +0.030]
++ per-person offsets, k = 20 0.640 [0.624, 0.655]           0.262 [0.255, 0.271] +0.095 [+0.082, +0.108] +0.039 [+0.029, +0.050]
+
+== DICES-990, 141 raters, teams of 3: 29700 (team, conversation) cases, split rate 0.457
+                   predictor                AUROC splits caught, top 20% flagged   AUROC vs content only  caught vs content only
+        content only (k = 0) 0.687 [0.672, 0.699]           0.291 [0.280, 0.302]                                                
+ + per-person offsets, k = 5 0.739 [0.728, 0.749]           0.318 [0.308, 0.328] +0.052 [+0.044, +0.061] +0.027 [+0.020, +0.034]
++ per-person offsets, k = 20 0.773 [0.763, 0.783]           0.341 [0.330, 0.351] +0.086 [+0.077, +0.096] +0.050 [+0.041, +0.057]

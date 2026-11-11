@@ -1,0 +1,56 @@
+      code                                               judge  base_rate  spearman_soft  auroc_majority  brier_soft  auroc_contested  spearman_disagree
+hatespeech                                                 JEV      0.182          0.640           0.879       0.171            0.569              0.067
+hatespeech TF-IDF+LR (supervised, 129k labels on 39k comments)      0.182          0.701           0.909       0.049            0.762              0.521
+hatespeech                                         GPT-4o-mini      0.182          0.640           0.857       0.269            0.603              0.201
+hatespeech                                              GPT-4o      0.182          0.651           0.854       0.266            0.609              0.203
+hatespeech                                   Qwen3-32B (local)      0.182          0.642           0.867       0.207            0.578              0.088
+    insult                                                 JEV      0.558          0.807           0.930       0.065            0.692              0.163
+    insult TF-IDF+LR (supervised, 129k labels on 39k comments)      0.558          0.682           0.882       0.081            0.624              0.231
+    insult                                         GPT-4o-mini      0.558          0.793           0.921       0.124            0.624              0.284
+    insult                                              GPT-4o      0.558          0.811           0.925       0.096            0.748              0.476
+    insult                                   Qwen3-32B (local)      0.558          0.802           0.920       0.098            0.700              0.213
+ humiliate                                                 JEV      0.405          0.761           0.884       0.098            0.605              0.132
+ humiliate TF-IDF+LR (supervised, 129k labels on 39k comments)      0.405          0.693           0.854       0.073            0.685              0.358
+ humiliate                                         GPT-4o-mini      0.405          0.756           0.876       0.178            0.671              0.350
+ humiliate                                              GPT-4o      0.405          0.755           0.880       0.171            0.705              0.383
+ humiliate                                   Qwen3-32B (local)      0.405          0.770           0.880       0.146            0.638              0.202
+dehumanize                                                 JEV      0.218          0.727           0.881       0.057            0.795              0.508
+dehumanize TF-IDF+LR (supervised, 129k labels on 39k comments)      0.218          0.633           0.823       0.068            0.720              0.417
+dehumanize                                         GPT-4o-mini      0.218          0.744           0.883       0.191            0.714              0.380
+dehumanize                                              GPT-4o      0.218          0.726           0.857       0.165            0.731              0.390
+dehumanize                                   Qwen3-32B (local)      0.218          0.715           0.871       0.138            0.705              0.337
+  violence                                                 JEV      0.095          0.649           0.985       0.020            0.841              0.466
+  violence TF-IDF+LR (supervised, 129k labels on 39k comments)      0.095          0.536           0.886       0.043            0.760              0.493
+  violence                                         GPT-4o-mini      0.095          0.639           0.981       0.072            0.769              0.527
+  violence                                              GPT-4o      0.095          0.634           0.982       0.061            0.775              0.534
+  violence                                   Qwen3-32B (local)      0.095          0.627           0.979       0.031            0.790              0.401
+disrespect                                                 JEV      0.598          0.804           0.944       0.061            0.699              0.145
+disrespect TF-IDF+LR (supervised, 129k labels on 39k comments)      0.598          0.685           0.881       0.075            0.644              0.211
+disrespect                                         GPT-4o-mini      0.598          0.795           0.929       0.116            0.599              0.238
+disrespect                                              GPT-4o      0.598          0.786           0.927       0.096            0.688              0.349
+disrespect                                   Qwen3-32B (local)      0.598          0.798           0.934       0.096            0.709              0.195
+                                                    spearman_soft  ...  spearman_disagree
+judge                                                              ...                   
+GPT-4o                                                      0.727  ...              0.389
+GPT-4o-mini                                                 0.728  ...              0.330
+JEV                                                         0.731  ...              0.247
+Qwen3-32B (local)                                           0.726  ...              0.239
+TF-IDF+LR (supervised, 129k labels on 39k comme...          0.655  ...              0.372
+
+[5 rows x 5 columns]
+deferred                                              0.0    0.1  ...    0.4    0.5
+judge                                                             ...              
+GPT-4o                                              0.750  0.800  ...  0.921  0.940
+GPT-4o (random 20%)                                   NaN    NaN  ...    NaN    NaN
+GPT-4o-mini                                         0.729  0.779  ...  0.890  0.910
+GPT-4o-mini (random 20%)                              NaN    NaN  ...    NaN    NaN
+JEV                                                 0.777  0.825  ...  0.925  0.950
+JEV (random 20%)                                      NaN    NaN  ...    NaN    NaN
+Qwen3-32B (local)                                   0.755  0.803  ...  0.905  0.934
+Qwen3-32B (local) (random 20%)                        NaN    NaN  ...    NaN    NaN
+TF-IDF+LR (supervised, 129k labels on 39k comme...  0.835  0.873  ...  0.955  0.970
+TF-IDF+LR (supervised, 129k labels on 39k comme...    NaN    NaN  ...    NaN    NaN
+
+[10 rows x 6 columns]
+contested share per code: {'hatespeech': 0.4, 'insult': 0.4, 'humiliate': 0.56, 'dehumanize': 0.55, 'violence': 0.19, 'disrespect': 0.36}
+median annotators per comment: 4.0

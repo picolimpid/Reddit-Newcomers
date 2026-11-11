@@ -1,11 +1,12 @@
 # 项目交接 / 重启说明（2026-11-11 暂停）
 
-这个仓库里有两个相关项目：
+这个仓库里有三个相关项目：
 
 | 部分 | 位置（本仓库） | 服务器上的工作目录 | 状态 |
 |---|---|---|---|
 | **A. Reddit Newcomers（信号研究）** | 仓库根目录：`src/`、`results/`、`REPORT.md`、`RQ.md`、`PROPOSAL.MD` | `/data/hanqim2/Reddit Newcomers` | 主假设为零结果；剩下的信号是探索性的，还没复制 |
 | **B. Behavioral fidelity（LLM 模拟 newcomer）** | `behavioral-fidelity/` | `/data/hanqim2/behavioral-fidelity` | 大部分实验已跑完；预注册的 outcome 还**封存**着 |
+| **C. hci-explore（判官固定，校准人：JEV + 每人一个截距）** | `hci-explore/` | `/data/hanqim2/Reddit Newcomers/hci-explore`（旧路径 `/data/hanqim2/hci-explore` 是指向它的软链接） | 30 组实验已跑完并整理；入口 `hci-explore/README.md`，结果总表 `RESULTS.md`，分析 `ANALYSIS.md`；论文方向待老师决定 |
 
 论文和 thesis 的主线是 B，A 是 B 的人类参照来源。B 最完整的叙述在 `behavioral-fidelity/NARRATIVE.md`（证据表 E1–E23，§5 机制，§7 论文结构，§9 弱点），执行细节和每次运行的流水在 `behavioral-fidelity/ROADMAP.md`。
 

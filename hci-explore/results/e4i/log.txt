@@ -1,0 +1,10 @@
+                 anchors  k  within_auroc     lo     hi  logloss
+                     own  0        0.5000 0.5000 0.5000   0.5182
+                     own  5        0.7604 0.7110 0.8064   0.4453
+                     own 10        0.7910 0.7433 0.8330   0.4248
+                     own 20        0.8126 0.7671 0.8520   0.4080
+someone else's (placebo)  0        0.5000 0.5000 0.5000   0.5182
+someone else's (placebo)  5        0.4816 0.4549 0.5068   0.5814
+someone else's (placebo) 10        0.4753 0.4488 0.5036   0.6092
+someone else's (placebo) 20        0.4700 0.4378 0.5013   0.6319
+pre-registered: placebo k = 20 CI [0.4378, 0.5013] contains 0.5 or upper < 0.52 -> MET
