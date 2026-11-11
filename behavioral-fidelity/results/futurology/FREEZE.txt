@@ -1,0 +1,65 @@
+## 2026-11-04T04:29:44+00:00  freeze 1: plan and code, before any Futurology outcome was fetched (inputs collection running; no agent scores yet)
+db3fbab6584ec0b7d26e3c7e2b2e69321e2835d689204ea7c9c1d08a814805e6  PREREG_futurology.md  (11233 bytes)
+32dce427e70d86f00b9ca78025e7879146dfc8e3ed3199bcdbc95615dc653cb5  src/futurology_collect.py  (10560 bytes)
+bd00cd387087941bb068db13edfec9feeaa5072e662929ab4bf4cdb5dc2b6a32  src/futurology_agents.py  (6866 bytes)
+8f7d9b3abffde6d1662249bb1dab9121c2efc4064933c361e04a2e97274ee8f2  src/futurology_analyze.py  (6632 bytes)
+9843252372eae893ff19b65a52b852b39033e8944d822f6fcf67a51f075f9681  src/rscience_analyze.py  (6526 bytes)
+703defda50376e8e7071a4a9b394f80db70e84aa5e1ca09c171dd03fa50ad552  src/analyze_probes.py  (8422 bytes)
+49c85505b385f6b606f47832115b674575136ce922f3568daaabdb648492f0b2  src/agent_sim.py  (11753 bytes)
+81b4a4e3ea7bc402b02135842b036064051d990b3a185b8178da18003d1c3c4c  data/futurology2020/posts.parquet  (1868191 bytes)
+458cf95a02a4b9add4876eaf281a1c24d0a453c7b23b9df3b5bc6c0129dfdc13  data/futurology2020/post_balance.csv  (243 bytes)
+
+## 2026-11-04T05:43:52+00:00  freeze 2: addendum H6/H7 (after the r/science Qwen3-32B run); still no Futurology agent score and no outcome
+9ffa49eba7b9c1b3f1da0719d22a9d2c694d677f82b3748c80494ac4770e2aba  PREREG_futurology.md  (12430 bytes)
+32dce427e70d86f00b9ca78025e7879146dfc8e3ed3199bcdbc95615dc653cb5  src/futurology_collect.py  (10560 bytes)
+bd00cd387087941bb068db13edfec9feeaa5072e662929ab4bf4cdb5dc2b6a32  src/futurology_agents.py  (6866 bytes)
+4a3700a119d4d941d90c831b56bff44ccc4a220021bd650d72cbaf2cc631f9f6  src/futurology_analyze.py  (7528 bytes)
+
+## 2026-11-04T09:26:36+00:00  freeze 3: agent scores (Qwen3-8B, gpt-4o-mini, Jev) and inputs; outcomes still not fetched (no outcomes.parquet exists)
+c5ec55e46088fd253e59a99d0042bfaf9f935cb1e06fb01f4caf84dc71a165df  data/futurology2020/inputs.parquet  (71868308 bytes)
+b2216566e1a91cbf51e312d001eef115e3a8a73632cc0e1870bc7b357b688e7a  data/futurology2020/commenters.parquet  (1527253 bytes)
+d4f546aa5de377c42a5cfbaea2ec9a0b86232af77ae547ae260687c586e182d3  results/futurology/futurology-qwen3-8b/scores.parquet  (432592 bytes)
+77e83f650d01b13a1305a9c8e14873fbd5360090d36947c3f2a2a0eb51692fbe  results/futurology/futurology-gpt-4o-mini/scores.parquet  (264868 bytes)
+7438bddcfd61130df58d65e6211bef0b39678bb0c44c8709c9667a869b2a4d49  results/futurology/futurology-jev/scores.parquet  (55940 bytes)
+
+## 2026-11-04T12:30:43+00:00  freeze 4: Qwen3-32B fp8 agent scores; outcomes still not fetched
+2f6acefa40f6f31dbe372552f4e516788218a178e6e6ddbf51ff776cacbf3692  results/futurology/futurology-qwen3-32b/scores.parquet  (505283 bytes)
+
+## 2026-11-07T02:22:27+00:00  freeze 5: H10 addendum (panel median) + analysis code + newer panel models' Futurology scores; outcomes still not fetched
+01bcfd0e7ff27f23c477ba413eeb9f27d9e863934d9655f9bea42989385b3465  PREREG_addendum_H10.md  (2898 bytes)
+8e753193797d1307ba59c25064e66670d592276efc89d73e70d185cb89c60c5a  src/panel_median.py  (4953 bytes)
+5e586bb45d11a5d22c291909a1712814a515d42259ac7204e3df2559900aa3d4  src/multiverse_summary.py  (7717 bytes)
+e0ea3cff4e5e8b59a540bf91df85cea90f1f62a4135a7dcf46df5100d742be60  src/swap_agents.py  (4649 bytes)
+015814c1eb4bc6737537d691ebc9b2966d4c8862bf5e81766fb0df2c6b6004b9  results/futurology/futurology-gemma3-12b/scores.parquet  (513107 bytes)
+e2a52f4cdd4b000ec2174da2e460a7337f1fd9763a4af6466c7514aced37b6c4  results/futurology/futurology-gemma3-4b/scores.parquet  (324695 bytes)
+153413b0d421068ceda8b37e6bef021f25807f66a985bb55cd0de22a18ab8a8c  results/futurology/futurology-llama3.1-8b/scores.parquet  (545273 bytes)
+49b0d6b831eba728d69e488ca1f6cc87d62b005d975f49759c5636a81cbf24e5  results/futurology/futurology-ministral3-8b/scores.parquet  (545841 bytes)
+
+## 2026-11-07T03:50:00+00:00  freeze 5b: Qwen3-14B and Phi-4 Futurology panel scores; outcomes still not fetched
+328dc10f9de52ab633c6c6385258c3e325181b5b333c1083db11e51fc9051d1b  results/futurology/futurology-qwen3-14b/scores.parquet  (429955 bytes)
+a85e88673ee9314b6a8c8f5e15797da7c154ce18369f69048f8b7aa24405486c  results/futurology/futurology-phi-4/scores.parquet  (496063 bytes)
+
+## 2026-11-07T10:58:21+00:00  freeze 6: P9 entry addendum + scripts, before any P9 score (first hashed 10:58 UTC into results/FREEZE.txt by mistake; same hashes)
+3ef760bf2e18a574f7f78d21fd148c3c13079a50b560ee22698744ead5ba9875  PREREG_addendum_P9.md  (2376 bytes)
+f9630ea8f66be49d07ee7d356da0dedbef523370ad37bdbc71fc7b475bc45d73  src/p9_entry.py  (4932 bytes)
+17b232b121f08cb1699f7a698a5055e602a881c2a376a95a49ddabe010a2056f  src/p9_analyze.py  (3737 bytes)
+
+## 2026-11-07T18:30:16+00:00  freeze 7: Futurology scores of gemma3-27b (panel), before any Futurology outcome
+b32f90a5469ebbe5395c6b01aac5da92d1da5e2f3ae8db0c9383b0f35103f3d5  results/futurology/futurology-gemma3-27b/scores.parquet  (477547 bytes)
+
+## 2026-11-07T23:23:47+00:00  freeze 8: H14/H15 addendum (sticky x newcomer history), before any Futurology/ffxiv2019/science2020 outcome
+b8d9a526b48cb75fae695e677b10e9aa67b71b9c6f8957f2c842576440c986a2  PREREG_addendum_H14.md  (2944 bytes)
+144687c669c0632eeff7c5f0c295fd1d340f20feaa0ad64ac96f4f29281af3a3  src/h14_analyze.py  (3542 bytes)
+e3df15d4d8fcb0d2e8559c197f0c435bb2e0ca5e51323026c74d808e3fec7e93  src/hetero_history.py  (4275 bytes)
+ec0e64ae2a319573e5fdb354d43dbfdb9ae8dd0a5e51de30186ba1a424171dec  results/panel/hetero_history.csv  (2336 bytes)
+7e7feeda582aff555efb5a8d4c5909f2a6693ac3a9ebaa6c0cedd8ff2c240704  results/panel/hetero_history_futurology.csv  (2017 bytes)
+258d1a31f4178351facfb89a762315e247b58c5376b62bdcfdb149071545bd88  results/panel/hetero_history_ffxiv2019.csv  (1675 bytes)
+7a0aaa3dff6bf27725cf7332f0a5e267e2f73e262921a74bf01b4b107c8fdc0c  results/panel/hetero_history_science2020.csv  (1370 bytes)
+
+## 2026-11-08T13:44:11+00:00  freeze 9: Futurology scores of glm4-32b (bf16, TP=2, tp_wrap GEN_SUFFIX newline; panel), before any Futurology outcome
+b993608b41720997a2eac525a82de73e5b2703e651d8d88fc38ecd7a36ef0e09  results/futurology/futurology-glm4-32b/scores.parquet  (545233 bytes)
+ae07261a6adfe910e93b79c018e7661660f050de922a760b7c3658edf75c254d  src/tp_wrap.py  (1757 bytes)
+
+## 2026-11-08T23:34:17+00:00  freeze 10: Mistral-Small-24B Futurology panel scores (before any Futurology outcome fetch)
+899789935079aeb36520294f1e0e7529ca21125abe27db0126c64ff4ba8a8851  results/futurology/futurology-mistral-small-24b/scores.parquet  (545857 bytes)
+

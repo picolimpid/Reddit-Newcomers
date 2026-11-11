@@ -1,0 +1,11 @@
+,existing,newcomer
+insider_knowledge_hi,0.022,0.015
+outsider_signal_hi,0.01,0.007
+member_signal_hi,0.007,0.004
+hostile_hi,0.149,0.151
+invites_response_hi,0.236,0.238
+insider_knowledge,0.131,0.125
+outsider_signal,0.065,0.067
+member_signal,0.079,0.074
+hostile,0.222,0.222
+invites_response,0.335,0.335

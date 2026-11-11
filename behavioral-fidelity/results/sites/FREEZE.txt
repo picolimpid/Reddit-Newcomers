@@ -1,0 +1,51 @@
+## 2026-11-06T22:55:56+00:00  freeze S1: sites plan and code, before any agent score or outcome for ffxiv2019 / science2020 (inputs still being collected)
+408b4c1b8ceb5a9120efe83ab5a73b22f09dc5b8569f5bfb1d6eddb492a322d1  PREREG_sites.md  (5418 bytes)
+b0cd87c7d0d36448cda60f549be0bb3c8977648e20dd36a59a1b1e0461085f42  src/site_fetch.py  (1723 bytes)
+e78285443bc6763dd13301236f2a095e6efee1bb61010dd1c58de36778651ff3  src/site_collect.py  (8593 bytes)
+76d18588054ccb436993e17e252366c075f0e072ea903f7ac659f70128e4501e  src/site_analyze.py  (1366 bytes)
+caed449e803ce387ffdee458d0ad914e7a34aefe07325d0bc9f6645a88687ccb  src/panel_agents.py  (9954 bytes)
+6362016413a74c472860b35e5d2aae386654171f9d979ab05beb7ca336ad72b5  src/panel_summary.py  (5150 bytes)
+4a3700a119d4d941d90c831b56bff44ccc4a220021bd650d72cbaf2cc631f9f6  src/futurology_analyze.py  (7528 bytes)
+466880672e9aba47f81c668117eb2aeb466882d26c7a28fb2b01ca36daf3b71f  data/sites/ffxiv2019/posts.parquet  (3315185 bytes)
+2c99949f29ee8d7a18e38488587f99b3c323d6363100cd5a192a08d376900b11  data/sites/science2020/posts.parquet  (627356 bytes)
+
+## 2026-11-06T23:08:10+00:00  freeze S2: panel_agents.py fix (outcome assertion skipped only for r/science 2016, whose outcomes are public); behaviour for sealed sites unchanged
+130e2c3a9d1608e8780bef2ffe3dc479faa43878494cf4d39a171725be21996e  src/panel_agents.py  (10069 bytes)
+
+## 2026-11-07T02:22:27+00:00  freeze S3: H10 addendum (panel median, open-weight models) + panel_median.py; no new-site score or outcome exists
+01bcfd0e7ff27f23c477ba413eeb9f27d9e863934d9655f9bea42989385b3465  PREREG_addendum_H10.md  (2898 bytes)
+8e753193797d1307ba59c25064e66670d592276efc89d73e70d185cb89c60c5a  src/panel_median.py  (4953 bytes)
+
+## 2026-11-11T08:06:12+00:00  scores ffxiv2019: inputs + every panel model's agent scores, before any ffxiv2019 outcome is fetched. Qwen2.5-72B dropped (online fp8 mass 0; AWQ diagnostic OOM at load). gpt-4o-mini not scored on science2020 (OpenRouter cap).
+1ae880c370663e66a15258a4ea984f8d2f27e39a2a4c7ad64afdd28fb2154145  data/sites/ffxiv2019/inputs.parquet  (18436000 bytes)
+5e9e09172c8843caa4e7fe7bf8a70ce4fbdc24ed0ae0c7b59130b9b3da3b280b  results/sites/ffxiv2019/ffxiv2019-gemma3-12b/scores.parquet  (199912 bytes)
+921b832b6c76852455eac9d641fa9b5fce66c5ff37d1240f6ca7b61fc13015a9  results/sites/ffxiv2019/ffxiv2019-gemma3-27b/scores.parquet  (185085 bytes)
+dcf8d9c6ecd263d50d167aa93590dc05df97895c2da3b898f51ff590b05619e3  results/sites/ffxiv2019/ffxiv2019-gemma3-4b/scores.parquet  (151402 bytes)
+531379569c2c5580346e40fefecec7e767f35adda6767e24bda4c75f4cb64a59  results/sites/ffxiv2019/ffxiv2019-glm4-32b/scores.parquet  (209846 bytes)
+2843f4c1f971f73a4bbdc8ca777a964e97bf9d48d32529f8704c855605bcb625  results/sites/ffxiv2019/ffxiv2019-gpt-4o-mini/scores.parquet  (76534 bytes)
+2fb2c402d9fdf090104c07ff8a0ed2db66a7a79ba65f54a3d8d87c512c154e26  results/sites/ffxiv2019/ffxiv2019-jev/scores.parquet  (13655 bytes)
+b7d41b14234dc246c377c205046e4baaf28c58a50089cb41063a9970c02992b4  results/sites/ffxiv2019/ffxiv2019-llama3.1-8b/scores.parquet  (209801 bytes)
+b2a65bde7f280823b624fa58ff290242bffaa45e267e484851c92b5ca7fd0faa  results/sites/ffxiv2019/ffxiv2019-ministral3-8b/scores.parquet  (209865 bytes)
+47863eddedd25d98b61bdfdf0472caf43f5489f16ef6b48d1b6a250acf5fc1b6  results/sites/ffxiv2019/ffxiv2019-mistral-small-24b/scores.parquet  (209857 bytes)
+286a38f042e925c1bfa058b9238ebfa8a69ca75264c05185685e4b85fd2b56da  results/sites/ffxiv2019/ffxiv2019-phi-4/scores.parquet  (185443 bytes)
+3436bc59b08e4824d206464a318bae57c41dfefac39017ebfae11cc8bcaafccd  results/sites/ffxiv2019/ffxiv2019-qwen3-14b/scores.parquet  (162836 bytes)
+bec47419887c258975e7c6e87a2cd2fdd730f3bcb3b24f6363079a6bf002cf98  results/sites/ffxiv2019/ffxiv2019-qwen3-32b/scores.parquet  (195902 bytes)
+7fee8306d23171cd1d93273ede810728728775b0e70fa748c09f81338ef9eb60  results/sites/ffxiv2019/ffxiv2019-qwen3-4b/scores.parquet  (174671 bytes)
+a4b319919b79d8848a9dec258e7c73925dcc30f83ab26b919a480027335f7654  results/sites/ffxiv2019/ffxiv2019-qwen3-8b/scores.parquet  (166440 bytes)
+
+## 2026-11-11T08:06:12+00:00  scores science2020: inputs + every panel model's agent scores, before any science2020 outcome is fetched. Qwen2.5-72B dropped (online fp8 mass 0; AWQ diagnostic OOM at load). gpt-4o-mini not scored on science2020 (OpenRouter cap).
+e9fb6f4a3863273290511d1b74b892d2e56fecad9d9e61657d3f0854dd906693  data/sites/science2020/inputs.parquet  (62297599 bytes)
+b890c1343a88d686264313e5fef59975bcac3f8c709e826621c2035b09761900  results/sites/science2020/science2020-gemma3-12b/scores.parquet  (453607 bytes)
+08e82d726557f37f056413b5bc9821d351f481c31c112a049d4ff8bdea888894  results/sites/science2020/science2020-gemma3-27b/scores.parquet  (421169 bytes)
+932e6f20800ee463c21c855d4e4f7cb98bbe0c698ffd0953e5bcaccdf04901b7  results/sites/science2020/science2020-gemma3-4b/scores.parquet  (282279 bytes)
+e2cfe3fecd5acc31a2b657f3b407a9fdc64b07c5ab6bfe1c3e70d6cd41ada40d  results/sites/science2020/science2020-glm4-32b/scores.parquet  (482474 bytes)
+cebcc4eebeaec3437a9bb9204f24cab53729ea1bc5e8f89e346be67c8e7bf7a5  results/sites/science2020/science2020-jev/scores.parquet  (13602 bytes)
+385b6c250d4bf2ab07c40ce7d039b01003581c078e31df8b9f505f3a06d5a047  results/sites/science2020/science2020-llama3.1-8b/scores.parquet  (482486 bytes)
+5e84b1486fe1f7aae763b66c665d07eae87fee34348f7fb20e76ce85bbd45566  results/sites/science2020/science2020-ministral3-8b/scores.parquet  (482846 bytes)
+7b333d3c9eaab850dd7bc48cceb9b9910e00c4d2cb86e2df4b3c83dceae4b959  results/sites/science2020/science2020-mistral-small-24b/scores.parquet  (482858 bytes)
+cc8534e9e22b07576149248c7b6a83041b16932b806a2848ffb9e28d064d2939  results/sites/science2020/science2020-phi-4/scores.parquet  (437314 bytes)
+c3f045abece35a66832d68c48650a6f7399523daf25f90c36c22b3bfcc95e03b  results/sites/science2020/science2020-qwen3-14b/scores.parquet  (371437 bytes)
+20a8b7f54df0fc563f7d11288b14ef2281d2f094bb0563f1789d90c82d4dc5a6  results/sites/science2020/science2020-qwen3-32b/scores.parquet  (447576 bytes)
+48b0f4242b4bc209a3800805cae044d38e741aa00ba9b2541b47e333d0887b49  results/sites/science2020/science2020-qwen3-4b/scores.parquet  (406704 bytes)
+db9e9cdf8ce805de339826cbb235f4e4cac1a3256333143cb98a787424c2655e  results/sites/science2020/science2020-qwen3-8b/scores.parquet  (384643 bytes)
+

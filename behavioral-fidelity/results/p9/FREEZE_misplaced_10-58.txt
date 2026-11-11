@@ -1,0 +1,5 @@
+## 2026-11-07T10:58:11+00:00  freeze 6: P9 entry addendum + scripts, before any P9 score
+3ef760bf2e18a574f7f78d21fd148c3c13079a50b560ee22698744ead5ba9875  PREREG_addendum_P9.md  (2376 bytes)
+f9630ea8f66be49d07ee7d356da0dedbef523370ad37bdbc71fc7b475bc45d73  src/p9_entry.py  (4932 bytes)
+17b232b121f08cb1699f7a698a5055e602a881c2a376a95a49ddabe010a2056f  src/p9_analyze.py  (3737 bytes)
+

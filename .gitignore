@@ -10,9 +10,22 @@ venv/
 # Raw data, API cache and embedding caches (~3.4 GB; rebuilt by the scripts in src/)
 data/
 
+# Secrets (Jev / TypeSafe API key)
+.env
+
 # OS / editor
 .DS_Store
 Thumbs.db
 desktop.ini
 .vscode/
 .idea/
+
+# behavioral-fidelity: raw/derived Reddit user data, texts conditioned on real users, run logs (they print prompts), large adapters
+behavioral-fidelity/data/
+behavioral-fidelity/**/example_prompts.json
+behavioral-fidelity/**/gen.parquet
+behavioral-fidelity/results/probes/qwen3-8b/readout.parquet
+behavioral-fidelity/results/probes/sft-qwen3-8b/adapter/
+behavioral-fidelity/**/*.log
+!behavioral-fidelity/results/queue/runner.log
+*.safetensors

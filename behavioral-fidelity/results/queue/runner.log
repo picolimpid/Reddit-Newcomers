@@ -1,0 +1,237 @@
+11-06 16:06 start P1-futurology-gemma3-12b on GPU [4]
+11-06 16:09 start P1-futurology-ministral3-8b on GPU [5]
+11-06 16:12 start P1-futurology-llama3.1-8b on GPU [6]
+11-06 17:03 P1-futurology-ministral3-8b done
+11-06 17:03 start P1-rscience-gemma3-12b on GPU [5]
+11-06 17:12 P1-futurology-llama3.1-8b done
+11-06 17:12 P1-rscience-gemma3-12b failed(1)
+11-06 17:12 start P1-rscience-gemma3-12b-r2 on GPU [5]
+11-06 17:16 start P1-rscience-ministral3-8b on GPU [6]
+11-06 17:52 P1-rscience-ministral3-8b done
+11-06 17:52 start P1-rscience-llama3.1-8b on GPU [6]
+11-06 18:04 P1-futurology-gemma3-12b done
+11-06 18:04 start P1-gemma3-4b on GPU [4]
+11-06 18:13 P1-rscience-gemma3-12b-r2 done
+11-06 18:13 start P1-ministral3-14b on GPU [5]
+11-06 18:22 P1-ministral3-14b failed(1)
+11-06 18:31 P1-rscience-llama3.1-8b done
+11-06 18:31 start P1-ministral3-3b on GPU [6]
+11-06 18:39 P1-ministral3-3b failed(1)
+11-06 19:15 P1-gemma3-4b done
+11-06 19:23 start P1-qwen3-4b on GPU [5]
+11-06 19:27 start P1-qwen3-14b on GPU [7]
+11-06 19:31 start P1-phi-4 on GPU [8]
+11-06 19:40 P1-qwen3-4b failed(1)
+Traceback (most recent call last):
+  File "/data/hanqim2/behavioral-fidelity/src/queue_runner.py", line 85, in <module>
+    name, pid, g, t0 = line.rstrip("\n").split("\t")
+^^
+  File "/data/hanqim2/behavioral-fidelity/src/queue_runner.py", line 60, in main
+    except OSError:
+                    
+  File "/data/hanqim2/behavioral-fidelity/src/queue_runner.py", line 38, in jobs
+    return s, tries
+                    
+ValueError: invalid literal for int() with base 10: '1:16'
+11-06 19:54 adopted P1-qwen3-14b pid 1229137 on GPU 7
+11-06 19:54 adopted P1-phi-4 pid 1238204 on GPU 8
+11-06 19:54 start P1-qwen3-4b-r2 on GPU [5] util 0.33
+11-06 20:57 P1-qwen3-4b-r2 done
+11-06 20:57 start P1-ministral3-3b-r2 on GPU [5] util 0.33
+11-06 21:06 P1-ministral3-3b-r2 failed(1)
+11-06 21:06 start P7-gen-qwen3-8b on GPU [5] util 0.41
+11-06 21:10 adopted P1-qwen3-14b pid 1229137 on GPU 7
+11-06 21:10 adopted P1-phi-4 pid 1238204 on GPU 8
+11-06 21:10 adopted P7-gen-qwen3-8b pid 1422837 on GPU 5
+11-06 21:29 P1-qwen3-14b done
+11-06 21:29 start P3-qwen3-8b on GPU [4] util 0.41
+11-06 21:39 P1-phi-4 done
+11-06 21:39 start P5-qwen3-8b on GPU [7] util 0.41
+11-06 21:49 P7-gen-qwen3-8b done
+11-06 21:49 start P8-qwen3-8b on GPU [5] util 0.41
+11-06 22:16 P8-qwen3-8b done
+11-06 22:16 start P7-gen-llama3.1-8b on GPU [8] util 0.41
+11-06 22:25 P5-qwen3-8b done
+11-06 22:25 start P7-gen-ministral3-8b on GPU [7] util 0.41
+11-06 22:38 P7-gen-ministral3-8b failed(1)
+11-06 22:38 start P3-llama3.1-8b on GPU [5] util 0.41
+11-06 22:47 P7-gen-llama3.1-8b done
+11-06 22:47 start P8-llama3.1-8b on GPU [7] util 0.41
+11-06 23:17 P8-llama3.1-8b done
+11-06 23:17 start P4-qwen3-8b on GPU [8] util 0.41
+11-06 23:39 P3-qwen3-8b done
+11-06 23:39 start P2f-qwen3-8b on GPU [7] util 0.41
+11-07 00:01 P4-qwen3-8b done
+11-07 00:01 start P2s-qwen3-8b on GPU [4] util 0.41
+11-07 00:10 P2f-qwen3-8b done
+11-07 00:10 start P5-llama3.1-8b on GPU [7] util 0.41
+11-07 00:23 P3-llama3.1-8b done
+11-07 00:23 start P2f-qwen3-32b on GPU [5]
+11-07 00:45 P2f-qwen3-32b busy
+11-07 00:45 start P7-gen-ministral3-8b-r2 on GPU [5] util 0.50
+11-07 00:54 P5-llama3.1-8b done
+11-07 00:54 start P3-ministral3-8b on GPU [6] util 0.50
+11-07 00:59 P2s-qwen3-8b done
+11-07 01:04 start P2f-llama3.1-8b on GPU [4] util 0.41
+11-07 01:18 P7-gen-ministral3-8b-r2 done
+11-07 01:18 start P8-ministral3-8b on GPU [5] util 0.50
+11-07 01:27 P2f-llama3.1-8b done
+11-07 01:27 start P2f-qwen3-32b on GPU [4]
+11-07 01:53 P8-ministral3-8b done
+11-07 01:53 start P2s-qwen3-32b on GPU [7]
+11-07 02:54 P2f-qwen3-32b done
+11-07 02:54 start P7-gen-qwen3-32b on GPU [4]
+11-07 03:07 P3-ministral3-8b done
+11-07 03:07 start P5-ministral3-8b on GPU [6] util 0.50
+11-07 03:46 P5-ministral3-8b done
+11-07 03:46 start P2s-llama3.1-8b on GPU [6] util 0.41
+11-07 04:10 P7-gen-qwen3-32b done
+11-07 04:10 start P7-gen-gemma3-12b on GPU [4]
+11-07 04:36 P2s-qwen3-32b done
+11-07 04:36 start P1-gemma3-27b on GPU [7]
+11-07 04:45 P2s-llama3.1-8b done
+11-07 04:45 P7-gen-gemma3-12b done
+11-07 04:45 P1-gemma3-27b busy
+11-07 04:45 start P2f-ministral3-8b on GPU [6] util 0.50
+11-07 04:49 start P2s-ministral3-8b on GPU [5] util 0.50
+11-07 04:53 start P2f-gemma3-4b on GPU [4] util 0.33
+11-07 05:02 P2f-gemma3-4b busy
+11-07 05:02 start P9-qwen3-8b on GPU [7] util 0.41
+11-07 05:14 P2f-ministral3-8b done
+11-07 05:14 start P9-llama3.1-8b on GPU [6] util 0.41
+11-07 05:22 P9-qwen3-8b done
+11-07 05:22 start P9-ministral3-8b on GPU [7] util 0.50
+11-07 05:31 P9-llama3.1-8b done
+11-07 05:31 start P9-gemma3-4b on GPU [6] util 0.33
+11-07 05:39 P9-ministral3-8b done
+11-07 05:39 start P9-qwen3-4b on GPU [4] util 0.33
+11-07 05:48 P2s-ministral3-8b done
+11-07 05:48 P9-gemma3-4b done
+11-07 05:48 start P9-qwen3-1.7b on GPU [6] util 0.33
+11-07 05:52 start P9-gemma3-12b on GPU [7]
+11-07 06:01 P9-qwen3-4b done
+11-07 06:01 P9-qwen3-1.7b done
+11-07 06:01 start P9-qwen3-32b on GPU [4]
+11-07 06:06 start P2f-gemma3-4b on GPU [6] util 0.33
+11-07 06:14 P9-gemma3-12b done
+11-07 06:14 start P9-qwen3-14b on GPU [7]
+11-07 06:27 P2f-gemma3-4b done
+11-07 06:27 start P2s-gemma3-4b on GPU [6] util 0.33
+11-07 06:44 P9-qwen3-32b done
+11-07 06:44 P9-qwen3-14b done
+11-07 06:44 start P9-phi-4 on GPU [4]
+11-07 06:48 start P7-judge-qwen3-32b on GPU [7]
+11-07 07:03 P2s-gemma3-4b done
+11-07 07:03 start P2f-qwen3-4b on GPU [6] util 0.33
+11-07 07:13 P9-phi-4 done
+11-07 07:13 start P7-judge2-qwen3-32b on GPU [4]
+11-07 07:22 P2f-qwen3-4b done
+11-07 07:22 start P2s-qwen3-4b on GPU [6] util 0.33
+11-07 07:58 P7-judge-qwen3-32b done
+11-07 07:58 P2s-qwen3-4b done
+11-07 07:58 start P7-judge-gemma3-27b on GPU [7]
+11-07 08:09 P7-judge2-qwen3-32b done
+11-07 08:09 start P7-judge2-gemma3-27b on GPU [4]
+11-07 09:25 P7-judge-gemma3-27b done
+11-07 09:25 P7-judge2-gemma3-27b done
+11-07 09:25 start P1-gemma3-27b on GPU [4]
+11-07 09:31 start P3-gemma3-12b on GPU [7]
+11-07 09:47 start P1-olmo3.1-32b on GPU [5]
+11-07 12:04 P3-gemma3-12b done
+11-07 12:04 start P1-glm4-32b on GPU [6]
+11-07 12:29 P1-glm4-32b busy
+11-07 12:29 start P1-glm4-32b on GPU [8]
+11-07 12:46 P1-glm4-32b busy
+11-07 13:14 start P1-glm4-32b on GPU [6]
+11-07 14:06 P1-gemma3-27b done
+11-07 14:06 start P5-gemma3-12b on GPU [4]
+11-07 14:17 P1-olmo3.1-32b failed(143)
+11-07 14:17 start DBG-olmo on GPU [5]
+11-07 15:00 P5-gemma3-12b done
+11-07 15:00 DBG-olmo done
+11-07 15:00 start P8-gemma3-12b on GPU [4]
+11-07 15:07 start P2f-gemma3-12b on GPU [5]
+11-07 15:48 P8-gemma3-12b done
+11-07 15:48 P2f-gemma3-12b done
+11-07 15:48 start P2s-gemma3-12b on GPU [4]
+11-07 15:55 start P2f-qwen3-14b on GPU [5]
+11-07 16:42 P2f-qwen3-14b done
+11-07 16:42 start P2s-qwen3-14b on GPU [5]
+11-07 16:54 P2s-gemma3-12b done
+11-07 16:54 start P2f-phi-4 on GPU [4]
+11-07 17:05 P1-glm4-32b failed(143)
+11-07 17:05 start DBG-glm4 on GPU [6]
+11-07 17:34 DBG-glm4 done
+11-07 17:34 start P2s-phi-4 on GPU [6]
+11-07 17:46 P2f-phi-4 done
+11-07 17:46 start P2f-gemma3-27b on GPU [4]
+11-07 17:58 P2s-qwen3-14b done
+11-07 18:39 P2s-phi-4 done
+11-07 18:39 start DBG-glm4-bf16 on GPU [5, 6]
+11-07 19:25 P2f-gemma3-27b done
+11-07 19:25 start P2s-gemma3-27b on GPU [4]
+11-07 19:37 DBG-glm4-bf16 failed(143)
+11-07 19:37 start DBG-glm4-bf16b on GPU [5, 6]
+11-07 21:53 P2s-gemma3-27b done
+11-07 21:53 start P2f-mistral-small-24b on GPU [4]
+11-07 23:22 P2f-mistral-small-24b done
+11-07 23:22 start P2s-mistral-small-24b on GPU [4]
+11-07 23:34 DBG-glm4-bf16b failed(143)
+11-07 23:34 start P2f-qwen2.5-72b on GPU [7, 8]
+11-07 23:47 P2f-qwen2.5-72b failed(143)
+11-07 23:47 start DBG-glm4-bf16c on GPU [5, 6]
+11-08 01:06 DBG-glm4-bf16c done
+11-08 01:06 start P2f-qwen2.5-72b-w on GPU [5, 6]
+11-08 02:06 P2s-mistral-small-24b done
+11-08 05:03 P2f-qwen2.5-72b-w done
+11-08 05:03 start P1-glm4-32b-bf16 on GPU [4, 5]
+11-08 05:10 adopted P1-glm4-32b-bf16 pid 895699 on GPU 4,5
+11-08 05:10 start P3-qwen3-32b on GPU [6]
+11-08 08:51 P1-glm4-32b-bf16 done
+11-08 08:51 start P2f-glm4-32b-bf16 on GPU [4, 5]
+11-08 10:04 P2f-glm4-32b-bf16 done
+11-08 10:04 start P9-gemma3-27b on GPU [4]
+11-08 10:11 start P9-mistral-small-24b on GPU [5]
+11-08 11:11 P9-gemma3-27b done
+11-08 11:11 start P5-qwen3-32b on GPU [4]
+11-08 11:37 P9-mistral-small-24b done
+11-08 11:37 start P8-qwen3-32b on GPU [5]
+11-08 13:18 P8-qwen3-32b done
+11-08 13:18 start P1-mistral-small-24b on GPU [5]
+11-08 13:39 P5-qwen3-32b done
+11-08 13:39 start P4-llama3.1-8b on GPU [4] util 0.41
+11-08 13:59 P3-qwen3-32b done
+11-08 13:59 start P4-ministral3-8b on GPU [6] util 0.50
+11-08 14:22 P4-llama3.1-8b done
+11-08 14:22 start P4-gemma3-12b on GPU [4]
+11-08 15:07 P4-ministral3-8b done
+11-08 15:07 start P4-qwen3-32b on GPU [6]
+11-08 15:31 P4-gemma3-12b done
+11-08 15:31 start P4-gemma3-27b on GPU [4]
+11-08 17:26 P1-mistral-small-24b done
+11-08 17:41 P4-qwen3-32b done
+11-08 17:41 P4-gemma3-27b done
+11-08 17:41 start P9-glm4-32b on GPU [4, 5]
+11-08 17:55 start P5-qwen3-14b on GPU [6]
+11-08 18:58 P5-qwen3-14b done
+11-08 18:58 start P5-phi-4 on GPU [6]
+11-08 19:36 P9-glm4-32b done
+11-08 19:36 start P2s-glm4-32b-bf16 on GPU [4, 5]
+11-08 20:12 P5-phi-4 done
+11-08 20:12 start P5-gemma3-4b on GPU [6] util 0.33
+11-08 20:26 P5-gemma3-4b busy
+11-08 20:26 start P5-gemma3-4b on GPU [6] util 0.33
+11-08 21:39 P5-gemma3-4b done
+11-08 21:39 start P5-qwen3-4b on GPU [6] util 0.33
+11-08 21:55 P2s-glm4-32b-bf16 failed(1)
+11-08 21:55 start P4-mistral-small-24b on GPU [7]
+11-08 22:17 P5-qwen3-4b done
+11-08 22:40 start P2s-glm4-32b-bf16-r2 on GPU [4, 5]
+11-09 00:04 P4-mistral-small-24b done
+11-09 01:16 P2s-glm4-32b-bf16-r2 done
+11-09 01:16 start DBG-qwen72awq on GPU [4, 5]
+11-09 02:10 DBG-qwen72awq failed(1)
+11-09 03:11 start P4-glm4-32b on GPU [6, 8]
+11-09 05:24 P4-glm4-32b failed(1)
+11-09 05:57 start P7-gen-glm4-32b on GPU [4, 5]
+11-09 06:53 P7-gen-glm4-32b done

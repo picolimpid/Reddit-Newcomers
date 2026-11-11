@@ -1,0 +1,361 @@
+
+=== A1 validity, Jev full: entry post vs random post from another subreddit ===
+                             measure     n  entry_gt_placebo      d    p
+0                jev_full:align_post  2413             0.591  0.232  0.0
+1           jev_full:align_community  2413             0.557  0.150  0.0
+2                  jev_full:familiar  2413             0.557  0.081  0.0
+3      embedding: text mean (MiniLM)  2413             0.569  0.148  0.0
+4         embedding: post-based mean  2412             0.568  0.157  0.0
+5  community-embedding fit (c2v_big)  2411             0.618  0.312  0.0
+
+=== A2 known groups ===
+                                           label            outcome     n effect ci_lo ci_hi     p fdr_p
+0       newcomer - existing, Jev align_post (SD)       align_post_z  3776  -0.43 -0.51 -0.35 0.000 0.000
+1  newcomer - existing, Jev align_community (SD)  align_community_z  3776  -0.55 -0.64 -0.47 0.000 0.000
+2         newcomer - existing, Jev familiar (SD)         familiar_z  3776  -0.45 -0.55 -0.36 0.000 0.000
+3            newcomer - existing, mini_mean (SD)        mini_mean_z  3776  -0.25 -0.31 -0.19 0.000 0.000
+4         newcomer - existing, pp_mini_mean (SD)     pp_mini_mean_z  3775  -0.35 -0.41 -0.29 0.000 0.000
+
+=== A3 Spearman correlations (newcomers) ===
+                       align_post_entry  align_community_entry  familiar_entry  mini_mean  mini_top5  pp_mini_mean  c2v_big  struct_fit
+align_post_entry                   1.00                   0.79            0.72       0.26       0.27           0.3     0.34        0.34
+align_community_entry              0.79                   1.00            0.83       0.25       0.26           0.3     0.36        0.34
+familiar_entry                     0.72                   0.83            1.00       0.25       0.25           0.3     0.31        0.27
+
+=== A4 predictive validity, Jev full ===
+                                               label         outcome     n effect ci_lo ci_hi     p fdr_p
+0                                Jev full align_post      return_90d  1969   1.24  1.07  1.44 0.004 0.009
+1                     Jev full align_post, + c2v fit      return_90d  1968   1.10  0.93  1.30 0.282 0.310
+2                                Jev full align_post     return_180d  2111   1.26  1.10  1.45 0.001 0.003
+3                     Jev full align_post, + c2v fit     return_180d  2110   1.09  0.93  1.28 0.282 0.310
+4                                Jev full align_post    regular_180d  1333   1.48  1.20  1.84 0.000 0.001
+5                     Jev full align_post, + c2v fit    regular_180d  1333   1.35  1.06  1.72 0.014 0.020
+6                                Jev full align_post  reply_received  1984   0.77  0.64  0.93 0.008 0.014
+7                                Jev full align_post       reengaged  1420   1.03  0.83  1.28 0.798 0.798
+8        placebo: Jev full align_post to random post     return_180d  2111   1.19  1.04  1.36 0.010 0.016
+9                           Jev full align_community      return_90d  1969   1.41  1.20  1.65 0.000 0.000
+10               Jev full align_community, + c2v fit      return_90d  1968   1.26  1.05  1.51 0.012 0.018
+11                          Jev full align_community     return_180d  2111   1.48  1.28  1.72 0.000 0.000
+12               Jev full align_community, + c2v fit     return_180d  2110   1.30  1.10  1.53 0.002 0.005
+13                          Jev full align_community    regular_180d  1333   1.52  1.22  1.89 0.000 0.001
+14               Jev full align_community, + c2v fit    regular_180d  1333   1.39  1.09  1.77 0.008 0.014
+15                          Jev full align_community  reply_received  1984   0.85  0.71  1.02 0.073 0.090
+16                          Jev full align_community       reengaged  1420   0.96  0.77  1.21 0.758 0.781
+17  placebo: Jev full align_community to random post     return_180d  2111   1.21  1.05  1.40 0.008 0.014
+18                                 Jev full familiar      return_90d  1969   1.22  1.07  1.39 0.003 0.007
+19                      Jev full familiar, + c2v fit      return_90d  1968   1.13  0.98  1.30 0.100 0.118
+20                                 Jev full familiar     return_180d  2111   1.25  1.10  1.41 0.000 0.001
+21                      Jev full familiar, + c2v fit     return_180d  2110   1.13  0.99  1.30 0.067 0.088
+22                                 Jev full familiar    regular_180d  1333   1.29  1.07  1.54 0.007 0.014
+23                      Jev full familiar, + c2v fit    regular_180d  1333   1.20  0.98  1.47 0.074 0.090
+24                                 Jev full familiar  reply_received  1984   0.79  0.65  0.96 0.018 0.025
+25                                 Jev full familiar       reengaged  1420   0.95  0.78  1.17 0.654 0.696
+26         placebo: Jev full familiar to random post     return_180d  2111   1.20  1.05  1.36 0.008 0.014
+27                               c2v fit (reference)      return_90d  1968   1.51  1.29  1.77 0.000 0.000
+28         c2v fit, + Jev familiar + align_community      return_90d  1968   1.40  1.18  1.66 0.000 0.001
+29                               c2v fit (reference)     return_180d  2110   1.61  1.38  1.88 0.000 0.000
+30         c2v fit, + Jev familiar + align_community     return_180d  2110   1.47  1.25  1.74 0.000 0.000
+31                               c2v fit (reference)    regular_180d  1333   1.54  1.21  1.95 0.000 0.001
+32         c2v fit, + Jev familiar + align_community    regular_180d  1333   1.40  1.08  1.82 0.011 0.017
+
+=== A1 validity, Jev subs: entry post vs random post from another subreddit ===
+                    measure     n  entry_gt_placebo      d      p
+0       jev_subs:align_post  2413             0.581  0.203  0.000
+1  jev_subs:align_community  2413             0.547  0.149  0.000
+2         jev_subs:familiar  2413             0.525  0.065  0.001
+
+=== A4 predictive validity, Jev subs ===
+                                               label       outcome     n effect ci_lo ci_hi     p fdr_p
+0                                Jev subs align_post    return_90d  1969   1.22  1.06  1.41 0.005 0.013
+1                     Jev subs align_post, + c2v fit    return_90d  1968   1.07  0.90  1.26 0.448 0.448
+2                                Jev subs align_post   return_180d  2111   1.29  1.13  1.48 0.000 0.001
+3                     Jev subs align_post, + c2v fit   return_180d  2110   1.12  0.95  1.31 0.179 0.208
+4                                Jev subs align_post  regular_180d  1333   1.49  1.22  1.82 0.000 0.000
+5                     Jev subs align_post, + c2v fit  regular_180d  1333   1.34  1.06  1.69 0.013 0.024
+6        placebo: Jev subs align_post to random post   return_180d  2111   1.19  1.03  1.37 0.016 0.024
+7                           Jev subs align_community    return_90d  1969   1.41  1.21  1.65 0.000 0.000
+8                Jev subs align_community, + c2v fit    return_90d  1968   1.25  1.04  1.49 0.016 0.024
+9                           Jev subs align_community   return_180d  2111   1.46  1.27  1.68 0.000 0.000
+10               Jev subs align_community, + c2v fit   return_180d  2110   1.27  1.07  1.49 0.005 0.013
+11                          Jev subs align_community  regular_180d  1333   1.71  1.38  2.11 0.000 0.000
+12               Jev subs align_community, + c2v fit  regular_180d  1333   1.55  1.21  1.99 0.000 0.002
+13  placebo: Jev subs align_community to random post   return_180d  2111   1.14  0.99  1.32 0.062 0.087
+14                                 Jev subs familiar    return_90d  1969   1.20  1.04  1.40 0.014 0.024
+15                      Jev subs familiar, + c2v fit    return_90d  1968   1.07  0.91  1.27 0.392 0.411
+16                                 Jev subs familiar   return_180d  2111   1.25  1.09  1.44 0.001 0.004
+17                      Jev subs familiar, + c2v fit   return_180d  2110   1.10  0.94  1.29 0.214 0.236
+18                                 Jev subs familiar  regular_180d  1333   1.29  1.06  1.58 0.011 0.023
+19                      Jev subs familiar, + c2v fit  regular_180d  1333   1.17  0.94  1.46 0.164 0.202
+20         placebo: Jev subs familiar to random post   return_180d  2111   1.12  0.97  1.30 0.121 0.159
+
+within-post quartiles of familiar_entry:
+q               1.0    2.0    3.0    4.0
+return_90d    0.178  0.196  0.192  0.244
+return_180d   0.209  0.239  0.247  0.298
+regular_180d  0.070  0.085  0.086  0.112
+
+within-post quartiles of align_community_entry:
+q               1.0    2.0    3.0    4.0
+return_90d    0.167  0.166  0.225  0.257
+return_180d   0.186  0.216  0.290  0.310
+regular_180d  0.065  0.067  0.090  0.129
+
+within-post quartiles of c2v_big:
+q               1.0    2.0    3.0    4.0
+return_90d    0.165  0.180  0.196  0.270
+return_180d   0.192  0.221  0.251  0.331
+regular_180d  0.061  0.074  0.098  0.121
+
+=== A5 target-specific Jev alignment (net of the user's score for a random post) ===
+                                                  label         outcome     n effect ci_lo ci_hi     p fdr_p
+0                  Jev full align_post, + placebo score      return_90d  1969   1.21  1.04  1.41 0.012 0.024
+1        Jev full align_post, + placebo score + c2v fit      return_90d  1968   1.08  0.91  1.29 0.375 0.404
+2                  Jev full align_post, + placebo score     return_180d  2111   1.22  1.06  1.41 0.006 0.016
+3        Jev full align_post, + placebo score + c2v fit     return_180d  2110   1.07  0.91  1.26 0.419 0.440
+4                  Jev full align_post, + placebo score    regular_180d  1333   1.45  1.16  1.81 0.001 0.004
+5        Jev full align_post, + placebo score + c2v fit    regular_180d  1333   1.33  1.04  1.71 0.023 0.039
+6             Jev full align_community, + placebo score      return_90d  1969   1.38  1.17  1.62 0.000 0.001
+7   Jev full align_community, + placebo score + c2v fit      return_90d  1968   1.24  1.03  1.49 0.021 0.038
+8             Jev full align_community, + placebo score     return_180d  2111   1.44  1.23  1.67 0.000 0.000
+9   Jev full align_community, + placebo score + c2v fit     return_180d  2110   1.27  1.08  1.51 0.005 0.014
+10            Jev full align_community, + placebo score    regular_180d  1333   1.49  1.20  1.86 0.000 0.002
+11  Jev full align_community, + placebo score + c2v fit    regular_180d  1333   1.37  1.07  1.75 0.012 0.024
+12                   Jev full familiar, + placebo score      return_90d  1969   1.20  1.05  1.37 0.007 0.017
+13         Jev full familiar, + placebo score + c2v fit      return_90d  1968   1.11  0.97  1.28 0.141 0.170
+14                   Jev full familiar, + placebo score     return_180d  2111   1.22  1.08  1.39 0.002 0.006
+15         Jev full familiar, + placebo score + c2v fit     return_180d  2110   1.12  0.98  1.28 0.108 0.134
+16                   Jev full familiar, + placebo score    regular_180d  1333   1.26  1.05  1.52 0.011 0.024
+17         Jev full familiar, + placebo score + c2v fit    regular_180d  1333   1.19  0.97  1.45 0.089 0.114
+18                 Jev full align_post, + placebo score  reply_received  1984   0.79  0.65  0.96 0.018 0.034
+19                 Jev subs align_post, + placebo score      return_90d  1969   1.18  1.02  1.37 0.030 0.044
+20       Jev subs align_post, + placebo score + c2v fit      return_90d  1968   1.04  0.87  1.24 0.645 0.645
+21                 Jev subs align_post, + placebo score     return_180d  2111   1.25  1.08  1.44 0.003 0.008
+22       Jev subs align_post, + placebo score + c2v fit     return_180d  2110   1.09  0.92  1.29 0.309 0.352
+23                 Jev subs align_post, + placebo score    regular_180d  1333   1.42  1.15  1.75 0.001 0.004
+24       Jev subs align_post, + placebo score + c2v fit    regular_180d  1333   1.29  1.01  1.65 0.039 0.055
+25            Jev subs align_community, + placebo score      return_90d  1969   1.39  1.18  1.63 0.000 0.001
+26  Jev subs align_community, + placebo score + c2v fit      return_90d  1968   1.23  1.03  1.49 0.026 0.042
+27            Jev subs align_community, + placebo score     return_180d  2111   1.44  1.24  1.67 0.000 0.000
+28  Jev subs align_community, + placebo score + c2v fit     return_180d  2110   1.26  1.06  1.49 0.009 0.021
+29            Jev subs align_community, + placebo score    regular_180d  1333   1.68  1.34  2.09 0.000 0.000
+30  Jev subs align_community, + placebo score + c2v fit    regular_180d  1333   1.53  1.19  1.97 0.001 0.004
+31                   Jev subs familiar, + placebo score      return_90d  1969   1.19  1.02  1.39 0.030 0.044
+32         Jev subs familiar, + placebo score + c2v fit      return_90d  1968   1.07  0.90  1.27 0.449 0.460
+33                   Jev subs familiar, + placebo score     return_180d  2111   1.23  1.06  1.42 0.005 0.014
+34         Jev subs familiar, + placebo score + c2v fit     return_180d  2110   1.09  0.93  1.29 0.274 0.321
+35                   Jev subs familiar, + placebo score    regular_180d  1333   1.22  1.00  1.48 0.052 0.069
+36         Jev subs familiar, + placebo score + c2v fit    regular_180d  1333   1.12  0.89  1.39 0.330 0.366
+37                 Jev subs align_post, + placebo score  reply_received  1984   0.83  0.71  0.98 0.030 0.044
+38  c2v fit, + Jev subs align_community entry & placebo      return_90d  1968   1.38  1.16  1.65 0.000 0.002
+39  c2v fit, + Jev subs align_community entry & placebo     return_180d  2110   1.47  1.24  1.74 0.000 0.000
+40  c2v fit, + Jev subs align_community entry & placebo    regular_180d  1333   1.32  1.01  1.73 0.042 0.057
+
+=== A6 ablations (same 600 newcomers): entry vs placebo discrimination ===
+   variant          measure    n  entry_gt_placebo      d      p  rho_with_full
+0     full       align_post  600             0.584  0.214  0.000          1.000
+1     full  align_community  600             0.556  0.089  0.014          1.000
+2     full         familiar  600             0.542  0.009  0.133          1.000
+3     subs       align_post  600             0.588  0.195  0.000          0.817
+4     subs  align_community  600             0.532  0.125  0.004          0.810
+5     subs         familiar  600             0.521  0.046  0.201          0.646
+6     text       align_post  600             0.551  0.200  0.000          0.752
+7     text  align_community  600             0.552  0.114  0.009          0.736
+8     text         familiar  600             0.548  0.091  0.015          0.625
+9    noimg       align_post  600             0.568  0.110  0.001          0.716
+10   noimg  align_community  600             0.513  0.027  0.226          0.831
+11   noimg         familiar  600             0.511 -0.015  0.560          0.759
+
+=== A7 pre-entry trajectory (Jev, subreddit names per window) ===
+newcomers with all three windows: 1745; mean align_community 90-365 / 30-90 / 0-30 d: 0.92 / 0.96 / 1.10
+mean by 180-day return:
+              jw_d0_30  jw_d30_90  jw_d90_365
+return_180d                                 
+0.0             1.078      0.956       0.930
+1.0             1.183      0.984       0.906
+
+=== A7 pre-entry trajectory: which window's community alignment predicts return? ===
+                         label       outcome     n effect ci_lo ci_hi     p fdr_p
+0               jw_d0_30 alone    return_90d  1217   1.43  1.18  1.73 0.000 0.001
+1     jw_d0_30 | other windows    return_90d  1217   1.54  1.23  1.93 0.000 0.001
+2              jw_d30_90 alone    return_90d  1217   1.00  0.83  1.20 0.974 0.974
+3    jw_d30_90 | other windows    return_90d  1217   0.90  0.72  1.13 0.385 0.573
+4             jw_d90_365 alone    return_90d  1217   0.95  0.76  1.18 0.618 0.742
+5   jw_d90_365 | other windows    return_90d  1217   0.88  0.69  1.13 0.324 0.573
+6               jw_d0_30 alone   return_180d  1350   1.48  1.23  1.77 0.000 0.000
+7     jw_d0_30 | other windows   return_180d  1350   1.57  1.27  1.94 0.000 0.000
+8              jw_d30_90 alone   return_180d  1350   1.07  0.90  1.27 0.434 0.573
+9    jw_d30_90 | other windows   return_180d  1350   0.98  0.80  1.21 0.881 0.933
+10            jw_d90_365 alone   return_180d  1350   0.93  0.77  1.12 0.425 0.573
+11  jw_d90_365 | other windows   return_180d  1350   0.83  0.67  1.03 0.092 0.218
+12              jw_d0_30 alone  regular_180d   712   1.54  1.16  2.05 0.003 0.011
+13    jw_d0_30 | other windows  regular_180d   712   1.65  1.17  2.32 0.004 0.012
+14             jw_d30_90 alone  regular_180d   712   1.15  0.87  1.53 0.311 0.573
+15   jw_d30_90 | other windows  regular_180d   712   1.07  0.76  1.53 0.688 0.774
+16            jw_d90_365 alone  regular_180d   712   0.90  0.69  1.18 0.446 0.573
+17  jw_d90_365 | other windows  regular_180d   712   0.75  0.53  1.05 0.097 0.218
+
+=== B0 first-comment signals: raw rates (share with p > .5; mean p) ===
+                      existing  newcomer
+insider_knowledge_hi     0.022     0.015
+outsider_signal_hi       0.010     0.007
+member_signal_hi         0.007     0.004
+hostile_hi               0.149     0.151
+invites_response_hi      0.236     0.238
+insider_knowledge        0.131     0.125
+outsider_signal          0.065     0.067
+member_signal            0.079     0.074
+hostile                  0.222     0.222
+invites_response         0.335     0.335
+
+function distribution:
+ newcomer            0      1
+fn_information  0.082  0.087
+fn_joke         0.246  0.236
+fn_meta         0.035  0.031
+fn_opinion      0.325  0.297
+fn_personal     0.087  0.082
+fn_question     0.068  0.076
+fn_reaction     0.157  0.191
+
+=== B1 newcomer vs existing first comments (pp, post FE) ===
+                                     label            outcome     n effect ci_lo ci_hi     p fdr_p
+0   newcomer - existing: insider_knowledge  insider_knowledge  3776  -0.01 -0.01  0.00 0.066 0.262
+1     newcomer - existing: outsider_signal    outsider_signal  3776  -0.00 -0.01  0.00 0.538 0.718
+2       newcomer - existing: member_signal      member_signal  3776  -0.01 -0.01 -0.00 0.005 0.057
+3             newcomer - existing: hostile            hostile  3776  -0.01 -0.03  0.00 0.118 0.353
+4    newcomer - existing: invites_response   invites_response  3776   0.00 -0.02  0.02 0.738 0.738
+5      newcomer - existing: fn_information     fn_information  3776   0.03  0.01  0.05 0.010 0.057
+6             newcomer - existing: fn_joke            fn_joke  3776  -0.01 -0.05  0.02 0.387 0.718
+7             newcomer - existing: fn_meta            fn_meta  3776  -0.01 -0.02  0.01 0.371 0.718
+8          newcomer - existing: fn_opinion         fn_opinion  3776  -0.01 -0.05  0.02 0.525 0.718
+9         newcomer - existing: fn_personal        fn_personal  3776  -0.01 -0.03  0.01 0.536 0.718
+10        newcomer - existing: fn_question        fn_question  3776   0.01 -0.01  0.02 0.611 0.730
+11        newcomer - existing: fn_reaction        fn_reaction  3776   0.01 -0.02  0.03 0.669 0.730
+
+=== B2 does fit show in first-comment signals? (newcomers; change in p per SD) ===
+                                  label            outcome     n effect ci_lo ci_hi     p fdr_p
+0          c2v_big -> insider_knowledge  insider_knowledge  2411  -0.00 -0.01  0.00 0.540 0.875
+1            c2v_big -> outsider_signal    outsider_signal  2411  -0.00 -0.00  0.00 0.718 0.875
+2              c2v_big -> member_signal      member_signal  2411  -0.00 -0.00  0.00 0.791 0.875
+3                    c2v_big -> hostile            hostile  2411   0.01 -0.00  0.02 0.242 0.727
+4           c2v_big -> invites_response   invites_response  2411   0.01 -0.01  0.02 0.219 0.727
+5   familiar_entry -> insider_knowledge  insider_knowledge  2413  -0.00 -0.01  0.00 0.706 0.875
+6     familiar_entry -> outsider_signal    outsider_signal  2413  -0.00 -0.00  0.00 0.086 0.648
+7       familiar_entry -> member_signal      member_signal  2413   0.00 -0.00  0.01 0.347 0.815
+8             familiar_entry -> hostile            hostile  2413  -0.00 -0.01  0.01 0.875 0.875
+9    familiar_entry -> invites_response   invites_response  2413  -0.01 -0.02  0.01 0.435 0.815
+10    pp_mini_mean -> insider_knowledge  insider_knowledge  2412   0.00 -0.00  0.01 0.237 0.727
+11      pp_mini_mean -> outsider_signal    outsider_signal  2412   0.00 -0.00  0.00 0.654 0.875
+12        pp_mini_mean -> member_signal      member_signal  2412  -0.00 -0.00  0.00 0.833 0.875
+13              pp_mini_mean -> hostile            hostile  2412   0.01 -0.00  0.02 0.073 0.648
+14     pp_mini_mean -> invites_response   invites_response  2412   0.01 -0.01  0.02 0.410 0.815
+
+=== B3 do first-comment signals predict reception and return? (newcomers) ===
+                                           label         outcome     n effect ci_lo ci_hi     p fdr_p
+0                insider_knowledge -> return_90d      return_90d  1969   1.04  0.90  1.20 0.615 0.989
+1     insider_knowledge -> return_90d, + c2v fit      return_90d  1968   1.04  0.90  1.21 0.558 0.989
+2               insider_knowledge -> return_180d     return_180d  2111   1.03  0.90  1.17 0.678 0.989
+3    insider_knowledge -> return_180d, + c2v fit     return_180d  2110   1.04  0.91  1.18 0.586 0.989
+4              insider_knowledge -> regular_180d    regular_180d  1333   1.16  0.95  1.41 0.142 0.551
+5   insider_knowledge -> regular_180d, + c2v fit    regular_180d  1333   1.18  0.97  1.43 0.104 0.551
+6            insider_knowledge -> reply_received  reply_received  1984   0.98  0.83  1.17 0.848 0.989
+7                  outsider_signal -> return_90d      return_90d  1969   1.04  0.90  1.20 0.605 0.989
+8       outsider_signal -> return_90d, + c2v fit      return_90d  1968   1.05  0.92  1.20 0.485 0.989
+9                 outsider_signal -> return_180d     return_180d  2111   1.03  0.92  1.16 0.611 0.989
+10     outsider_signal -> return_180d, + c2v fit     return_180d  2110   1.04  0.93  1.16 0.534 0.989
+11               outsider_signal -> regular_180d    regular_180d  1333   1.10  0.93  1.30 0.264 0.771
+12    outsider_signal -> regular_180d, + c2v fit    regular_180d  1333   1.12  0.96  1.31 0.154 0.551
+13             outsider_signal -> reply_received  reply_received  1984   1.07  0.96  1.20 0.237 0.754
+14                   member_signal -> return_90d      return_90d  1969   1.11  0.96  1.29 0.157 0.551
+15        member_signal -> return_90d, + c2v fit      return_90d  1968   1.12  0.96  1.30 0.145 0.551
+16                  member_signal -> return_180d     return_180d  2111   1.06  0.92  1.22 0.403 0.989
+17       member_signal -> return_180d, + c2v fit     return_180d  2110   1.07  0.93  1.23 0.366 0.985
+18                 member_signal -> regular_180d    regular_180d  1333   0.97  0.80  1.18 0.745 0.989
+19      member_signal -> regular_180d, + c2v fit    regular_180d  1333   0.97  0.79  1.19 0.778 0.989
+20               member_signal -> reply_received  reply_received  1984   0.88  0.75  1.04 0.128 0.551
+21                         hostile -> return_90d      return_90d  1969   1.02  0.86  1.21 0.827 0.989
+22              hostile -> return_90d, + c2v fit      return_90d  1968   1.01  0.85  1.19 0.932 0.989
+23                        hostile -> return_180d     return_180d  2111   1.03  0.88  1.21 0.731 0.989
+24             hostile -> return_180d, + c2v fit     return_180d  2110   1.02  0.87  1.20 0.791 0.989
+25                       hostile -> regular_180d    regular_180d  1333   0.99  0.79  1.23 0.922 0.989
+26            hostile -> regular_180d, + c2v fit    regular_180d  1333   0.97  0.78  1.20 0.784 0.989
+27                     hostile -> reply_received  reply_received  1984   1.14  0.97  1.34 0.100 0.551
+28                invites_response -> return_90d      return_90d  1969   1.00  0.87  1.15 0.984 0.998
+29     invites_response -> return_90d, + c2v fit      return_90d  1968   0.99  0.86  1.15 0.932 0.989
+30               invites_response -> return_180d     return_180d  2111   1.01  0.89  1.14 0.917 0.989
+31    invites_response -> return_180d, + c2v fit     return_180d  2110   1.00  0.88  1.14 0.998 0.998
+32              invites_response -> regular_180d    regular_180d  1333   0.87  0.73  1.05 0.144 0.551
+33   invites_response -> regular_180d, + c2v fit    regular_180d  1333   0.87  0.72  1.05 0.146 0.551
+34            invites_response -> reply_received  reply_received  1984   1.35  1.17  1.56 0.000 0.001
+
+Jev vs Qwen stance: n = 1534; Jev disagree 32.8%, Qwen disagree 29.8%; agreement on disagree 69.1%; kappa 0.282
+
+=== C0 replies to first comments: share with p > .5 ===
+group                existing  newcomer
+gatekeeping_hi          0.017     0.025
+welcoming_hi            0.386     0.368
+explains_context_hi     0.164     0.188
+hostile_hi              0.099     0.107
+disagree                0.338     0.368 
+n replies: {'existing': 977, 'newcomer': 917}
+
+=== C1 how replies treat newcomers vs existing members (pp, post FE) ===
+                                               label           outcome     n effect ci_lo ci_hi     p fdr_p
+0       reply to newcomer - to existing: gatekeeping       gatekeeping  1894   0.02 -0.00  0.03 0.064 0.318
+1         reply to newcomer - to existing: welcoming         welcoming  1894  -0.01 -0.05  0.03 0.603 0.672
+2  reply to newcomer - to existing: explains_context  explains_context  1894   0.01 -0.02  0.05 0.459 0.672
+3           reply to newcomer - to existing: hostile           hostile  1894   0.02 -0.02  0.06 0.291 0.672
+4          reply to newcomer - to existing: disagree          disagree  1894   0.02 -0.06  0.09 0.672 0.672
+
+replies to newcomers by replier status (share with p > .5):
+insider                     0.0    1.0
+gatekeeping_hi      mean  0.027  0.023
+welcoming_hi        mean  0.365  0.391
+explains_context_hi mean  0.187  0.195
+hostile_hi          mean  0.110  0.082
+disagree            mean  0.356  0.395
+
+=== C2 insider vs outsider repliers (replies to newcomers) ===
+                                 label           outcome    n effect ci_lo ci_hi     p fdr_p
+0       insider replier -> gatekeeping       gatekeeping  899  -0.01 -0.03  0.02 0.532 0.532
+1         insider replier -> welcoming         welcoming  899   0.04 -0.00  0.09 0.078 0.263
+2  insider replier -> explains_context  explains_context  899   0.02 -0.03  0.06 0.443 0.532
+3           insider replier -> hostile           hostile  899  -0.03 -0.07  0.01 0.132 0.263
+
+=== C3 reply content and newcomer return ===
+                                                               label          outcome    n effect ci_lo ci_hi     p fdr_p
+0         got gatekeeping reply -> return_90d (replied-to newcomers)       return_90d  222   0.82  0.43  1.56 0.551 0.834
+1        got gatekeeping reply -> return_180d (replied-to newcomers)      return_180d  263   0.96  0.63  1.46 0.834 0.841
+2           got welcoming reply -> return_90d (replied-to newcomers)       return_90d  222   0.83  0.42  1.62 0.580 0.834
+3          got welcoming reply -> return_180d (replied-to newcomers)      return_180d  263   0.86  0.47  1.54 0.606 0.834
+4    got explains_context reply -> return_90d (replied-to newcomers)       return_90d  222   0.66  0.35  1.23 0.190 0.834
+5   got explains_context reply -> return_180d (replied-to newcomers)      return_180d  263   0.82  0.50  1.34 0.430 0.834
+6             got hostile reply -> return_90d (replied-to newcomers)       return_90d  222   1.09  0.64  1.86 0.750 0.841
+7            got hostile reply -> return_180d (replied-to newcomers)      return_180d  263   1.18  0.80  1.74 0.408 0.834
+8                    outsider_signal -> got gatekeeping (replied-to)  got_gatekeeping  495   0.01 -0.01  0.02 0.575 0.834
+9                            c2v fit -> got gatekeeping (replied-to)  got_gatekeeping  495  -0.00 -0.03  0.03 0.841 0.841
+10                   insider_knowledge -> got welcoming (replied-to)    got_welcoming  495  -0.03 -0.07  0.00 0.062 0.687
+
+=== D0 post genres ===
+                       posts  newcomers  return_90d  return_180d  insider_needed
+genre                                                                           
+meme_humor               105       1022       0.230        0.281           0.772
+animals_wholesome         47        430       0.147        0.193           0.383
+personal                  33        338       0.192        0.228           0.592
+impressive_satisfying     27        253       0.186        0.217           0.543
+news_politics             17        171       0.292        0.322           0.859
+fail_karma                15        170       0.141        0.206           0.760
+fandom_entertainment       2         15       0.333        0.333           1.322
+other                      1         14       0.071        0.071           0.830
+
+posts: Spearman(insider_needed, newcomer share) = 0.153 | genre-mean newcomer share: {'animals_wholesome': 0.61, 'fail_karma': 0.75, 'fandom_entertainment': 0.54, 'impressive_satisfying': 0.62, 'meme_humor': 0.62, 'news_politics': 0.65, 'other': 0.82, 'personal': 0.68}
+
+=== D1 does the fit -> return link differ by post type? (ratio of ORs) ===
+                                   label      outcome     n effect ci_lo ci_hi     p fdr_p
+0       c2v fit x insider-knowledge post  return_180d  2110   1.00  0.74  1.34 0.975 0.975
+1  Jev familiar x insider-knowledge post  return_180d  2111   1.09  0.85  1.40 0.508 0.763
+2              c2v fit x discussion post  return_180d  2110   1.13  0.79  1.64 0.500 0.763
+
+between posts: return_180d ~ insider_needed + invites_discussion (OR per unit): {'insider_needed': 1.28, 'invites_discussion': 1.15} p: {'insider_needed': 0.166, 'invites_discussion': 0.637}
+
+saved jev_models.csv, jev_validity.csv

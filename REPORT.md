@@ -84,6 +84,12 @@ We asked whether newcomers whose prior Reddit interests align with the post thro
       - High-fit newcomers were twice as likely to have talked with the community's members (33% vs 17%). These ties do not predict return, and fit predicts return unchanged when they are controlled.
       - Only fit in the last 30 days before entry predicts return (180-day OR 2.06 per SD). Fit from earlier in the year does not (OR 0.91–1.24). Newcomers who stay were already moving toward the community.
 
+12. **A decision model (Jev) as a second instrument confirms both patterns** (§4.13; $1.85 of API cost).
+    - Jev reads the post image and the newcomer's subreddits and history. It separates newcomers from members 1.6× better than the embeddings (−0.55 vs −0.35 SD) and discriminates the entry post slightly better (59% vs 57%).
+    - Even so, alignment does not predict first-contact behavior. Richer codings of first comments (insider knowledge, identity signals) and of replies (gatekeeping, welcoming) are also null. Gatekeeping is rare (2.5% of replies to newcomers vs 1.7% to members).
+    - Jev's community alignment predicts 180-day return (OR 1.44) and becoming a regular (1.49) net of its own placebo score, and still 1.27 / 1.37 net of c2v fit. Using only the names of the newcomer's top 20 subreddits, it matches c2v.
+    - With Jev scoring each pre-entry window separately, only the last 30 days predicts return (OR 1.57), replicating §4.12 F4 with an independent measure.
+
 **Bottom line:** prior-interest alignment, as measured here, does not shape how a newcomer's *first* comment looks or how it is received. There is initial evidence that it predicts whether the newcomer *returns*: better-aligned newcomers are more likely to become repeat participants. This return result needs confirmation in a pre-registered replication. Separately, newcomer status itself robustly predicts lower in-thread re-engagement. Section 5 discusses why the alignment measure may be too weak to detect first-comment differences (short, meme-style titles and a small separation between aligned and unaligned users).
 
 ---
@@ -775,6 +781,140 @@ The groups converge: this is regression to the mean, not a move toward the commu
 - **Selection, not socialization.** This pattern is consistent with selection: some "newcomers" are already on their way into the community, and the viral post is one stop on that path. It does not fit an account in which the first interaction socializes them.
 - **Most participation by returners is not deep integration.** A third of what returners contribute goes to the next very large thread, and half is made within hours of a thread's creation. This holds for high- and low-fit returners alike.
 
+### 4.13 Jev: a decision model as a second measurement instrument
+
+**Question.** Two open issues remain from §4.1–4.12: (1) Are the first-contact nulls a measurement artifact of noisy embeddings and short image titles? (2) Can a model-based judgment replace hand-built modules (embedding alignment, community embeddings, the Qwen-3B stance model, sentiment-based reply tone)? We used **Jev** (TypeSafe's System One model, `jev-1.13.0`). Jev does not generate text: it returns calibrated probabilities for typed questions (yes/no, choice, ordered score). It also accepts images.
+
+**Design** (`s15a_post_images.py`, `s15b_jev_score.py`, `s15c_jev_analysis.py`; results in `results/global/jev_*.csv`, log `results/global_s15c.log`). Study 2 only.
+
+| Part | Unit | State given to Jev | Questions |
+|---|---|---|---|
+| align | newcomer × entry post; newcomer × placebo post (random target post from another subreddit); existing member × entry post | Post title, body and **post image** (246 of 249 posts; video posts use the preview frame); the user's 20 most-used prior subreddits with counts; their 40 most recent prior items (≤ 200 characters each) | `align_post` (0–4 rubric from proposal §5), `align_community` (same rubric, community rather than this post), `familiar` (does the history show they already follow the community's topic or culture) |
+| align ablations | Same 600 newcomers × entry and placebo | `subs`: subreddit list only (all newcomers); `text`: item texts without subreddit names; `noimg`: no image | Same |
+| window | newcomer × {0–30, 30–90, 90–365 days before the post} | Subreddit list from that window only | `align_community`, `familiar` |
+| comment | First comment of each newcomer and existing member (3,776) | Community, post title, parent comment, comment | Insider knowledge, outsider self-signal, member self-signal, hostility, invites response, function (7 categories), stance toward parent |
+| reply | Every direct reply to those first comments (1,894) | Community, post title, first comment, reply. Jev is **not** told who is a newcomer | Gatekeeping (treats the commenter as an outsider), welcoming, explains context, hostility, stance |
+| post | 247 target posts | Title, body, image | Genre (8 categories), insider knowledge needed (0–4), invites discussion |
+
+Choice options were shuffled per item with a fixed seed, because Jev favours the first-listed option. Models are as in §4.10 (post FE, SEs clustered by post, BH-FDR within each block). Scores are z-scored, so effects are per SD.
+
+**Cost.** Jev bills $0.042 per million input tokens; output is free. The state is billed once per request, however many questions it carries (each extra question adds about 60 tokens), and a 768-px image costs about 1,100 tokens. Every response is cached on disk and logged to `data/jev_ledger.jsonl`.
+
+| Part | Requests | Input tokens | Cost |
+|---|---|---|---|
+| align (full) | 6,189 | 20.5 M | $0.86 |
+| align ablations (subs, text, noimg) | 7,204 | 15.1 M | $0.64 |
+| window | 6,344 | 3.8 M | $0.16 |
+| comment | 3,772 | 3.0 M | $0.12 |
+| reply | 1,889 | 1.2 M | $0.05 |
+| post | 247 | 0.4 M | $0.02 |
+| **Total** | **25,650** | **44.0 M** | **$1.85** |
+
+#### A. Jev alignment as a measure
+
+| Check (newcomers) | Jev `align_post` | Jev `align_community` | Text embedding (§4.1) | Post-based embedding (§4.7) | c2v fit (§4.11) |
+|---|---|---|---|---|---|
+| Entry > placebo post | **59.1%** (d = 0.23) | 55.7% (d = 0.15) | 56.9% (d = 0.15) | 56.8% (d = 0.16) | 61.8% (d = 0.31) |
+| Newcomer − existing, same post (SD) | −0.43 | **−0.55** | −0.25 | −0.35 | – |
+| Spearman ρ with c2v fit | 0.34 | 0.36 | – | – | – |
+
+- **Jev separates newcomers from members better than any text measure**: −0.55 SD vs −0.35 SD for the best embedding.
+- On discrimination of the entry post it beats the embeddings (59% vs 57%) but not c2v (62%).
+- It correlates only 0.25–0.36 with the embeddings and c2v, so it captures something partly different.
+
+**Ablations** (same 600 newcomers, entry > placebo for `align_post`): full 58.4% (d = 0.21); subreddit names only 58.8% (d = 0.20); item texts without subreddit names 55.1% (d = 0.20); **no image 56.8% (d = 0.11)**. Most of Jev's signal comes from the subreddit names (its world knowledge of what those communities are) and from the image. Showing the image roughly doubles the effect size, which supports the diagnosis in §5 that short titles were a major weakness of the embedding measure.
+
+**Predictive validity.** Effects per SD (`jev_models.csv`, blocks A4–A5):
+
+| Predictor | Return 90 d | Return 180 d | Regular 180 d | Reply received | Re-engaged |
+|---|---|---|---|---|---|
+| Jev `align_community` | 1.41 [1.20, 1.65] | 1.48 [1.28, 1.72] | 1.52 [1.22, 1.89] | 0.85 | 0.96 |
+| … + its own placebo score | 1.38 | 1.44 | 1.49 | – | – |
+| … + placebo score + c2v fit | **1.24** (FDR .038) | **1.27** (FDR .014) | **1.37** (FDR .024) | – | – |
+| Jev `align_community`, subreddit names only, + placebo + c2v | 1.23 | 1.26 | **1.53** (FDR .004) | – | – |
+| Jev `align_post` | 1.24 | 1.26 | 1.48 | **0.77** (FDR .014) | 1.03 |
+| Jev `align_post` + placebo | 1.21 | 1.22 | 1.45 | **0.79** (FDR .034) | – |
+| c2v fit + Jev `align_community` (entry and placebo, subs) | 1.38 | 1.47 | 1.32 | – | – |
+
+| Within-post quartile of Jev `align_community` | Q1 | Q2 | Q3 | Q4 |
+|---|---|---|---|---|
+| Return 180 d | 18.6% | 21.6% | 29.0% | **31.0%** |
+| Regular 180 d | 6.5% | 6.7% | 9.0% | **12.9%** |
+
+- **A user-level component.** Jev's score for a *random* post also predicts return (OR ≈ 1.2, p ≈ .01), unlike c2v's placebo (1.10, n.s.). Part of the Jev score therefore reflects how "viral-content-aligned" a user's history is in general. Controlling for that placebo score leaves the entry-specific association almost unchanged (1.48 → 1.44).
+- **Jev and c2v are complementary.** Each predicts return net of the other. Jev's community alignment adds information beyond the co-membership network, and vice versa.
+- **A cheap substitute for network fit.** Given only the names of a newcomer's 20 most-used subreddits (about 1,900 tokens, $0.00008 per user), Jev predicts becoming a regular as well as c2v does, without needing co-membership data from thousands of users.
+- **First contact is still null.** Alignment does not predict in-thread re-engagement. Better-aligned newcomers are, if anything, *less* likely to be answered (OR 0.77–0.79). That matches the isolated MPNet coefficient in §4.2 (0.82), so it may be real, but it is secondary and post hoc.
+
+#### A7. Pre-entry trajectory, measured independently
+
+Section 4.12 F4 found, with c2v, that only fit in the last 30 days before entry predicts return. Here each window's subreddit list was scored separately by Jev (1,745 newcomers with all three windows):
+
+| Mean Jev `align_community` | 90–365 d before | 30–90 d | 0–30 d |
+|---|---|---|---|
+| Returned within 180 d | 0.91 | 0.98 | **1.18** |
+| Did not return | 0.93 | 0.96 | 1.08 |
+
+| Window (entered together) | Return 90 d, OR | Return 180 d, OR | Regular 180 d, OR |
+|---|---|---|---|
+| **0–30 days** | **1.54 [1.23, 1.93]** | **1.57 [1.27, 1.94]**, FDR < .001 | **1.65 [1.17, 2.32]** |
+| 30–90 days | 0.90 | 0.98 | 1.07 |
+| 90–365 days | 0.88 | 0.83 | 0.75 |
+
+The F4 result replicates with a different instrument (world-knowledge judgments of subreddit names instead of co-membership embeddings). Newcomers who stay were already moving toward the community in the month before entry. Where their interests sat earlier in the year predicts nothing.
+
+#### B. Social signals in the first comment
+
+| Share with p > .5 | Existing | Newcomer |
+|---|---|---|
+| Shows community-specific knowledge | 2.2% | 1.5% |
+| Signals being an outsider ("what is this from?") | 1.0% | 0.7% |
+| Signals being a member or fan | 0.7% | 0.4% |
+| Hostile | 14.9% | 15.1% |
+| Function: joke / opinion / reaction / information / question | 25 / 33 / 16 / 8 / 7% | 24 / 30 / 19 / 9 / 8% |
+
+- **Identity work is rare on viral threads.** Fewer than 2% of first comments, from members or newcomers, show insider knowledge or any self-positioning. Spot checks of the top-scored items look valid: outsider signals pick up "What's this supposed to be anyway?", and insider knowledge picks up Stranger Things plot detail and "the Cat Distribution system".
+- **Newcomers and members write alike** (block B1: no difference survives FDR; the largest is newcomers' +3 pp informational comments, FDR .057).
+- **Fit does not show in the comment** (B2: c2v and text alignment → every signal, all FDR p ≥ .6).
+- **None of the signals predicts return** (B3: all FDR p ≥ .55), with or without controlling fit. Comments that invite a response do get more replies (OR 1.35, FDR .001), which is a sanity check on the measure.
+- **The Qwen-3B stance labels were unreliable.** Agreement with Jev on "disagree" is κ = 0.28 (n = 1,534). §4.6's stance null should be read through this measure; Jev's stance is used in blocks B–C.
+
+#### C. Does the community gatekeep?
+
+| Share of replies with p > .5 | To existing members' first comments (977) | To newcomers' (917) |
+|---|---|---|
+| Gatekeeping (treats commenter as an outsider) | 1.7% | 2.5% |
+| Welcoming or helpful | 38.6% | 36.8% |
+| Explains context | 16.4% | 18.8% |
+| Hostile | 9.9% | 10.7% |
+| Disagrees | 33.8% | 36.8% |
+
+- **There is essentially no gatekeeping on viral threads.** Gatekeeping is rare and only nominally more frequent toward newcomers (+1.6 pp, p = .06, FDR .32). Welcoming, context-giving and hostility do not differ (C1).
+- **Insiders do not gatekeep more than outsiders** (C2: −1 pp, n.s.). If anything they are slightly more welcoming (+4 pp, p = .08).
+- **Gatekeeping is not targeted.** Neither an outsider signal in the newcomer's comment nor low fit makes a gatekeeping reply more likely (C3).
+- **What the reply says does not predict return** (C3: gatekeeping, welcoming, context and hostile replies, all FDR p ≥ .83; n = 222–263 replied-to newcomers, so intervals are wide).
+
+#### D. Post genre
+
+| Genre (Jev, with image) | Posts | Newcomers | Return 90 d | Return 180 d | Insider knowledge needed (0–4) |
+|---|---|---|---|---|---|
+| Meme / humor | 105 | 1,022 | 23.0% | 28.1% | 0.77 |
+| Animals / wholesome | 47 | 430 | 14.7% | 19.3% | 0.38 |
+| Personal (appearance, milestone, story) | 33 | 338 | 19.2% | 22.8% | 0.59 |
+| Impressive / satisfying | 27 | 253 | 18.6% | 21.7% | 0.54 |
+| News / politics | 17 | 171 | **29.2%** | **32.2%** | 0.86 |
+| Fail / karma | 15 | 170 | 14.1% | 20.6% | 0.76 |
+
+- Newcomers who enter through meme and news/politics posts return about twice as often as those entering through animal or fail videos.
+- Between posts, the insider knowledge a post requires is weakly associated with return (OR 1.28 per level, p = .17).
+- The fit → return association does not differ by post type (D1: c2v × insider-knowledge post, ratio of ORs 1.00; × discussion post 1.13, n.s.).
+
+**Reading of §4.13.**
+- **The first-contact nulls are not a measurement artifact.** With a measure that separates members from newcomers about 1.6× better than the embeddings and sees the post image, alignment still does not predict how newcomers participate in the thread. Richer constructs of the first comment (insider knowledge, identity signals) and of the reply (gatekeeping, welcoming) are null too, and gatekeeping barely exists.
+- **The retention result is now triangulated.** Text embeddings, community co-membership embeddings and a decision model working from world knowledge all predict return and becoming a regular, each net of the others. In every case the predictive part is the most recent month before entry.
+- **Selection, not socialization, is strengthened.** Nothing that happens at the viral interaction (what newcomers write, how they are answered, whether they are gatekept) relates to whether they stay. Where they were heading before they arrived does.
+- **Jev replaces modules cheaply.** For under $2 it replaced the stance classifier and reply-tone proxy, added image-aware post representation and genre coding, and produced a community-fit measure needing only subreddit names. It complements c2v rather than replacing it. Scores are model judgments, not ground truth, and the human validation of §6 is still outstanding.
+
 ---
 
 ## 5. Interpretation
@@ -791,11 +931,13 @@ Study 2's confidence intervals are fairly tight: a +1 SD increase in alignment i
 
 The Step 6 results (§4.6) sharpen this picture. Even the noisy measure picks up an association with *returning* to the community weeks later, but none with how the first comment looks. A plausible account is that alignment matters for **whether a newcomer becomes a member** rather than for **how they behave on first contact**. On first contact, a viral post sets the norms and everyone reacts to the same content in similar ways.
 
+**Update (§9):** an image-aware Jev measure of alignment separates newcomers from members about 1.6× better than the embeddings, yet first-contact behavior is still unrelated to alignment. This rules out reading 2 (a measure too coarse) as the main explanation.
+
 ---
 
 ## 6. Limitations
 
-1. **Measurement validity** (see §5). This is the main open issue. The proposal's human validation (§6) and Jev-based measure have not yet been run.
+1. **Measurement validity** (see §5). The Jev-based measure (§4.13) now gives a second operationalization, but the proposal's human validation (§6) has not yet been run. Jev scores are model judgments, carry a user-level component (a random post's score also predicts return), and `jev-latest` is an alias that may point to a newer model later. Analyses record `jev-1.13.0`.
 2. **"Observed" newcomers only.** Absence from the archive in the lookback window does not prove a user never participated, and lurking is invisible.
 3. **Truncated histories.** Only each user's latest ≤ 100 comments and ≤ 100 posts are used, which covers only recent weeks for heavy users.
 4. **Study 2 target list.** The 2025 top-posts page is curated by Reddit using an undocumented ranking. It was saved manually on 28 Sep 2026, and 3 of its 250 posts are missing from the analysis.
@@ -806,6 +948,7 @@ The Step 6 results (§4.6) sharpen this picture. Even the noisy measure picks up
    - Sentiment and toxicity models were trained on other social-media text. They confuse profanity with hostility, which matters in meme subreddits.
    - The 3B-parameter stance model is noisy (§4.6).
    - None of these has yet been checked against human labels on this data.
+   - Jev and the Qwen stance model agree poorly on "disagree" (κ = 0.28), so stance results in §4.6 are unreliable; Jev's codings in §4.13 are also unvalidated.
 9. **Return is observational.** A newcomer who returns may have been shown the subreddit again by Reddit's feed, which also relies on interest similarity. Return therefore mixes user choice with platform recommendation.
 
 ---
@@ -818,7 +961,7 @@ The Step 6 results (§4.6) sharpen this picture. Even the noisy measure picks up
 2. **Human validation (proposal §6).**
    - Annotate 150–300 user–post pairs on the 0–4 scale.
    - If humans agree with each other but not with the embeddings, the measurement problem is confirmed.
-3. **Jev or other LLM-based alignment (proposal Method 2).** Compare with the embedding measures on the same pairs, especially for short titles.
+3. **Jev-based alignment (proposal Method 2): done** (§4.13). Remaining: include Jev scores in the human-validation sample, and pre-register Jev `align_community` (net of its placebo score) alongside c2v fit for the replication.
 4. **Hand-label the validation sample** (`results/global/validation_sample_to_label.csv`, 200 items; ideally two annotators). Report agreement between the annotators, and between the humans and the question, stance and insult classifiers.
 5. **Pre-register and replicate the return finding** (alignment → 90-day return) on a new sample, for example the 2024 top-posts list or other months. Test it with longer windows (180 days) and with "became a regular" (≥ 3 later contributions) as the outcome.
 6. **Drop or demote the in-thread re-engagement hypothesis** for alignment, given the Study 1 → Study 2 non-replication. Keep newcomer-vs-member re-engagement as an established baseline.
@@ -864,13 +1007,92 @@ src/s13b_extended_analysis.py longer-horizon retention, insider vs outsider repl
 src/s14a_collect_behavior.py  returners' in-community items (PART=insub); pre-entry interlocutors and their profiles (PART=ties; CACHED_ONLY=1 uses cached profiles)
 src/s14b_behavior_metrics.py  §4.9 before/after metrics for ALL newcomers (text scores cached by hash, seeded from s11b)
 src/s14c_fit_behavior.py      behavior of high vs low fit: F1 first comment, F2 Reddit-wide, F3 in-community, F4 trajectory, F5 ties (ONLY=F1,F4,...)
+src/jev.py                    cached TypeSafe Jev client; reads TYPESAFE_API_KEY / JEV_MODEL / JEV_MAX_BUDGET_USD from .env; ledger in data/jev_ledger.jsonl
+src/s15a_post_images.py       one still image per target post (image, video preview frame, first gallery item), <= 768 px
+src/s15b_jev_score.py         Jev measurements (PART=align|comment|reply|post|window; VARIANT=full|subs|text|noimg; LIMIT=n pilot)
+src/s15c_jev_analysis.py      Jev validity, predictive models, first-comment signals, gatekeeping, post genre, pre-entry trajectory
 ```
 
 - **Study 1:** run `s1_select_posts.py`, then `s2`–`s11b`.
 - **Study 2:** set `STUDY=global USERS_PER_POST=20`, then run `s1_global_2025.py` and `s2`–`s11b`.
 - **Long runs:** `s11a` (about 15k API requests) and `s11b` (about 200k comments scored) take longer than 10 minutes. Run them from a terminal. Both resume from cache if interrupted (scores are saved to `data/<study>/s11_*.npy`).
+- **Jev (§4.13):** with `STUDY=global`, run `s15a_post_images.py`, then `s15b_jev_score.py` for `PART=post`, `comment`, `reply`, `align` (`VARIANT=full`, `subs`, `text`, `noimg`) and `window`, then `s15c_jev_analysis.py`. Responses are cached in `data/jev_cache/`, so re-runs are free. The client stops once the ledger reaches `JEV_MAX_BUDGET_USD`.
 - **Activity counts:** the Arctic Shift aggregate endpoint must be queried with calendar dates. Epoch timestamps return all-zero daily buckets.
 - **Models:** `s7b` needs `Qwen/Qwen2.5-3B-Instruct`, `cardiffnlp/twitter-roberta-base-sentiment-latest` and `unitary/unbiased-toxic-roberta` (downloaded automatically to the Hugging Face cache).
 - **Seeds:** posts 42, users 7, validity draws 0.
 - **Re-runs:** all API responses are cached in `data/cache/`, so re-runs make no new requests.
 - **Environment:** embeddings were computed on an NVIDIA RTX 5060 with PyTorch 2.11 (CUDA 12.8). A full CPU re-run of Study 1 gave identical estimates to four decimal places.
+
+---
+
+## 9. Update: what the Jev decision model changes, and what it does not
+
+*Synthesis of §4.13 for the original research questions. All numbers are Study 2 and come from `s15b_jev_score.py` / `s15c_jev_analysis.py`.*
+
+### 9.1 What Jev adds as a tool
+
+The embedding pipeline could not use what most Study 2 posts actually show: 91% are images or videos whose only text is a short title. Jev reads images directly and answers typed questions with calibrated probabilities, so these posts can now be measured at scale.
+
+| | Value |
+|---|---|
+| Posts with a usable image | 246 of 249 (127 images, 97 videos via preview frame, 23 galleries via first item) |
+| Cost per image (768 px) | about 1,100 input tokens, about $0.00005 |
+| Price | $0.042 per million input tokens; output free; one state is billed once for all its questions |
+| Throughput (8 threads) | 27 requests/s with an image; 50–85 requests/s for text only |
+| Total for all §4.13 experiments | 25,650 requests, 44 M tokens, **$1.85**, 0 failed requests |
+
+What the image adds, measurably: without it, the effect size of Jev's post alignment (entry vs placebo post) falls from d = 0.21 to d = 0.11 (§4.13 ablations).
+
+Modules Jev replaced or added in the same run:
+- **Prior-interest alignment** with the post image (proposal Method 2).
+- **Community fit from subreddit names alone.** It needs no co-membership data and matches c2v in predicting who becomes a regular.
+- **Stance.** It replaces the Qwen-3B model, which agrees with Jev only at κ = 0.28.
+- **Reply content.** Gatekeeping, welcoming and context-giving replace the sentiment-based reply-tone proxy.
+- **Post genre** and the insider knowledge a post requires.
+
+### 9.2 The original research questions: results unchanged
+
+| RQ | Embedding results (§4.2–4.6) | With Jev (§4.13) |
+|---|---|---|
+| RQ1: alignment → first-participation behavior | No association | **No association.** Re-engagement OR 0.96–1.03; no first-comment signal (insider knowledge, identity signals, function) relates to alignment |
+| RQ2: high vs low alignment in conversational engagement | No difference in replies or re-engagement | **No difference in re-engagement.** Better-aligned newcomers are, if anything, less often answered (OR 0.77–0.79; see 9.4) |
+| RQ3: robust across operationalizations? | Null across 2 models × 4 aggregations | **Null also holds for a model-based, image-aware measure** |
+
+### 9.3 The measurement explanation is ruled out
+
+Section 5 left two readings of the null open: the relationship is weak, or the measure is too coarse. Jev tests the second reading directly, because it improves on exactly the weaknesses listed there:
+
+| Weakness named in §5 | Embedding measure | Jev measure |
+|---|---|---|
+| Short, image-only targets | Title text only | Sees the image (doubles the effect size) |
+| Heterogeneous histories | Mean or top-k of comment embeddings | Reads the subreddit list and the 40 most recent items as a whole |
+| Weak separation of groups | Newcomer − member gap −0.25 / −0.35 SD | **−0.55 SD** (about 1.6× larger) |
+| Entry post vs random post | 57% | 59% |
+
+With a measure that separates members from newcomers about 1.6 times better and sees what the post shows, first-contact behavior is still unrelated to alignment. The null is therefore best read as substantive: on viral threads, how a newcomer participates the first time does not depend on their prior interests.
+
+### 9.4 New findings
+
+1. **Retention is triangulated.** Three instruments now predict 90/180-day return and becoming a regular, each net of the others: text embeddings, co-membership embeddings (c2v) and Jev. Jev's community alignment gives 180-day return OR 1.44 net of its own placebo score, and 1.27 (FDR .014) after also controlling for c2v.
+2. **Pre-entry drift replicates with an independent instrument.** Scoring each window before entry separately, only the last 30 days predicts return (180-day OR 1.57, FDR < .001). The 30–90 and 90–365 day windows predict nothing. This is the same pattern as §4.12 F4, which used c2v.
+3. **The community does not gatekeep.** 2.5% of replies to newcomers treat them as outsiders, vs 1.7% for existing members (n.s.). Insiders do not gatekeep more than outsiders, gatekeeping is not aimed at low-fit or self-declared outsiders, and no kind of reply content predicts return.
+4. **Identity work is rare on viral threads.** Fewer than 2% of first comments, from newcomers or members, show community-specific knowledge or position the writer as an insider or outsider.
+5. **The entry post type matters for the base rate.** Newcomers entering through meme or news/politics posts return about twice as often (23–29% at 90 days) as those entering through animal or fail videos (14–15%). The fit → return association is the same across post types.
+6. **Exploratory: alignment and being answered.** Better-aligned newcomers are less likely to receive a reply (Jev OR 0.77–0.79, net of placebo). This is consistent with the isolated MPNet coefficient in §4.2 (0.82). It was not pre-specified and should be treated as a lead, not a finding.
+
+Together these strengthen the conclusion of §4.12: **selection, not socialization.** What newcomers write on the viral thread, how they are answered and whether they are gatekept do not relate to whether they stay. Where their activity was heading before they arrived does.
+
+### 9.5 What is still not covered
+
+- **Animated GIFs and full videos.** Jev accepts still PNG/JPEG only. Videos were represented by one preview frame, and GIFs would need frame extraction.
+- **Images inside comments and histories.** About 3% of first comments and 2.7% of history items are images or GIFs (1.8% of first comments are giphy links). These were still read as text. Scoring them with Jev would cost under $0.10.
+- **Experimental status.** Image support is labeled experimental by TypeSafe. `jev-latest` is an alias (here `jev-1.13.0`), so the model behind it may change.
+- **A user-level component.** Jev's score for a *random* post also predicts return (OR ≈ 1.2). Every reported effect controls for this placebo score.
+- **No human validation yet.** Jev's scores and codings have not been compared with human labels (proposal §6).
+
+### 9.6 Revised framing and next steps
+
+- **Primary question:** among newcomers brought in by viral posts, who stays? Treat the first-contact null as a robust, measurement-checked negative result rather than a missing finding.
+- **Pre-registered replication** on the 2024 top-posts list. Primary predictors: c2v fit and Jev community alignment, net of its placebo score. Outcomes: 90/180-day return and becoming a regular. The remaining Jev budget (about $1.15) covers the full scoring of such a sample.
+- **Human validation** of 150–300 user–post pairs and of the Jev comment and reply codings.
+- **Optional:** score GIFs (extracted frames) and images inside comments, to test whether meme replies carry community identity signals.
