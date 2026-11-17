@@ -9,7 +9,7 @@
 | [PLAN.md](PLAN.md) | 第一轮测试的设计：benchmark、agent 协议、指标、局限 |
 | [RESULTS.md](RESULTS.md) | **结果**：Qwen3 1.7B → 32B 和 Qwen2.5-72B。规模大了能复现进入前轨迹（FP1），但对欢迎语仍然过度敏感，基线比率失真 |
 | `reference/` | Reddit Newcomers 的 REPORT.md 和 RQ.md 副本（所有数字的出处） |
-| `data/source` | 指向 `/data/hanqim2/Reddit Newcomers/data/global` 的 symlink，只读 |
+| `data/source` | 指向 `/mnt/disk1/hanqim2/Reddit Newcomers/data/global` 的 symlink，只读 |
 | `data/benchmark.parquet` | 2,413 名 newcomer 的 agent 输入和人类参照 |
 | `results/` | `human_fingerprints.csv`；每个 agent run 一个子目录 |
 
@@ -20,7 +20,7 @@ cd src
 python3 build_benchmark.py      # ~3.5 min，CPU；训练 c2v 并计算窗口 fit
 python3 fingerprints.py         # 人类 fingerprint，和 REPORT 对照
 
-PY=/data/hanqim2/.conda/envs/vllm311/bin/python
+PY=/mnt/disk1/hanqim2/.conda/envs/vllm311/bin/python
 $PY agent_sim.py --dry-run                                        # 只渲染 prompt，不用 GPU
 CUDA_VISIBLE_DEVICES=<gpu> $PY agent_sim.py --model Qwen/Qwen3-8B --out qwen3-8b --limit 50
 CUDA_VISIBLE_DEVICES=<gpu> $PY agent_sim.py --model Qwen/Qwen3-8B --out qwen3-8b

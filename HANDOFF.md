@@ -1,12 +1,14 @@
-# 项目交接 / 重启说明（2026-11-11 暂停）
+# 项目交接 / 重启说明（2026-11-11 暂停；路径于 2026-11-17 更新）
+
+> **存储迁移（2026-11-12）**：`/data` 是 mergerfs 联合挂载，经常整段冻结（11-11 有 87% 的时间不可用）。现在所有文件都在 **`/mnt/disk1/hanqim2/...`**，不要再用 `/data/...`（两者是同一批文件，不是副本，**不要"去重"删除**）。规则见 `~/.claude/CLAUDE.md` 和 `/mnt/disk1/hanqim2/STORAGE_README.md`。下文路径已全部改成 disk1。入口 README（`hci-explore/README.md`、`behavioral-fidelity/README.md`）也已改好；其余旧文档和约 29 个脚本里还写着 `/data/hanqim2/...`，运行前请换成 `/mnt/disk1/hanqim2/...`。
 
 这个仓库里有三个相关项目：
 
 | 部分 | 位置（本仓库） | 服务器上的工作目录 | 状态 |
 |---|---|---|---|
-| **A. Reddit Newcomers（信号研究）** | 仓库根目录：`src/`、`results/`、`REPORT.md`、`RQ.md`、`PROPOSAL.MD` | `/data/hanqim2/Reddit Newcomers` | 主假设为零结果；剩下的信号是探索性的，还没复制 |
-| **B. Behavioral fidelity（LLM 模拟 newcomer）** | `behavioral-fidelity/` | `/data/hanqim2/behavioral-fidelity` | 大部分实验已跑完；预注册的 outcome 还**封存**着 |
-| **C. hci-explore（判官固定，校准人：JEV + 每人一个截距）** | `hci-explore/` | `/data/hanqim2/Reddit Newcomers/hci-explore`（旧路径 `/data/hanqim2/hci-explore` 是指向它的软链接） | 30 组实验已跑完并整理；入口 `hci-explore/README.md`，结果总表 `RESULTS.md`，分析 `ANALYSIS.md`；论文方向待老师决定 |
+| **A. Reddit Newcomers（信号研究）** | 仓库根目录：`src/`、`results/`、`REPORT.md`、`RQ.md`、`PROPOSAL.MD` | `/mnt/disk1/hanqim2/Reddit Newcomers` | 主假设为零结果；剩下的信号是探索性的，还没复制 |
+| **B. Behavioral fidelity（LLM 模拟 newcomer）** | `behavioral-fidelity/` | `/mnt/disk1/hanqim2/behavioral-fidelity`（工作副本，含 data 和日志；本仓库里的 `behavioral-fidelity/` 是它去掉 gitignore 内容后的快照） | 大部分实验已跑完；预注册的 outcome 还**封存**着 |
+| **C. hci-explore（判官固定，校准人：JEV + 每人一个截距）** | `hci-explore/` | `/mnt/disk1/hanqim2/Reddit Newcomers/hci-explore`（`/mnt/disk1/hanqim2/hci-explore` 是指向它的软链接） | 30 组实验已跑完并整理；入口 `hci-explore/README.md`，结果总表 `RESULTS.md`，分析 `ANALYSIS.md`；论文方向待老师决定 |
 
 论文和 thesis 的主线是 B，A 是 B 的人类参照来源。B 最完整的叙述在 `behavioral-fidelity/NARRATIVE.md`（证据表 E1–E23，§5 机制，§7 论文结构，§9 弱点），执行细节和每次运行的流水在 `behavioral-fidelity/ROADMAP.md`。
 
@@ -82,25 +84,31 @@
 
 **环境**
 - GPU 机器：GPU 0 坏了；GPU 9 是别人的。队列只用 GPU 4–8，`MAX_GPUS=3`。nvidia-smi 一律套 `timeout 20`，它卡死过一次。
-- vLLM 环境：`/data/hanqim2/.conda/envs/vllm311/bin/python`（vLLM 0.19.1）。统计用系统的 `python3`（有 statsmodels 和 sklearn）。
+- vLLM 环境：`/mnt/disk1/hanqim2/.conda/envs/vllm311/bin/python`（vLLM 0.19.1）。不经过 /data 的启动脚本：`/mnt/disk1/hanqim2/vllm_direct/start_direct_vllm.sh`。统计用系统的 `python3`（有 statsmodels 和 sklearn）。
 - 双卡（TP=2）一律通过 `src/tp_wrap.py` 运行（NCCL_P2P_DISABLE=1 + disable_custom_all_reduce），长任务再加 `VLLM_EXECUTE_MODEL_TIMEOUT_SECONDS=3600`。
 - 在线 fp8 在 OLMo-3.1-32B、GLM-4-32B、Qwen2.5-72B 上 readout mass = 0。**每个新模型都要先检查 mass。**
 - `.env`（不在 git 里）需要 TYPESAFE_API_KEY、JEV_*、OPENROUTER_API_KEY、OPENROUTER_MAX_USD=10。支出记录在 `data/openrouter_ledger.jsonl`，目前约 $9.09。
 
 **数据（不在 git 里，公开仓库里不能放 Reddit 用户数据）**
-- 服务器上：`/data/hanqim2/Reddit Newcomers/data`（约 4.1 GB）、`/data/hanqim2/behavioral-fidelity/data`（约 520 MB）。`/mnt/disk1/hanqim2` 只读，不要动。
+- 服务器上：`/mnt/disk1/hanqim2/Reddit Newcomers/data`（约 4.1 GB）、`/mnt/disk1/hanqim2/behavioral-fidelity/data`（约 520 MB）。
 - 重建：A 部分按 `src/s1_*` → `s15c_*` 的顺序；B 部分用 `build_benchmark.py`、`rscience_collect.py` / `rscience_retro_collect.py`、`futurology_collect.py inputs`、`site_fetch.py` / `site_collect.py assign|collect`。
 - 为了不在公开仓库里放用户内容，**下面这些没有推送**：`results/*/example_prompts.json`（含真实用户历史）；`results/p7/*/gen.parquet` 和 `results/probes/qwen3-8b/readout.parquet`（以真实历史为条件生成的文本）；`results/**/*.log`（日志里打印了 prompt 示例；runner.log 保留了）；SFT adapter（175 MB，在用户数据上训练）。这些都还在服务器上。
 
 **队列**
 ```bash
-cd /data/hanqim2/behavioral-fidelity/src
+cd /mnt/disk1/hanqim2/behavioral-fidelity/src
 setsid nohup python3 -u queue_runner.py >> ../results/queue/runner.log 2>&1 < /dev/null &
 ```
 - 任务的格式：`results/queue/jobs.txt` 中每行一个 `name | n 或 n:G | 依赖文件 | 命令`。`# ` 开头的行会被跳过；`HOLD(...)` 只是一种注释写法。
 - 状态记录在 `state.tsv`。`failed(...)` 是终态，要重跑就换一个任务名。
 - 单卡任务会占满 3 张卡，让双卡任务一直排不上。所以有双卡任务排队时，先把后面的单卡任务暂时 HOLD 起来。
 - 结束任务只按明确的 PID 来，不要用 pkill -f。TP worker 可能变成孤儿进程（11-08 出现过，占着 45 GB），要检查。
+
+**B 部分的提交方式**：实验在工作副本 `/mnt/disk1/hanqim2/behavioral-fidelity` 里跑。要提交时先同步到本仓库，再 commit：
+```bash
+rsync -a --exclude data/ --exclude '__pycache__/' /mnt/disk1/hanqim2/behavioral-fidelity/ "/mnt/disk1/hanqim2/Reddit Newcomers/behavioral-fidelity/"
+```
+`.gitignore` 会挡住日志、example_prompts、gen.parquet 和 adapter。截至 11-17，两边被跟踪的文件完全一致。
 
 **跑完新结果后的汇总顺序**
 `panel_summary.py` → `fig_panel.py` → `scorecard.py`；`multiverse_summary.py`、`swap_content.py`（P3 / P8）；`p5_analyze.py <models...>`；`p9_analyze.py`；`p4_summary.py`；`h8_h9_formal.py`（已完成）。

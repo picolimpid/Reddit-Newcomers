@@ -1,7 +1,7 @@
 # hci-explore：判官固定，校准人（HCI 论文 × JEV）
 
 > 状态（2026-11-11）：探索 + 试点，已做 **30 组实验**（其中 16 项有事先写定的判定标准）。论文还没写，方向待两位老师（Koustuv Saha、Eshwar Chandrasekharan）决定。
-> 本目录是 Reddit-Newcomers 仓库的子项目 C（总说明见 [../HANDOFF.md](../HANDOFF.md)）；它在服务器上的工作目录是 `/data/hanqim2/hci-explore`（现为指向本目录的软链接）。
+> 本目录是 Reddit-Newcomers 仓库的子项目 C（总说明见 [../HANDOFF.md](../HANDOFF.md)）；它在服务器上的工作目录是 `/mnt/disk1/hanqim2/hci-explore`（现为指向本目录的软链接）。
 
 ## 一句话
 
@@ -82,7 +82,7 @@ hci-explore/
 全部 JEV 和 LLM 响应在服务器上已缓存，重跑分析不花钱。命令见 [REPORT.md](REPORT.md) §6；D 线的脚本：
 
 ```bash
-cd /data/hanqim2/hci-explore      # 或 "/data/hanqim2/Reddit Newcomers/hci-explore"
+cd /mnt/disk1/hanqim2/hci-explore      # 或 "/mnt/disk1/hanqim2/Reddit Newcomers/hci-explore"
 python3 -I src/e4c_single_label.py          # 先跑：E4d、E4i、E4k 用它的样本外预测
 python3 -I src/e4b_construct.py             # 加 --posthoc、--replicate350 跑事后分析和复现
 python3 -I src/e4d_venire_sim.py
@@ -95,12 +95,12 @@ python3 -I src/e4a_community_calib.py analyze; python3 -I src/e4e_paraphrase.py 
 本地 Qwen3-32B（不要用 0 号 GPU，它故障，会让 CUDA 初始化失败）：
 
 ```bash
-CUDA_VISIBLE_DEVICES=7,9 NCCL_P2P_DISABLE=1 /data/hanqim2/.conda/envs/vllm311/bin/python src/local_judge.py \
-    --model /data/hanqim2/models/Qwen3-32B --tp 2 --gpu-mem 0.80 --max-model-len 2048 \
+CUDA_VISIBLE_DEVICES=7,9 NCCL_P2P_DISABLE=1 /mnt/disk1/hanqim2/.conda/envs/vllm311/bin/python src/local_judge.py \
+    --model /mnt/disk1/hanqim2/models/Qwen3-32B --tp 2 --gpu-mem 0.80 --max-model-len 2048 \
     --tag qwen3-32b-local results/e4h/qwen_in.jsonl
 ```
 
-环境：系统 `python3`（numpy、scipy、pandas、scikit-learn）；E1h 需要 torch（`/data/hanqim2/.conda/envs/specjev/bin/python`，CPU）；本地判官用 `vllm311` 环境。
+环境：系统 `python3`（numpy、scipy、pandas、scikit-learn）；E1h 需要 torch（`/mnt/disk1/hanqim2/.conda/envs/specjev/bin/python`，CPU）；本地判官用 `vllm311` 环境。
 
 ## 花费
 
